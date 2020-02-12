@@ -107,10 +107,11 @@ public class TestController {
 
     @RequestMapping("/create")
     public void createCollection(){
+        //也可以不先创建等到插入数据的时候在进行创建
         //创建对应实体类mongodb集合（mysql->table）
         MongoCollection<Document> collection = mongoTemplate.createCollection(User.class);
         System.out.println(collection);
-        //创建任意mongodb集合（mysql ->table）
+        //创建任意mongodb集合（mysql ->table)
         MongoCollection<Document> collection1 = mongoTemplate.createCollection("mongoStudy");
         System.out.println(collection1);
     }
