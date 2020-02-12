@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd"
+       default-autowire="byName">
+    <!--开启注解扫描-->
+    <context:annotation-config />
+
+    <dubbo:application name="dubbo-consumer"/>
+    <!--注册 zookeeper dubbo注册服务中心 配置zookeeper 注册地址-->
+    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
+    <!--配合dubbo 注册中心 端口（port）注:与服务生产者注册端口一致-->
+    <dubbo:protocol name="dubbo" port="20880"/>
+    <!--扫描注解包路径,即扫描包下表面的所有控制类-->
+    <dubbo:annotation package="com.luwei.dubbo_consumer"/>
+    <!--check ->false 表示不检查服务注册端口,默认为true 如：开启检查，
+    启动时检查依赖的服务是否可用，不可用时会抛出异常，阻止 Spring 初始化完成-->
+    <dubbo:reference id="userService" check="false" interface="com.luwei.service.UserService"/>
+</beans>

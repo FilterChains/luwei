@@ -1,0 +1,9 @@
+server:
+  port: 8086
+#mongodb配置
+spring:
+  data:
+    mongodb:
+      database: mongodemo
+      host: localhost
+      port: 27017
