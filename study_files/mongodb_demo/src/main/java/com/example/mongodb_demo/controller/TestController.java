@@ -30,7 +30,7 @@ import java.util.logging.Filter;
 public class TestController {
 
     @Autowired
-    @Qualifier(value = "testdbMongoTemplate")
+    @Qualifier(value = "mongoTemplate")
     protected MongoTemplate mongoTemplate;
 
     @RequestMapping("/test")

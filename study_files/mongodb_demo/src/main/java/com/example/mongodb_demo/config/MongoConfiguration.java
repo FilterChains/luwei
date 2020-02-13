@@ -16,15 +16,15 @@ import java.util.ArrayList;
 import java.util.List;
 @Data
 @Configuration
-//读取配置文件中spring.data.mongodb.testdb 开头的属性如database，通过反射调用setDatabase()保存从配置文件中读取的database值
+//读取配置文件中spring.data.mongodb 开头的属性如database，通过反射调用setDatabase()保存从配置文件中读取的database值
 //需要maven依赖 spring-boot-configuration-processor
 @ConfigurationProperties(prefix = "spring.data.mongodb")
-public class TestdbMongoConfiguration {
+public class MongoConfiguration {
     // MongoDB Properties
     private String host, database, username, password;
     private int port;
 
-    public MongoDbFactory mongoDbFactory() throws Exception {
+    private MongoDbFactory mongoDbFactory() throws Exception {
         //不认证账号密码
         return new SimpleMongoDbFactory(new MongoClient(host, port), database);
         //连接mongodb的工厂认证账号密码
@@ -36,7 +36,7 @@ public class TestdbMongoConfiguration {
 
     //第一个数据库 默认作为主数据库 需要添加注解 @Primary ，后面的数据库不需要这个注解
     @Primary
-    @Bean(name = "testdbMongoTemplate")
+    @Bean(name = "mongoTemplate")
     public MongoTemplate getMongoTemplate() throws Exception {
         return new MongoTemplate(mongoDbFactory());
     }
