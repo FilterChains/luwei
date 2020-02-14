@@ -26,12 +26,12 @@ public class MongoConfiguration {
 
     private MongoDbFactory mongoDbFactory() throws Exception {
         //不认证账号密码
-        return new SimpleMongoDbFactory(new MongoClient(host, port), database);
+//        return new SimpleMongoDbFactory(new MongoClient(host, port), database);
         //连接mongodb的工厂认证账号密码
-//        ServerAddress serverAddress = new ServerAddress(host, port);
-//        List<MongoCredential> mongoCredentialList = new ArrayList<>();
-//        mongoCredentialList.add(MongoCredential.createCredential(username, database, password.toCharArray()));
-//        return new SimpleMongoDbFactory(new MongoClient(serverAddress, mongoCredentialList), database);
+        ServerAddress serverAddress = new ServerAddress(host, port);
+        List<MongoCredential> mongoCredentialList = new ArrayList<>();
+        mongoCredentialList.add(MongoCredential.createCredential(username, database, password.toCharArray()));
+        return new SimpleMongoDbFactory(new MongoClient(serverAddress, mongoCredentialList), database);
     }
 
     //第一个数据库 默认作为主数据库 需要添加注解 @Primary ，后面的数据库不需要这个注解

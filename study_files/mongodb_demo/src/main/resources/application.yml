@@ -5,7 +5,7 @@ spring:
   data:
     mongodb:
       database: mongodemo
-      #username: admin
-      #password: 123456
+      username: mongoadmin
+      password: 123456
       host: localhost
       port: 27017

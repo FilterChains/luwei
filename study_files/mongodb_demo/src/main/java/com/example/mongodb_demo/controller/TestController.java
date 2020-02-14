@@ -88,7 +88,7 @@ public class TestController {
     @RequestMapping("/findUser")
     public List<User> findUser(){
         MongoCollection<Document> user = mongoTemplate.getCollection("User");
-        FindIterable<Document> documents = user.find(Filters.eq("name", "你好"));
+        FindIterable<Document> documents = user.find(Filters.eq("name", "卢伟"));
         MongoCursor<Document> iterator = documents.iterator();
         List<User> list = Lists.newArrayList();
         while(iterator.hasNext()){

@@ -36,7 +36,7 @@ public class CloseThread {
             public void run() {
                 try {
                     System.out.println("线程2开始");
-                    Thread.sleep(1000);
+                    Thread.sleep(2000);
                     System.out.println("线程2结束");
                 } catch (InterruptedException e) {
                     System.out.println("task2 interrupted: " + e);
