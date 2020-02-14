@@ -19,26 +19,27 @@ import java.util.function.Supplier;
  */
 public class ThreaPoolDemo {
     public static void main(String[] args) {
-        ExecutorService executorService = Executors.newFixedThreadPool(2);
+        System.out.println(validateFuntion());
+        /*ExecutorService executorService = Executors.newFixedThreadPool(2);
         CompletableFuture.runAsync(()->System.out.println(validateFuntion()),executorService);
         CompletableFuture.runAsync(()->System.out.println(validataFun()),executorService);
-        executorService.shutdown();
+        executorService.shutdown();*/
     }
 
     private static String validateFuntion(){
         long start = System.currentTimeMillis();
         //创建线程池
-        ExecutorService executorService = Executors.newFixedThreadPool(2);
+//        ExecutorService executorService = Executors.newFixedThreadPool(2);
+        ExecutorService executorService = Executors.newCachedThreadPool();
         //模拟数据操作
         CompletableFuture<String> supplyAsync1 = CompletableFuture.supplyAsync(new Supplier<String>() {
             @Override
             public String get() {
                 try {
                     System.out.println("开始执行任务一:" + System.currentTimeMillis());
-                    Thread.sleep(5000);
+                    Thread.sleep(3000);
                     System.out.println("任务一执行完毕====");
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
                 }
                 return "执行完毕：任务一";
             }
@@ -51,53 +52,44 @@ public class ThreaPoolDemo {
                     Thread.sleep(3000);
                     System.out.println("任务二执行完毕====");
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
                 }
                 return "执行完毕：任务二";
             }
         }, executorService);
+
         CompletableFuture<String> supplyAsync3 = CompletableFuture.supplyAsync(new Supplier<String>() {
             @Override
             public String get() {
                 try {
                     System.out.println("开始执行任务三:" + System.currentTimeMillis());
-                    Thread.sleep(3000);
+                    Thread.sleep(2000);
                     System.out.println("任务三执行完毕====");
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
                 }
                 return "执行完毕：任务三";
             }
         }, executorService);
-
         try {
+            System.out.println("报异常后1：======");
             long startTimes1 = System.currentTimeMillis();
-            String result1 = supplyAsync1.get();
-            System.err.println("获取时间:"+(System.currentTimeMillis()-startTimes1));
+            String result1 = supplyAsync1.get(3000,TimeUnit.MILLISECONDS);
+            System.err.println("获取时间1:"+(System.currentTimeMillis()-startTimes1));
             System.out.println("执行结果："+result1);
 
             long startTimes2 = System.currentTimeMillis();
-            String result2 = supplyAsync2.get();
-            System.err.println("获取时间:"+(System.currentTimeMillis()-startTimes2));
+            String result2 = supplyAsync2.get(3000,TimeUnit.MILLISECONDS);
+            System.err.println("获取时间2:"+(System.currentTimeMillis()-startTimes2));
             System.out.println("执行结果："+result2);
 
             long startTimes3 = System.currentTimeMillis();
-            String result3 = supplyAsync3.get();
-            System.err.println("获取时间:"+(System.currentTimeMillis()-startTimes3));
+            String result3 = supplyAsync3.get(3000,TimeUnit.MILLISECONDS);
+            System.err.println("获取时间3:"+(System.currentTimeMillis()-startTimes3));
             System.out.println("执行结果："+result3);
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("报异常后2：======");
         }finally {
-            executorService.shutdown();
-            try {
-                //如果大于规定时间
-                if(!executorService.awaitTermination(2*1000,TimeUnit.MILLISECONDS)){
-                    executorService.shutdownNow();
-                }
-            } catch (InterruptedException e) {
-                System.out.println(e.getMessage());
-                executorService.shutdownNow();
-            }
+            executorService.shutdownNow();
+            System.out.println("最后执行3：======");
         }
         return "总的执行时间:"+(System.currentTimeMillis()-start);
     }
@@ -105,7 +97,7 @@ public class ThreaPoolDemo {
     private static String validataFun(){
         long start = System.currentTimeMillis();
         try {
-            System.out.println("开始执行任务一:" + System.currentTimeMillis());
+            System.out.println("开始执行任务一:" + System.currentTimeMillis()+"==============");
             Thread.sleep(5000);
             System.out.println("任务一执行完毕====");
             System.out.println("开始执行任务二:" + System.currentTimeMillis());
