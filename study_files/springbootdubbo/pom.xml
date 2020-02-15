@@ -23,7 +23,7 @@
     <dubbo.version>2.5.5</dubbo.version>
     <zkClient.version>0.10</zkClient.version>
     <lombok.version>1.18.10</lombok.version>
-    <springBoot.version>2.1.5.RELEASE</springBoot.version>
+    <springBoot.version>2.2.4.RELEASE</springBoot.version>
   </properties>
 
   <dependencies>
@@ -31,12 +31,32 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter</artifactId>
       <version>${springBoot.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>spring-beans</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>slf4j-api</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <version>${springBoot.version}</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>slf4j-api</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>junit-jupiter-api</artifactId>
+          <groupId>org.junit.jupiter</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <!-- 使用lombok实现JavaBean的get、set、toString、hashCode、equals等方法的自动生成  -->
@@ -54,6 +74,14 @@
         <exclusion>
           <groupId>log4j</groupId>
           <artifactId>log4j</artifactId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-core</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-context</artifactId>
+          <groupId>org.springframework</groupId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -81,7 +109,7 @@
       <optional>true</optional>
     </dependency>
     <!--rabbitmq-->
-    <dependency>
+    <!--<dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-amqp</artifactId>
       <version>${springBoot.version}</version>
@@ -103,7 +131,7 @@
           <groupId>org.springframework</groupId>
         </exclusion>
       </exclusions>
-    </dependency>
+    </dependency>-->
   </dependencies>
   <build>
     <plugins>

@@ -16,17 +16,20 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <springBoot.version>2.2.4.RELEASE</springBoot.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <version>${springBoot.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <version>${springBoot.version}</version>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
