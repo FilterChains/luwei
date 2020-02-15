@@ -1,3 +1,4 @@
+/*
 package com.luwei.entity;
 
 import org.springframework.util.CollectionUtils;
@@ -14,17 +15,23 @@ public class TdOrder{
     private Integer orderType;
 
     private Integer userId;
-    /**
+    */
+/**
      * 下单药店ID
-     */
+     *//*
+
     private Integer uaid;
-	/**
+	*/
+/**
 	 * 供应商ID
-	 */
+	 *//*
+
 	private Integer supplierId;
-    /**
+    */
+/**
      * 推荐人id
-     */
+     *//*
+
     private Integer recommendid;
 
     private Integer itemNum;
@@ -92,13 +99,17 @@ public class TdOrder{
 
 	private String cname;//公司名称
 
-	/**
+	*/
+/**
 	 * 订单对公打款待审核条数
-	 */
+	 *//*
+
 	private Integer pendingReview;
-	/**
+	*/
+/**
 	 * 订单对公打款已审核条数
-	 */
+	 *//*
+
 	private Integer alreadyReview;
 	//审核状态
 	private Integer approvalStauts;
@@ -114,96 +125,134 @@ public class TdOrder{
 
 	private String discountStr;//
 
-	/**
+	*/
+/**
 	 * 授信是否还款
-	 */
+	 *//*
+
 	private Boolean paidCredit;
 
-	/**
+	*/
+/**
 	 * 最后一次退货退款的id
-	 */
+	 *//*
+
 	private Integer latestOrderReturnId;
 
-    /**
+    */
+/**
      * 退款信息集合
-     */
+     *//*
+
     private List<TdOrderRefund> orderRefundList;
 
-    /**
+    */
+/**
      * 退货信息集合
-     */
+     *//*
+
     private List<TdOrderReturn> orderReturnList;
 
-    /**
+    */
+/**
      * 优惠券信息
-     */
+     *//*
+
     private TdCoupon coupon;
 
-    /**
+    */
+/**
      * 购买店铺信息
-     */
+     *//*
+
     private TdUserAddress userAddress;
 
-    /**
+    */
+/**
      * 购买人信息
-     */
+     *//*
+
     private TdUser orderUser;
 
-    /**
+    */
+/**
      * 推荐人信息
-     */
+     *//*
+
     private TdUser recommendUser;
 
-    /**
+    */
+/**
      * 订单货品集合
-     */
+     *//*
+
     private List<TdOrderSku> skuList;
 
-    /**
+    */
+/**
      * 订单商品（产品包使用）
-     */
+     *//*
+
     private List<TdOrderProduct> productList;
 
-    /**
+    */
+/**
      * 订单收货/退货单
-     */
+     *//*
+
     private List<TdOrderShipment> shipList;
 
-    /**
+    */
+/**
      * 订单收货地址
-     */
+     *//*
+
     private TdOrderAddress orderAddress;
 
-    /**
+    */
+/**
      * 供应商信息
-     */
+     *//*
+
     private TdUserSupply userSupply;
 
-    /**
+    */
+/**
      * 可以使用钱包余额支付
-     */
+     *//*
+
     private boolean canUserAccount;
-    /**
+    */
+/**
      * 可以使用授信资金余额支付
-     */
+     *//*
+
     private boolean canUserCredit;
 
     private String errMsg;
-	/**
+	*/
+/**
 	 *  免手续费标示
-	 */
+	 *//*
+
     private Integer free;
-	/**
+	*/
+/**
 	 * 退还云采豆数
-	 */
+	 *//*
+
 	private Integer refundCoin;
-	/**
+	*/
+/**
 	 * 退还云采豆金额
-	 */
+	 *//*
+
 	private BigDecimal refundCoinAmount;
-	/**
+	*/
+/**
 	 * 退还平台折扣金额
-	 */
+	 *//*
+
 	private BigDecimal refundDiscountAmount;
 
 
@@ -212,90 +261,126 @@ public class TdOrder{
     private String fullname;
 
     private BigDecimal diacount;
-	/**
+	*/
+/**
 	 * 省名
-	 */
+	 *//*
+
 	private String province;
-	/**
+	*/
+/**
 	 * 市名
-	 */
+	 *//*
+
 	private String city;
-	/**
+	*/
+/**
 	 * 区名
-	 */
+	 *//*
+
 	private String region;
 
 	private BigDecimal amount;
 
 	private String status;
-	/**
+	*/
+/**
 	 * 原邮费金额
-	 */
+	 *//*
+
 	private BigDecimal originalPostage;
-	/**
+	*/
+/**
 	 * 已退款邮费
-	 */
+	 *//*
+
 	private BigDecimal refundPostage;
-	/**
+	*/
+/**
 	 * 订单服务费规则
-	 */
+	 *//*
+
 	private TdOrderServiceFeeRule orderServiceFeeRule;
-	/**
+	*/
+/**
 	 * 退款前订单状态
-	 */
+	 *//*
+
 	private Integer preOrderStatus;
 
-	/**
+	*/
+/**
 	 * 折扣
-	 */
+	 *//*
+
 	private Integer ratio;
 
-	/**
+	*/
+/**
 	 * 普控状态
-	 */
+	 *//*
+
 	private Integer vipStatus;
 
-	/**
+	*/
+/**
 	 * 精控状态
-	 */
+	 *//*
+
 	private Integer vipStatusForSupply;
 
-	/**
+	*/
+/**
 	 * 优惠券信息
-	 */
+	 *//*
+
 	private List<TdCoupon> couponList;
 
-	/**
+	*/
+/**
 	 * 云采豆选中
-	 */
+	 *//*
+
 	private Boolean coinChecked;
 
-	/**
+	*/
+/**
 	 * 云采豆
-	 */
+	 *//*
+
 	private BigDecimal coinAmount;
 
-	/**
+	*/
+/**
 	 * 不包含秒杀金额的商品价格
-	 */
+	 *//*
+
 	private BigDecimal totalPriceNoSeckill;
 
-	/**
+	*/
+/**
 	 * 秒杀商品金额
-	 */
+	 *//*
+
 	private BigDecimal seckillPrice;
-	/**
+	*/
+/**
 	 * 是否省内：0-省外，1-省内
-	 */
+	 *//*
+
 	private Boolean theProvince;
-	/**
+	*/
+/**
 	 * 是否允许商家收货
-	 */
+	 *//*
+
 	private Boolean supplyReceiveOrder;
 
-	/**
+	*/
+/**
 	 * 集采退差金额
-	 */
+	 *//*
+
 	private BigDecimal collectReturnAmount;
 
 
@@ -307,59 +392,83 @@ public class TdOrder{
 		this.collectReturnAmount = collectReturnAmount;
 	}
 
-	/**
+	*/
+/**
 	 * 电子发票地址
-	 */
+	 *//*
+
 	private String invoiceUrl;
-	/**
+	*/
+/**
 	 * 平台优惠券金额
-	 */
+	 *//*
+
 	private BigDecimal platformCouponAmount;
-	/**
+	*/
+/**
 	 * 退款平台优惠金额
-	 */
+	 *//*
+
 	private BigDecimal refundPlatformCouponAmount;
-	/**
+	*/
+/**
 	 * 平台优惠券使用ID（未使用为0）
-	 */
+	 *//*
+
 	private Integer usePlatformCouponId;
 
-	/**
+	*/
+/**
 	 * 商家名称
-	 */
+	 *//*
+
 	private String shortname;
 
-	/**
+	*/
+/**
 	 * 使用优惠总和
-	 */
+	 *//*
+
 	private BigDecimal platformCouponAmountSum;
 
-	/**
+	*/
+/**
 	 * 退款金额优惠总和
-	 */
+	 *//*
+
 	private BigDecimal refundPlatformCouponAmountSum;
 
-	/**
+	*/
+/**
 	 * 使用金额
-	 */
+	 *//*
+
 	private BigDecimal useAmount;
 
-	/**
+	*/
+/**
 	 * 折扣
-	 */
+	 *//*
+
 	private BigDecimal discount;
 
-	/**
+	*/
+/**
 	 * 优惠券分类[1-满减券 2-折扣券]
-	 */
+	 *//*
+
 	private Integer category;
-	/**
+	*/
+/**
 	 * 是否他人代付
-	 */
+	 *//*
+
 	private Boolean paidByOthers;
-	/**
+	*/
+/**
 	 * 下单药店名称
-	 */
+	 *//*
+
 	private String shopname;
 
 	public String getShopname() {
@@ -418,9 +527,11 @@ public class TdOrder{
 		this.shortname = shortname;
 	}
 
-	/**
+	*/
+/**
 	 * 业务员信息
-	 */
+	 *//*
+
 	private SalesmanVO salesmanVO;
 
 	public BigDecimal getSeckillPrice() {
@@ -486,9 +597,11 @@ public class TdOrder{
 	public void setRatio(Integer ratio) {
 		this.ratio = ratio;
 	}
-	/**
+	*/
+/**
 	 * 集采活动编号
-	 */
+	 *//*
+
 	private String collectNo;
 
 
@@ -939,17 +1052,21 @@ public class TdOrder{
 		this.commissionAmount = commissionAmount;
 	}
 
-	/**
+	*/
+/**
 	 * 获取订单未支付金额
 	 * @return
-	 */
+	 *//*
+
 	public BigDecimal getUnPayAmount(){
 		return this.getPayAmount();
 	}
-	/**
+	*/
+/**
 	 * 获取订单实际支付金额
 	 * @return
-	 */
+	 *//*
+
 	public BigDecimal getOrderPayAmount(){
 		BigDecimal amount = BigDecimal.ZERO;
 		if(null!=this.getPayAmount()){
@@ -958,10 +1075,12 @@ public class TdOrder{
 		return amount;
 	}
 
-	/**
+	*/
+/**
      * 获取订单发票类型文字说明
      * @return
-     */
+     *//*
+
     public String getInvoiceTypeStr(){
     	StringBuffer sb = new StringBuffer();
     	if(null!=this.getInvoiceType()){
@@ -975,10 +1094,12 @@ public class TdOrder{
     	}
     	return sb.toString();
     }
-    /**
+    */
+/**
      * 获取订单分润状态文字说明
      * @return
-     */
+     *//*
+
     public String getBenefitedStr(){
     	StringBuffer sb = new StringBuffer();
     	if(null!=this.getBenefited()){
@@ -990,10 +1111,12 @@ public class TdOrder{
     	}
     	return sb.toString();
     }
-    /**
+    */
+/**
      * 获取订单状态文字说明
      * @return
-     */
+     *//*
+
     public String getOrderStatusStr(){
     	StringBuffer sb = new StringBuffer();
     	if(null!=this.getOrderStatus()){
@@ -1021,10 +1144,12 @@ public class TdOrder{
     	}
     	return sb.toString();
     }
-    /**
+    */
+/**
      * 获取客户查看订单状态文字说明
      * @return
-     */
+     *//*
+
     public String getCusOrderStatusStr(){
     	StringBuffer sb = new StringBuffer();
     	if(null!=this.getOrderStatus()){
@@ -1050,10 +1175,12 @@ public class TdOrder{
     	}
     	return sb.toString();
     }
-    /**
+    */
+/**
      * 获取订单支付状态文字说明
      * @return
-     */
+     *//*
+
     public String getPayStatusStr(){
     	StringBuffer sb = new StringBuffer();
     	if(null!=this.getPayStatus()){
@@ -1069,10 +1196,12 @@ public class TdOrder{
     	}
     	return sb.toString();
     }
-    /**
+    */
+/**
      * 获取订单发货状态文字说明
      * @return
-     */
+     *//*
+
     public String getShipmentStatusStr(){
     	StringBuffer sb = new StringBuffer();
     	if(null!=this.getShipmentStatus()){
@@ -1092,10 +1221,12 @@ public class TdOrder{
     	}
     	return sb.toString();
     }
-    /**
+    */
+/**
      * 获取订单支付方式文字说明
      * @return
-     */
+     *//*
+
     public String getPaymentStr(){
     	StringBuffer sb = new StringBuffer();
     	if(null!=this.getPaymentId()){
@@ -1192,10 +1323,12 @@ public class TdOrder{
 		this.approvalStauts = approvalStauts;
 	}
 
-	/**
+	*/
+/**
 	 * 获取是否全部发货
 	 * @return
-	 */
+	 *//*
+
 	public boolean getIsAllShip() {
 		for(TdOrderSku sku : this.skuList) {
 			if(!sku.getQuantity().equals(sku.getPostQuantity())) {
@@ -1205,10 +1338,12 @@ public class TdOrder{
 		return true;
 	}
 
-	/**
+	*/
+/**
 	 * 获取是否全部退款
 	 * @return
-	 */
+	 *//*
+
 	public boolean getIsAllRefund() {
 		for(TdOrderSku sku :this.skuList) {
 			if(!sku.getQuantity().equals(sku.getBackQuantity())) {
@@ -1258,10 +1393,12 @@ public class TdOrder{
 		this.paidCredit = paidCredit;
 	}
 
-	/**
+	*/
+/**
 	 * 是否线上支付
 	 * @return
-	 */
+	 *//*
+
 	public boolean isPaidOnline() {
 		return ConstantsUtils.ORDER_PAYMENT_ALIPAY.equals(this.getPaymentId())
 				|| ConstantsUtils.ORDER_PAYMENT_WEIXIN.equals(this.getPaymentId())
@@ -1269,10 +1406,12 @@ public class TdOrder{
                 || ConstantsUtils.ORDER_PAYMENT_UNIONPAY.equals(this.getPaymentId());
 	}
 
-	/**
+	*/
+/**
 	 * 实际是否已付款
 	 * @return
-	 */
+	 *//*
+
 	public boolean isActuallyPaid() {
 		return ConstantsUtils.ORDER_PAYMENT_ALIPAY.equals(this.getPaymentId())
 				|| ConstantsUtils.ORDER_PAYMENT_WEIXIN.equals(this.getPaymentId())
@@ -1395,10 +1534,12 @@ public class TdOrder{
 		this.discountStr = discountStr;
 	}
 
-	/**
+	*/
+/**
 	 * 获取订单所有发货的总价格
 	 * @return
-	 */
+	 *//*
+
 	public BigDecimal getTotalShipAmount() {
 		BigDecimal total = BigDecimal.ZERO;
 		if (!CollectionUtils.isEmpty(this.getShipList())) {
@@ -1409,10 +1550,12 @@ public class TdOrder{
 		return total;
 	}
 
-	/**
+	*/
+/**
 	 * 获取订单总退款金额
 	 * @return
-	 */
+	 *//*
+
 	public BigDecimal getTotalReturnAmount() {
 		BigDecimal total = BigDecimal.ZERO;
 		if (!CollectionUtils.isEmpty(this.getSkuList())) {
@@ -1518,4 +1661,4 @@ public class TdOrder{
 	public void setPaidByOthers(Boolean paidByOthers) {
 		this.paidByOthers = paidByOthers;
 	}
-}
+}*/

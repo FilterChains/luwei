@@ -22,32 +22,28 @@
     <java.version>1.8</java.version>
     <dubbo.version>2.5.5</dubbo.version>
     <zkClient.version>0.10</zkClient.version>
-    <lombok.version>1.16.18</lombok.version>
-    <springBoot.version>1.5.7</springBoot.version>
+    <lombok.version>1.18.10</lombok.version>
+    <springBoot.version>2.1.5.RELEASE</springBoot.version>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter</artifactId>
-      <!--<version>${springBoot.version}</version>-->
+      <version>${springBoot.version}</version>
     </dependency>
-    <!-- web应用  springmvc -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <version>${springBoot.version}</version>
+      <scope>test</scope>
     </dependency>
-    <!--<dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-test</artifactId>
-        <scope>test</scope>
-    </dependency>-->
+
     <!-- 使用lombok实现JavaBean的get、set、toString、hashCode、equals等方法的自动生成  -->
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <version>${lombok.version}</version>
-      <scope>provided</scope>
     </dependency>
     <!-- Dubbo依赖 -->
     <dependency>
@@ -71,12 +67,42 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-devtools</artifactId>
+      <version>${springBoot.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>spring-context</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-core</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+      </exclusions>
       <optional>true</optional>
     </dependency>
     <!--rabbitmq-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-amqp</artifactId>
+      <version>${springBoot.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>spring-beans</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-core</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+          <exclusion>
+              <artifactId>slf4j-api</artifactId>
+              <groupId>org.slf4j</groupId>
+          </exclusion>
+        <exclusion>
+          <artifactId>spring-context</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
   <build>
