@@ -1,7 +1,10 @@
 package com.luwei.dubbo_provider.service.impl;
 
+import com.google.common.collect.Lists;
 import com.luwei.entity.User;
 import com.luwei.service.MongoDbService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
 
 import java.util.List;
 
@@ -16,8 +19,13 @@ import java.util.List;
  */
 public class MongoDbServiceImpl implements MongoDbService {
 
+    @Autowired
+    private MongoTemplate mongoTemplate;
+
     @Override
     public List<User> save(User user) {
-        return null;
+        User save = mongoTemplate.save(user);
+        System.out.println("保存结果:"+save);
+        return Lists.newArrayList(user);
     }
 }
