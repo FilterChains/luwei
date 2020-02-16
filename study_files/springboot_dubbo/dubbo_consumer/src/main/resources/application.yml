@@ -1,0 +1,5 @@
+# 配置消费端服务端口，端口名不能配置被占用的端口，避免报错
+server:
+  port: 8089
+  servlet:
+    context-path: /

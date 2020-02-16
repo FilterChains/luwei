@@ -1,0 +1,49 @@
+# 设置生产者服务端口，注：多个生产者的服务端口不能一样，避免注册冲突启动报错
+server:
+  port: 8082
+  servlet:
+    context-path: /
+# 配置spring
+spring:
+  # 配置连接数据库
+  datasource:
+    name: tvpanda
+    url: jdbc:mysql://127.0.0.1:3306/ssm?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123456
+    # 配置使用druid数据源 数据库连接池
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+  # mongodb 配置
+  data:
+      mongodb:
+        uri: mongodb://mongoadmin:123456@localhost:27017/mongodemo
+
+#Mybatis配置
+mybatis:
+  # 配置扫描映射实体类
+  typeAliasesPackage: com.luwei.entity
+  # 配置扫描映射mapper,xml文件
+  mapperLocations: classpath:mapper/*.xml
+  #打印Mybatis的sql语句
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# rabbitMq配置rabbitMq 服务器
+rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest

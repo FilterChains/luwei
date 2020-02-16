@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd"
+       default-autowire="byName">
+    <!--开启注解扫描-->
+    <context:annotation-config />
+
+    <dubbo:application name="dubbo-provider"/>
+    <!-- 注册中心的ip地址 -->
+    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
+    <!--注册dubbo 服务端口：生产者服务端口的设置，决定消费者zookeeper的服务端口，consumer 的port要与生产者一致 -->
+    <dubbo:protocol name="dubbo" port="20880"/>
+    <!-- 扫描注解包路径，多个包用逗号分隔，不填pacakge表示扫描当前ApplicationContext中所有的类 -->
+    <dubbo:annotation package="com.luwei.dubbo_provider.service.impl"/>
+    <!--注册服务bean-->
+    <bean id="userService" class="com.luwei.dubbo_provider.service.impl.UserServiceImpl"/>
+    <bean id="mongoDbService" class="com.luwei.dubbo_provider.service.impl.MongoDbServiceImpl"/>
+    <!--注册服务对象 timeout 设置访问服务时间-->
+    <dubbo:service interface="com.luwei.service.UserService" ref="userService"/>
+    <dubbo:service interface="com.luwei.service.MongoDbService" ref="mongoDbService"/>
+</beans>

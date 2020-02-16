@@ -23,7 +23,7 @@
         <mysql-connector.version>5.1.39</mysql-connector.version>
         <mybatis-plus.version>3.1.0</mybatis-plus.version>
         <mybatis-plus-generator.version>3.1.0</mybatis-plus-generator.version>
-        <freemarker.version>2.3.28</freemarker.version>
+        <springBoot.version>2.2.4.RELEASE</springBoot.version>
     </properties>
 
     <dependencies>
@@ -37,10 +37,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+            <version>${springBoot.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <version>${springBoot.version}</version>
             <scope>test</scope>
         </dependency>
         <!-- Dubbo -->
@@ -112,6 +114,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-amqp</artifactId>
+            <version>${springBoot.version}</version>
         </dependency>
     </dependencies>
     <build>

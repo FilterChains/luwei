@@ -7,30 +7,20 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.result.DeleteResult;
-import com.mongodb.client.result.UpdateResult;
-import com.mongodb.util.JSON;
-import netscape.javascript.JSObject;
 import org.bson.Document;
-import org.bson.conversions.Bson;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Filter;
 
 @RestController
 public class TestController {
 
     @Autowired
-    @Qualifier(value = "testdbMongoTemplate")
     protected MongoTemplate mongoTemplate;
 
     @RequestMapping("/test")
@@ -88,7 +78,7 @@ public class TestController {
     @RequestMapping("/findUser")
     public List<User> findUser(){
         MongoCollection<Document> user = mongoTemplate.getCollection("User");
-        FindIterable<Document> documents = user.find(Filters.eq("name", "你好"));
+        FindIterable<Document> documents = user.find(Filters.eq("name", "卢伟"));
         MongoCursor<Document> iterator = documents.iterator();
         List<User> list = Lists.newArrayList();
         while(iterator.hasNext()){
@@ -107,10 +97,11 @@ public class TestController {
 
     @RequestMapping("/create")
     public void createCollection(){
+        //也可以不先创建等到插入数据的时候在进行创建
         //创建对应实体类mongodb集合（mysql->table）
         MongoCollection<Document> collection = mongoTemplate.createCollection(User.class);
         System.out.println(collection);
-        //创建任意mongodb集合（mysql ->table）
+        //创建任意mongodb集合（mysql ->table)
         MongoCollection<Document> collection1 = mongoTemplate.createCollection("mongoStudy");
         System.out.println(collection1);
     }
