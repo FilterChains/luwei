@@ -17,13 +17,21 @@
     <bytecodeTargetLevel>
       <module name="common" target="1.8" />
       <module name="dubbo_api" target="1.8" />
+      <module name="dubbo_api (1)" target="1.8" />
       <module name="dubbo_common" target="1.8" />
+      <module name="dubbo_common (1)" target="1.8" />
       <module name="dubbo_consumer" target="1.8" />
+      <module name="dubbo_consumer (1)" target="1.8" />
+      <module name="dubbo_consumer (2)" target="1.8" />
       <module name="dubbo_provider" target="1.8" />
+      <module name="dubbo_provider (1)" target="1.8" />
+      <module name="dubbo_provider (2)" target="1.8" />
       <module name="dubbo_timer" target="1.8" />
+      <module name="dubbo_timer (1)" target="1.8" />
       <module name="maven-archiver" target="1.8" />
       <module name="mongodb_demo" target="1.8" />
       <module name="springboot_dubbo" target="1.8" />
+      <module name="springbootdubbo" target="1.8" />
       <module name="timer" target="1.8" />
     </bytecodeTargetLevel>
   </component>
