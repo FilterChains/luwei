@@ -8,14 +8,22 @@
         <outputRelativeToContentRoot value="true" />
         <module name="dubbo_api" />
         <module name="dubbo_common" />
-        <module name="dubbo_consumer" />
+        <module name="dubbo_consumer (1)" />
         <module name="dubbo_provider" />
+        <module name="dubbo_timer" />
         <module name="mongodb_demo" />
-        <module name="timer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="common" target="1.8" />
+      <module name="dubbo_consumer1" target="1.8" />
+      <module name="dubbo_consumers" target="1.8" />
+      <module name="dubbo_providers" target="1.8" />
+      <module name="maven-archiver (1)" target="1.8" />
+      <module name="maven-archiver (2)" target="1.8" />
+      <module name="maven-archiver (3)" target="1.8" />
+      <module name="springboot_dubbo" target="1.8" />
+      <module name="timer" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

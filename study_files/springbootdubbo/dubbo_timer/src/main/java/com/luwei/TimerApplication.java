@@ -1,4 +1,4 @@
-package com.dubbo.timer;
+package com.luwei;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

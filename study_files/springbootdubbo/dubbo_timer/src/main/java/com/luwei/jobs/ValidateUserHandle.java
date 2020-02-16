@@ -1,4 +1,4 @@
-package com.dubbo.timer.jobs;
+package com.luwei.jobs;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
