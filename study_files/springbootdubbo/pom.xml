@@ -10,6 +10,7 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>dubbo_api</module>
+      <module>dubbo_common</module>
   </modules>
 
   <name>springbootdubbo</name>

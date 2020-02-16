@@ -1,15 +1,12 @@
-package com.dubbo.common.util;
+package com.luwei.util;
 
 import com.google.common.collect.Lists;
-import org.apache.tomcat.jni.User;
 
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import java.util.logging.SimpleFormatter;
 
 /**
  * @projectName： springbootdubbo
@@ -32,12 +29,6 @@ public class PaChongTest {
 
         List<Integer> integer = getInteger(1,2);
         System.out.println(integer);
-
-        List<User> users = Lists.newArrayList(new User(), new User());
-
-        List<User> objcet = (List<User>) getObjcet(users.toArray());
-        System.out.println(objcet);
-
 
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.MINUTE, 1);

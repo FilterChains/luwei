@@ -1,4 +1,4 @@
-package com.dubbo.common.redisconfig;
+package com.luwei.redisconfig;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;

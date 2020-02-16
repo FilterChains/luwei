@@ -1,4 +1,4 @@
-package com.dubbo.common.redisconfig;
+package com.luwei.redisconfig;
 
 import java.util.concurrent.TimeUnit;
 

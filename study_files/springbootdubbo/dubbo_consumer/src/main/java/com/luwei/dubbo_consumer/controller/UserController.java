@@ -1,11 +1,10 @@
 package com.luwei.dubbo_consumer.controller;
 
-import com.alibaba.dubbo.common.utils.CollectionUtils;
 import com.alibaba.dubbo.common.utils.StringUtils;
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.dubbo.common.redisconfig.RedisUtil;
 import com.google.common.collect.Lists;
 import com.luwei.entity.User;
+import com.luwei.redisconfig.RedisUtil;
 import com.luwei.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -17,7 +16,6 @@ import javax.servlet.http.HttpServletRequest;
 import java.math.BigDecimal;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.util.ArrayList;
 import java.util.List;
 
 /**

@@ -1,4 +1,4 @@
-package com.dubbo.common.redisconfig;
+package com.luwei.redisconfig;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;

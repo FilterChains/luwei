@@ -1,11 +1,9 @@
-package com.dubbo.common.util;
+package com.luwei.util;
 
-import com.google.common.collect.Lists;
-
-import java.sql.SQLOutput;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.*;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
 /**
