@@ -1,0 +1,10 @@
+//∂® ±∆˜ ->≈‰÷√:
+https://blog.csdn.net/sheshouzuomeiyou/article/details/82622237
+//rabbitmq ->≈‰÷√:
+https://blog.csdn.net/lihua5419/article/details/93006834
+//redis ->≈‰÷√:
+https://www.jianshu.com/p/5596c3a4978d
+//zookeeper ->≈‰÷√
+https://www.cnblogs.com/itoyr/p/10100600.html
+// springboot + dubbo + zookeeper
+https://blog.csdn.net/weixin_41843053/article/details/83687289
