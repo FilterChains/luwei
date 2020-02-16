@@ -20,6 +20,8 @@
     <dubbo:annotation package="com.luwei.dubbo_provider.service.impl"/>
     <!--注册服务bean-->
     <bean id="userService" class="com.luwei.dubbo_provider.service.impl.UserServiceImpl"/>
+    <bean id="mongoDbService" class="com.luwei.dubbo_provider.service.impl.MongoDbServiceImpl"/>
     <!--注册服务对象 timeout 设置访问服务时间-->
     <dubbo:service interface="com.luwei.service.UserService" ref="userService"/>
+    <dubbo:service interface="com.luwei.service.MongoDbService" ref="mongoDbService"/>
 </beans>

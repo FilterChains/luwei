@@ -26,6 +26,10 @@ spring:
     testOnReturn: false
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
+  # mongodb 配置
+  data:
+      mongodb:
+        uri: mongodb://mongoadmin:123456@localhost:27017/mongodemo
 
 #Mybatis配置
 mybatis:

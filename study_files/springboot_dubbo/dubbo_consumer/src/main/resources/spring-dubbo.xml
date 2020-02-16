@@ -21,4 +21,5 @@
     <!--check ->false 表示不检查服务注册端口,默认为true 如：开启检查，
     启动时检查依赖的服务是否可用，不可用时会抛出异常，阻止 Spring 初始化完成-->
     <dubbo:reference id="userService" check="false" interface="com.luwei.service.UserService"/>
+    <dubbo:reference id="mongoDbService" check="false" interface="com.luwei.service.MongoDbService"/>
 </beans>
