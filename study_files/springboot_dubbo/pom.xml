@@ -16,7 +16,7 @@
       <module>dubbo_provider</module>
   </modules>
 
-  <name>springbootdubbo</name>
+  <name>springboot_dubbo</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
