@@ -19,6 +19,8 @@ import java.math.BigDecimal;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.List;
+import java.util.concurrent.*;
+import java.util.function.Supplier;
 
 /**
  * @projectName： springbootdubbo
@@ -43,10 +45,24 @@ public class UserController {
 
     @PostMapping("/getAllUser") //redis 存储信息
     public List<User> getAllUsers(String userName, String userPassword) {
+        ExecutorService executorService = Executors.newCachedThreadPool();
+        CompletableFuture<List<User>> supplyAsync = CompletableFuture.supplyAsync(new Supplier<List<User>>() {
+            @Override
+            public List<User> get() {
+                return userService.getAllUser(userName, userPassword);
+            }
+        }, executorService);
+        List<User> list = null;
+        try {
+            list = supplyAsync.get();
+            RedisUtil redisUtil = new RedisUtil(redisTemplate);
+            redisUtil.setRedisList("list", list);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            executorService.shutdownNow();
+        }
         System.out.println("进来了！！！！！！！！！");
-        List<User> list = userService.getAllUser(userName, userPassword);
-        RedisUtil redisUtil = new RedisUtil(redisTemplate);
-        redisUtil.setRedisList("list", list);
+        executorService.shutdown();
         return list;
     }
 
@@ -93,8 +109,28 @@ public class UserController {
         return "成功";
     }
 
-    @RequestMapping("findUser")
+    @RequestMapping("/findUser")
     public List<User> findUser() {
+        System.out.println("请求进来了======");
+        try {
+            Thread.sleep(6000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.err.println("开始执行下一个任务");
+        ExecutorService executorService = Executors.newCachedThreadPool();
+        CompletableFuture.runAsync(()-> {
+            try {
+                System.out.println("开始执行插入任务====");
+                Thread.sleep(10000);
+                System.out.println("执行新增任务成功");
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        },executorService);
+        executorService.shutdown();
+        System.out.println("查看线程是否关闭"+executorService.isShutdown());
+        System.out.println("跳过异步");
         return mongoDbService.save(User.builder()
                 .id(999).username("小念").password("PWD142857")
                 .moneys(new BigDecimal("9999.99")).build());
