@@ -46,12 +46,6 @@ public class UserController {
         System.out.println("进来了！！！！！！！！！");
         List<User> list = userService.getAllUser(userName, userPassword);
         RedisUtil redisUtil = new RedisUtil(redisTemplate);
-        for (int i = 0; i < 100; i++) {
-            list.add(User.builder()
-                    .id(i).username("AZX" + i)
-                    .password("PWD" + i).moneys(new BigDecimal(i))
-                    .build());
-        }
         redisUtil.setRedisList("list", list);
         return list;
     }
