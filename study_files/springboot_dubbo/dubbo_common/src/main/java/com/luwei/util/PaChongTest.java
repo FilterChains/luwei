@@ -1,6 +1,7 @@
 package com.luwei.util;
 
 import com.google.common.collect.Lists;
+import com.luwei.encryption.CaesarEncryption;
 
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
@@ -19,6 +20,17 @@ import java.util.List;
  */
 public class PaChongTest {
     public static void main(String[] args) {
+        String proclaim = "JAVA,JAVAEE,IOS,ANDROID,Go414124124eeasvasvsavavav";
+        int secretKey = -12;
+        //加密
+        String caesarEncryption = CaesarEncryption.caesarEncryption(proclaim, secretKey, CaesarEncryption.coder.ENCODER);
+        System.out.println("加密:" + caesarEncryption);
+        //解密
+        String encryption = CaesarEncryption.caesarEncryption(caesarEncryption, secretKey, CaesarEncryption.coder.DECODER);
+        System.out.println("解密:" + encryption);
+        if (proclaim.equals(encryption)) {
+            System.err.println("加密解密成功");
+        }
 
         String[] s = {"JAVA","JAVAEE","IOS","ANDROID","Go"};
 
