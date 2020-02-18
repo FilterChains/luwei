@@ -36,7 +36,7 @@ public class ExcelUtil{
      * @Throws: throws ExcelException
      * @Date: 2019/10/20 12:32
      */
-    public List readSingleTitleExcel(MultipartFile  file, Object object) throws ExcelException {
+    public static List readSingleTitleExcel(MultipartFile  file, Object object) throws ExcelException {
         // 把spring文件上传的MultipartFile转换成CommonsMultipartFile类型
         CommonsMultipartFile cf = (CommonsMultipartFile)file;
         String fileName = file.getOriginalFilename();
@@ -84,7 +84,7 @@ public class ExcelUtil{
      * @Throws: throws ExcelException
      * @Date: 2019/10/20 12:35
      */
-    private List readTheCorrespondingVersionExcel(InputStream inputStream, boolean isExcel2003, Object object) throws ExcelException {
+    private static List readTheCorrespondingVersionExcel(InputStream inputStream, boolean isExcel2003, Object object) throws ExcelException {
         List dataLst = null;
         Workbook wb = null;
         try {
@@ -109,7 +109,7 @@ public class ExcelUtil{
      * @Throws: throws ExcelException
      * @Date: 2019/10/20 11:55
      */
-    private List readFromExcel(Workbook wb , Object object) throws ExcelException {
+    private static List readFromExcel(Workbook wb , Object object) throws ExcelException {
         List result = new ArrayList();
         // 获取该对象的class对象
         Class<?> objectClass = object.getClass();
@@ -175,7 +175,7 @@ public class ExcelUtil{
      * @Throws: ExcelException
      * @Date: 2019/10/20 14:14
      */
-    private void readExcelTitle(Class objectClass,Sheet sheet,Field[] fields) throws ExcelException {
+    private static void readExcelTitle(Class objectClass,Sheet sheet,Field[] fields) throws ExcelException {
         // 获取表格的总行数
         ExcelCode.totalRows = sheet.getLastRowNum() + ExcelCode.titleRows; // 需要算表头
         if (ExcelCode.totalRows < ExcelCode.titleRows) {
