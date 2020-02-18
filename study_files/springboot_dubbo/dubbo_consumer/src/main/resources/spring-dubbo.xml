@@ -13,13 +13,13 @@
 
     <dubbo:application name="dubbo-consumer"/>
     <!--注册 zookeeper dubbo注册服务中心 配置zookeeper 注册地址-->
-    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
+    <dubbo:registry address="zookeeper://127.0.0.1:2181" timeout="60000"/>
     <!--配合dubbo 注册中心 端口（port）注:与服务生产者注册端口一致-->
     <dubbo:protocol name="dubbo" port="20880"/>
     <!--扫描注解包路径,即扫描包下表面的所有控制类-->
     <dubbo:annotation package="com.luwei.dubbo_consumer"/>
     <!--check ->false 表示不检查服务注册端口,默认为true 如：开启检查，
-    启动时检查依赖的服务是否可用，不可用时会抛出异常，阻止 Spring 初始化完成-->
-    <dubbo:reference id="userService" check="false" interface="com.luwei.service.UserService"/>
-    <dubbo:reference id="mongoDbService" check="false" interface="com.luwei.service.MongoDbService"/>
+    启动时检查依赖的服务是否可用，不可用时会抛出异常，阻止 Spring 初始化完成 retries，失败重试次数，缺省是2（表示加上第一次调用，会调用3次）-->
+    <dubbo:reference id="userService" check="false" interface="com.luwei.service.UserService" retries="0" timeout="60000"/>
+    <dubbo:reference id="mongoDbService" check="false" interface="com.luwei.service.MongoDbService" retries="0"/>
 </beans>

@@ -9,6 +9,8 @@ import com.luwei.dubbo_provider.rabbitmqconfig.RabbitMqProvider;
 import com.luwei.entity.User;
 import com.luwei.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.ObjectUtils;
 
 import java.util.List;
 
@@ -35,6 +37,21 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User>
         return  baseMapper.selectList(lambda
                 .eq(User::getUsername, userName)
                 .eq(User::getPassword, userPassword));
+    }
+
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public Boolean updateUserMsgCheckVersion(User user) {
+        Boolean flag = false;
+        if(!ObjectUtils.isEmpty(user)){
+            User selectById = baseMapper.selectById(user);
+            if(!ObjectUtils.isEmpty(selectById)&& user.getVersion().equals(selectById.getVersion())){
+                user.setVersion(user.getVersion()+1);
+                flag = 0 < baseMapper.updateById(user);
+            }
+        }
+        return flag;
     }
 
     @Override

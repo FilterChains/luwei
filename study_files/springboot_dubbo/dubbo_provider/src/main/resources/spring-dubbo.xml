@@ -13,7 +13,7 @@
 
     <dubbo:application name="dubbo-provider"/>
     <!-- 注册中心的ip地址 -->
-    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
+    <dubbo:registry address="zookeeper://127.0.0.1:2181" timeout="60000"/>
     <!--注册dubbo 服务端口：生产者服务端口的设置，决定消费者zookeeper的服务端口，consumer 的port要与生产者一致 -->
     <dubbo:protocol name="dubbo" port="20880"/>
     <!-- 扫描注解包路径，多个包用逗号分隔，不填pacakge表示扫描当前ApplicationContext中所有的类 -->
@@ -22,6 +22,6 @@
     <bean id="userService" class="com.luwei.dubbo_provider.service.impl.UserServiceImpl"/>
     <bean id="mongoDbService" class="com.luwei.dubbo_provider.service.impl.MongoDbServiceImpl"/>
     <!--注册服务对象 timeout 设置访问服务时间-->
-    <dubbo:service interface="com.luwei.service.UserService" ref="userService"/>
+    <dubbo:service interface="com.luwei.service.UserService" ref="userService" timeout="60000"/>
     <dubbo:service interface="com.luwei.service.MongoDbService" ref="mongoDbService"/>
 </beans>

@@ -42,4 +42,9 @@ public class User implements Serializable {
      * 用户余额
      */
     private BigDecimal moneys;
+
+    /**
+     * 版本控制
+     */
+    private Integer version;
 }

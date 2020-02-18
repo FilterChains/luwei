@@ -19,4 +19,7 @@ public interface UserService extends IService<User> {
     List<User> getAllUser(String userName,String userPassword);
 
     void sendRabbitMqMessage(String useName);
+
+    //检查版本更新
+    Boolean updateUserMsgCheckVersion(User user);
 }
