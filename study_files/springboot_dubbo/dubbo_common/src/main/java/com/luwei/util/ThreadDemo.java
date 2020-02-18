@@ -3,9 +3,7 @@ package com.luwei.util;
 import com.google.common.collect.Lists;
 
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 
 /**
  * @projectName： springbootdubbo
@@ -21,6 +19,21 @@ public class ThreadDemo {
     private static final int PAGE_SIZE = 3000;
 
     public static void main(String[] args) {
+
+        ThreadPoolExecutor pool = new ThreadPoolExecutor(2, 3, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue<>(1));
+        // 任务1
+        pool.execute(() -> {
+            try {
+                Thread.sleep(3 * 1000);
+                System.out.println("--helloWorld_001--" + Thread.currentThread().getName());
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+        //任务2
+        pool.execute(() -> System.out.println("--helloWorld_002--" + Thread.currentThread().getName()));
+        pool.shutdown();
+
         //创建固定核心数的线程池
         ExecutorService threadPool = Executors.newFixedThreadPool(Math.max(Runtime.getRuntime().availableProcessors() + 1, 2));
         List<Integer> list = Lists.newArrayList();

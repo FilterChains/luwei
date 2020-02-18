@@ -1,9 +1,6 @@
 package com.luwei.util;
 
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import java.util.function.Supplier;
 
 /**
@@ -17,11 +14,13 @@ import java.util.function.Supplier;
  */
 public class ThreaPoolDemo {
     public static void main(String[] args) {
-        System.out.println(validateFuntion());
+        //System.out.println(validateFuntion());
         /*ExecutorService executorService = Executors.newFixedThreadPool(2);
         CompletableFuture.runAsync(()->System.out.println(validateFuntion()),executorService);
         CompletableFuture.runAsync(()->System.out.println(validataFun()),executorService);
         executorService.shutdown();*/
+
+        System.out.println("开启线程:"+createThread());
     }
 
     private static String validateFuntion(){
@@ -109,4 +108,33 @@ public class ThreaPoolDemo {
         }
         return "执行总时间:"+(System.currentTimeMillis()-start);
     }
+
+
+    private static String createThread(){
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(2,3,60L,TimeUnit.SECONDS,new LinkedBlockingQueue<>(1));
+        executor.execute(()->{
+                    try {
+                        Thread.sleep(10000);
+                        System.err.println("线程正在执行第一个"+Thread.currentThread().getName());
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                });
+        System.err.println("是不是异步");
+        ThreadFactory threadFactory = executor.getThreadFactory();
+        threadFactory.newThread(()->
+        {
+            try {
+                Thread.sleep(9000);
+                System.err.println("创建新线程第二个："+Thread.currentThread().getName());
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }).start();
+        executor.shutdown();
+        System.out.println("直接执行，是不是异步");
+        return "success";
+    }
+
 }
