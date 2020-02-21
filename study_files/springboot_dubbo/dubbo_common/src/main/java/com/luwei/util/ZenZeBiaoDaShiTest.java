@@ -1,6 +1,11 @@
 package com.luwei.util;
 
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.regex.Pattern;
+
+import static java.util.regex.Pattern.compile;
 
 /**
  * @projectName： springbootdubbo
@@ -19,5 +24,10 @@ public class ZenZeBiaoDaShiTest {
         System.out.println(!s.matches("([1-9])|([1-9]\\d{1,7})|([1-9]\\d{1,7}\\.\\d{1,2})|([0-9]\\.\\d{1,2})"));
 
         System.out.println("19922218826".matches("[1][0-9]{10}"));
+
+        String str = " qwe das d 89 ";
+        System.err.println(str.replaceAll("\\s*",""));
+
+        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
     }
 }
