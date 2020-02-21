@@ -82,21 +82,21 @@ public class UserController {
         /*//获取redis里集合List的长度
         long listLen = redisUtil.getRedisListSize("list");
         //获取redis集合List指定下标index的值value
-        User listValue = (User) redisUtil.getRedisListValue("list", 10);
+        UserExcel listValue = (UserExcel) redisUtil.getRedisListValue("list", 10);
         //向redis里添加list集合
-        boolean value = redisUtil.setRedisListValue("list", User.builder().id(1000)
+        boolean value = redisUtil.setRedisListValue("list", UserExcel.builder().id(1000)
                 .username("测试Redis最后数据").password("测试密码").moneys(new BigDecimal("10000.99"))
                 .build());
 
         boolean b = redisUtil.setRedisListUpdateIndexValue("list", 1,
-                User.builder()
+                UserExcel.builder()
                         .id(889).username("修改Redis里对应的User")
                         .password("修改的密码").moneys(new BigDecimal("989898.89"))
                         .build());
-        long indexValue = redisUtil.setRedisListRemoveIndexValue("list", 1, User.builder().id(1000)
+        long indexValue = redisUtil.setRedisListRemoveIndexValue("list", 1, UserExcel.builder().id(1000)
                 .username("测试Redis最后数据").password("测试密码").moneys(new BigDecimal("10000.99"))
                 .build());
-        boolean expire = redisUtil.setRedisListValueExpire("list", User.builder().id(1000)
+        boolean expire = redisUtil.setRedisListValueExpire("list", UserExcel.builder().id(1000)
                 .username("测试Redis最后数据").password("测试密码").moneys(new BigDecimal("10000.99"))
                 .build(), 10);*/
         List<User> list = (List<User>) redisUtil.getRedisList("list", 0, -1);
@@ -199,13 +199,16 @@ public class UserController {
 
 
     @PostMapping("/uploadFile")
-    public String uploadFiles(MultipartFile files){
+    public List<GroupTest> uploadFiles(MultipartFile files){
+        List<?> list = null;
         try {
-            List<User> list = ExcelUtil.readSingleTitleExcel(files, User.class);
-        } catch (ExcelException e) {
-            e.printStackTrace();
+            list = ExcelUtil.readSingleTitleExcel(files,GroupTest.class);
+            System.err.println(list);
+        } catch (Exception e) {
+            System.out.println(e.getCause());
+            System.err.println(e.getMessage());
         }
-        return "上传成功";
+        return (List<GroupTest>) list;
     }
 
     /**
