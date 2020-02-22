@@ -31,7 +31,8 @@ public class ExcelUtil {
 
     /**
      * @Title: readSingleTitleExcelCheckReadWay
-     * @Description: 读取信息并保存至相应的类
+     * @Description: 读取信息并保存至相应的类 ,根据对应信息读取表中信息功能占不完善
+     * @Description: ->无法读取表头(所有表头为字符串,字段不一定都是字符串原因) 推荐使用readSingleTitleExcel()方法
      * @Param: [file, objectClass,operation]  参数
      * @Param: file ->上传文件对象
      * @Param: objectClass ->获取实体类Class
