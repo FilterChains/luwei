@@ -68,7 +68,7 @@ class ExcelFunction {
             //验证文件是否合法,并判断文件的类型，是2003还是2007
             Future<Workbook> submit = executor.submit((new Callable<Workbook>() {
                 @Override
-                public Workbook call() throws ExcelException {
+                public Workbook call() throws ExecutionException {
                     return validateExcel(file.getOriginalFilename(), finalInputStream);
                 }
             }));
@@ -78,12 +78,15 @@ class ExcelFunction {
             //开始保存数据
             resultDate = readFromExcel(workbook, objectClass);
         } catch (IOException e) {
+            e.fillInStackTrace();
             LOGGER.info("获取上传文件输入流异常", e.getMessage());
         } catch (ExcelException ex) {
             LOGGER.info("上传文件验证失败", ex.getMessage());
             throw ex;
         } catch (InterruptedException | ExecutionException | TimeoutException e) {
-            LOGGER.info("获取对应文件操作超时,时间:3s",e.getMessage());
+            e.fillInStackTrace();
+            LOGGER.info("获取对应文件操作超时,时间:3s",e.getCause());
+            throw new ExcelException("上传文件格式与模板不匹配", ExcelType.ExcelError.EXCEL_VERSION);
         } finally {
             //关闭线程池
             executor.shutdownNow();
@@ -100,11 +103,11 @@ class ExcelFunction {
      * @Throws: ExcelException
      * @Date: 2020/2/19 21:37
      */
-    static Workbook validateExcel(String fileName, InputStream inputStream) throws ExcelException {
+    static Workbook validateExcel(String fileName, InputStream inputStream) throws ExecutionException {
         Workbook workbook = null;
         /*检查文件名是否为空或者是否是Excel格式的文件,并验证相应版本*/
         if (StringUtils.isEmpty(fileName)) {
-            throw new ExcelException("文件上传失败,请检查上传文件路径");
+            throw new ExecutionException(new Throwable("文件上传失败,请检查上传文件路径"));
         }
         try {
             if (fileName.matches(ExcelType.ExcelVersion.EXCEL_XLS.value)) {
@@ -114,6 +117,7 @@ class ExcelFunction {
             }
         } catch (IOException e) {
             LOGGER.info("获取文件对应版本异常", e.getMessage());
+            e.fillInStackTrace();
         } finally {
             try{
                 //关闭文件流
@@ -123,10 +127,11 @@ class ExcelFunction {
                 }
             } catch (IOException e) {
                 LOGGER.info("关闭上传文件输入流异常", e.getMessage());
+                e.fillInStackTrace();
             }
         }
         if (ObjectUtils.isEmpty(workbook)) {
-            throw new ExcelException("上传文件格式与模板不匹配", ExcelType.ExcelError.EXCEL_VERSION);
+            throw new ExecutionException(new Throwable(ExcelType.ExcelError.EXCEL_VERSION.getError()));
         }
         return workbook;
     }
@@ -321,8 +326,10 @@ class ExcelFunction {
             }
         } catch (InstantiationException | IllegalAccessException e) {
             LOGGER.info("实例化对象异常", e.getMessage());
+            e.fillInStackTrace();
         } catch (InvocationTargetException | NoSuchMethodException e) {
             LOGGER.info("保存数据异常,检查字段类型是否正确", e.getMessage());
+            e.fillInStackTrace();
         } finally {
             //清除集合数据
             ExcelCode.titleName.clear();

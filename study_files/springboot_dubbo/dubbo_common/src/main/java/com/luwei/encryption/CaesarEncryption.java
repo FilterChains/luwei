@@ -26,7 +26,7 @@ public class CaesarEncryption {
      * @Title: caesarEncryption
      * @Description: 凯撒加密
      * @Param: [proclaim, secretKey,operation]  参数: proclaim ->明文,secretKey 秘钥
-     * @param: operation ->true 加密,false->解密
+     * @param: coder ->加密,解密。开关
      * @Param: secretKey 大于0 向左加密,小于向右加密,等于0 无意义不加密
      * @Return: java.lang.String   返回类型
      * @Date: 2020/2/16 20:48

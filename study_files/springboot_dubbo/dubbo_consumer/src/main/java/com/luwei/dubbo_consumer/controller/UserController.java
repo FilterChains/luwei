@@ -205,8 +205,8 @@ public class UserController {
             list = ExcelUtil.readSingleTitleExcel(files,GroupTest.class);
             System.err.println(list);
         } catch (Exception e) {
-            System.out.println(e.getCause());
-            System.err.println(e.getMessage());
+            System.out.println("返回原因:"+e.getCause().getMessage());
+            System.err.println("技术问题:"+e.getMessage());
         }
         return (List<GroupTest>) list;
     }

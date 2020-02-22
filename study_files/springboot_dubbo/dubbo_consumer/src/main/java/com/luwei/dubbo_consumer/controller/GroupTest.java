@@ -4,6 +4,8 @@ import com.luwei.excelutils.ExcelTitleName;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * @projectName： GitHub
@@ -22,14 +24,10 @@ public class GroupTest implements Serializable {
     private String ramk;
     @ExcelTitleName("药店编码")
     private String taxCode;
-    @ExcelTitleName("药店名称")
+    @ExcelTitleName(value = "药店名称")
     private String drugstoreName;
-    @ExcelTitleName("金钱")
-    private String moneys;
     @ExcelTitleName("时间")
     private String times ;
-    @ExcelTitleName("判断")
-    private String yesOrNo ;
 
     private String errorMsg;
 
