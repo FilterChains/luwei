@@ -20,7 +20,7 @@ public class ThreaPoolDemo {
         CompletableFuture.runAsync(()->System.out.println(validataFun()),executorService);
         executorService.shutdown();*/
 
-        System.out.println("开启线程:"+createThread());
+        System.out.println("开启线程:"+threadPoolsize());
     }
 
     private static String validateFuntion(){
@@ -137,4 +137,52 @@ public class ThreaPoolDemo {
         return "success";
     }
 
+    private static String threadPoolsize(){
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 3,
+                2L, TimeUnit.SECONDS, new LinkedBlockingQueue<>(3));
+        //阻塞队列有界 ArrayList 无界LinkedList 无界 优先。。。
+        executor.execute(()->{
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("线程1"+Thread.currentThread().getName());
+        });
+        executor.execute(()->{
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("线程2"+Thread.currentThread().getName());
+        });
+        executor.execute(()->{
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("线程3"+Thread.currentThread().getName());
+        });
+        executor.execute(()->{
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("线程4"+Thread.currentThread().getName());
+        });
+        executor.execute(()->{
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("线程5"+Thread.currentThread().getName());
+        });
+        executor.shutdown();
+        return "成功";
+
+    }
 }

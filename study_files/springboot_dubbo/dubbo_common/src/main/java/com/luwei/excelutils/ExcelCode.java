@@ -1,7 +1,9 @@
 package com.luwei.excelutils;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -35,6 +37,16 @@ class ExcelCode {
     static final String METHOD_SET = "set";
 
     /**
+     * 序号排除
+     */
+    static final String EXCEL_SERIAL_NUMBER = "序号";
+
+    /**
+     * 排除表头集合
+     */
+    static List<String> excludeTitle = new ArrayList<>();
+
+    /**
      * 用于存储方法名 ->表头列数即为需要的set方法个数
      */
     static Map<String, String> methodNames = new HashMap<>(16);
@@ -57,4 +69,9 @@ class ExcelCode {
      * excel read the way(excel读取方式)
      */
     static Boolean EXCEL_READ_WAY = false;
+
+    /**
+     * excel check tableTitle(excel检查表头)
+     */
+    static Boolean Excel_check_title = false;
 }

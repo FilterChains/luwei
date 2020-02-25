@@ -22,4 +22,5 @@
     启动时检查依赖的服务是否可用，不可用时会抛出异常，阻止 Spring 初始化完成 retries，失败重试次数，缺省是2（表示加上第一次调用，会调用3次）-->
     <dubbo:reference id="userService" check="false" interface="com.luwei.service.UserService" retries="0" timeout="60000"/>
     <dubbo:reference id="mongoDbService" check="false" interface="com.luwei.service.MongoDbService" retries="0"/>
+    <dubbo:reference id="rcoketMqService" check="false" interface="com.luwei.service.RcoketMqService" retries="0"/>
 </beans>

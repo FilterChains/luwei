@@ -18,7 +18,7 @@ import java.util.Date;
  */
 @Data
 public class GroupTest implements Serializable {
-    @ExcelTitleName("分组名称")
+   /* @ExcelTitleName("分组名称")
     private String groupName;
     @ExcelTitleName("描述")
     private String ramk;
@@ -26,8 +26,12 @@ public class GroupTest implements Serializable {
     private String taxCode;
     @ExcelTitleName(value = "药店名称")
     private String drugstoreName;
-    @ExcelTitleName("时间")
-    private String times ;
+    @ExcelTitleName("金钱")
+    private String moneys;*/
+   /* @ExcelTitleName("时间")
+    private String times ;*/
+    /*@ExcelTitleName("判断")
+    private String qwe;*/
 
     private String errorMsg;
 

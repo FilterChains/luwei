@@ -2,15 +2,18 @@ package com.luwei.dubbo_consumer.controller;
 
 import com.alibaba.dubbo.common.utils.StringUtils;
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.alibaba.fastjson.JSONArray;
 import com.google.common.collect.Lists;
 import com.luwei.entity.User;
-import com.luwei.excelutils.ExcelException;
 import com.luwei.excelutils.ExcelUtil;
 import com.luwei.redisconfig.RedisUtil;
 import com.luwei.service.MongoDbService;
+import com.luwei.service.RcoketMqService;
 import com.luwei.service.UserService;
+import org.apache.rocketmq.client.producer.SendResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -43,6 +46,9 @@ public class UserController {
     @Reference
     private MongoDbService mongoDbService;
 
+    @Reference
+    private RcoketMqService rcoketMqService;
+
     @Autowired
     private RedisTemplate redisTemplate;
 
@@ -60,6 +66,9 @@ public class UserController {
             list = supplyAsync.get();
             RedisUtil redisUtil = new RedisUtil(redisTemplate);
             redisUtil.setRedisList("list", list);
+
+            SendResult sendResult = rcoketMqService.openAccountMsg(JSONArray.toJSONString(list));
+            System.out.println("消息队列发送消息:"+sendResult);
         } catch (Exception e) {
             System.out.println(e.getMessage());
             executorService.shutdownNow();
@@ -202,10 +211,13 @@ public class UserController {
     public List<GroupTest> uploadFiles(MultipartFile files){
         List<?> list = null;
         try {
-            list = ExcelUtil.readSingleTitleExcel(files,GroupTest.class);
+            list = ExcelUtil.readSingleTitleExcelCheckTableTitle(files,GroupTest.class);
             System.err.println(list);
         } catch (Exception e) {
-            System.out.println("返回原因:"+e.getCause().getMessage());
+            Throwable cause = e.getCause();
+            if(!ObjectUtils.isEmpty(cause)){
+                System.out.println("返回原因:"+cause.getMessage());
+            }
             System.err.println("技术问题:"+e.getMessage());
         }
         return (List<GroupTest>) list;

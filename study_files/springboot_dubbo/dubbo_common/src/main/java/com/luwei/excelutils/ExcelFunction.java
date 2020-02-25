@@ -42,16 +42,17 @@ class ExcelFunction {
     /**
      * @Title: readExcel
      * @Description: 读取信息并保存至相应的类
-     * @Param: [file, objectClass,operation]  参数
+     * @Param: [file, objectClass,operation,checkTitle]  参数
      * @Param: file ->上传文件对象
      * @Param: objectClass ->获取实体类Class
      * @Param: operation ->获取方式操作,operation ->true:将按照实体类字段对应数据类型获取表中的值
      * @Param: operation ->false:全部默认为String方式获取,注:字段对应数据类型必须为String。(默认：false)
+     * @Param: checkTitle:是否检查表头,checkTitle ->true 检查,checkTitle ->false 不检查
      * @Return: java.util.List<?>   返回类型
      * @Throws: ExcelException
      * @Date: 2020/2/19 20:39
      */
-    static List<?> readExcel(MultipartFile file, Class<?> objectClass, boolean operation) throws ExcelException {
+    static List<?> readExcel(MultipartFile file, Class<?> objectClass, boolean operation, boolean checkTitle) throws ExcelException {
         List resultDate = null;
         //创建线程池
         ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 3,
@@ -59,9 +60,11 @@ class ExcelFunction {
         try {
             //读取数据方式
             ExcelCode.EXCEL_READ_WAY = operation;
+            //是否检查表头
+            ExcelCode.Excel_check_title = checkTitle;
             //验证实体类字段
-            executor.execute(() ->{
-                validateFields(objectClass.getDeclaredFields());
+            executor.execute(() -> {
+                 validateFields(objectClass.getDeclaredFields());
             });
             //获取文件上传流对象
             InputStream finalInputStream = file.getInputStream();
@@ -85,12 +88,18 @@ class ExcelFunction {
             throw ex;
         } catch (InterruptedException | ExecutionException | TimeoutException e) {
             e.fillInStackTrace();
-            LOGGER.info("获取对应文件操作超时,时间:3s",e.getCause());
+            LOGGER.info("获取对应文件操作超时,时间:3s", e.getCause());
             throw new ExcelException("上传文件格式与模板不匹配", ExcelType.ExcelError.EXCEL_VERSION);
         } finally {
             //关闭线程池
             executor.shutdownNow();
             //System.out.println("线程池是否关闭"+executor.isShutdown());
+            //清除集合数据
+            ExcelCode.titleName.clear();
+            ExcelCode.methodNames.clear();
+            ExcelCode.fieldTypes.clear();
+            ExcelCode.validateName.clear();
+            ExcelCode.excludeTitle.clear();
         }
         return resultDate;
     }
@@ -119,7 +128,7 @@ class ExcelFunction {
             LOGGER.info("获取文件对应版本异常", e.getMessage());
             e.fillInStackTrace();
         } finally {
-            try{
+            try {
                 //关闭文件流
                 if (inputStream != null) {
                     inputStream.close();
@@ -153,7 +162,8 @@ class ExcelFunction {
         return saveMessage(objectClass, sheet);
     }
 
-    /**@Title: validateExcelContent
+    /**
+     * @Title: validateExcelContent
      * @Description: 验证表中数据
      * @Param: [workbook]   参数
      * @Return: org.apache.poi.ss.usermodel.Sheet   返回类型
@@ -183,7 +193,6 @@ class ExcelFunction {
     }
 
 
-
     /**
      * @Title: validateFields
      * @Description: 验证获取实体类字段
@@ -192,9 +201,9 @@ class ExcelFunction {
      * @Throws: ExcelException
      * @Date: 2020/2/19 19:52
      */
-    static void validateFields(Field[] fields) throws ExcelException {
+    static void validateFields(Field[] fields) throws RuntimeException {
         if (null == fields || 0 == fields.length) {
-            throw new ExcelException("请为实体类创建字段");
+            throw new RuntimeException("请为实体类创建字段");
         }
         //获取字段
         validateExcelTitle(fields);
@@ -215,9 +224,13 @@ class ExcelFunction {
         // 获取表头的列数
         ExcelCode.totalCells = titleRow.getLastCellNum();
         // 遍历
-        for (int columnIndex = 0; columnIndex < ExcelCode.totalCells; columnIndex++) { // 遍历表头列
+        for (int columnIndex = 0; columnIndex < ExcelCode.totalCells; columnIndex++) {
             //获取对应列的名称
             String data = titleRow.getCell(columnIndex).toString();
+            //指定排除列表表头字段
+            if (ExcelCode.EXCEL_SERIAL_NUMBER.equals(data)) {
+                ExcelCode.excludeTitle.add(data);
+            }
             //排除表名
             Field field = validateExcelTitle.get(data);
             if (ObjectUtils.isEmpty(field)) {
@@ -245,19 +258,28 @@ class ExcelFunction {
                 }
             }
         }
-        if (excelTitle.size() != ExcelCode.methodNames.size()) {
-            throw new ExcelException("表头已被篡改,请仔细检查后重新上传", ExcelType.ExcelError.TITLE_THE_MANIPULATION);
+        //是否检查表头
+        if (ExcelCode.Excel_check_title) {
+            int size = ExcelCode.totalCells - ExcelCode.excludeTitle.size();
+            int methodSize = ExcelCode.methodNames.size();
+            if(size != excelTitle.size()){
+                throw new ExcelException("实体类字段缺省,与上传文件表头不匹配",ExcelType.ExcelError.TITLE_THE_MANIPULATION);
+            }
+            if (excelTitle.size() != methodSize) {
+                throw new ExcelException("表头已被篡改,请仔细检查后重新上传", ExcelType.ExcelError.TITLE_THE_MANIPULATION);
+            }
         }
     }
 
-    /**@Title: validateExcelTitle
+    /**
+     * @Title: validateExcelTitle
      * @Description: 获取实体类字段信息
      * @Param: [fields]   参数
      * @Return: void   返回类型
      * @Throws: ExcelException
      * @Date: 2020/2/21 17:52
      */
-    static void validateExcelTitle(Field... fields) throws ExcelException {
+    static void validateExcelTitle(Field... fields) throws RuntimeException {
         // 获得该类的所有属性
         for (Field field : fields) {
             // 获得字段注解
@@ -271,7 +293,7 @@ class ExcelFunction {
             }
         }
         if (MapUtils.isEmpty(ExcelCode.titleName) || MapUtils.isEmpty(ExcelCode.validateName)) {
-            throw new ExcelException("获取实体类信息异常,请为字段添加注解");
+            throw new RuntimeException("获取实体类信息异常,请为字段添加注解");
         }
     }
 
@@ -330,12 +352,6 @@ class ExcelFunction {
         } catch (InvocationTargetException | NoSuchMethodException e) {
             LOGGER.info("保存数据异常,检查字段类型是否正确", e.getMessage());
             e.fillInStackTrace();
-        } finally {
-            //清除集合数据
-            ExcelCode.titleName.clear();
-            ExcelCode.methodNames.clear();
-            ExcelCode.fieldTypes.clear();
-            ExcelCode.validateName.clear();
         }
         return result;
     }
