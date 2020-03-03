@@ -157,6 +157,7 @@ public class ThreaPoolDemo {
             }
             System.out.println("线程2"+Thread.currentThread().getName());
         });
+        threadTransfer(executor);
         executor.execute(()->{
             try {
                 Thread.sleep(3000);
@@ -185,4 +186,11 @@ public class ThreaPoolDemo {
         return "成功";
 
     }
+
+    private static void threadTransfer(ThreadPoolExecutor executor){
+            executor.execute(()->{
+                System.err.println("线程传递进啦了");
+            });
+            executor.shutdownNow();
+    };
 }
