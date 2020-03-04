@@ -22,7 +22,7 @@ class ExcelCode {
     static int totalRows = 0;
 
     /**
-     * 总列数 -> 最大支持127列
+     * 总列数
      */
     static int totalCells = 0;
 

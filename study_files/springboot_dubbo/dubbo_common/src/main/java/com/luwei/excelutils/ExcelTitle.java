@@ -1,7 +1,5 @@
 package com.luwei.excelutils;
 
-import lombok.Data;
-
 import java.io.Serializable;
 
 /**
@@ -13,15 +11,30 @@ import java.io.Serializable;
  * @alert: This document is private to luwei
  * @version: 1.8.00_66
  */
-@Data
 class ExcelTitle implements Serializable {
     /**
      * excel title name
      */
-     String titleName;
+    private String titleName;
 
     /**
      * excel title index
      */
-     int titleIndex;
+    private int titleIndex;
+
+    public String getTitleName() {
+        return titleName;
+    }
+
+    public void setTitleName(String titleName) {
+        this.titleName = titleName;
+    }
+
+    public int getTitleIndex() {
+        return titleIndex;
+    }
+
+    public void setTitleIndex(int titleIndex) {
+        this.titleIndex = titleIndex;
+    }
 }

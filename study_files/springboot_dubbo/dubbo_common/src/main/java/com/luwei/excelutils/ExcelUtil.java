@@ -27,8 +27,8 @@ public class ExcelUtil {
      * @Throws: ExcelException 注：getMessage()为所有操作异常信息,e.getCause()为验证异常信息
      * @Date: 2020/2/19 20:39
      */
-    public static List<?> readSingleTitleExcel(MultipartFile file, Class<?> objectClass) throws ExcelException {
-        return ExcelFunction.readExcel(file, objectClass, false,false);
+    public static<T> List<T>  readSingleTitleExcel(MultipartFile file, Class<T> objectClass) throws ExcelException {
+        return ExcelFunction.readExcel(file, objectClass, false, false);
     }
 
     /**
@@ -43,8 +43,8 @@ public class ExcelUtil {
      * @Throws: ExcelException 注：getMessage()为所有操作异常信息,e.getCause()为验证异常信息
      * @Date: 2020/2/19 20:39
      */
-    public static List<?> readSingleTitleExcelCheckReadWay(MultipartFile file, Class<?> objectClass) throws ExcelException {
-        return ExcelFunction.readExcel(file, objectClass, true,false);
+    public static<T> List<T>  readSingleTitleExcelCheckReadWay(MultipartFile file, Class<T> objectClass) throws ExcelException {
+        return ExcelFunction.readExcel(file, objectClass, true, false);
     }
 
     /**
@@ -57,8 +57,8 @@ public class ExcelUtil {
      * @Throws: ExcelException 注：getMessage()为所有操作异常信息,e.getCause()为验证异常信息
      * @Date: 2020/2/19 20:42
      */
-    public static List<?> readSingleTitleExcelCheckTableTitle(MultipartFile file, Class<?> objectClass) throws ExcelException {
-        return ExcelFunction.readExcel(file, objectClass, false,true);
+    public static <T> List<T> readSingleTitleExcelCheckTableTitle(MultipartFile file, Class<T> objectClass) throws ExcelException {
+        return ExcelFunction.readExcel(file, objectClass, false, true);
     }
 
 

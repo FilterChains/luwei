@@ -52,8 +52,8 @@ class ExcelFunction {
      * @Throws: ExcelException
      * @Date: 2020/2/19 20:39
      */
-    static List<?> readExcel(MultipartFile file, Class<?> objectClass, boolean operation, boolean checkTitle) throws ExcelException {
-        List resultDate = null;
+    static <T> List<T> readExcel(MultipartFile file, Class<T> objectClass, boolean operation, boolean checkTitle) throws ExcelException {
+        List<T> resultDate = null;
         //创建线程池
         ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 3,
                 10L, TimeUnit.SECONDS, new LinkedBlockingQueue<>(1));
@@ -64,7 +64,7 @@ class ExcelFunction {
             ExcelCode.Excel_check_title = checkTitle;
             //验证实体类字段
             executor.execute(() -> {
-                 validateFields(objectClass.getDeclaredFields());
+                validateFields(objectClass.getDeclaredFields());
             });
             //获取文件上传流对象
             InputStream finalInputStream = file.getInputStream();
@@ -153,7 +153,7 @@ class ExcelFunction {
      * @Throws: ExcelException
      * @Date: 2020/2/19 21:39
      */
-    static List<?> readFromExcel(Workbook workbook, Class<?> objectClass) throws ExcelException {
+    static <T> List<T> readFromExcel(Workbook workbook, Class<T> objectClass) throws ExcelException {
         //验证表中数据
         Sheet sheet = validateExcelContent(workbook);
         //读取表头信息,并验证表头信息,确定需要用的方法名---set方法
@@ -201,7 +201,7 @@ class ExcelFunction {
      * @Throws: ExcelException
      * @Date: 2020/2/19 19:52
      */
-    static void validateFields(Field[] fields) throws RuntimeException {
+    static void validateFields(Field... fields) throws RuntimeException {
         if (null == fields || 0 == fields.length) {
             throw new RuntimeException("请为实体类创建字段");
         }
@@ -226,7 +226,7 @@ class ExcelFunction {
         // 遍历
         for (int columnIndex = 0; columnIndex < ExcelCode.totalCells; columnIndex++) {
             //获取对应列的名称
-            String data = titleRow.getCell(columnIndex).toString();
+            String data = StringReplace(titleRow.getCell(columnIndex).toString());
             //指定排除列表表头字段
             if (ExcelCode.EXCEL_SERIAL_NUMBER.equals(data)) {
                 ExcelCode.excludeTitle.add(data);
@@ -238,14 +238,14 @@ class ExcelFunction {
             }
             //获取对应字段
             ExcelTitle title = excelTitle.get(field.getName());
-            if (null != title) {
+            if (!ObjectUtils.isEmpty(title)) {
                 //Judge Excel Title Name
                 String capitalizeTheFirstLetter = null;
-                if (!ObjectUtils.isEmpty(title) && title.getTitleIndex() != -1 && title.getTitleIndex() == columnIndex) {
+                if (title.getTitleIndex() != -1 && title.getTitleIndex() == columnIndex) {
                     capitalizeTheFirstLetter = field.getName().substring(0, 1).toUpperCase()
                             + field.getName().substring(1); // 使其首字母大写
 
-                } else if (!ObjectUtils.isEmpty(title) && title.getTitleIndex() == -1) {
+                } else if (title.getTitleIndex() == -1) {
                     capitalizeTheFirstLetter = field.getName().substring(0, 1).toUpperCase()
                             + field.getName().substring(1); // 使其首字母大写
                 }
@@ -262,8 +262,8 @@ class ExcelFunction {
         if (ExcelCode.Excel_check_title) {
             int size = ExcelCode.totalCells - ExcelCode.excludeTitle.size();
             int methodSize = ExcelCode.methodNames.size();
-            if(size != excelTitle.size()){
-                throw new ExcelException("实体类字段缺省,与上传文件表头不匹配",ExcelType.ExcelError.TITLE_THE_MANIPULATION);
+            if (size != excelTitle.size()) {
+                throw new ExcelException("实体类字段缺省,与上传文件表头不匹配", ExcelType.ExcelError.TITLE_THE_MANIPULATION);
             }
             if (excelTitle.size() != methodSize) {
                 throw new ExcelException("表头已被篡改,请仔细检查后重新上传", ExcelType.ExcelError.TITLE_THE_MANIPULATION);
@@ -289,7 +289,7 @@ class ExcelFunction {
                 excelTitle.setTitleName(excelTitleName.value());
                 excelTitle.setTitleIndex(excelTitleName.index());
                 ExcelCode.titleName.put(field.getName(), excelTitle);
-                ExcelCode.validateName.put(excelTitleName.value(), field);
+                ExcelCode.validateName.put(StringReplace(excelTitleName.value()), field);
             }
         }
         if (MapUtils.isEmpty(ExcelCode.titleName) || MapUtils.isEmpty(ExcelCode.validateName)) {
@@ -304,8 +304,8 @@ class ExcelFunction {
      * @Return: java.util.List<?>   返回类型
      * @Date: 2020/2/19 20:32
      */
-    static List<?> saveMessage(Class<?> objectClass, Sheet... sheets) {
-        List<Object> result = null;
+    static <T> List<T> saveMessage(Class<T> objectClass, Sheet... sheets) {
+        List<T> result = null;
         Sheet sheet = sheets[0]; //获取第一个sheet文件
         Row titleRow = sheet.getRow(0); //获取表头
         Map<String, Field> validateExcelTitle = ExcelCode.validateName;
@@ -317,10 +317,10 @@ class ExcelFunction {
                 Row row = sheet.getRow(rowIndex);
                 if (row != null) {
                     // 实例化该泛型类的对象
-                    Object obj = objectClass.newInstance();
+                    T obj = objectClass.newInstance();
                     // 获得本行中各单元格中的数据,从第一列开始读取
                     for (int columnIndex = 0; columnIndex < ExcelCode.totalCells; columnIndex++) {
-                        String tableName = titleRow.getCell(columnIndex).toString();
+                        String tableName = StringReplace(titleRow.getCell(columnIndex).toString());
                         Field field = validateExcelTitle.get(tableName);
                         //验证保存信息,验证表中的字段是否已在实体类中创建
                         if (ObjectUtils.isEmpty(field)) {
@@ -454,5 +454,22 @@ class ExcelFunction {
             cellValue = Double.valueOf(number);
         }
         return cellValue;
+    }
+
+    /**
+     * @Title: StringReplace
+     * @Description: 字符串替换英文
+     * @Param: [data]   参数
+     * @Return: String ->结果  返回类型
+     * @Date: 2020/2/19 20:57
+     */
+    static String StringReplace(String data) {
+        String result = "";
+        if (!StringUtils.isEmpty(data)) {
+            result = data.replaceAll("\\s+", "")
+                    .replace("（", "(")
+                    .replace("）", ")");
+        }
+        return result;
     }
 }
