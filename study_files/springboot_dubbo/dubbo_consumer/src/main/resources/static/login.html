@@ -55,14 +55,16 @@
             $.ajax({
                 url:"/getAllUser",
                 type:"post",
-                async:false, //开启异步 请求ajax
+                async:true, //开启异步 请求ajax
                 dataType: "json",
                 data:{userName:userName,userPassword:userPassword},
                 success:function(res){
                     console.log(res);
-                    layer.msg("登陆成功")
+                    layer.msg("登陆成功");
+                    console.log("ajax中");
                 }
-            })
+            });
+            console.log("ajax执行后");
         })
     });
 </script>

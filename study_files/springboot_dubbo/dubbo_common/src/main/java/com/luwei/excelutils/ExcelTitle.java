@@ -1,19 +1,16 @@
 package com.luwei.excelutils;
 
-import lombok.Data;
-
 import java.io.Serializable;
 
 /**
- * @projectName： EasyExcelUtil
- * @packageName: com.excel.util
+ * @projectName： GitHub
+ * @packageName: com.luwei.excelutils
  * @auther: luwei
  * @description: validate excel title
- * @date: 2019/10/20 16:41
+ * @date: 2020/2/19 19:38
  * @alert: This document is private to luwei
  * @version: 1.8.00_66
  */
-@Data
 class ExcelTitle implements Serializable {
     /**
      * excel title name
@@ -24,4 +21,20 @@ class ExcelTitle implements Serializable {
      * excel title index
      */
     private int titleIndex;
+
+    public String getTitleName() {
+        return titleName;
+    }
+
+    public void setTitleName(String titleName) {
+        this.titleName = titleName;
+    }
+
+    public int getTitleIndex() {
+        return titleIndex;
+    }
+
+    public void setTitleIndex(int titleIndex) {
+        this.titleIndex = titleIndex;
+    }
 }

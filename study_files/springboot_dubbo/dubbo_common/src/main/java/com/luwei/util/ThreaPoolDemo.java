@@ -19,8 +19,9 @@ public class ThreaPoolDemo {
         CompletableFuture.runAsync(()->System.out.println(validateFuntion()),executorService);
         CompletableFuture.runAsync(()->System.out.println(validataFun()),executorService);
         executorService.shutdown();*/
+        //System.out.println("开启线程:"+threadPoolsize());
+        SycThread();
 
-        System.out.println("开启线程:"+createThread());
     }
 
     private static String validateFuntion(){
@@ -137,4 +138,96 @@ public class ThreaPoolDemo {
         return "success";
     }
 
+    private static String threadPoolsize(){
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 3,
+                2L, TimeUnit.SECONDS, new LinkedBlockingQueue<>(3));
+        //阻塞队列有界 ArrayList 无界LinkedList 无界 优先。。。
+        executor.execute(()->{
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("线程1"+Thread.currentThread().getName());
+        });
+        executor.execute(()->{
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("线程2"+Thread.currentThread().getName());
+        });
+        threadTransfer(executor);
+        executor.execute(()->{
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("线程3"+Thread.currentThread().getName());
+        });
+        executor.execute(()->{
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("线程4"+Thread.currentThread().getName());
+        });
+        executor.execute(()->{
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("线程5"+Thread.currentThread().getName());
+        });
+        executor.shutdown();
+        return "成功";
+
+    }
+
+
+    private static void SycThread(){
+
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(5, 8, 1L, TimeUnit.SECONDS,
+                new LinkedBlockingQueue<>(2), Executors.defaultThreadFactory(), new ThreadPoolExecutor.DiscardPolicy());
+
+        CountDownLatch startCountDownLatch = new CountDownLatch(1);
+        CountDownLatch endCountDownLatch = new CountDownLatch(10);
+
+        for (int i = 1; i <= 10; i++) {
+            executor.execute(()->{
+                try {
+                    System.out.println("等待发出并发信号:>>>2");
+                    //startCountDownLatch.await();
+                    Thread.sleep(2000);
+                    System.out.println(Thread.currentThread().getName()+"开始执行程序:>>>3");
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } finally {
+                    endCountDownLatch.countDown();
+                }
+            });
+        }
+
+        try {
+            System.out.println("开始向并发程序发出执行信号:>>>1");
+            //startCountDownLatch.countDown();
+            endCountDownLatch.await();
+            System.out.println("并发开始执行:>>>4");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        executor.shutdown();
+    }
+
+    private static void threadTransfer(ThreadPoolExecutor executor){
+            executor.execute(()->{
+                System.err.println("线程传递进啦了");
+            });
+            executor.shutdownNow();
+    };
 }
