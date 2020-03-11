@@ -70,7 +70,7 @@ public class ThreadIntroduce {
     public static void main(String[] args) {
 
         ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 3, 1L,
-                TimeUnit.SECONDS, new LinkedBlockingQueue<>(10),
+                TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>(10),
                 Executors.defaultThreadFactory(),new ThreadPoolExecutor.AbortPolicy());
 
         /**

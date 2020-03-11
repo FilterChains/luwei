@@ -1,11 +1,17 @@
 package com.luwei.util;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.apache.http.annotation.NotThreadSafe;
+
 import java.io.Serializable;
 @Data
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @NotThreadSafe
 public class ThreadTest implements Serializable {
 
