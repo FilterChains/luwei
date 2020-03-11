@@ -11,7 +11,13 @@ package com.luwei.util;
  */
 public class StringOperation {
     public static void main(String[] args) {
-        System.out.println("代码提交");
+        String str1 = "10*5克";
+        String str2 = "10*5袋";
+        String str3 = "10*5克";
+
+
+
+
     }
 }
 
