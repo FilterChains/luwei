@@ -38,6 +38,7 @@ public class DateUtils {
         ZonedDateTime zonedDateTime = ZonedDateTime.now();
         System.out.println("新API:"+zonedDateTime);
 
+
         // 获取所有时区
         // Set<String> zoneIds = ZoneId.getAvailableZoneIds();
         // System.out.println("新API:"+zoneIds);
