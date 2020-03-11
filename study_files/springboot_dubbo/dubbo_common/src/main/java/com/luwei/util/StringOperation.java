@@ -10,4 +10,8 @@ package com.luwei.util;
  * @version: 1.8.00_66
  */
 public class StringOperation {
+    public static void main(String[] args) {
+
+    }
 }
+
