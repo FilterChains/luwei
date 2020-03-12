@@ -20,8 +20,8 @@ public class ThreaPoolDemo {
         CompletableFuture.runAsync(()->System.out.println(validataFun()),executorService);
         executorService.shutdown();*/
         //System.out.println("开启线程:"+threadPoolsize());
-        SycThread();
-
+        //SycThread();
+        sysEruptThread();
     }
 
     private static String validateFuntion(){
@@ -222,6 +222,66 @@ public class ThreaPoolDemo {
         }
 
         executor.shutdown();
+    }
+
+
+    private static void sysEruptThread(){
+        // 模拟同步请求
+        Semaphore semaphore = new Semaphore(1);
+        CyclicBarrier cyclicBarrier = new CyclicBarrier(100,()->{
+            System.out.println("并发执行完毕");
+        });
+        for (int i = 0; i < 100; i++) {
+            int finalI = i;
+            new Thread(()->{
+                try {
+                    Thread.sleep(3000);
+                    cyclicBarrier.await(); //等待屏障
+                    semaphore.acquire();
+                    System.err.println(Thread.currentThread().getName()+"正在执行"+ finalI);
+                    Thread.sleep(2000);
+                    semaphore.release();
+                    System.out.println(Thread.currentThread().getName()+"执行完毕"+ finalI);
+                } catch (InterruptedException | BrokenBarrierException e) {
+                    e.printStackTrace();
+                }
+            },"线程"+i+"正在执行").start();
+        }
+    }
+
+    private static void sycSemaphoreThread(Thread thread){
+        Semaphore semaphore = new Semaphore(1);
+        try {
+            semaphore.acquire(); //获取信号量
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.err.println("=====>>>"+thread.currentThread().getName());
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(8, 10, 1L,
+                TimeUnit.SECONDS, new LinkedBlockingQueue<>(2), Executors.defaultThreadFactory(),
+                new ThreadPoolExecutor.AbortPolicy());
+        for (int i = 0; i < 10; i++) {
+            executor.execute(()->{
+                try {
+                    //System.out.println("执行任务");
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            });
+        }
+
+        executor.execute(()->{
+            try {
+                Thread.sleep(3000);
+                System.out.println("任务执行完");
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+        executor.shutdown();
+
+        semaphore.release(); //释放信号量
     }
 
     private static void threadTransfer(ThreadPoolExecutor executor){
