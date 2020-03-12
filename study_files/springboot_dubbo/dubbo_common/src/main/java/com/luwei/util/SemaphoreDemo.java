@@ -7,6 +7,8 @@ import java.util.concurrent.Semaphore;
 
 public class SemaphoreDemo {
 
+    private static String lin = "https://www.cnblogs.com/ysocean/p/10541151.html"+"分布式任务调度平台XXL-JOB搭建教程";
+
     // 排队总人数（请求总数）
     public static int clientTotal = 10;
 
