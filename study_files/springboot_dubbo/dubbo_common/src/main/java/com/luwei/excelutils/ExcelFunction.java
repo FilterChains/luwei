@@ -54,10 +54,14 @@ class ExcelFunction {
      */
     static <T> List<T> readExcel(MultipartFile file, Class<T> objectClass, boolean operation, boolean checkTitle) throws ExcelException {
         List<T> resultDate = null;
+        //同步请求
+        Semaphore semaphore = new Semaphore(1);
         //创建线程池
         ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 3,
                 10L, TimeUnit.SECONDS, new LinkedBlockingQueue<>(1));
         try {
+            // 获取信号量
+            semaphore.acquire();
             //读取数据方式
             ExcelCode.EXCEL_READ_WAY = operation;
             //是否检查表头
@@ -94,6 +98,8 @@ class ExcelFunction {
             //关闭线程池
             executor.shutdownNow();
             //System.out.println("线程池是否关闭"+executor.isShutdown());
+            //释放信号量
+            semaphore.release();
             //清除集合数据
             ExcelCode.titleName.clear();
             ExcelCode.methodNames.clear();
