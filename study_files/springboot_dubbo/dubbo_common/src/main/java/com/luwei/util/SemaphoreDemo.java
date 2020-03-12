@@ -11,7 +11,7 @@ public class SemaphoreDemo {
     public static int clientTotal = 10;
 
     // 可同时受理业务的窗口数量（同时并发执行的线程数）
-    public static int threadTotal = 3;
+    public static int threadTotal = 10;
 
 
     public static void main(String[] args) throws Exception {
@@ -22,9 +22,9 @@ public class SemaphoreDemo {
             final int count = i;
             executorService.execute(() -> {
                 try {
-                    semaphore.acquire();
+                    semaphore.acquire(1);
                     resolve(count);
-                    semaphore.release();
+                    semaphore.release(1);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
