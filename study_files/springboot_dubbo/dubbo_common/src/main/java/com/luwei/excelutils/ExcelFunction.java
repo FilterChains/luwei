@@ -35,7 +35,7 @@ import java.util.concurrent.*;
  * @alert: This document is private to luwei
  * @version: 1.8.00_66
  */
-class ExcelFunction {
+final class ExcelFunction {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ExcelFunction.class);
 
@@ -98,14 +98,13 @@ class ExcelFunction {
             //关闭线程池
             executor.shutdownNow();
             //System.out.println("线程池是否关闭"+executor.isShutdown());
-            //释放信号量
-            semaphore.release();
             //清除集合数据
             ExcelCode.titleName.clear();
             ExcelCode.methodNames.clear();
             ExcelCode.fieldTypes.clear();
             ExcelCode.validateName.clear();
             ExcelCode.excludeTitle.clear();
+            semaphore.release(); //释放信号量
         }
         return resultDate;
     }
@@ -232,7 +231,8 @@ class ExcelFunction {
         // 遍历
         for (int columnIndex = 0; columnIndex < ExcelCode.totalCells; columnIndex++) {
             //获取对应列的名称
-            String data = StringReplace(titleRow.getCell(columnIndex).toString());
+            Cell cell = titleRow.getCell(columnIndex);
+            String data = StringReplace(ObjectUtils.isEmpty(cell) ? null : cell.toString());
             //指定排除列表表头字段
             if (ExcelCode.EXCEL_SERIAL_NUMBER.equals(data)) {
                 ExcelCode.excludeTitle.add(data);
@@ -326,7 +326,8 @@ class ExcelFunction {
                     T obj = objectClass.newInstance();
                     // 获得本行中各单元格中的数据,从第一列开始读取
                     for (int columnIndex = 0; columnIndex < ExcelCode.totalCells; columnIndex++) {
-                        String tableName = StringReplace(titleRow.getCell(columnIndex).toString());
+                        Cell cl = titleRow.getCell(columnIndex);
+                        String tableName = StringReplace(ObjectUtils.isEmpty(cl) ? null : cl.toString());
                         Field field = validateExcelTitle.get(tableName);
                         //验证保存信息,验证表中的字段是否已在实体类中创建
                         if (ObjectUtils.isEmpty(field)) {

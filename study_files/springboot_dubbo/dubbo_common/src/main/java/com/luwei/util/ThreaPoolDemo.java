@@ -1,6 +1,23 @@
 package com.luwei.util;
 
-import java.util.concurrent.*;
+import com.alibaba.dubbo.common.utils.CollectionUtils;
+import com.google.common.collect.Lists;
+
+import java.util.List;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 import java.util.function.Supplier;
 
 /**
@@ -13,6 +30,7 @@ import java.util.function.Supplier;
  * @version: 1.8.00_66
  */
 public class ThreaPoolDemo {
+
     public static void main(String[] args) {
         //System.out.println(validateFuntion());
         /*ExecutorService executorService = Executors.newFixedThreadPool(2);
@@ -21,7 +39,10 @@ public class ThreaPoolDemo {
         executorService.shutdown();*/
         //System.out.println("开启线程:"+threadPoolsize());
         //SycThread();
-        sysEruptThread();
+        //sysEruptThread();
+        //String str = ",1,2,3,4,5,6,7,8,";
+        //System.out.println(StringConversion(str));
+        threadDemo();
     }
 
     private static String validateFuntion(){
@@ -290,4 +311,63 @@ public class ThreaPoolDemo {
             });
             executor.shutdownNow();
     };
+
+    private static String StringConversion(String resource){
+        String s = resource.replaceFirst(",", "[")
+                .replaceAll(",", "][");
+        return s.substring(0,s.length()-1);
+    }
+
+
+    private static void threadDemo(){
+
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(10, 15, 2L, TimeUnit.SECONDS,
+                new LinkedBlockingQueue<>(5),Executors.defaultThreadFactory(),new ThreadPoolExecutor.AbortPolicy());
+
+
+        // 先并发是个操作然后在并发10个操作
+        CountDownLatch countDownLatch = new CountDownLatch(10);
+        for (int i = 0; i < 10; i++) {
+            executor.execute(()->{
+                try {
+                    System.out.println(Thread.currentThread().getName()+"排队等待");
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } finally {
+                    countDownLatch.countDown();
+                }
+            });
+        }
+
+        try {
+            System.err.println("马上准备执行");
+            countDownLatch.await(1000,TimeUnit.MILLISECONDS);
+            System.out.println("正在执行中");
+            // 执行有返回值的线程
+            List<Integer> list = Lists.newArrayList(1);
+            List<Integer> submitList = null;
+
+            if(CollectionUtils.isNotEmpty(list)){
+                Future<List<Integer>> submit = executor.submit(() -> {
+                    for (int i = 0; i < 10; i++) {
+                        list.add(i);
+                    }
+                }, list);
+                submitList = submit.get(2000, TimeUnit.MILLISECONDS);
+            }
+
+            List<Integer> finalSubmitList = submitList;
+            executor.execute(()->{
+                System.out.println("线程结果:"+ finalSubmitList);
+            });
+
+
+        } catch (InterruptedException | TimeoutException | ExecutionException e) {
+            e.printStackTrace();
+        } finally {
+            executor.shutdown();
+        }
+
+    }
 }
