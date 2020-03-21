@@ -4,6 +4,10 @@ import com.alibaba.dubbo.common.utils.CollectionUtils;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.collect.Lists;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.TransactionDefinition;
+import org.springframework.transaction.TransactionException;
+import org.springframework.transaction.TransactionStatus;
 
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -13,7 +17,7 @@ import java.util.concurrent.TimeUnit;
  * <p>@author : Wei.Lu</p>
  * <p>@date : 2020/3/19 8:26 </p>
  */
-public class CacheDemo {
+public class CacheDemo  implements PlatformTransactionManager {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
 
         Cache<String, List<String>> build = CacheBuilder.newBuilder()
@@ -34,4 +38,18 @@ public class CacheDemo {
     }
 
 
+    @Override
+    public TransactionStatus getTransaction(TransactionDefinition transactionDefinition) throws TransactionException {
+        return null;
+    }
+
+    @Override
+    public void commit(TransactionStatus transactionStatus) throws TransactionException {
+
+    }
+
+    @Override
+    public void rollback(TransactionStatus transactionStatus) throws TransactionException {
+
+    }
 }
