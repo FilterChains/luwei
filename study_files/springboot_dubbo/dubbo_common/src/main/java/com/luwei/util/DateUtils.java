@@ -1,5 +1,7 @@
 package com.luwei.util;
 
+import com.google.common.base.Splitter;
+
 import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDate;
@@ -10,6 +12,7 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 public class DateUtils {
     public static void main(String[] args) {
@@ -82,8 +85,9 @@ public class DateUtils {
         System.err.println(Calendar.getInstance().getTime());
         System.err.println(new Date());
 
-        ThreadTest threadTest = new ThreadTest();
-
+        String s = "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36";
+        List<String> strings = Splitter.on(",").trimResults().omitEmptyStrings().splitToList(s);
+        System.out.println("截取结果:" + strings);
 
     }
 }
