@@ -1,8 +1,10 @@
 package com.luwei.excelutils;
 
 import org.apache.commons.collections4.MapUtils;
+import org.apache.poi.POIXMLDocument;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -16,6 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PushbackInputStream;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
@@ -119,9 +122,13 @@ class ExcelFunction {
             throw new ExecutionException(new Throwable("文件上传失败,请检查上传文件路径"));
         }
         try {
-            if (fileName.matches(ExcelType.ExcelVersion.EXCEL_XLS.value)) {
+            if (!inputStream.markSupported()) {
+                inputStream = new PushbackInputStream(inputStream, 8);
+            }
+            if (POIFSFileSystem.hasPOIFSHeader(inputStream)) {
                 workbook = new HSSFWorkbook(inputStream); //excel ->2003版(suffix ->.xls)
-            } else if (fileName.matches(ExcelType.ExcelVersion.EXCEL_XLSX.value)) {
+            }
+            if (POIXMLDocument.hasOOXMLHeader(inputStream)) {
                 workbook = new XSSFWorkbook(inputStream); //excel ->2007版(suffix ->.xlsx)
             }
         } catch (IOException e) {
