@@ -21,12 +21,9 @@ public class AliYunIm {
 
     private static final long APPKEY = 29117683L;
 
-    public static final String ACCESSKEY = "LTAIN5BKeZjMeEYE";
-
-    public static final String SECRET = "ApICtB7IQi67o2lufC4CaATjEcA1DW";
 
     public static void main(String[] args) {
-        IClientProfile profile = DefaultProfile.getProfile("cn-hangzhou", ACCESSKEY, SECRET);
+        IClientProfile profile = DefaultProfile.getProfile("cn-hangzhou", "", "");
         DefaultAcsClient client = new DefaultAcsClient(profile);
         PushRequest pushRequest = new PushRequest();
         pushRequest.setActionName("Push");
