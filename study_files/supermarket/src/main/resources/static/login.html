@@ -2,15 +2,12 @@
 <html lang="en" class="no-js">
 
 <head>
-
     <meta charset="utf-8">
-    <title>html5响应式后台登录界面模板</title>
+    <title>叮叮瞄</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
+    <meta name="description" content="便捷超市用户登录">
+    <meta name="author" content="芦苇">
     <!-- CSS -->
-
     <link rel="stylesheet" href="css/supersized.css">
     <link rel="stylesheet" href="css/login.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -22,6 +19,7 @@
     <script type="text/javascript" src="js/jquery.form.js"></script>
     <script type="text/javascript" src="js/tooltips.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/md5.js"></script>
 </head>
 
 <body>
@@ -30,19 +28,18 @@
     <div class="main_box">
         <div class="login_box">
             <div class="login_logo">
-                <img src="images/logo.png">
+                <span>登录</span>
             </div>
-
             <div class="login_form">
-                <form action="index.html" id="login_form" method="post">
+                <form id="login_form" method="post">
                     <div class="form-group">
-                        <label for="j_username" class="t">邮　箱：</label>
-                        <input id="email" value="" name="email" type="text" class="form-control x319 in"
+                        <label class="t">用&nbsp;&nbsp;&nbsp;&nbsp;户：</label>
+                        <input id="userName" value="" name="userName" type="text" class="form-control x319 in"
                                autocomplete="off">
                     </div>
                     <div class="form-group">
-                        <label for="j_password" class="t">密　码：</label>
-                        <input id="password" value="" name="password" type="password"
+                        <label class="t">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+                        <input id="userPassword" value="" name="userPassword" type="password"
                                class="password form-control x319 in">
                     </div>
                     <div class="form-group">
@@ -61,6 +58,9 @@
                                 class="btn btn-primary btn-lg">&nbsp;登&nbsp;录&nbsp
                         </button>
                         <input type="reset" value="&nbsp;重&nbsp;置&nbsp;" class="btn btn-default btn-lg">
+                        <button type="button" id="register_btn"
+                                class="btn btn-primary btn-lg">&nbsp;注&nbsp;册&nbsp
+                        </button>
                     </div>
                 </form>
             </div>
@@ -68,9 +68,7 @@
         <div class="bottom">Copyright &copy; 2019 - 2020 <a href="#">系统登陆</a></div>
     </div>
 </div>
-
 <!-- Javascript -->
-
 <script src="js/supersized.3.2.7.min.js"></script>
 <script src="js/supersized-init.js"></script>
 <script src="js/scripts.js"></script>

@@ -1,121 +1,264 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
-		<!-- Google Chrome Frame也可以让IE用上Chrome的引擎: -->
-		<meta name="renderer" content="webkit">
-		<!--国产浏览器高速模式-->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="author" content="穷在闹市" />
-		<!-- 作者 -->
-		<meta name="revised" content="穷在闹市.v3, 2019/05/01" />
-		<!-- 定义页面的最新版本 -->
-		<meta name="description" content="网站简介" />
-		<!-- 网站简介 -->
-		<meta name="keywords" content="搜索关键字，以半角英文逗号隔开" />
-		<title>穷在闹市出品</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <!-- Google Chrome Frame也可以让IE用上Chrome的引擎: -->
+    <meta name="renderer" content="webkit">
+    <title>叮叮瞄</title>
+    <meta name="description" content="便捷超市后台">
+    <meta name="author" content="芦苇">
+    <!--国产浏览器高速模式-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 网站简介 -->
+    <meta name="keywords" content="搜索关键字，以半角英文逗号隔开"/>
 
-		<!-- 公共样式 开始 -->
-		<link rel="stylesheet" type="text/css" href="../../../css/base.css">
-		<link rel="stylesheet" type="text/css" href="../../../css/iconfont.css">
-		<script type="text/javascript" src="../../framework/jquery-1.11.3.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="../../layui/css/layui.css">
-		<script type="text/javascript" src="../../layui/layui.js"></script>
-		<!-- 滚动条插件 -->
-		<link rel="stylesheet" type="text/css" href="../../../css/jquery.mCustomScrollbar.css">
-		<script src="../../framework/jquery-ui-1.10.4.min.js"></script>
-		<script src="../../framework/jquery.mousewheel.min.js"></script>
-		<script src="../../framework/jquery.mCustomScrollbar.min.js"></script>
-		<script src="../../framework/cframe.js"></script><!-- 仅供所有子页面使用 -->
-		<!-- 公共样式 结束 -->
+    <!-- 公共样式 开始 -->
+    <link rel="stylesheet" type="text/css" href="../../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../../css/iconfont.css">
+    <script type="text/javascript" src="../../framework/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../layui/css/layui.css">
+    <script type="text/javascript" src="../../layui/layui.all.js"></script>
+    <!-- 滚动条插件 -->
+    <link rel="stylesheet" type="text/css" href="../../css/jquery.mCustomScrollbar.css">
+    <script src="../../framework/jquery-ui-1.10.4.min.js"></script>
+    <script src="../../framework/jquery.mousewheel.min.js"></script>
+    <script src="../../framework/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../framework/cframe.js"></script><!-- 仅供所有子页面使用 -->
+    <script src="../../js/vue.min.js"></script>
+    <!-- 公共样式 结束 -->
+</head>
+<body>
+<div class="demo-tree demo-tree-box" style="width: 100%;height: 300px;">
+    <button class="layui-btn" onclick="addType()">添加一级分类</button>
+</div>
 
-	</head>
+<div class="demo-tree demo-tree-box" style="width: 100%;height: 40px;
+border:1px solid gray;line-height: 40px;background-color: #eee">操作分类
+</div>
+<div id="show_type" class="demo-tree demo-tree-box" style="width: 100%;height: 300px;"></div>
+</body>
+<script>
+    // 分类操作
+    $(function () {
+        $.ajax({
+            url: "/product/category",
+            type: "post",
+            contentType: "application/json",
+            dataType: "json",
+            success: function (rst) {
+                if (200 === rst.code) {
+                    // console.log("返回值：" + JSON.stringify(rst.data));
+                    layui.use(['tree', 'util'], function () {
+                        var tree = layui.tree,
+                            layer = layui.layer,
+                            util = layui.util,
+                            list = rst.data;
+                        //开启节点操作图标
+                        tree.render({
+                            elem: '#show_type',
+                            // 初始化数据
+                            data: list,
+                            customOperate: true,//自定义属性
+                            onlyIconControl: true,
+                            edit: ['add', 'update', 'del'], //操作节点的图标
+                            click: function (obj) {
+                                // var data = obj.data;
+                                // layer.msg('状态：'+ obj.state + '<br>节点数据：' + JSON.stringify(data));
+                            }
+                            , operate: function (obj) {
+                                var type = obj.type; //得到操作类型：add、edit、del
+                                var data = obj.data; //得到当前节点的数据
+                                var elem = obj.elem; //得到当前节点元素
+                                console.log("type:" + JSON.stringify(type) + "data:" + JSON.stringify(data));
+                                var cont = "<span style='font-size: 15px;'>分类名称:</span>" +
+                                    "<input type='text' id='typeName' style='width: 190px;height: 38px;'>";
+                                //Ajax 操作
+                                var id = data.value; //得到节点索引
+                                if (type === 'add') { //增加节点
+                                    layer.confirm(cont, {
+                                        title: "新增子分类",
+                                        btn: ['新增', '取消'] //按钮
+                                    }, function () {
+                                        var typeName = $("#typeName").val();
+                                        console.log("id:" + id + "name:" + typeName);
+                                        // 发送请求
+                                        if ('' === typeName || null === typeName) {
+                                            layer.msg("新增名称不能为空")
+                                        } else {
+                                            var obj = {
+                                                id: id,
+                                                title: typeName,
+                                                operation: "INSERT"
+                                            };
+                                            $.ajax({
+                                                url: '/product/operationCategory',
+                                                type: 'post',
+                                                contentType: "application/json",
+                                                dataType: 'json',
+                                                data: JSON.stringify(obj),
+                                                success: function (dat) {
+                                                    // 跳转登录页面
+                                                    if (-1 === dat.code) {
+                                                        layer.msg(dat.data);
+                                                        setTimeout(function () {
+                                                            top.location.href = "/login.html";
+                                                        }, 2000);
+                                                    }
+                                                    if (200 === dat.code) {
+                                                        //关闭
+                                                        layer.msg('新增成功', {icon: 1});
+                                                        setTimeout(function () {
+                                                            window.location.reload();
+                                                        }, 1000);
+                                                    } else {
+                                                        layer.msg(dat.data, {icon: 2});
+                                                    }
+                                                }
+                                            });
+                                        }
+                                    });
+                                } else if (type === 'update') { //修改节点
+                                    layer.confirm(cont, {
+                                        title: "修改分类",
+                                        btn: ['修改', '取消'] //按钮
+                                    }, function () {
+                                        var typeName = $("#typeName").val();
+                                        // console.log("id:" + id + "name:" + typeName);
+                                        // 发送请求
+                                        if ('' === typeName || null === typeName) {
+                                            layer.msg("新增名称不能为空")
+                                        } else {
+                                            var obj = {
+                                                id: id,
+                                                title: typeName,
+                                                operation: "UPDATE"
+                                            };
+                                            $.ajax({
+                                                url: '/product/operationCategory',
+                                                type: 'post',
+                                                contentType: "application/json",
+                                                dataType: 'json',
+                                                data: JSON.stringify(obj),
+                                                success: function (dat) {
+                                                    // 跳转登录页面
+                                                    if (-1 === dat.code) {
+                                                        layer.msg(dat.data);
+                                                        setTimeout(function () {
+                                                            top.location.href = "/login.html";
+                                                        }, 2000);
+                                                    }
+                                                    if (200 === dat.code) {
+                                                        //关闭
+                                                        layer.msg('修改成功', {icon: 1});
+                                                        setTimeout(function () {
+                                                            window.location.reload();
+                                                        }, 1000);
+                                                    } else {
+                                                        layer.msg(dat.data, {icon: 2});
+                                                    }
+                                                }
+                                            });
+                                        }
+                                    });
+                                } else if (type === 'del') { //删除节点
+                                    layer.confirm("真的要删除此分类吗？", {
+                                        title: "删除分类",
+                                        btn: ['删除', '取消'] //按钮
+                                    }, function () {
+                                        // console.log("id:" + id);
+                                        var obj = {
+                                            id: id,
+                                            operation: "DELETE"
+                                        };
+                                        // 发送请求
+                                        $.ajax({
+                                            url: '/product/operationCategory',
+                                            type: 'post',
+                                            contentType: "application/json",
+                                            dataType: 'json',
+                                            data: JSON.stringify(obj),
+                                            success: function (dat) {
+                                                // 跳转登录页面
+                                                if (-1 === dat.code) {
+                                                    layer.msg(dat.data);
+                                                    setTimeout(function () {
+                                                        top.location.href = "/login.html";
+                                                    }, 2000);
+                                                }
+                                                if (200 === dat.code) {
+                                                    layer.msg('删除成功', {icon: 1});
+                                                    setTimeout(function () {
+                                                        window.location.reload();
+                                                    }, 1000);
+                                                } else {
+                                                    layer.msg(dat.data, {icon: 2});
+                                                }
+                                            }
+                                        });
+                                    });
+                                }
+                            }
+                        });
+                    });
+                } else {
+                    layer.msg("暂无相关信息");
+                }
+            },
+            error: function () {
+                layer.msg("查询异常");
+            }
+        });
+    });
 
-	<body>
-		<div class="cBody">
-			<div class="console">
-				<form class="layui-form" action="">
-					<div class="layui-form-item">
-						<div class="layui-input-inline">
-							<input type="text" name="name" required lay-verify="required" placeholder="输入分管名称" autocomplete="off" class="layui-input">
-						</div>
-						<button class="layui-btn" lay-submit lay-filter="formDemo">检索</button>
-					</div>
-				</form>
+    // 添加一级分类
+    function addType() {
+        var cont = "<span style='font-size: 15px;'>分类名称:</span>" +
+            "<input type='text' id='typeName' style='width: 190px;height: 38px;'>";
+        layer.confirm(cont, {
+            title: "新增一级分类",
+            btn: ['新增', '取消'] //按钮
+        }, function () {
+            var typeName = $("#typeName").val();
+            // console.log("name:" + typeName);
+            // 发送请求
+            if ('' === typeName || null === typeName) {
+                layer.msg("分类名称不能为空")
+            } else {
+                var obj = {
+                    title: typeName,
+                    operation: "INSERT"
+                };
+                $.ajax({
+                    url: '/product/operationCategory',
+                    type: 'post',
+                    contentType: "application/json",
+                    dataType: 'json',
+                    data: JSON.stringify(obj),
+                    success: function (dat) {
+                        // console.log("返回值：" + JSON.stringify(dat));
+                        // 跳转登录页面
+                        if (-1 === dat.code) {
+                            layer.msg(dat.data);
+                            setTimeout(function () {
+                                top.location.href = "/login.html";
+                            }, 2000);
+                        }
+                        if (200 === dat.code) {
+                            //关闭
+                            layer.msg('成功添加一级分类', {icon: 1});
+                            setTimeout(function () {
+                                window.location.reload();
+                            }, 1000);
+                        } else {
+                            layer.msg(dat.data, {icon: 2});
+                        }
+                    }
+                });
+            }
+        });
+    }
 
-				<script>
-					layui.use('form', function() {
-						var form = layui.form;
-				
-						//监听提交
-						form.on('submit(formDemo)', function(data) {
-							layer.msg(JSON.stringify(data.field));
-							return false;
-						});
-					});
-				</script>
-			</div>
-			
-			<table class="layui-table">
-				<thead>
-					<tr>
-						<th>名称</th>
-						<th>描述</th>
-						<th>操作</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>前端</td>
-						<td>例：ES5、ES6、ES7</td>
-						<td>
-							<button class="layui-btn layui-btn-xs">修改</button>
-							<button class="layui-btn layui-btn-xs layui-btn-normal">添加二级分类</button>
-							<button class="layui-btn layui-btn-xs layui-btn-warm">查看二级分类</button>
-						</td>
-					</tr>
-					<tr>
-						<td>前端</td>
-						<td>例：ES5、ES6、ES7</td>
-						<td>
-							<button class="layui-btn layui-btn-xs">修改</button>
-							<button class="layui-btn layui-btn-xs layui-btn-normal">添加二级分类</button>
-							<button class="layui-btn layui-btn-xs layui-btn-warm">查看二级分类</button>
-						</td>
-					</tr>
-					<tr>
-						<td>前端</td>
-						<td>例：ES5、ES6、ES7</td>
-						<td>
-							<button class="layui-btn layui-btn-xs">修改</button>
-							<button class="layui-btn layui-btn-xs layui-btn-normal">添加二级分类</button>
-							<button class="layui-btn layui-btn-xs layui-btn-warm">查看二级分类</button>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			
-			<!-- layUI 分页模块 -->
-			<div id="pages"></div>
-			<script>
-				layui.use(['laypage', 'layer'], function() {
-					var laypage = layui.laypage,
-						layer = layui.layer;
-				
-					//总页数大于页码总数
-					laypage.render({
-					    elem: 'pages'
-					    ,count: 100
-					    ,layout: ['count', 'prev', 'page', 'next', 'limit', 'skip']
-					    ,jump: function(obj){
-					      console.log(obj)
-					    }
-					});
-				});
-			</script>
-		</div>
-	</body>
-
+</script>
 </html>
