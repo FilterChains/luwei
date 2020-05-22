@@ -1,6 +1,8 @@
 package com.luwei.supermarket.entity.vo;
 
-import lombok.Data;
+import lombok.*;
+import lombok.experimental.Accessors;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;
 import java.util.List;
@@ -15,6 +17,11 @@ import java.util.List;
  * @version: 1.8.00_66
  */
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Accessors(chain = true)
+@ToString(callSuper = true)
 public class ProductSearchVO implements Serializable {
 
     /**

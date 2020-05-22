@@ -1,13 +1,14 @@
 package com.luwei.supermarket.admin.controller.product;
 
 import com.luwei.supermarket.admin.business.product.ProductBusiness;
-import com.luwei.supermarket.admin.controller.BaseController;
+import com.luwei.supermarket.base.BaseController;
 import com.luwei.supermarket.entity.bo.request.ProductCategoryRequest;
 import com.luwei.supermarket.entity.bo.request.ProductRequest;
 import com.luwei.supermarket.entity.bo.request.ProductSearchRequest;
 import com.luwei.supermarket.entity.bo.response.DistrictResponse;
 import com.luwei.supermarket.entity.bo.response.ProductCategoryResponse;
 import com.luwei.supermarket.entity.bo.response.ProductListResponse;
+import com.luwei.supermarket.entity.po.District;
 import com.luwei.supermarket.entity.po.User;
 import com.luwei.supermarket.util.Notify;
 import io.swagger.annotations.Api;
@@ -15,11 +16,7 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -49,7 +46,7 @@ public class ProductController extends BaseController {
     @PostMapping("/district")
     @ApiOperation(value = "获取平台一级地区", notes = "获取平台一级地区")
     public Notify<List<DistrictResponse>> findDistrict() {
-        return super.getProvinceList();
+        return super.getProvinceList(District.DistrictType.FIRST_LEVEL);
     }
 
     @ResponseBody
@@ -90,6 +87,7 @@ public class ProductController extends BaseController {
     @PostMapping("/echoProduct")
     @ApiOperation(value = "商品信息回显", notes = "商品信息回显")
     @ApiImplicitParam(name = "id", value = "商品ID", dataType = "int")
+    @ResponseBody
     public Notify<ProductListResponse> echoProductMsg(Integer id, HttpServletRequest hsq) {
         HttpSession session = hsq.getSession();
         User user = (User) session.getAttribute("userSession");

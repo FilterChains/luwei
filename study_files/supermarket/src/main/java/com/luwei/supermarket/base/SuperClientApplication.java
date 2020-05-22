@@ -24,20 +24,20 @@ public class SuperClientApplication {
         return new SuperExceptionHandler();
     }
 
-    /**
-     * <p>@Description : 解决请求BODY只能读取一次的问题</p>
-     * <p>@Author : QiLin.Xing </p>
-     * <p>@Date : 2018/8/1 9:23 </p>
-     */
-    @Bean
-    public FilterRegistrationBean filterRegistrationBean() {
-        FilterRegistrationBean registrationBean = new FilterRegistrationBean();
-        registrationBean.setFilter(new RequestBodyFilter());
-        registrationBean.addUrlPatterns("/*");
-        registrationBean.setName("requestBodyFilter");
-        registrationBean.setOrder(1);
-        return registrationBean;
-    }
+//    /**
+//     * <p>@Description : 解决请求BODY只能读取一次的问题</p>
+//     * <p>@Author : QiLin.Xing </p>
+//     * <p>@Date : 2018/8/1 9:23 </p>
+//     */
+//    @Bean
+//    public FilterRegistrationBean filterRegistrationBean() {
+//        FilterRegistrationBean registrationBean = new FilterRegistrationBean();
+//        registrationBean.setFilter(new RequestBodyFilter());
+//        registrationBean.addUrlPatterns("/*");
+//        registrationBean.setName("requestBodyFilter");
+//        registrationBean.setOrder(1);
+//        return registrationBean;
+//    }
 
     /**
      * <p>@Description : 解决跨域问题</p>

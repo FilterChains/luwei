@@ -29,6 +29,5 @@ public class UserRequest implements Serializable {
     private String userPassword;
 
     @ApiModelProperty("微信号")
-    @NotBlank(message = "微信号不能为空")
     private String userWeiChat;
 }
