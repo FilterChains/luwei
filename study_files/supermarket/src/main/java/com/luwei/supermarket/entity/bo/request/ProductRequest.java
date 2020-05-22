@@ -1,6 +1,6 @@
-package com.luwei.supermarket.admin.entity.bo.request;
+package com.luwei.supermarket.entity.bo.request;
 
-import com.luwei.supermarket.admin.entity.po.Product;
+import com.luwei.supermarket.entity.po.Product;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 
 /**
  * @projectName： supermarket
- * @packageName: com.luwei.supermarket.admin.entity.bo.request
+ * @packageName: com.luwei.supermarket.entity.bo.request
  * @auther: luwei
  * @description: 创建商品请求实体类
  * @date: 2020/5/17 00:14

@@ -1,7 +1,7 @@
 package com.luwei.supermarket.service.product;
 
-import com.luwei.supermarket.admin.entity.po.ProductCategory;
 import com.luwei.supermarket.base.SuperService;
+import com.luwei.supermarket.entity.po.ProductCategory;
 
 import java.util.List;
 import java.util.Map;

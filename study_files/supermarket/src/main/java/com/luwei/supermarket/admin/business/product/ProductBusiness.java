@@ -1,13 +1,13 @@
 package com.luwei.supermarket.admin.business.product;
 
-import com.luwei.supermarket.admin.entity.bo.request.ProductCategoryRequest;
-import com.luwei.supermarket.admin.entity.bo.request.ProductRequest;
-import com.luwei.supermarket.admin.entity.bo.request.ProductSearchRequest;
-import com.luwei.supermarket.admin.entity.bo.response.ProductListResponse;
-import com.luwei.supermarket.admin.entity.po.District;
-import com.luwei.supermarket.admin.entity.po.Product;
-import com.luwei.supermarket.admin.entity.po.ProductCategory;
-import com.luwei.supermarket.admin.entity.vo.ProductSearchVO;
+import com.luwei.supermarket.entity.bo.request.ProductCategoryRequest;
+import com.luwei.supermarket.entity.bo.request.ProductRequest;
+import com.luwei.supermarket.entity.bo.request.ProductSearchRequest;
+import com.luwei.supermarket.entity.bo.response.ProductListResponse;
+import com.luwei.supermarket.entity.po.District;
+import com.luwei.supermarket.entity.po.Product;
+import com.luwei.supermarket.entity.po.ProductCategory;
+import com.luwei.supermarket.entity.vo.ProductSearchVO;
 import com.luwei.supermarket.service.product.ProductCategoryService;
 import com.luwei.supermarket.service.product.ProductService;
 import com.luwei.supermarket.service.region.DistrictService;

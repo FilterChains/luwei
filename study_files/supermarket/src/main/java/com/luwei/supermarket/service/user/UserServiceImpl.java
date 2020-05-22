@@ -2,8 +2,8 @@ package com.luwei.supermarket.service.user;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.luwei.supermarket.admin.entity.po.User;
 import com.luwei.supermarket.base.SuperServiceImpl;
+import com.luwei.supermarket.entity.po.User;
 import com.luwei.supermarket.mapper.UserMapper;
 import org.springframework.stereotype.Service;
 

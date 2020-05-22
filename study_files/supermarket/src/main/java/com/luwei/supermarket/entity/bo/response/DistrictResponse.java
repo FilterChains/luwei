@@ -1,4 +1,4 @@
-package com.luwei.supermarket.admin.entity.bo.response;
+package com.luwei.supermarket.entity.bo.response;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * @projectName： supermarket
- * @packageName: com.luwei.supermarket.admin.entity.bo.response
+ * @packageName: com.luwei.supermarket.entity.bo.response
  * @auther: luwei
  * @description:
  * @date: 2020/5/18 22:38

@@ -1,4 +1,4 @@
-package com.luwei.supermarket.admin.entity.vo;
+package com.luwei.supermarket.entity.vo;
 
 import lombok.Data;
 
@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * @projectName： supermarket
- * @packageName: com.luwei.supermarket.admin.entity.vo
+ * @packageName: com.luwei.supermarket.entity.vo
  * @auther: luwei
  * @description: 商品搜索
  * @date: 2020/5/20 00:48

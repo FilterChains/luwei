@@ -40,7 +40,7 @@ spring:
 
 #Mybatis配置
 mybatis:
-  typeAliasesPackage: com.luwei.supermarket.admin.entity.po
+  typeAliasesPackage: com.luwei.supermarket.entity.po
   mapperLocations: classpath:mapper/*.xml
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
@@ -50,7 +50,7 @@ mybatis:
 
 #mybatis-plus 枚举自动转换配置
 mybatis-plus:
-  typeEnumsPackage: com.luwei.supermarket.admin.entity.po*
+  typeEnumsPackage: com.luwei.supermarket.entity.po*
 
 # swagger-ui 配置所有资源都会屏蔽输出 true->开启 ，false->关闭
 swagger2:

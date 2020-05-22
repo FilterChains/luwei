@@ -1,8 +1,8 @@
 package com.luwei.supermarket.service.product;
 
-import com.luwei.supermarket.admin.entity.po.Product;
-import com.luwei.supermarket.admin.entity.vo.ProductSearchVO;
 import com.luwei.supermarket.base.SuperService;
+import com.luwei.supermarket.entity.po.Product;
+import com.luwei.supermarket.entity.vo.ProductSearchVO;
 
 import java.util.List;
 

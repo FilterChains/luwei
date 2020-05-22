@@ -1,4 +1,4 @@
-package com.luwei.supermarket.admin.entity.po;
+package com.luwei.supermarket.entity.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -12,7 +12,7 @@ import java.io.Serializable;
 
 /**
  * @projectName： supermarket
- * @packageName: com.luwei.supermarket.admin.entity.po
+ * @packageName: com.luwei.supermarket.entity.po
  * @auther: luwei
  * @description: 用户实体类
  * @date: 2020/5/13 22:46

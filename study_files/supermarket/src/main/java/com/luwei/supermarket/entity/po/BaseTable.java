@@ -1,4 +1,4 @@
-package com.luwei.supermarket.admin.entity.po;
+package com.luwei.supermarket.entity.po;
 
 import lombok.Data;
 
@@ -7,7 +7,7 @@ import java.util.Date;
 
 /**
  * @projectName： supermarket
- * @packageName: com.luwei.supermarket.admin.entity.po
+ * @packageName: com.luwei.supermarket.entity.po
  * @auther: luwei
  * @description:
  * @date: 2020/5/14 22:05

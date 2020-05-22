@@ -1,9 +1,9 @@
 package com.luwei.supermarket.admin.controller;
 
-import com.luwei.supermarket.admin.entity.bo.response.DistrictResponse;
-import com.luwei.supermarket.admin.entity.bo.response.ProductCategoryResponse;
-import com.luwei.supermarket.admin.entity.po.District;
-import com.luwei.supermarket.admin.entity.po.ProductCategory;
+import com.luwei.supermarket.entity.bo.response.DistrictResponse;
+import com.luwei.supermarket.entity.bo.response.ProductCategoryResponse;
+import com.luwei.supermarket.entity.po.District;
+import com.luwei.supermarket.entity.po.ProductCategory;
 import com.luwei.supermarket.service.product.ProductCategoryService;
 import com.luwei.supermarket.service.region.DistrictService;
 import com.luwei.supermarket.util.Notify;

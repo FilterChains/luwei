@@ -2,13 +2,17 @@ package com.luwei.supermarket.admin.controller.user;
 
 import com.luwei.supermarket.admin.business.user.UserBusiness;
 import com.luwei.supermarket.admin.controller.BaseController;
-import com.luwei.supermarket.admin.entity.bo.request.UserRequest;
+import com.luwei.supermarket.entity.bo.request.UserRequest;
 import com.luwei.supermarket.util.Notify;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 

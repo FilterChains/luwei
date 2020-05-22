@@ -1,4 +1,4 @@
-package com.luwei.supermarket.admin.entity.bo.request;
+package com.luwei.supermarket.entity.bo.request;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /**
  * @projectName： supermarket
- * @packageName: com.luwei.supermarket.admin.entity.bo.request
+ * @packageName: com.luwei.supermarket.entity.bo.request
  * @auther: luwei
  * @description:
  * @date: 2020/5/19 23:48

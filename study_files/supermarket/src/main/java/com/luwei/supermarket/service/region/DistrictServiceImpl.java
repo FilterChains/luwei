@@ -2,8 +2,8 @@ package com.luwei.supermarket.service.region;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.luwei.supermarket.admin.entity.po.District;
 import com.luwei.supermarket.base.SuperServiceImpl;
+import com.luwei.supermarket.entity.po.District;
 import com.luwei.supermarket.mapper.DistrictMapper;
 import org.springframework.stereotype.Service;
 

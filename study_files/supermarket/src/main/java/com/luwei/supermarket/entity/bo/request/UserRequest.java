@@ -1,4 +1,4 @@
-package com.luwei.supermarket.admin.entity.bo.request;
+package com.luwei.supermarket.entity.bo.request;
 
 import lombok.Data;
 

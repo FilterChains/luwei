@@ -1,4 +1,4 @@
-package com.luwei.supermarket.admin.entity.po;
+package com.luwei.supermarket.entity.po;
 
 import com.baomidou.mybatisplus.annotation.EnumValue;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -13,7 +13,7 @@ import java.io.Serializable;
 
 /**
  * @projectName： supermarket
- * @packageName: com.luwei.supermarket.admin.entity.po
+ * @packageName: com.luwei.supermarket.entity.po
  * @auther: luwei
  * @description: 地区
  * @date: 2020/5/14 23:09

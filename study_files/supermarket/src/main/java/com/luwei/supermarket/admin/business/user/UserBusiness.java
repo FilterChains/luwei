@@ -1,7 +1,7 @@
 package com.luwei.supermarket.admin.business.user;
 
-import com.luwei.supermarket.admin.entity.bo.request.UserRequest;
-import com.luwei.supermarket.admin.entity.po.User;
+import com.luwei.supermarket.entity.bo.request.UserRequest;
+import com.luwei.supermarket.entity.po.User;
 import com.luwei.supermarket.service.user.UserService;
 import com.luwei.supermarket.util.Md5Util;
 import com.luwei.supermarket.util.Notify;
