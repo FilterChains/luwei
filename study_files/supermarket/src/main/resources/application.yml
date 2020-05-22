@@ -1,0 +1,48 @@
+# 更改服务端口
+server:
+    port: 9099
+    servlet:
+      context-path: /
+# 配置spring
+spring:
+  datasource:
+    name: panda
+    url: jdbc:mysql://127.0.0.1:3306/supermarket?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 30000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: true
+      test-on-return: false
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+#Mybatis配置
+mybatis:
+  typeAliasesPackage: com.luwei.supermarket.admin.entity.po
+  mapperLocations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  logging:
+    level:
+      com.luwei.supermarket.mapper: debug
+#mybatis-plus 枚举自动转换配置
+mybatis-plus:
+  typeEnumsPackage: com.luwei.supermarket.admin.entity.po*
+# swagger-ui 配置所有资源都会屏蔽输出 true->开启 ，false->关闭
+swagger2:
+# 开启Swagger的Basic认证功能,默认是false
+  basic:
+    enable: true
+## Basic认证用户名
+    username: luwei
+## Basic认证密码
+    password: 142857

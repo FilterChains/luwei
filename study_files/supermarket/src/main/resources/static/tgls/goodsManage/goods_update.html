@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <!-- Google Chrome Frame也可以让IE用上Chrome的引擎: -->
+    <meta name="renderer" content="webkit">
+    <title>叮叮瞄</title>
+    <meta name="description" content="便捷超市后台">
+    <meta name="author" content="芦苇">
+    <!--国产浏览器高速模式-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 网站简介 -->
+    <meta name="keywords" content="搜索关键字，以半角英文逗号隔开"/>
+
+    <!-- 公共样式 开始 -->
+    <link rel="stylesheet" type="text/css" href="../../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../../css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/element-ui@2.13.2/lib/theme-chalk/index.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script type="text/javascript" src="../../framework/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/element-ui@2.13.2/lib/index.js"></script>
+    <script type="text/javascript" src="../../js/getUrlParam.js"></script>
+
+    <style>
+        .layui-form-label {
+            width: 100px;
+        }
+
+        .layui-input-block {
+            margin-left: 130px;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="cBody" id="updateBody">
+    <form id="updateForm" class="layui-form" action="">
+        <input name="id" id="id" style="display:none;">
+        <div class="layui-form-item">
+            <label class="layui-form-label">商品名称</label>
+            <div class="layui-input-block">
+                <input type="text" id="productName" name="productName" required lay-verify="required" autocomplete="off"
+                       class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">商品图片</label>
+            <div class="layui-upload-drag" id="goodsPic">
+                <i class="layui-icon"></i>
+                <p>点击上传，或将文件拖拽到此处</p>
+            </div>
+            <input id="productImagesUrl" style="display: none" name="productImagesUrl" value="www.luwei.com"/>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">参考价格</label>
+            <div class="layui-input-block">
+                <input type="text" id="productPrice" name="productPrice" required lay-verify="required|number"
+                       autocomplete="off"
+                       class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">库存</label>
+            <div class="layui-input-block">
+                <input type="text" id="productStock" name="productStock" required lay-verify="required|number"
+                       autocomplete="off"
+                       class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">单位</label>
+            <div class="layui-input-block">
+                <input type="text" id="productUnit" name="productUnit" required lay-verify="required" autocomplete="off"
+                       class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">描述</label>
+            <div class="layui-input-block">
+                <textarea id="productRemark" name="productRemark" class="layui-textarea"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">分类</label>
+            <el-cascader id="pType" v-model="type" :options="options" :show-all-levels="false"></el-cascader>
+            <input name="productType" id="productType" style="display:none;">
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">地区</label>
+            <div class="layui-input-inline" id="regionType">
+                <template>
+                    <el-select v-model="optValue" placeholder="请选择">
+                        <el-option
+                                v-for="(item,index) of resultList"
+                                :key="index"
+                                :label="item.name"
+                                :value="item.id">
+                        </el-option>
+                    </el-select>
+                </template>
+                <input name="productRegion" id="productRegion" style="display:none;">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">状态</label>
+            <div class="layui-input-block">
+                <input type="radio" name="productStatus" id="stu1" value="PUT_AWAY" title="上架">
+                <input type="radio" name="productStatus" id="stu2" value="TO_STAY_ON" title="待上架">
+                <input type="radio" name="productStatus" id="stu3" value="SOLD_OUT" title="下架">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="submitBut">提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+
+
+    <script>
+
+        var vue = new Vue({
+            el: "#updateBody",
+            data: {
+                optValue: '',
+                resultList: [],
+                type: '',
+                options: []
+            },
+            watch: { // 监听
+                type(val) {
+                    // console.log('val..........', val);
+                    // console.log('val..........', val[val.length - 1]);
+                    $("#productType").val(val[val.length - 1]);
+                },
+                optValue(val) {
+                    // console.log(val);
+                    $("#productRegion").val(val);
+                }
+            }
+        });
+
+        // 请求数据
+        $(function () {
+            var layer = layui.layer;
+            // 获取地区
+            $.ajax({
+                url: "/product/district",
+                type: "post",
+                contentType: "application/json",
+                dataType: "json",
+                success: function (rst) {
+                    // console.log("返回结果" + JSON.stringify(rst.data));
+                    vue.resultList = rst.data;
+                },
+                error: function () {
+                    layer.msg("查询异常");
+                }
+            });
+
+            // 获取分类
+            $.ajax({
+                url: "/product/category",
+                type: "post",
+                contentType: "application/json",
+                dataType: "json",
+                success: function (rst) {
+                    // console.log("返回结果" + JSON.stringify(rst.data));
+                    if (200 === rst.code) {
+                        // 数据绑定
+                        vue.options = rst.data;
+                    } else {
+                        layer.msg("暂无相关信息");
+                    }
+                },
+                error: function () {
+                    layer.msg("查询异常");
+                }
+            });
+
+            // 获取父页HTML 页面传递的值
+            var id = UrlParm.parm("id");
+            // console.log("获取父页的值：" + id);
+            $.ajax({
+                url: "/product/echoProduct",
+                type: "post",
+                dataType: "json",
+                data: {id: id},
+                success: function (rst) {
+                    // 跳转登录页面
+                    if (-1 === rst.code) {
+                        // layer.msg(rst.data);
+                        setTimeout(function () {
+                            top.location.href = "/login.html";
+                        }, 3000);
+                    }
+                    if (200 === rst.code) {
+                        var dat = rst.data;
+                        // console.log("搜索结果" + JSON.stringify(dat));
+                        // 数据绑定
+                        // vue.optValue = dat.productRegion;
+                        $("#id").val(dat.id);
+                        $("#productName").val(dat.productName);
+                        $("#productPrice").val(dat.productPrice);
+                        $("#productRemark").val(dat.productRemark);
+                        $("#productStock").val(dat.productStock);
+                        $("#productUnit").val(dat.productUnit);
+                        if ("SOLD_OUT" === dat.productStatus) {
+                            $("#stu1").removeAttr("checked");
+                            $("#stu2").removeAttr("checked");
+                            $("#stu3").attr("checked", "checked");
+                        } else if ("PUT_AWAY" === dat.productStatus) {
+                            $("#stu2").removeAttr("checked");
+                            $("#stu3").removeAttr("checked");
+                            $("#stu1").attr("checked", "checked");
+                        } else {
+                            $("#stu1").removeAttr("checked");
+                            $("#stu3").removeAttr("checked");
+                            $("#stu2").attr("checked", "checked");
+                        }
+                    } else {
+                        layer.msg("暂无相关信息");
+                    }
+                },
+                error: function () {
+                    layer.msg("查询异常");
+                }
+            });
+        });
+
+        // 修改
+        layui.use(['upload', 'form'], function () {
+            var form = layui.form;
+            var upload = layui.upload;
+            var layer = layui.layer;
+            //监听提交 layer 提交form表单
+            form.on('submit(submitBut)', function (data) {
+                // console.log("青丘之：" + JSON.stringify(data.field));
+                var obj = data.field;
+                if ('' === obj.productType || null === obj.productType) {
+                    layer.msg("请选择分类信息", {icon: 2});
+                } else if ('' === obj.productRegion || null === obj.productRegion) {
+                    layer.msg("请选择地区信息", {icon: 2});
+                } else {
+                    $.ajax({
+                        url: "/product/createOrUpdateProduct",
+                        type: "post",
+                        contentType: "application/json",
+                        dataType: "json",
+                        data: JSON.stringify(obj),
+                        success: function (rst) {
+                            // console.log("返回值：" + JSON.stringify(rst));
+                            // 跳转登录页面
+                            if (-1 === rst.code) {
+                                layer.msg(rst.data);
+                                setTimeout(function () {
+                                    top.location.href = "/login.html";
+                                }, 3000);
+                            }
+                            if (200 === rst.code) {
+                                layer.msg(rst.data, {icon: 1});
+                                // 刷新父类
+                                window.parent.location.reload();
+                                // 关闭窗口
+                                var index = parent.layer.getFrameIndex(window.name);
+                                parent.layer.close(index);
+                            } else {
+                                layer.msg(rst.data, {icon: 2});
+                            }
+                        },
+                        error: function (rst) {
+                            layer.msg(rst.data);
+                        }
+                    });
+                }
+                return false;
+            });
+            form.verify({
+                //数组的两个值分别代表：[正则匹配、匹配不符时的提示文字]
+                ZHCheck: [
+                    /^[\u0391-\uFFE5]+$/
+                    , '只允许输入中文'
+                ]
+            });
+            //拖拽上传
+            upload.render({
+                elem: '#goodsPic',
+                url: '/upload/',
+                done: function (res) {
+                    console.log(res)
+                }
+            });
+        });
+    </script>
+
+</div>
+</body>
+
+</html>
