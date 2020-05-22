@@ -73,7 +73,7 @@ border:1px solid gray;line-height: 40px;background-color: #eee">操作分类
                                 var elem = obj.elem; //得到当前节点元素
                                 console.log("type:" + JSON.stringify(type) + "data:" + JSON.stringify(data));
                                 var cont = "<span style='font-size: 15px;'>分类名称:</span>" +
-                                    "<input type='text' id='typeName' style='width: 190px;height: 38px;'>";
+                                    "<input type='text' id='typeName' style='width: 190px;height: 38px;' class=‘layui-input’>";
                                 //Ajax 操作
                                 var id = data.value; //得到节点索引
                                 if (type === 'add') { //增加节点

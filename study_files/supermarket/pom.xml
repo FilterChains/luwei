@@ -20,6 +20,10 @@
         <mysql-connector.version>5.1.39</mysql-connector.version>
         <mybatis-plus.version>3.1.2</mybatis-plus.version>
         <swagger-bootstrap-ui.version>1.9.6</swagger-bootstrap-ui.version>
+        <commons-lang.version>2.6</commons-lang.version>
+        <commons-httpclient.version>3.1</commons-httpclient.version>
+        <commons-codec.version>1.10</commons-codec.version>
+        <commons-fileupload.version>1.3.3</commons-fileupload.version>
     </properties>
 
     <dependencies>
@@ -39,6 +43,13 @@
                     <artifactId>junit-vintage-engine</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <!--redis 配置-->
+        <!--springboot中的redis依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <version>${springBoot.version}</version>
         </dependency>
         <!--mybatis-plus 相关依赖-->
         <dependency>
@@ -98,6 +109,30 @@
             <artifactId>druid</artifactId>
             <version>1.0.11</version>
         </dependency>
+
+        <!-- spring上传组件 依赖的 上传组件包 -->
+        <!-- 包含 commons-io 包 -->
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>${commons-fileupload.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${commons-codec.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+            <version>${commons-httpclient.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>${commons-lang.version}</version>
+        </dependency>
+
         <!--pojo实用小插件-->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -135,9 +170,9 @@
             <version>${swagger-bootstrap-ui.version}</version>
         </dependency>
         <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-            <version>2.4</version>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.8.13</version>
         </dependency>
     </dependencies>
 

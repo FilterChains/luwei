@@ -73,7 +73,7 @@ public class Notify<T> {
         this.data = data;
     }
 
-    public Notify(T data) {
+    public Notify(T data, Code exception, String s, String localizedMessage) {
         this.data = data;
     }
 

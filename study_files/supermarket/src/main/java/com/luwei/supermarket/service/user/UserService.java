@@ -1,7 +1,7 @@
 package com.luwei.supermarket.service.user;
 
-import com.baomidou.mybatisplus.extension.service.IService;
 import com.luwei.supermarket.admin.entity.po.User;
+import com.luwei.supermarket.base.SuperService;
 
 /**
  * @projectName： supermarket
@@ -12,7 +12,7 @@ import com.luwei.supermarket.admin.entity.po.User;
  * @alert: This document is private to luwei
  * @version: 1.8.00_66
  */
-public interface UserService extends IService<User> {
+public interface UserService extends SuperService<User> {
 
     /**
      * @Title: findUserName

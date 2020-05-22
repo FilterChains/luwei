@@ -44,8 +44,8 @@ public class BaseController {
         provinceList.forEach(p -> {
             DistrictResponse response = new DistrictResponse();
             response.setId(p.getId());
-            response.setName(p.getName());
             response.setUpid(p.getUpid());
+            response.setName(p.getName());
             response.setLevel(p.getLevel().getIndex());
             List<DistrictResponse> cityResponseList = new ArrayList<>();
             cityList.forEach(c -> {
@@ -53,8 +53,8 @@ public class BaseController {
                     DistrictResponse cityResponse = new DistrictResponse();
                     cityResponse.setId(c.getId());
                     cityResponse.setName(c.getName());
-                    cityResponse.setUpid(c.getUpid());
                     cityResponse.setLevel(c.getLevel().getIndex());
+                    cityResponse.setUpid(c.getUpid());
                     List<DistrictResponse> regionResponseList = new ArrayList<>();
                     regionList.forEach(r -> {
                         if (c.getId().equals(r.getUpid())) {
@@ -119,8 +119,8 @@ public class BaseController {
             productCategory2.forEach(s -> {
                 if (f.getId().equals(s.getPrev())) {
                     ProductCategoryResponse response1 = new ProductCategoryResponse();
-                    response1.setValue(s.getId());
                     response1.setPrev(s.getPrev());
+                    response1.setValue(s.getId());
                     response1.setLabel(s.getName());
                     response1.setType(s.getType().getIndex());
                     List<ProductCategoryResponse> responses2 = new ArrayList<>();

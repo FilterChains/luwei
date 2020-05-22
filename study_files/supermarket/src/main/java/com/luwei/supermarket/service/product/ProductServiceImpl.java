@@ -4,9 +4,9 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.luwei.supermarket.admin.entity.po.Product;
 import com.luwei.supermarket.admin.entity.vo.ProductSearchVO;
+import com.luwei.supermarket.base.SuperServiceImpl;
 import com.luwei.supermarket.mapper.ProductMapper;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
@@ -24,7 +24,7 @@ import java.util.List;
  * @version: 1.8.00_66
  */
 @Service
-public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product>
+public class ProductServiceImpl extends SuperServiceImpl<ProductMapper, Product>
         implements ProductService {
 
     @Override

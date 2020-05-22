@@ -57,7 +57,7 @@ public class UserBusiness {
             user.setCreateBy(1);
             user.setUpdateBy(1);
             user.setUpdateTime(time);
-            userService.save(user);
+            userService.insert(user);
             return new Notify<>(Notify.Code.SUCCESS);
         }
     }
