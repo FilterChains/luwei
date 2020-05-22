@@ -1,8 +1,8 @@
 package com.luwei.supermarket.service.product;
 
-import com.baomidou.mybatisplus.extension.service.IService;
 import com.luwei.supermarket.admin.entity.po.Product;
 import com.luwei.supermarket.admin.entity.vo.ProductSearchVO;
+import com.luwei.supermarket.base.SuperService;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ import java.util.List;
  * @alert: This document is private to luwei
  * @version: 1.8.00_66
  */
-public interface ProductService extends IService<Product> {
+public interface ProductService extends SuperService<Product> {
 
     /**
      * @Title: validateProduct

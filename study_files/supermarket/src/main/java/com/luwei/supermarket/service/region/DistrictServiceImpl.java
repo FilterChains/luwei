@@ -2,8 +2,8 @@ package com.luwei.supermarket.service.region;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.luwei.supermarket.admin.entity.po.District;
+import com.luwei.supermarket.base.SuperServiceImpl;
 import com.luwei.supermarket.mapper.DistrictMapper;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +19,7 @@ import java.util.List;
  * @version: 1.8.00_66
  */
 @Service
-public class DistrictServiceImpl extends ServiceImpl<DistrictMapper, District>
+public class DistrictServiceImpl extends SuperServiceImpl<DistrictMapper, District>
         implements DistrictService {
 
     @Override

@@ -1,15 +1,15 @@
 # 更改服务端口
 server:
-    port: 9099
-    servlet:
-      context-path: /
+  port: 9099
+  servlet:
+    context-path: /
 # 配置spring
 spring:
   datasource:
-    name: panda
-    url: jdbc:mysql://127.0.0.1:3306/supermarket?useUnicode=true&characterEncoding=utf8
-    username: root
-    password: 123456
+    url: jdbc:mysql://192.168.3.111:3306/yuncai?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
+    name: yuncai
+    username: yuncai998
+    password: dbksq7zn
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
@@ -25,6 +25,20 @@ spring:
       test-on-return: false
       pool-prepared-statements: true
       max-pool-prepared-statement-per-connection-size: 20
+  # 配置redis信息
+  redis:
+    host: 192.168.3.111 #redis本地URL
+    port: 6397  #redis端口(port)
+    database: 8 #选择存储的数据库(0-15)
+    password: n1yEl39pMQZkH
+    #timeout: 3000 #连接超时
+    #配置连接池
+    #pool:
+    #max-wait: 30000 #连接池最大阻塞等待时间(使用负值表示没有限制)
+    #max-active: 100 #连接池最大连接数(使用负值表示没有限制)
+    #max-idle: 20 #连接池中的最大空闲连接
+    #min-idle: 0 #连接池中的最小空闲连接
+
 #Mybatis配置
 mybatis:
   typeAliasesPackage: com.luwei.supermarket.admin.entity.po
@@ -34,15 +48,17 @@ mybatis:
   logging:
     level:
       com.luwei.supermarket.mapper: debug
+
 #mybatis-plus 枚举自动转换配置
 mybatis-plus:
   typeEnumsPackage: com.luwei.supermarket.admin.entity.po*
+
 # swagger-ui 配置所有资源都会屏蔽输出 true->开启 ，false->关闭
 swagger2:
-# 开启Swagger的Basic认证功能,默认是false
+  # 开启Swagger的Basic认证功能,默认是false
   basic:
     enable: true
-## Basic认证用户名
+    ## Basic认证用户名
     username: luwei
-## Basic认证密码
+    ## Basic认证密码
     password: 142857

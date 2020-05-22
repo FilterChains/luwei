@@ -1,7 +1,7 @@
 package com.luwei.supermarket.service.region;
 
-import com.baomidou.mybatisplus.extension.service.IService;
 import com.luwei.supermarket.admin.entity.po.District;
+import com.luwei.supermarket.base.SuperService;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ import java.util.List;
  * @alert: This document is private to luwei
  * @version: 1.8.00_66
  */
-public interface DistrictService extends IService<District> {
+public interface DistrictService extends SuperService<District> {
 
     /**
      * @Title: findDistrictLevel

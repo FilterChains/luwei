@@ -20,7 +20,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.ObjectUtils;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 /**
  * @projectName： supermarket
@@ -70,7 +76,7 @@ public class ProductBusiness {
                     productCategory.setType(ProductCategory.ProductCategoryType.FIRST_LEVEL);
                 }
                 if (null != id && StringUtils.isNotEmpty(title)) {
-                    ProductCategory byId = productCategoryService.getById(id);
+                    ProductCategory byId = productCategoryService.get(id);
                     if (Objects.nonNull(byId)) {
                         // 新增一级分类
                         productCategory.setName(title);
@@ -87,13 +93,13 @@ public class ProductBusiness {
                 productCategory.setName(title);
                 break;
             case DELETE:
-                productCategoryService.removeById(id);
+                productCategoryService.deleteById(id);
                 return new Notify<>(Notify.Code.SUCCESS);
             default:
                 return new Notify<>(Notify.Code.ERROR, "操作类型选择错误");
         }
         productCategory.setUpdateBy(userId);
-        productCategoryService.saveOrUpdate(productCategory);
+        productCategoryService.insertOrUpdate(productCategory);
         return new Notify<>(Notify.Code.SUCCESS);
     }
 
@@ -115,7 +121,7 @@ public class ProductBusiness {
         if (StringUtils.isEmpty(productRegion)) {
             return new Notify<>(Notify.Code.ERROR, "商品地区不能为空");
         }
-        District byId = districtService.getById(Integer.valueOf(productRegion));
+        District byId = districtService.get(Integer.valueOf(productRegion));
         final Product product = new Product();
         final Date time = Calendar.getInstance().getTime();
         if (null == id) {
@@ -151,7 +157,7 @@ public class ProductBusiness {
         product.setProductRemark(request.getProductRemark());
         product.setUpdateBy(userId);
         product.setUpdateTime(time);
-        productService.saveOrUpdate(product);
+        productService.insertOrUpdate(product);
         return new Notify<>(Notify.Code.SUCCESS, "编辑成功");
     }
 
@@ -190,8 +196,8 @@ public class ProductBusiness {
                     productListResponse.setId(lt.getId());
                     productListResponse.setProductName(lt.getProductName());
                     productListResponse.setProductAddress(lt.getProductAddress());
-                    productListResponse.setProductPrice(lt.getProductPrice());
                     productListResponse.setProductStock(lt.getProductStock());
+                    productListResponse.setProductPrice(lt.getProductPrice());
                     productListResponse.setProductStatus(lt.getProductStatus().getValue());
                     productListResponse.setProductImagesUrl(lt.getProductImagesUrl());
                     productListResponse.setProductUnit(lt.getProductUnit());
@@ -218,7 +224,7 @@ public class ProductBusiness {
      * @Date: 2020/5/17 21:37
      */
     public Notify<ProductListResponse> echoProductMsg(Integer id) {
-        Product product = productService.getById(id);
+        Product product = productService.get(id);
         ProductListResponse productListResponse = new ProductListResponse();
         if (Objects.nonNull(product)) {
             productListResponse.setId(product.getId());
@@ -228,7 +234,7 @@ public class ProductBusiness {
             productListResponse.setProductStock(product.getProductStock());
             productListResponse.setProductStatus(product.getProductStatus().getValue());
             productListResponse.setProductImagesUrl(product.getProductImagesUrl());
-            ProductCategory byId = productCategoryService.getById(product.getProductType());
+            ProductCategory byId = productCategoryService.get(product.getProductType());
             if (Objects.nonNull(byId)) {
                 productListResponse.setProductType(byId.getName());
             }
@@ -247,7 +253,7 @@ public class ProductBusiness {
      */
     public Notify<String> deleteProductMsg(final Integer id) {
         return new Notify<>(Notify.Code.SUCCESS,
-                productService.removeById(id) ? "删除成功" : "删除失败");
+                productService.deleteById(id) ? "删除成功" : "删除失败");
     }
 
     /**

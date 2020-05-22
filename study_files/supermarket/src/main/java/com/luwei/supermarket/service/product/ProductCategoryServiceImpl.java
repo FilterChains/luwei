@@ -2,8 +2,8 @@ package com.luwei.supermarket.service.product;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.luwei.supermarket.admin.entity.po.ProductCategory;
+import com.luwei.supermarket.base.SuperServiceImpl;
 import com.luwei.supermarket.mapper.ProductCategoryMapper;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
@@ -24,7 +24,7 @@ import java.util.stream.Collectors;
  * @version: 1.8.00_66
  */
 @Service
-public class ProductCategoryServiceImpl extends ServiceImpl<ProductCategoryMapper, ProductCategory>
+public class ProductCategoryServiceImpl extends SuperServiceImpl<ProductCategoryMapper, ProductCategory>
         implements ProductCategoryService {
 
     @Override
@@ -46,8 +46,8 @@ public class ProductCategoryServiceImpl extends ServiceImpl<ProductCategoryMappe
 
     @Override
     public Map<Integer, ProductCategory> findProductTypeAll() {
-        List<ProductCategory> list = super.list();
-        return CollectionUtils.isEmpty(list) ? Collections.EMPTY_MAP :
+        List<ProductCategory> list = super.find(null);
+        return CollectionUtils.isEmpty(list) ? Collections.<Integer, ProductCategory>emptyMap() :
                 list.stream().collect(Collectors.toMap(ProductCategory::getId, ProductCategory -> ProductCategory));
     }
 }

@@ -1,7 +1,7 @@
 package com.luwei.supermarket.service.product;
 
-import com.baomidou.mybatisplus.extension.service.IService;
 import com.luwei.supermarket.admin.entity.po.ProductCategory;
+import com.luwei.supermarket.base.SuperService;
 
 import java.util.List;
 import java.util.Map;
@@ -15,7 +15,7 @@ import java.util.Map;
  * @alert: This document is private to luwei
  * @version: 1.8.00_66
  */
-public interface ProductCategoryService extends IService<ProductCategory> {
+public interface ProductCategoryService extends SuperService<ProductCategory> {
 
     /**
      * @Title: findProductCategory

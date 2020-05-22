@@ -2,8 +2,8 @@ package com.luwei.supermarket.service.user;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.luwei.supermarket.admin.entity.po.User;
+import com.luwei.supermarket.base.SuperServiceImpl;
 import com.luwei.supermarket.mapper.UserMapper;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
  * @version: 1.8.00_66
  */
 @Service
-public class UserServiceImpl extends ServiceImpl<UserMapper, User>
+public class UserServiceImpl extends SuperServiceImpl<UserMapper, User>
         implements UserService {
 
     @Override
