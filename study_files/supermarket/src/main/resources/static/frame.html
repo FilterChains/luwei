@@ -6,16 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
     <!-- Google Chrome Frame也可以让IE用上Chrome的引擎: -->
     <meta name="renderer" content="webkit">
+    <title>叮叮瞄</title>
+    <meta name="description" content="便捷超市后台">
+    <meta name="author" content="芦苇">
     <!--国产浏览器高速模式-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="穷在闹市"/>
-    <!-- 作者 -->
-    <meta name="revised" content="穷在闹市.v3, 2019/05/01"/>
-    <!-- 定义页面的最新版本 -->
-    <meta name="description" content="网站简介"/>
     <!-- 网站简介 -->
     <meta name="keywords" content="搜索关键字，以半角英文逗号隔开"/>
-    <title>穷在闹市出品</title>
 
     <!-- 公共样式 开始 -->
     <link rel="shortcut icon" href="images/favicon.ico"/>
@@ -48,31 +45,39 @@
     <div class="logo">
         <img src="images/logo.png"/>
         <div class="logoText">
-            <h1>穷在闹市出品</h1>
-            <p>qiongzainaoshi</p>
+            <h1>超市</h1>
+            <p>supermarket</p>
         </div>
     </div>
     <div class="menu">
         <ul>
             <li>
-                <a class="menuFA" href="javascript:void(0)" onclick="menuCAClick('tgls/qdAPI.html',this)"><i
-                        class="iconfont icon-zhishi left"></i>前端API</a>
-            </li>
-            <li>
-                <a class="menuFA" href="javascript:void(0)" onclick="menuCAClick('tgls/iconfont.html',this)"><i
-                        class="iconfont icon-huojian left"></i>iconfont字体库</a>
-            </li>
-            <li>
-                <a class="menuFA" href="javascript:void(0)"><i
-                        class="iconfont icon-liuliangyunpingtaitubiao03 left"></i>分管管理<i
+                <a class="menuFA" href="javascript:void(0)"><i class="iconfont icon-icon left"></i>运营管理<i
                         class="iconfont icon-dajiantouyou right"></i></a>
                 <dl>
-                    <dt><a href="javascript:void(0)" onclick="menuCAClick('tgls/agent/agent_add.html',this)">添加分管</a>
-                    </dt>
-                    <dt><a href="javascript:void(0)" onclick="menuCAClick('tgls/agent/agent_list.html',this)">分管列表</a>
+                    <dt><a href="javascript:void(0)" onclick="menuCAClick('tgls/reportForm/reportForm1.html',this)">订单统计报表</a>
                     </dt>
                 </dl>
             </li>
+            <!--<li>-->
+            <!--<a class="menuFA" href="javascript:void(0)" onclick="menuCAClick('tgls/qdAPI.html',this)"><i-->
+            <!--class="iconfont icon-zhishi left"></i>首页</a>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<a class="menuFA" href="javascript:void(0)" onclick="menuCAClick('tgls/iconfont.html',this)"><i-->
+            <!--class="iconfont icon-huojian left"></i>iconfont字体库</a>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<a class="menuFA" href="javascript:void(0)"><i-->
+            <!--class="iconfont icon-liuliangyunpingtaitubiao03 left"></i>分管管理<i-->
+            <!--class="iconfont icon-dajiantouyou right"></i></a>-->
+            <!--<dl>-->
+            <!--<dt><a href="javascript:void(0)" onclick="menuCAClick('tgls/agent/agent_add.html',this)">添加分管</a>-->
+            <!--</dt>-->
+            <!--<dt><a href="javascript:void(0)" onclick="menuCAClick('tgls/agent/agent_list.html',this)">分管列表</a>-->
+            <!--</dt>-->
+            <!--</dl>-->
+            <!--</li>-->
             <li>
                 <a class="menuFA" href="javascript:void(0)"><i class="iconfont icon-shangpin left"></i>商品管理<i
                         class="iconfont icon-dajiantouyou right"></i></a>
@@ -86,7 +91,7 @@
                 </dl>
             </li>
             <li>
-                <a class="menuFA" href="javascript:void(0)"><i class="iconfont icon-yunying left"></i>基础库内容<i
+                <a class="menuFA" href="javascript:void(0)"><i class="iconfont icon-yunying left"></i>订单管理<i
                         class="iconfont icon-dajiantouyou right"></i></a>
                 <dl>
                     <dt><a href="javascript:void(0)" onclick="menuCAClick('tgls/base/base_add.html',this)">表单含编辑器</a>
@@ -103,25 +108,17 @@
                     </dt>
                 </dl>
             </li>
-            <li>
-                <a class="menuFA" href="javascript:void(0)"><i class="iconfont icon-icon left"></i>打印模板<i
-                        class="iconfont icon-dajiantouyou right"></i></a>
-                <dl>
-                    <dt><a href="javascript:void(0)"
-                           onclick="menuCAClick('tgls/print/outPrintData.html',this)">入库单打印模版</a></dt>
-                </dl>
-            </li>
-            <li>
-                <a class="menuFA" href="javascript:void(0)"><i class="iconfont icon-caiwu left"></i>财务管理</a>
-            </li>
-            <li>
-                <a class="menuFA" href="javascript:void(0)"><i class="iconfont icon-icon left"></i>报表模块<i
-                        class="iconfont icon-dajiantouyou right"></i></a>
-                <dl>
-                    <dt><a href="javascript:void(0)" onclick="menuCAClick('tgls/reportForm/reportForm1.html',this)">订单统计报表</a>
-                    </dt>
-                </dl>
-            </li>
+            <!--<li>-->
+            <!--<a class="menuFA" href="javascript:void(0)"><i class="iconfont icon-icon left"></i>打印模板<i-->
+            <!--class="iconfont icon-dajiantouyou right"></i></a>-->
+            <!--<dl>-->
+            <!--<dt><a href="javascript:void(0)"-->
+            <!--onclick="menuCAClick('tgls/print/outPrintData.html',this)">入库单打印模版</a></dt>-->
+            <!--</dl>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<a class="menuFA" href="javascript:void(0)"><i class="iconfont icon-caiwu left"></i>财务管理</a>-->
+            <!--</li>-->
         </ul>
     </div>
 </div>
