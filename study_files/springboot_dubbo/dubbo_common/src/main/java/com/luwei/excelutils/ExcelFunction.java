@@ -27,7 +27,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.*;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 /**
  * @projectName： GitHub
@@ -38,7 +45,7 @@ import java.util.concurrent.*;
  * @alert: This document is private to luwei
  * @version: 1.8.00_66
  */
-class ExcelFunction {
+final class ExcelFunction {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ExcelFunction.class);
 
@@ -57,10 +64,14 @@ class ExcelFunction {
      */
     static <T> List<T> readExcel(MultipartFile file, Class<T> objectClass, boolean operation, boolean checkTitle) throws ExcelException {
         List<T> resultDate = null;
+        //同步请求
+        Semaphore semaphore = new Semaphore(1);
         //创建线程池
         ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 3,
                 10L, TimeUnit.SECONDS, new LinkedBlockingQueue<>(1));
         try {
+            // 获取信号量
+            semaphore.acquire();
             //读取数据方式
             ExcelCode.EXCEL_READ_WAY = operation;
             //是否检查表头
@@ -103,6 +114,7 @@ class ExcelFunction {
             ExcelCode.fieldTypes.clear();
             ExcelCode.validateName.clear();
             ExcelCode.excludeTitle.clear();
+            semaphore.release(); //释放信号量
         }
         return resultDate;
     }
@@ -233,7 +245,8 @@ class ExcelFunction {
         // 遍历
         for (int columnIndex = 0; columnIndex < ExcelCode.totalCells; columnIndex++) {
             //获取对应列的名称
-            String data = StringReplace(titleRow.getCell(columnIndex).toString());
+            Cell cell = titleRow.getCell(columnIndex);
+            String data = StringReplace(ObjectUtils.isEmpty(cell) ? null : cell.toString());
             //指定排除列表表头字段
             if (ExcelCode.EXCEL_SERIAL_NUMBER.equals(data)) {
                 ExcelCode.excludeTitle.add(data);
@@ -327,7 +340,8 @@ class ExcelFunction {
                     T obj = objectClass.newInstance();
                     // 获得本行中各单元格中的数据,从第一列开始读取
                     for (int columnIndex = 0; columnIndex < ExcelCode.totalCells; columnIndex++) {
-                        String tableName = StringReplace(titleRow.getCell(columnIndex).toString());
+                        Cell cl = titleRow.getCell(columnIndex);
+                        String tableName = StringReplace(ObjectUtils.isEmpty(cl) ? null : cl.toString());
                         Field field = validateExcelTitle.get(tableName);
                         //验证保存信息,验证表中的字段是否已在实体类中创建
                         if (ObjectUtils.isEmpty(field)) {

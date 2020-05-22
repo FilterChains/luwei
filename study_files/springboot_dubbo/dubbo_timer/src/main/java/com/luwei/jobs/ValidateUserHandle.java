@@ -23,7 +23,7 @@ public class ValidateUserHandle {
     private static long count=1;
     private static long cot=1;
 
-    @Scheduled(fixedDelay = 60*1000)
+    @Scheduled(fixedDelay = 60 * 1000)
     public void timerToZZP(){
         System.out.println("执行:"+count+"次"+new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
         count++;
