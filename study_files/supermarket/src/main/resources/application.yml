@@ -6,10 +6,10 @@ server:
 # 配置spring
 spring:
   datasource:
-    url: jdbc:mysql://192.168.3.111:3306/yuncai?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
-    name: yuncai
-    username: yuncai998
-    password: dbksq7zn
+    url: jdbc:mysql://xxx?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
+    name: xxx
+    username: xxx
+    password: xxx
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
@@ -27,10 +27,9 @@ spring:
       max-pool-prepared-statement-per-connection-size: 20
   # 配置redis信息
   redis:
-    host: 192.168.3.111 #redis本地URL
+    host: 127.0.0.1 #redis本地URL
     port: 6397  #redis端口(port)
     database: 8 #选择存储的数据库(0-15)
-    password: n1yEl39pMQZkH
     #timeout: 3000 #连接超时
     #配置连接池
     #pool:
@@ -61,4 +60,4 @@ swagger2:
     ## Basic认证用户名
     username: luwei
     ## Basic认证密码
-    password: 142857
+    password: 123456
