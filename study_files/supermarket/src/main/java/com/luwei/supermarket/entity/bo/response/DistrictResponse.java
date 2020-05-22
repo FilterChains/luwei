@@ -16,8 +16,8 @@ import java.util.List;
  * @alert: This document is private to luwei
  * @version: 1.8.00_66
  */
-@ApiModel("地区响应Model")
 @Data
+@ApiModel("地区响应Model")
 public class DistrictResponse implements Serializable {
 
     @ApiModelProperty("地区ID")

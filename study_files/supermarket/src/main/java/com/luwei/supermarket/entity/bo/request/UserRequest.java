@@ -1,8 +1,9 @@
 package com.luwei.supermarket.entity.bo.request;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
@@ -16,23 +17,18 @@ import java.io.Serializable;
  * @version: 1.8.00_66
  */
 @Data
-@Valid
+@ApiModel("用户信息请求Model")
 public class UserRequest implements Serializable {
 
-    /**
-     * 用户名
-     */
+    @ApiModelProperty("用户名")
     @NotBlank(message = "用户名不能为空")
     private String userName;
 
-    /**
-     * 密码
-     */
+    @ApiModelProperty("密码")
     @NotBlank(message = "密码不能为空")
     private String userPassword;
 
-    /**
-     * 微信号
-     */
+    @ApiModelProperty("微信号")
+    @NotBlank(message = "微信号不能为空")
     private String userWeiChat;
 }

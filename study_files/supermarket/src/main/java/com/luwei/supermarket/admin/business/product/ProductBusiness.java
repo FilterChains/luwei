@@ -166,7 +166,6 @@ public class ProductBusiness {
      * @Title: showProductListBody
      * @Description: 商品列表展示/查询
      * @Return: 返回类型
-     * @Throws:
      * @Date: 2020/5/17 12:20
      */
     public Notify<List<ProductListResponse>> showProductListBody(ProductSearchRequest request) {

@@ -17,7 +17,7 @@ import java.io.Serializable;
  * @version: 1.8.00_66
  */
 @Data
-@ApiModel("商品分类MOdel")
+@ApiModel("商品分类Model")
 public class ProductCategoryRequest implements Serializable {
 
     @ApiModelProperty("分类ID")
@@ -26,7 +26,7 @@ public class ProductCategoryRequest implements Serializable {
     @ApiModelProperty("分类名称")
     private String title;
 
-    @ApiModelProperty("商品分类操作")
+    @ApiModelProperty("商品分类操作:INSERT-新增,UPDATE-修改,DELETE-删除")
     private ProductCategoryOperation operation;
 
     public enum ProductCategoryOperation {

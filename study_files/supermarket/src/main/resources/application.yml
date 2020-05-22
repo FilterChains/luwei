@@ -6,7 +6,7 @@ server:
 # 配置spring
 spring:
   datasource:
-    url: jdbc:mysql://xxx?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
+    url: jdbc:mysql:xxx?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
     name: xxx
     username: xxx
     password: xxx

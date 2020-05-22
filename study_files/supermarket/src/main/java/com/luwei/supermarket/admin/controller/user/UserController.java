@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 /**
  * @projectName： supermarket
@@ -37,14 +38,14 @@ public class UserController extends BaseController {
     @ResponseBody
     @PostMapping("/register")
     @ApiOperation(value = "用户注册接口", notes = "用户注册接口")
-    public Notify<String> register(@RequestBody UserRequest request) {
+    public Notify<String> register(@RequestBody @Valid UserRequest request) {
         return userBusiness.userRegister(request);
     }
 
     @ResponseBody
     @PostMapping("/login")
     @ApiOperation(value = "用户登录接口", notes = "用户登录接口")
-    public Notify<String> login(@RequestBody UserRequest request, HttpServletRequest hsq) {
+    public Notify<String> login(@RequestBody @Valid UserRequest request, HttpServletRequest hsq) {
         return userBusiness.userLogin(request, hsq);
     }
 }

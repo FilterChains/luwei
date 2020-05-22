@@ -15,7 +15,7 @@ import java.util.Date;
  * @version: 1.8.00_66
  */
 @Data
-public class BaseTable implements Serializable {
+class BaseTable implements Serializable {
     /**
      * 创建人
      */

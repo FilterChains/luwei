@@ -6,6 +6,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+
 /**
  * @projectName： supermarket
  * @packageName: com.luwei.supermarket.entity.bo.request
@@ -15,8 +16,8 @@ import java.io.Serializable;
  * @alert: This document is private to luwei
  * @version: 1.8.00_66
  */
-@ApiModel("商品搜索Model")
 @Data
+@ApiModel("商品搜索Model")
 public class ProductSearchRequest implements Serializable {
 
     @ApiModelProperty("商品名称")

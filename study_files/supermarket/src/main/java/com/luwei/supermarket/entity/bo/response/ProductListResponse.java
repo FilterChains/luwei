@@ -35,7 +35,7 @@ public class ProductListResponse implements Serializable {
     @ApiModelProperty("商品库存")
     private Integer productStock;
 
-    @ApiModelProperty("商品状态：0-下架，1-上架，2-待上架")
+    @ApiModelProperty("商品状态：下架,上架，待上架")
     private String productStatus;
 
     @ApiModelProperty("商品图片")
