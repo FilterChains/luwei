@@ -1,7 +1,7 @@
 package com.luwei.supermarket.admin.controller.user;
 
 import com.luwei.supermarket.admin.business.user.UserBusiness;
-import com.luwei.supermarket.admin.controller.BaseController;
+import com.luwei.supermarket.base.BaseController;
 import com.luwei.supermarket.entity.bo.request.UserRequest;
 import com.luwei.supermarket.util.Notify;
 import io.swagger.annotations.Api;
