@@ -1,5 +1,6 @@
 package com.luwei.supermarket.admin.business.user;
 
+import com.luwei.supermarket.base.BaseBusiness;
 import com.luwei.supermarket.entity.bo.request.UserRequest;
 import com.luwei.supermarket.entity.po.User;
 import com.luwei.supermarket.service.user.UserService;
@@ -26,7 +27,7 @@ import java.util.Objects;
  * @version: 1.8.00_66
  */
 @Service
-public class UserBusiness {
+public class UserBusiness extends BaseBusiness {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UserBusiness.class);
 

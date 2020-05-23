@@ -7,7 +7,7 @@ import org.springframework.util.StringUtils;
 
 /**
  * <p>@Description : 动态数据源路由配置</p>
- * <p>@Author : QiLin.Xing </p>
+ * <p>@Author : luwei </p>
  * <p>@Date : 2018/11/11 9:06 </p>
  */
 public class DataSourceRouting extends AbstractRoutingDataSource {

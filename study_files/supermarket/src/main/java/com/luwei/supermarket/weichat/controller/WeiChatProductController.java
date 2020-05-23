@@ -7,15 +7,12 @@ import com.luwei.supermarket.entity.bo.response.ProductListResponse;
 import com.luwei.supermarket.entity.po.ProductCategory;
 import com.luwei.supermarket.util.Notify;
 import com.luwei.supermarket.weichat.business.WeiChatProductBusiness;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -27,7 +24,8 @@ import java.util.List;
  * @alert: This document is private to luwei
  * @version: 1.8.00_66
  */
-@Valid
+@Api(tags = "微信端商品接口")
+@Validated
 @RestController
 @RequestMapping("/wcProduct")
 public class WeiChatProductController extends BaseController {

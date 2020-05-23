@@ -2,18 +2,13 @@ package com.luwei.supermarket.intercepter;
 
 import org.springframework.util.StringUtils;
 
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.FilterConfig;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
+import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
  * <p>@Description : 包装请求过滤器</p>
- * <p>@Author : QiLin.Xing </p>
+ * <p>@Author : luwei</p>
  * <p>@Date : 2018/8/2 14:30 </p>
  */
 public class RequestBodyFilter implements Filter {

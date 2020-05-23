@@ -107,6 +107,11 @@ public class Product implements Serializable {
     private String productRemark;
 
     /**
+     * 商品排序
+     */
+    private Integer sort;
+
+    /**
      * 创建人
      */
     private Integer createBy;

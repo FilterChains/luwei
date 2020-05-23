@@ -17,7 +17,6 @@ import java.util.Properties;
  * @alert: This document is private to luwei
  * @version: 1.8.00_66
  */
-
 @Configuration
 @MapperScan("com.luwei.supermarket.mapper")
 public class MybatisPlusConfig {

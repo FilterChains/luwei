@@ -18,7 +18,7 @@ import java.util.Objects;
  * 1.解决body只能读一次的问题
  * 2.预防XSS攻击
  * </p>
- * <p>@Author : QiLin.Xing </p>
+ * <p>@Author : luwei</p>
  * <p>@Date : 2018/8/3 16:17 </p>
  */
 public class RequestWrapper extends HttpServletRequestWrapper {

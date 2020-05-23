@@ -4,29 +4,29 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
-
 /**
- * @projectName： supermarket
+ * @projectName： spring-boot-seckill
  * @packageName: com.luwei.supermarket.entity.bo.request
  * @auther: luwei
  * @description:
- * @date: 2020/5/19 23:48
+ * @date: 2020/5/24 01:43
  * @alert: This document is private to luwei
  * @version: 1.8.00_66
  */
 @Data
-@ApiModel("商品搜索Model")
-public class WcProductSearchRequest implements Serializable {
+@ApiModel("购物车搜索Model")
+public class WcShoppingCartSearchRequest implements Serializable {
 
-    @ApiModelProperty("商品分类")
-    private Integer typeId;
+    @ApiModelProperty("用户ID")
+    @NotNull(message = "用户ID不能为空")
+    private Integer userId;
 
     @ApiModelProperty("起始页")
     private Integer pageNo;
 
     @ApiModelProperty("展示行数")
     private Integer pageSize;
-
 }

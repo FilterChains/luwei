@@ -1,5 +1,6 @@
 package com.luwei.supermarket.admin.business.product;
 
+import com.luwei.supermarket.base.BaseBusiness;
 import com.luwei.supermarket.entity.bo.request.ProductCategoryRequest;
 import com.luwei.supermarket.entity.bo.request.ProductRequest;
 import com.luwei.supermarket.entity.bo.request.ProductSearchRequest;
@@ -20,13 +21,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.ObjectUtils;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.math.BigDecimal;
+import java.util.*;
 
 /**
  * @projectName： supermarket
@@ -38,7 +34,7 @@ import java.util.Objects;
  * @version: 1.8.00_66
  */
 @Service
-public class ProductBusiness {
+public class ProductBusiness extends BaseBusiness {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ProductBusiness.class);
 
@@ -137,7 +133,8 @@ public class ProductBusiness {
         //商品名称
         product.setProductName(productName);
         //商品价格
-        product.setProductPrice(request.getProductPrice());
+//        new DecimalFormat("0.00").format(request.getProductPrice())
+        product.setProductPrice(request.getProductPrice().setScale(2, BigDecimal.ROUND_HALF_DOWN));
         //商品库存
         product.setProductStock(request.getProductStock());
         //商品状态：0-下架，1-上架，2-待上架

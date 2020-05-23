@@ -5,7 +5,7 @@ import java.net.UnknownHostException;
 
 /**
  * <p>@Description : 订单号生成器</p>
- * <p>@Author : QiLin.Xing </p>
+ * <p>@Author : luwei</p>
  * <p>@Date : 2019/10/24 0024 下午 15:24 </p>
  */
 public class IDGenerator {
