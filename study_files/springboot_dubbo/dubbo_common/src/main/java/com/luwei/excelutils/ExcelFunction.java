@@ -1,15 +1,13 @@
 package com.luwei.excelutils;
 
 import org.apache.commons.collections4.MapUtils;
-import org.apache.poi.POIXMLDocument;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.poifs.filesystem.POIFSFileSystem;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.ObjectUtils;
@@ -18,7 +16,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.PushbackInputStream;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
@@ -134,16 +131,17 @@ final class ExcelFunction {
             throw new ExecutionException(new Throwable("文件上传失败,请检查上传文件路径"));
         }
         try {
-            if (!inputStream.markSupported()) {
-                inputStream = new PushbackInputStream(inputStream, 8);
-            }
-            if (POIFSFileSystem.hasPOIFSHeader(inputStream)) {
-                workbook = new HSSFWorkbook(inputStream); //excel ->2003版(suffix ->.xls)
-            }
-            if (POIXMLDocument.hasOOXMLHeader(inputStream)) {
-                workbook = new XSSFWorkbook(inputStream); //excel ->2007版(suffix ->.xlsx)
-            }
-        } catch (IOException e) {
+            //if (!inputStream.markSupported()) {
+            //    inputStream = new PushbackInputStream(inputStream, 8);
+            //}
+            //if (POIFSFileSystem.hasPOIFSHeader(inputStream)) {
+            //    workbook = new HSSFWorkbook(inputStream); //excel ->2003版(suffix ->.xls)
+            //}
+            //if (POIXMLDocument.hasOOXMLHeader(inputStream)) {
+            //    workbook = new XSSFWorkbook(inputStream); //excel ->2007版(suffix ->.xlsx)
+            //}
+            workbook = WorkbookFactory.create(inputStream); // poi 升级后的新方法，获取对应excel的操作版本
+        } catch (IOException | InvalidFormatException e) {
             LOGGER.info("获取文件对应版本异常", e.getMessage());
             e.fillInStackTrace();
         } finally {

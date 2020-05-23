@@ -41,26 +41,27 @@ public class WeiChatProductBusiness {
     @Autowired
     private ProductCategoryService productCategoryService;
 
-    /**@Title: getProductMsg
+    /**
+     * @Title: getProductMsg
      * @Description: 获取商品分类对应商品
      * @Param: [request]   参数
      * @Return: List<ProductListResponse> 返回类型
      * @Date: 2020/5/23 0:58
      */
-    public Notify<List<ProductListResponse>> getProductMsg(final WcProductSearchRequest request){
+    public Notify<List<ProductListResponse>> getProductMsg(final WcProductSearchRequest request) {
         final Integer type = request.getType();
         Integer pageNo = request.getPageNo();
         Integer pageSize = request.getPageSize();
         ProductSearchVO build = ProductSearchVO.builder().pageNo(pageNo).typeList(Lists.newArrayList(type)).build();
         Integer totalPages = productService.searchProductListTotalPages(build);
         List<ProductListResponse> list = new ArrayList<>();
-        if(0 <totalPages){
+        if (0 < totalPages) {
             // 查询商品类型
             Map<Integer, ProductCategory> productTypeAll = productCategoryService.findProductTypeAll();
-            build.setPageSize(pageSize>totalPages?totalPages:pageSize);
+            build.setPageSize(pageSize > totalPages ? totalPages : pageSize);
             List<Product> productList = productService.searchProductList(build);
-            if(!CollectionUtils.isEmpty(productList)){
-                productList.forEach(p ->{
+            if (!CollectionUtils.isEmpty(productList)) {
+                productList.forEach(p -> {
                     ProductListResponse response = new ProductListResponse();
                     response.setId(p.getId());
                     response.setProductName(p.getProductName());
@@ -68,9 +69,9 @@ public class WeiChatProductBusiness {
                     response.setProductPrice(p.getProductPrice());
                     response.setProductStock(p.getProductStock());
                     response.setProductImagesUrl(p.getProductImagesUrl());
-                    if(!ObjectUtils.isEmpty(productTypeAll)){
+                    if (!ObjectUtils.isEmpty(productTypeAll)) {
                         ProductCategory productCategory = productTypeAll.get(p.getProductType());
-                        if(Objects.nonNull(productCategory)){
+                        if (Objects.nonNull(productCategory)) {
                             response.setProductType(productCategory.getName());
                         }
                     }
@@ -81,6 +82,6 @@ public class WeiChatProductBusiness {
                 });
             }
         }
-        return new Notify<>(Notify.Code.SUCCESS,list);
+        return new Notify<>(Notify.Code.SUCCESS, list);
     }
 }
