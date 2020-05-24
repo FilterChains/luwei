@@ -65,9 +65,10 @@ public class ProductServiceImpl extends SuperServiceImpl<ProductMapper, Product>
     }
 
     @Override
-    public Map<Integer, Product> findProductMsg(List<Integer> idList) {
+    public Map<Integer, Product> findProductMsg(List<Integer> idList, boolean flag) {
         LambdaQueryWrapper<Product> lambda = new QueryWrapper<Product>().lambda();
-        List<Product> products = baseMapper.selectList(lambda.in(Product::getId, idList));
+        List<Product> products = baseMapper.selectList(lambda.in(Product::getId, idList)
+                .eq(flag, Product::getProductStatus, Product.ProductStatus.PUT_AWAY));
         return CollectionUtils.isEmpty(products) ? Collections.emptyMap() :
                 products.stream().collect(Collectors.toMap(Product::getId, Product -> Product));
     }

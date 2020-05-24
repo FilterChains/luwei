@@ -52,7 +52,7 @@ public interface ProductService extends SuperService<Product> {
      * @Return: Map  返回类型
      * @Date: 2020/5/24 14:57
      */
-    Map<Integer, Product> findProductMsg(List<Integer> idList);
+    Map<Integer, Product> findProductMsg(List<Integer> idList, boolean flag);
 
     /**
      * @Title: findProductCategory
@@ -62,4 +62,5 @@ public interface ProductService extends SuperService<Product> {
      * @Date: 2020/5/24 15:40
      */
     List<Product> findProductCategory(Integer categoryId);
+
 }

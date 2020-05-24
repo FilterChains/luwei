@@ -19,7 +19,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
-import org.springframework.util.ObjectUtils;
 
 import java.math.BigDecimal;
 import java.util.*;
@@ -207,7 +206,7 @@ public class ProductBusiness extends BaseBusiness {
                     productListResponse.setProductImagesUrl(lt.getProductImagesUrl());
                     productListResponse.setProductUnit(lt.getProductUnit());
                     productListResponse.setProductRemark(lt.getProductRemark());
-                    if (!ObjectUtils.isEmpty(productTypeAll)) {
+                    if (!CollectionUtils.isEmpty(productTypeAll)) {
                         ProductCategory productCategory = productTypeAll.get(lt.getProductType());
                         if (Objects.nonNull(productCategory)) {
                             productListResponse.setProductType(productCategory.getName());

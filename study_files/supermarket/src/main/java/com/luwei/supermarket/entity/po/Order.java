@@ -4,8 +4,7 @@ import com.baomidou.mybatisplus.annotation.EnumValue;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
@@ -22,6 +21,9 @@ import java.util.Date;
  * @version: 1.8.00_66
  */
 @Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @TableName("td_order")
 @Accessors(chain = true)
 @ToString(callSuper = true)
@@ -113,6 +115,11 @@ public class Order implements Serializable {
     private Date createTime;
 
     /**
+     * 创建人
+     */
+    private String createBy;
+
+    /**
      * 订单更新时间
      */
     private Date updateTime;
@@ -120,7 +127,7 @@ public class Order implements Serializable {
     /**
      * 收货人
      */
-    private Integer receiverBy;
+    private String receiverBy;
 
     /**
      * 收货电话

@@ -47,7 +47,7 @@ public class ShoppingCart implements Serializable {
     /**
      * 购买者
      */
-    private Integer createBy;
+    private String createBy;
 
     /**
      * 创建时间/修改时间

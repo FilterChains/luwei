@@ -4,6 +4,7 @@ import com.luwei.supermarket.base.SuperService;
 import com.luwei.supermarket.entity.po.ShoppingCart;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @projectName： spring-boot-seckill
@@ -23,7 +24,7 @@ public interface ShoppingCartService extends SuperService<ShoppingCart> {
      * @Return: List<ShoppingCart>  返回类型
      * @Date: 2020/5/24 1:55
      */
-    List<ShoppingCart> getShoppingCartList(Integer userId, Integer pageNo, Integer pageSize);
+    List<ShoppingCart> getShoppingCartList(String userId, Integer pageNo, Integer pageSize);
 
     /**
      * @Title: getShoppingCartList
@@ -32,7 +33,7 @@ public interface ShoppingCartService extends SuperService<ShoppingCart> {
      * @Return: List<ShoppingCart>  返回类型
      * @Date: 2020/5/24 1:55
      */
-    Integer getShoppingCartListTotalPage(Integer userId);
+    Integer getShoppingCartListTotalPage(String userId);
 
     /**
      * @Title: cleanUserShoppingCart
@@ -41,7 +42,7 @@ public interface ShoppingCartService extends SuperService<ShoppingCart> {
      * @Return: void   返回类型
      * @Date: 2020/5/24 2:13
      */
-    void cleanShoppingCart(Integer userId, Integer productId);
+    void cleanShoppingCart(String userId, Integer productId);
 
     /**
      * @Title: validateSHoppingCart
@@ -50,6 +51,14 @@ public interface ShoppingCartService extends SuperService<ShoppingCart> {
      * @Return: ShoppingCart   返回类型
      * @Date: 2020/5/24 12:05
      */
-    ShoppingCart validateShoppingCart(Integer productId, Integer userId);
+    ShoppingCart validateShoppingCart(Integer productId, String userId);
 
+    /**
+     * @Title: findShoppingCart
+     * @Description: 根据用户ID查询购物车信息
+     * @Param: [userId]   参数
+     * @Return: Map  返回类型
+     * @Date: 2020/5/24 23:18
+     */
+    Map<Integer, ShoppingCart> findShoppingCart(String userId);
 }

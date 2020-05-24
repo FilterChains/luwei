@@ -16,7 +16,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
-import org.springframework.util.ObjectUtils;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -49,7 +48,7 @@ public class WeiChatShoppingCartBusiness extends BaseBusiness {
      * @Date: 2020/5/24 1:46
      */
     public Notify<List<WcShoppingCartSearchResponse>> getShoppingCart(WcShoppingCartSearchRequest request) {
-        final Integer userId = request.getUserId();
+        final String userId = request.getUserId();
         final Integer pageNo = request.getPageNo();
         Integer pageSize = request.getPageSize();
         Integer listTotalPage = shoppingCartService.getShoppingCartListTotalPage(userId);
@@ -58,12 +57,12 @@ public class WeiChatShoppingCartBusiness extends BaseBusiness {
             List<ShoppingCart> shoppingCartList = shoppingCartService.getShoppingCartList(userId, pageNo, pageSize > listTotalPage ? listTotalPage : pageSize);
             if (!CollectionUtils.isEmpty(shoppingCartList)) {
                 List<Integer> idList = shoppingCartList.stream().map(ShoppingCart::getProductId).collect(Collectors.toList());
-                Map<Integer, Product> productMsg = productService.findProductMsg(idList);
+                Map<Integer, Product> productMsg = productService.findProductMsg(idList, false);
                 shoppingCartList.forEach(sp -> {
                     WcShoppingCartSearchResponse wcShoppingCartSearchResponse = new WcShoppingCartSearchResponse();
                     wcShoppingCartSearchResponse.setId(sp.getId());
                     final Integer productId = sp.getProductId();
-                    if (!ObjectUtils.isEmpty(productMsg)) {
+                    if (!CollectionUtils.isEmpty(productMsg)) {
                         Product product = productMsg.get(productId);
                         if (Objects.nonNull(product)) {
                             final Integer productNumber = sp.getProductNumber();
@@ -92,7 +91,7 @@ public class WeiChatShoppingCartBusiness extends BaseBusiness {
      */
     public Notify<String> createShoppingCart(WcShoppingCartRequest request) {
         final Integer productId = request.getProductId();
-        final Integer userId = request.getUserId();
+        final String userId = request.getUserId();
         final Integer productNumber = request.getProductNumber();
         if (CommonEnum.ZERO.getIndex() >= productId) {
             return new Notify<>(Notify.Code.ERROR, "请正确填写商品ID");
@@ -158,7 +157,7 @@ public class WeiChatShoppingCartBusiness extends BaseBusiness {
     public Notify<String> updateShoppingCart(WcShoppingCartRequest request) {
         final Integer productId = request.getProductId();
         final Integer productNumber = request.getProductNumber();
-        final Integer userId = request.getUserId();
+        final String userId = request.getUserId();
         // 查询购物车信息
         ShoppingCart shoppingCart = shoppingCartService.validateShoppingCart(productId, userId);
         if (Objects.isNull(shoppingCart)) {
