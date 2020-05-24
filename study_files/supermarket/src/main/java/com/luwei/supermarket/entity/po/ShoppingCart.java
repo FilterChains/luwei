@@ -3,13 +3,11 @@ package com.luwei.supermarket.entity.po;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
+import com.baomidou.mybatisplus.annotation.Version;
+import lombok.*;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -22,6 +20,9 @@ import java.util.Date;
  * @version: 1.8.00_66
  */
 @Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @TableName("td_shopping_cart")
 @Accessors(chain = true)
 @ToString(callSuper = true)
@@ -39,29 +40,9 @@ public class ShoppingCart implements Serializable {
     private Integer productId;
 
     /**
-     * 商品名称
-     */
-    private String productName;
-
-    /**
-     * 商品图片
-     */
-    private String productImageUrl;
-
-    /**
      * 商品数量
      */
     private Integer productNumber;
-
-    /**
-     * 商品价格
-     */
-    private BigDecimal productPrice;
-
-    /**
-     * 商品类型
-     */
-    private Integer productType;
 
     /**
      * 购买者
@@ -72,4 +53,10 @@ public class ShoppingCart implements Serializable {
      * 创建时间/修改时间
      */
     private Date createTime;
+
+    /**
+     * 版本控制
+     */
+    @Version
+    private Integer version;
 }

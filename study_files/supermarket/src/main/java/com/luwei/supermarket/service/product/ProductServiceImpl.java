@@ -12,7 +12,10 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * @projectName： supermarket
@@ -35,7 +38,7 @@ public class ProductServiceImpl extends SuperServiceImpl<ProductMapper, Product>
     }
 
     @Override
-    public List<Product> searchProductList(ProductSearchVO productSearchVO) {
+    public List<Product> searchProductList(ProductSearchVO productSearchVO, boolean flag) {
         LambdaQueryWrapper<Product> lambda = new QueryWrapper<Product>().lambda();
         final String name = productSearchVO.getName();
         final List<Integer> typeList = productSearchVO.getTypeList();
@@ -45,17 +48,33 @@ public class ProductServiceImpl extends SuperServiceImpl<ProductMapper, Product>
                 lambda.like(StringUtils.isNotEmpty(name), Product::getProductName, name)
                         .in(!CollectionUtils.isEmpty(typeList), Product::getProductType, typeList)
                         .eq(StringUtils.isNotEmpty(region), Product::getProductAddress, region)
+                        .eq(flag, Product::getProductStatus, Product.ProductStatus.PUT_AWAY)
                         .orderByDesc(Product::getUpdateTime).orderByAsc(Product::getId)).getRecords();
     }
 
     @Override
-    public Integer searchProductListTotalPages(ProductSearchVO productSearchVO) {
+    public Integer searchProductListTotalPages(ProductSearchVO productSearchVO, boolean flag) {
         LambdaQueryWrapper<Product> lambda = new QueryWrapper<Product>().lambda();
         final String name = productSearchVO.getName();
         final List<Integer> typeList = productSearchVO.getTypeList();
         final String region = productSearchVO.getRegion();
         return baseMapper.selectCount(lambda.like(StringUtils.isNotEmpty(name), Product::getProductName, name)
                 .in(!CollectionUtils.isEmpty(typeList), Product::getProductType, typeList)
-                .eq(StringUtils.isNotEmpty(region), Product::getProductAddress, region));
+                .eq(StringUtils.isNotEmpty(region), Product::getProductAddress, region)
+                .eq(flag, Product::getProductStatus, Product.ProductStatus.PUT_AWAY));
+    }
+
+    @Override
+    public Map<Integer, Product> findProductMsg(List<Integer> idList) {
+        LambdaQueryWrapper<Product> lambda = new QueryWrapper<Product>().lambda();
+        List<Product> products = baseMapper.selectList(lambda.in(Product::getId, idList));
+        return CollectionUtils.isEmpty(products) ? Collections.emptyMap() :
+                products.stream().collect(Collectors.toMap(Product::getId, Product -> Product));
+    }
+
+    @Override
+    public List<Product> findProductCategory(Integer categoryId) {
+        LambdaQueryWrapper<Product> lambda = new QueryWrapper<Product>().lambda();
+        return baseMapper.selectList(lambda.eq(Product::getProductType, categoryId));
     }
 }

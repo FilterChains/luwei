@@ -56,7 +56,7 @@ public class Swagger2 {
                 .groupName("叮叮瞄API")//创建分组,可以创建多个分组
                 .select()//控制需要暴露的接口
                 //扫描暴露的包,每次扫描一个包
-                .apis(RequestHandlerSelectors.basePackage("com.luwei.supermarket.admin.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.luwei.supermarket.controller"))
                 //设置过滤规则暴露接口
                 .paths(PathSelectors.any())
                 //.paths(or(regex("/api/.*")))过滤的接口

@@ -1,4 +1,4 @@
-package com.luwei.supermarket.weichat.business;
+package com.luwei.supermarket.business.weichat;
 
 import com.google.common.collect.Lists;
 import com.luwei.supermarket.base.BaseBusiness;
@@ -19,7 +19,7 @@ import java.util.List;
 
 /**
  * @projectName： supermarket
- * @packageName: com.luwei.supermarket.admin.business.product
+ * @packageName: com.luwei.supermarket.business.admin.product
  * @auther: luwei
  * @description:
  * @date: 2020/5/14 23:16
@@ -46,11 +46,11 @@ public class WeiChatProductBusiness extends BaseBusiness {
         Integer pageNo = request.getPageNo();
         Integer pageSize = request.getPageSize();
         ProductSearchVO build = ProductSearchVO.builder().pageNo(pageNo).typeList(Lists.newArrayList(type)).build();
-        Integer totalPages = productService.searchProductListTotalPages(build);
+        Integer totalPages = productService.searchProductListTotalPages(build, true);
         List<ProductListResponse> list = new ArrayList<>();
         if (0 < totalPages) {
             build.setPageSize(pageSize > totalPages ? totalPages : pageSize);
-            List<Product> productList = productService.searchProductList(build);
+            List<Product> productList = productService.searchProductList(build, true);
             if (!CollectionUtils.isEmpty(productList)) {
                 productList.forEach(p -> {
                     ProductListResponse response = new ProductListResponse();

@@ -1,4 +1,4 @@
-package com.luwei.supermarket.admin.business.product;
+package com.luwei.supermarket.business.admin.product;
 
 import com.luwei.supermarket.base.BaseBusiness;
 import com.luwei.supermarket.entity.bo.request.ProductCategoryRequest;
@@ -26,7 +26,7 @@ import java.util.*;
 
 /**
  * @projectName： supermarket
- * @packageName: com.luwei.supermarket.admin.business.product
+ * @packageName: com.luwei.supermarket.business.admin.product
  * @auther: luwei
  * @description:
  * @date: 2020/5/14 23:16
@@ -89,8 +89,14 @@ public class ProductBusiness extends BaseBusiness {
                 productCategory.setName(title);
                 break;
             case DELETE:
-                productCategoryService.deleteById(id);
-                return new Notify<>(Notify.Code.SUCCESS);
+                // 查询分类中是否有商品
+                List<Product> category = productService.findProductCategory(id);
+                if (CollectionUtils.isEmpty(category)) {
+                    productCategoryService.deleteById(id);
+                    return new Notify<>(Notify.Code.SUCCESS);
+                } else {
+                    return new Notify<>(Notify.Code.ERROR, "分类中存在商品无法删除");
+                }
             default:
                 return new Notify<>(Notify.Code.ERROR, "操作类型选择错误");
         }
@@ -118,7 +124,7 @@ public class ProductBusiness extends BaseBusiness {
             return new Notify<>(Notify.Code.ERROR, "商品地区不能为空");
         }
         District byId = districtService.get(Integer.valueOf(productRegion));
-        final Product product = new Product();
+        Product product = new Product();
         final Date time = Calendar.getInstance().getTime();
         if (null == id) {
             Product validateProduct = productService.validateProduct(productName);
@@ -128,7 +134,10 @@ public class ProductBusiness extends BaseBusiness {
             product.setCreateBy(userId);
             product.setCreateTime(time);
         } else {
+            // 修改
+            product = productService.get(id);
             product.setId(id);
+            product.setVersion(product.getVersion());
         }
         //商品名称
         product.setProductName(productName);
@@ -178,14 +187,14 @@ public class ProductBusiness extends BaseBusiness {
         productSearchVO.setName(name);
         productSearchVO.setTypeList(findProductType(type));
         productSearchVO.setRegion(region);
-        final Integer totalPages = productService.searchProductListTotalPages(productSearchVO);
+        final Integer totalPages = productService.searchProductListTotalPages(productSearchVO, false);
         List<ProductListResponse> listResponses = new ArrayList<>();
         if (0 < totalPages) {
             // 查询商品类型
             Map<Integer, ProductCategory> productTypeAll = productCategoryService.findProductTypeAll();
             productSearchVO.setPageNo(pageNo);
             productSearchVO.setPageSize(pageSize > totalPages ? totalPages : pageSize);
-            List<Product> products = productService.searchProductList(productSearchVO);
+            List<Product> products = productService.searchProductList(productSearchVO, false);
             if (!CollectionUtils.isEmpty(products)) {
                 products.forEach(lt -> {
                     ProductListResponse productListResponse = new ProductListResponse();

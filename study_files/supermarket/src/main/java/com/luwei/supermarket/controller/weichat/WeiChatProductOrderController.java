@@ -1,7 +1,7 @@
-package com.luwei.supermarket.weichat.controller;
+package com.luwei.supermarket.controller.weichat;
 
 import com.luwei.supermarket.base.BaseController;
-import com.luwei.supermarket.weichat.business.WeiChatProductOrderBusiness;
+import com.luwei.supermarket.business.weichat.WeiChatProductOrderBusiness;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;

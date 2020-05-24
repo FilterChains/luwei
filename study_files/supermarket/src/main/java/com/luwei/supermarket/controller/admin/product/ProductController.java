@@ -1,7 +1,7 @@
-package com.luwei.supermarket.admin.controller.product;
+package com.luwei.supermarket.controller.admin.product;
 
-import com.luwei.supermarket.admin.business.product.ProductBusiness;
 import com.luwei.supermarket.base.BaseController;
+import com.luwei.supermarket.business.admin.product.ProductBusiness;
 import com.luwei.supermarket.entity.bo.request.ProductCategoryRequest;
 import com.luwei.supermarket.entity.bo.request.ProductRequest;
 import com.luwei.supermarket.entity.bo.request.ProductSearchRequest;
@@ -42,14 +42,12 @@ public class ProductController extends BaseController {
     @Autowired
     private ProductBusiness productBusiness;
 
-    @ResponseBody
     @PostMapping("/district")
     @ApiOperation(value = "获取平台一级地区", notes = "获取平台一级地区")
     public Notify<List<DistrictResponse>> findDistrict() {
         return super.getProvinceList(District.DistrictType.FIRST_LEVEL);
     }
 
-    @ResponseBody
     @PostMapping("/category")
     @ApiOperation(value = "查询商品分类", notes = "查询商品分类")
     public Notify<List<ProductCategoryResponse>> findProductCategory() {

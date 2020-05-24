@@ -9,6 +9,7 @@ import com.luwei.supermarket.entity.po.ShoppingCart;
 import com.luwei.supermarket.mapper.ShoppingCartMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.ObjectUtils;
 
 import java.util.List;
 
@@ -26,7 +27,9 @@ public class ShoppingCartServiceImpl extends SuperServiceImpl<ShoppingCartMapper
         implements ShoppingCartService {
 
     @Override
-    public List<ShoppingCart> getShoppingCartList(Integer userId, Integer pageNo, Integer pageSize) {
+    public List<ShoppingCart> getShoppingCartList(final Integer userId,
+                                                  final Integer pageNo,
+                                                  final Integer pageSize) {
         LambdaQueryWrapper<ShoppingCart> lambda = new QueryWrapper<ShoppingCart>().lambda();
         IPage<ShoppingCart> page = new Page<>(pageNo, pageSize, false);
         return baseMapper.selectPage(page, lambda
@@ -35,15 +38,25 @@ public class ShoppingCartServiceImpl extends SuperServiceImpl<ShoppingCartMapper
     }
 
     @Override
-    public Integer getShoppingCartListTotalPage(Integer userId) {
+    public Integer getShoppingCartListTotalPage(final Integer userId) {
         return baseMapper.selectCount(new QueryWrapper<ShoppingCart>().lambda()
                 .eq(ShoppingCart::getCreateBy, userId));
     }
 
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public void cleanUserShoppingCart(Integer userId) {
+    public void cleanShoppingCart(final Integer userId, final Integer productId) {
         baseMapper.delete(new QueryWrapper<ShoppingCart>().lambda()
-                .eq(ShoppingCart::getCreateBy, userId));
+                .eq(ShoppingCart::getCreateBy, userId)
+                .eq(!ObjectUtils.isEmpty(productId), ShoppingCart::getProductId, productId));
     }
+
+    @Override
+    public ShoppingCart validateShoppingCart(final Integer productId, final Integer userId) {
+        return baseMapper.selectOne(new QueryWrapper<ShoppingCart>().lambda()
+                .eq(ShoppingCart::getProductId, productId)
+                .eq(ShoppingCart::getCreateBy, userId).last("limit 1"));
+    }
+
+
 }

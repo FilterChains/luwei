@@ -1,9 +1,6 @@
 package com.luwei.supermarket.entity.po;
 
-import com.baomidou.mybatisplus.annotation.EnumValue;
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 import lombok.ToString;
 import lombok.experimental.Accessors;
@@ -130,4 +127,10 @@ public class Product implements Serializable {
      * 修改时间
      */
     private Date updateTime;
+
+    /**
+     * 版本控制
+     */
+    @Version
+    private Integer version;
 }

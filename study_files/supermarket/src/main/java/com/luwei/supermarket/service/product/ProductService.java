@@ -5,6 +5,7 @@ import com.luwei.supermarket.entity.po.Product;
 import com.luwei.supermarket.entity.vo.ProductSearchVO;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @projectName： supermarket
@@ -29,18 +30,36 @@ public interface ProductService extends SuperService<Product> {
     /**
      * @Title: searchProductList
      * @Description: 商品搜索列表信息
-     * @Param: [productSearchVO]   参数
+     * @Param: [productSearchVO, flag]   参数
      * @Return: List<Product>  返回类型
      * @Date: 2020/5/20 0:50
      */
-    List<Product> searchProductList(ProductSearchVO productSearchVO);
+    List<Product> searchProductList(ProductSearchVO productSearchVO, boolean flag);
 
     /**
      * @Title: searchProductListTotalPages
      * @Description: 商品搜索总条数
-     * @Param: [productSearchVO]   参数
+     * @Param: [productSearchVO, flag]   参数
      * @Return: java.lang.Integer   返回类型
      * @Date: 2020/5/20 0:51
      */
-    Integer searchProductListTotalPages(ProductSearchVO productSearchVO);
+    Integer searchProductListTotalPages(ProductSearchVO productSearchVO, boolean flag);
+
+    /**
+     * @Title: findProductMsg
+     * @Description: 根据商品ID查询商品信息
+     * @Param: [idList]   参数
+     * @Return: Map  返回类型
+     * @Date: 2020/5/24 14:57
+     */
+    Map<Integer, Product> findProductMsg(List<Integer> idList);
+
+    /**
+     * @Title: findProductCategory
+     * @Description: 查询商品中是否有此分类
+     * @Param: [categoryId]   参数
+     * @Return: List<Product>  返回类型
+     * @Date: 2020/5/24 15:40
+     */
+    List<Product> findProductCategory(Integer categoryId);
 }

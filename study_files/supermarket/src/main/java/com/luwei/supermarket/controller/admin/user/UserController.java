@@ -1,7 +1,7 @@
-package com.luwei.supermarket.admin.controller.user;
+package com.luwei.supermarket.controller.admin.user;
 
-import com.luwei.supermarket.admin.business.user.UserBusiness;
 import com.luwei.supermarket.base.BaseController;
+import com.luwei.supermarket.business.admin.user.UserBusiness;
 import com.luwei.supermarket.entity.bo.request.UserRequest;
 import com.luwei.supermarket.util.Notify;
 import io.swagger.annotations.Api;
@@ -11,7 +11,6 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
@@ -35,14 +34,12 @@ public class UserController extends BaseController {
     @Autowired
     private UserBusiness userBusiness;
 
-    @ResponseBody
     @PostMapping("/register")
     @ApiOperation(value = "用户注册接口", notes = "用户注册接口")
     public Notify<String> register(@RequestBody @Valid UserRequest request) {
         return userBusiness.userRegister(request);
     }
 
-    @ResponseBody
     @PostMapping("/login")
     @ApiOperation(value = "用户登录接口", notes = "用户登录接口")
     public Notify<String> login(@RequestBody @Valid UserRequest request, HttpServletRequest hsq) {

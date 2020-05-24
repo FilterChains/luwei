@@ -37,9 +37,19 @@ public interface ShoppingCartService extends SuperService<ShoppingCart> {
     /**
      * @Title: cleanUserShoppingCart
      * @Description: 清空用户购物车
-     * @Param: [userId]   参数
+     * @Param: [userId, productId]   参数
      * @Return: void   返回类型
      * @Date: 2020/5/24 2:13
      */
-    void cleanUserShoppingCart(Integer userId);
+    void cleanShoppingCart(Integer userId, Integer productId);
+
+    /**
+     * @Title: validateSHoppingCart
+     * @Description: 验证购物车商品
+     * @Param: [productId, userId]   参数
+     * @Return: ShoppingCart   返回类型
+     * @Date: 2020/5/24 12:05
+     */
+    ShoppingCart validateShoppingCart(Integer productId, Integer userId);
+
 }

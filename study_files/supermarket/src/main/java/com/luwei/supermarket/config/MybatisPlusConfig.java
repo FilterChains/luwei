@@ -1,5 +1,6 @@
 package com.luwei.supermarket.config;
 
+import com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.PerformanceInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
@@ -41,6 +42,16 @@ public class MybatisPlusConfig {
         performanceInterceptor.setProperties(properties);
         return performanceInterceptor;
 
+    }
+
+    /**
+     * 乐观锁 插件
+     *
+     * @return
+     */
+    @Bean
+    public OptimisticLockerInterceptor optimisticLoker() {
+        return new OptimisticLockerInterceptor();
     }
 
 }

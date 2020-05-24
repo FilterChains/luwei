@@ -1,4 +1,4 @@
-package com.luwei.supermarket.weichat.business;
+package com.luwei.supermarket.business.weichat;
 
 import com.luwei.supermarket.base.BaseBusiness;
 import org.slf4j.Logger;

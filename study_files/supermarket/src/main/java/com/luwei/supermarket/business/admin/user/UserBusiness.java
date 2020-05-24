@@ -1,4 +1,4 @@
-package com.luwei.supermarket.admin.business.user;
+package com.luwei.supermarket.business.admin.user;
 
 import com.luwei.supermarket.base.BaseBusiness;
 import com.luwei.supermarket.entity.bo.request.UserRequest;
@@ -19,7 +19,7 @@ import java.util.Objects;
 
 /**
  * @projectName： supermarket
- * @packageName: com.luwei.supermarket.admin.business
+ * @packageName: com.luwei.supermarket.business
  * @auther: luwei
  * @description:
  * @date: 2020/5/13 21:42
