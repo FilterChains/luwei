@@ -2,9 +2,7 @@ package com.luwei.supermarket.base;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.luwei.supermarket.intercepter.RequestBodyFilter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
@@ -24,24 +22,24 @@ public class SuperClientApplication {
         return new SuperExceptionHandler();
     }
 
-    /**
-     * <p>@Description : 解决请求BODY只能读取一次的问题</p>
-     * <p>@Author : QiLin.Xing </p>
-     * <p>@Date : 2018/8/1 9:23 </p>
-     */
-    @Bean
-    public FilterRegistrationBean filterRegistrationBean() {
-        FilterRegistrationBean registrationBean = new FilterRegistrationBean();
-        registrationBean.setFilter(new RequestBodyFilter());
-        registrationBean.addUrlPatterns("/*");
-        registrationBean.setName("requestBodyFilter");
-        registrationBean.setOrder(1);
-        return registrationBean;
-    }
+//    /**
+//     * <p>@Description : 解决请求BODY只能读取一次的问题</p>
+//     * <p>@Author : luwei </p>
+//     * <p>@Date : 2018/8/1 9:23 </p>
+//     */
+//    @Bean
+//    public FilterRegistrationBean filterRegistrationBean() {
+//        FilterRegistrationBean registrationBean = new FilterRegistrationBean();
+//        registrationBean.setFilter(new RequestBodyFilter());
+//        registrationBean.addUrlPatterns("/*");
+//        registrationBean.setName("requestBodyFilter");
+//        registrationBean.setOrder(1);
+//        return registrationBean;
+//    }
 
     /**
      * <p>@Description : 解决跨域问题</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2018/8/11 9:13 </p>
      */
     @Bean
@@ -57,7 +55,7 @@ public class SuperClientApplication {
 
     /**
      * <p>@Description : 处理响应JSON时，字符串为null不序列化</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/3/16 15:10 </p>
      */
     @Bean

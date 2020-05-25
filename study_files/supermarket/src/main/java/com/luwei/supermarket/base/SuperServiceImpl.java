@@ -9,13 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.metadata.TableInfo;
 import com.baomidou.mybatisplus.core.metadata.TableInfoHelper;
-import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
-import com.baomidou.mybatisplus.core.toolkit.Constants;
-import com.baomidou.mybatisplus.core.toolkit.ExceptionUtils;
-import com.baomidou.mybatisplus.core.toolkit.LambdaUtils;
-import com.baomidou.mybatisplus.core.toolkit.ReflectionKit;
-import com.baomidou.mybatisplus.core.toolkit.StringUtils;
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.baomidou.mybatisplus.core.toolkit.*;
 import com.baomidou.mybatisplus.core.toolkit.support.SFunction;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.toolkit.SqlHelper;
@@ -27,12 +21,7 @@ import org.springframework.util.ReflectionUtils;
 
 import java.io.Serializable;
 import java.lang.reflect.Field;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -44,7 +33,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 插入一条记录</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 15:12 </p>
      *
      * @param entity 实体
@@ -58,7 +47,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 批量插入</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 15:15 </p>
      *
      * @param entityList 实体集合
@@ -71,7 +60,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 批量插入</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 15:15 </p>
      *
      * @param entityList 实体集合
@@ -103,7 +92,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 根据@TableId判断是更新还是新增记录</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 15:36 </p>
      *
      * @param entity 实体
@@ -135,7 +124,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 批量更新插入</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 15:16 </p>
      *
      * @param entityList 实体集合
@@ -181,7 +170,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 根据ID删除</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 15:17 </p>
      *
      * @param id 主键ID
@@ -195,7 +184,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 根据entity条件删除记录</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 15:18 </p>
      *
      * @param condition 实体  注意：此condition表示删除的条件
@@ -212,7 +201,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 删除所有记录</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 15:26 </p>
      *
      * @return
@@ -225,7 +214,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 根据ID批量删除</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/3/15 13:51 </p>
      *
      * @param idList ID集合
@@ -242,7 +231,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 根据ID选择修改</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 15:26 </p>
      *
      * @param entity 实体
@@ -256,7 +245,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 根据ID批量更新</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 15:34 </p>
      *
      * @param entityList 实体集合
@@ -291,7 +280,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 根据实体包装类的条件更新记录</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 15:29 </p>
      *
      * @param entity    实体(更新的内容）
@@ -308,7 +297,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 统计所有数据</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 15:44 </p>
      *
      * @return
@@ -321,7 +310,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 根据实体的条件，查询总条数</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 15:43 </p>
      *
      * @param condition 实体条件
@@ -337,7 +326,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 根据实体的条件，查询数据</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 15:45 </p>
      *
      * @param condition 实体条件
@@ -357,7 +346,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 根据实体包装类的条件，查询数据，响应自定义对象</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 16:06 </p>
      *
      * @param wrapper 实体包装类 {@link com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper}
@@ -372,7 +361,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 翻页查询</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 15:49 </p>
      *
      * @param condition  实体条件 {@link com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper}
@@ -394,7 +383,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 翻页查询所有数据，自定响应数据对象</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 16:04 </p>
      *
      * @param page   翻页对象
@@ -409,7 +398,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 翻页查询，自定义响应数据对象</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 16:02 </p>
      *
      * @param page    翻页对象
@@ -425,7 +414,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 翻页查询，返回List,注意：page参数需要设置isSearchCount=false</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/14 13:30 </p>
      *
      * @param condition 实体条件 {@link com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper}
@@ -449,7 +438,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 翻页查询，返回List，自定义数据类型,注意：page需要设置isSearchCount=false</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/14 13:32 </p>
      *
      * @param page    翻页对象
@@ -466,7 +455,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 根据实体包装类的条件,返回查询后的第一列数据</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 15:57 </p>
      *
      * @param wrapper 实体包装类 {@link com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper}
@@ -482,7 +471,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 根据ID查询对象</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 15:40 </p>
      *
      * @param id 主键
@@ -496,7 +485,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 根据实体类的条件，获取第一条数据</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 16:17 </p>
      *
      * @param condition 实体 {@link com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper}
@@ -525,7 +514,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 根据实体包装类的条件，获取第一条数据，响应自定义对象</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 16:19 </p>
      *
      * @param wrapper 实体包装类 {@link com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper}
@@ -540,7 +529,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 查询所有数据，将响应数据以对象的属性为Key的形式转为Map数据</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 16:25 </p>
      *
      * @param column 实体属性
@@ -554,7 +543,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 根据实体包装类的条件，将响应数据以对象的属性为Key的形式转成Map数据</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/2/12 16:22 </p>
      *
      * @param wrapper 实体包装类 {@link com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper}
@@ -585,7 +574,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : 转换为Mybatis plus的分页模型</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/3/14 12:10 </p>
      * 为什么有这两个转换器，其目的就是不让调用层为了一个IPage类而引用mybatis plus的jar包
      * 最好的办法就是重写mybatis plus的分页插件(PaginationInterceptor、IPage、Page)
@@ -596,7 +585,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> implements SuperServic
 
     /**
      * <p>@Description : Mybatis plus模型转为自定义模型</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/3/14 12:12 </p>
      */
     protected Pagination toPagination(IPage page, Pagination pagination) {

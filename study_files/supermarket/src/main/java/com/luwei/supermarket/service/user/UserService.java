@@ -1,7 +1,7 @@
 package com.luwei.supermarket.service.user;
 
-import com.luwei.supermarket.admin.entity.po.User;
 import com.luwei.supermarket.base.SuperService;
+import com.luwei.supermarket.entity.po.User;
 
 /**
  * @projectName： supermarket

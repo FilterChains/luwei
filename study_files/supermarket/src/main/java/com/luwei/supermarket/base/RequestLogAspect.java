@@ -16,7 +16,7 @@
 //
 ///**
 // * <p>@Description : 记录请求日志和请求日志</p>
-// * <p>@Author : QiLin.Xing </p>
+// * <p>@Author : luwei </p>
 // * <p>@Date : 2019/2/2 9:00 </p>
 // */
 //@Aspect
@@ -50,7 +50,7 @@
 //
 //    /**
 //     * <p>@Description : 记录业务日志</p>
-//     * <p>@Author : QiLin.Xing </p>
+//     * <p>@Author : luwei </p>
 //     * <p>@Date : 2019/2/2 11:30 </p>
 //     */
 //    @AfterReturning(pointcut = "pointCut() && recordLog(businessLog)", returning = "result")
@@ -72,7 +72,7 @@
 //
 //    /**
 //     * <p>@Description : 获取请求日志</p>
-//     * <p>@Author : QiLin.Xing </p>
+//     * <p>@Author : luwei </p>
 //     * <p>@Date : 2019/2/2 9:49 </p>
 //     */
 //    private RequestLogBo getRequestLog() {

@@ -1,6 +1,6 @@
 package com.luwei.supermarket.intercepter;
 
-import com.luwei.supermarket.admin.entity.po.User;
+import com.luwei.supermarket.entity.po.User;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
