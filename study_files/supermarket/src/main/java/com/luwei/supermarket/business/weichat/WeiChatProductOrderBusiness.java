@@ -47,8 +47,8 @@ public class WeiChatProductOrderBusiness extends BaseBusiness {
     public Notify<String> createOrder(WcOrderRequest request) {
         final BigDecimal payment = request.getPayment();
         final String userId = request.getUserId();
-        final String receiverBy = request.getReceiverBy();
         final String receiverPhone = request.getReceiverPhone();
+        final String receiverBy = request.getReceiverBy();
         final String receiverAddress = request.getReceiverAddress();
         String productId = request.getProductId();
         List<String> idList = Splitter.on(",").trimResults().omitEmptyStrings().splitToList(productId);

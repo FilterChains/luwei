@@ -1,5 +1,7 @@
 package com.luwei.supermarket.service.product;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.google.common.collect.Lists;
 import com.luwei.supermarket.base.SuperServiceImpl;
 import com.luwei.supermarket.entity.po.Order;
@@ -13,9 +15,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.StringUtils;
 
 import java.math.BigDecimal;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 /**
  * @projectName： spring-boot-seckill
@@ -106,5 +113,30 @@ public class OrderServiceImpl extends SuperServiceImpl<OrderMapper, Order>
                 .receiverAddress(receiverAddress)
                 .build());
         return "创建成功";
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public void updateOrder(OrderCreateVO orderCreateVO) {
+        baseMapper.update(Order.builder()
+                .status(orderCreateVO.getStatus())
+                .consignTime(orderCreateVO.getConsignTime())
+                .endTime(orderCreateVO.getEndTime())
+                .shippingName(orderCreateVO.getShippingName())
+                .shippingCode(orderCreateVO.getShippingCode())
+                .build(), new QueryWrapper<Order>().lambda()
+                .eq(Order::getOrderNumber, orderCreateVO.getOrderNumber()));
+    }
+
+    @Override
+    public List<Order> findOrder(String userId, Integer pageNo, Integer pageSize) {
+        return baseMapper.selectPage(new Page<>(pageNo, pageSize, false),
+                new QueryWrapper<Order>().lambda().eq(!StringUtils.isEmpty(userId), Order::getCreateBy, userId)).getRecords();
+    }
+
+    @Override
+    public Integer findOrderTotalPage(String userId) {
+        return baseMapper.selectCount(new QueryWrapper<Order>()
+                .lambda().eq(!StringUtils.isEmpty(userId), Order::getCreateBy, userId));
     }
 }

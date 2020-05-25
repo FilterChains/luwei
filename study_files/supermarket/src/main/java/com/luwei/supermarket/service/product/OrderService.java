@@ -4,6 +4,8 @@ import com.luwei.supermarket.base.SuperService;
 import com.luwei.supermarket.entity.po.Order;
 import com.luwei.supermarket.entity.vo.OrderCreateVO;
 
+import java.util.List;
+
 /**
  * @projectName： spring-boot-seckill
  * @packageName: com.luwei.supermarket.service.product
@@ -23,4 +25,33 @@ public interface OrderService extends SuperService<Order> {
      * @Date: 2020/5/24 23:02
      */
     String createOrder(OrderCreateVO orderCreateVO);
+
+    /**
+     * <p>@description : 修改订单物流信息和订单状态 </p>
+     * <p>@author : Wei.Lu</p>
+     * <p>@date : 2020/5/25 12:23 </p>
+     *
+     * @param orderCreateVO
+     **/
+    void updateOrder(OrderCreateVO orderCreateVO);
+
+    /**
+     * <p>@description : 查询用户订单信息 </p>
+     * <p>@author : Wei.Lu</p>
+     * <p>@date : 2020/5/25 12:37 </p>
+     *
+     * @param userId
+     * @return List<Order>
+     **/
+    List<Order> findOrder(String userId, Integer pageNo, Integer pageSize);
+
+    /**
+     * <p>@description : 查询用户订单信息 </p>
+     * <p>@author : Wei.Lu</p>
+     * <p>@date : 2020/5/25 12:37 </p>
+     *
+     * @param userId
+     * @return Integer
+     **/
+    Integer findOrderTotalPage(String userId);
 }

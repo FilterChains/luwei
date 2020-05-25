@@ -1,10 +1,16 @@
 package com.luwei.supermarket.entity.vo;
 
-import lombok.*;
+import com.luwei.supermarket.entity.po.Order;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * @projectName： spring-boot-seckill
@@ -51,4 +57,34 @@ public class OrderCreateVO implements Serializable {
      * 收货地址
      */
     private String receiverAddress;
+
+    /**
+     * 订单编号
+     */
+    private String orderNumber;
+
+    /**
+     * 订单状态
+     */
+    private Order.OrderStatus status;
+
+    /**
+     * 发货时间
+     */
+    private Date consignTime;
+
+    /**
+     * 收货时间
+     */
+    private Date endTime;
+
+    /**
+     * 物流名称
+     */
+    private String shippingName;
+
+    /**
+     * 物流单号
+     */
+    private String shippingCode;
 }
