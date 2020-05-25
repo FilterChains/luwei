@@ -11,11 +11,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.ControllerAdvice;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.InitBinder;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
@@ -23,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * <p>@Description : 默认异常处理类</p>
- * <p>@Author : QiLin.Xing </p>
+ * <p>@Author : luwei </p>
  * <p>@Date : 2018/8/2 17:18 </p>
  */
 @ControllerAdvice
@@ -33,7 +29,7 @@ public class SuperExceptionHandler extends ResponseEntityExceptionHandler {
 
     /**
      * <p>@Description : 将数据绑定到@RequestMapping注解，在执行方法之前初始化数据绑定器</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2018/8/2 17:21 </p>
      */
     @InitBinder
@@ -42,7 +38,7 @@ public class SuperExceptionHandler extends ResponseEntityExceptionHandler {
 
     /**
      * <p>@Description : 将值绑定到model中，使全局@RequestMapping可以获取到值</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2018/8/2 17:23 </p>
      * <p>
      * 设置值
@@ -72,7 +68,7 @@ public class SuperExceptionHandler extends ResponseEntityExceptionHandler {
 
     ///**
     // * <p>@Description : 捕捉业务异常</p>
-    // * <p>@Author : QiLin.Xing </p>
+    // * <p>@Author : luwei </p>
     // * <p>@Date : 2018/8/2 17:25 </p>
     // */
     //@ResponseBody
@@ -87,7 +83,7 @@ public class SuperExceptionHandler extends ResponseEntityExceptionHandler {
 
     ///**
     // * <p>@Description : 捕捉Service层异常</p>
-    // * <p>@Author : QiLin.Xing </p>
+    // * <p>@Author : luwei </p>
     // * <p>@Date : 2018/9/3 11:59 </p>
     // */
     //@ResponseBody
@@ -100,7 +96,7 @@ public class SuperExceptionHandler extends ResponseEntityExceptionHandler {
 
     ///**
     // * <p>@Description : 捕捉参数异常,验证参数手动抛出异常</p>
-    // * <p>@Author : QiLin.Xing </p>
+    // * <p>@Author : luwei </p>
     // * <p>@Date : 2018/8/6 19:55 </p>
     // */
     //@ResponseBody
@@ -113,7 +109,7 @@ public class SuperExceptionHandler extends ResponseEntityExceptionHandler {
 
     /**
      * <p>@Description : 参数解析或方法验证错误异常</p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei </p>
      * <p>@Date : 2019/4/30 0030 下午 14:37 </p>
      */
     @Override

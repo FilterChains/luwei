@@ -187,7 +187,7 @@ public final class RequestUtils {
      * 例如：X-Forwarded-For：192.168.1.110, 192.168.1.120,
      * 192.168.1.130, 192.168.1.100 用户真实IP为： 192.168.1.110
      * </p>
-     * <p>@Author : QiLin.Xing </p>
+     * <p>@Author : luwei</p>
      * <p>@Date : 2019/2/1 15:52 </p>
      *
      * @param request

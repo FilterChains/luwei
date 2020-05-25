@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * <p>@Description : 分页模型</p>
- * <p>@Author : QiLin.Xing </p>
+ * <p>@Author : luwei </p>
  * <p>@Date : 2019/3/14 10:47 </p>
  */
 @Data

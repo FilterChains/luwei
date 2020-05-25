@@ -10,7 +10,7 @@ import org.springframework.core.annotation.Order;
 
 /**
  * <p>@Description : AOP动态切换数据源</p>
- * <p>@Author : QiLin.Xing </p>
+ * <p>@Author : luwei </p>
  * <p>@Date : 2018/11/11 9:15 </p>
  */
 @Aspect

@@ -1,7 +1,7 @@
 package com.luwei.supermarket.service.region;
 
-import com.luwei.supermarket.admin.entity.po.District;
 import com.luwei.supermarket.base.SuperService;
+import com.luwei.supermarket.entity.po.District;
 
 import java.util.List;
 

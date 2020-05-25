@@ -2,8 +2,8 @@ package com.luwei.supermarket.service.product;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.luwei.supermarket.admin.entity.po.ProductCategory;
 import com.luwei.supermarket.base.SuperServiceImpl;
+import com.luwei.supermarket.entity.po.ProductCategory;
 import com.luwei.supermarket.mapper.ProductCategoryMapper;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;

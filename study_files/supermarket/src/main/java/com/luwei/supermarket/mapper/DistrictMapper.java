@@ -1,7 +1,7 @@
 package com.luwei.supermarket.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.luwei.supermarket.admin.entity.po.District;
+import com.luwei.supermarket.entity.po.District;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
