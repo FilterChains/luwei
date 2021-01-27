@@ -1,0 +1,9 @@
+server:
+  port: 6098
+spring:
+  application:
+    name: order
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848

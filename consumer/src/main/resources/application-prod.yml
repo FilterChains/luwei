@@ -1,9 +1,0 @@
-server:
-  port: 9124
-spring:
-  application:
-    name: consumer
-  cloud:
-    nacos:
-      discovery:
-        server-addr: localhost:8848

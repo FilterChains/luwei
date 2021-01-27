@@ -1,0 +1,55 @@
+server:
+  port: 9908
+spring:
+  application:
+    name: user
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+  # 配置连接数据库
+  datasource:
+    name: tvpanda
+    url: jdbc:mysql://192.168.3.111:3306/seat-account?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    # 配置使用druid数据源 数据库连接池
+    type: com.alibaba.druid.pool.DruidDataSource
+    #2.连接池配置
+    #初始化连接池的连接数量 大小，最小，最大
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      #配置获取连接等待超时的时间
+      max-wait: 60000
+      #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      time-between-eviction-runs-millis: 60000
+      # 配置一个连接在池中最小生存的时间，单位是毫秒
+      min-evictable-idle-time-millis: 30000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: true
+      test-on-return: false
+      # 是否缓存preparedStatement，也就是PSCache  官方建议MySQL下建议关闭   个人建议如果想用SQL防火墙 建议打开
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+
+seata:
+  enabled: true
+  application-id: applicationName
+  tx-service-group: fsp_tx_group
+  enable-auto-data-source-proxy: true
+  data-source-proxy-mode: AT
+  use-jdk-proxy: false
+#  excludes-for-auto-proxying: firstClassNameForExclude,secondClassNameForExclude
+  config:
+    type: nacos
+    nacos:
+      server-addr: 127.0.0.1:8848
+      group: "SEATA_GROUP"
+      namespace: ""
+      username: "nacos"
+      password: "nacos"
