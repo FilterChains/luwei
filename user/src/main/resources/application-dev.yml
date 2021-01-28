@@ -4,6 +4,7 @@ spring:
   application:
     name: user
   cloud:
+    # nacos 配置
     nacos:
       discovery:
         server-addr: localhost:8848
@@ -37,19 +38,8 @@ spring:
       pool-prepared-statements: true
       max-pool-prepared-statement-per-connection-size: 20
 
+# seata 配置分布式事务
 seata:
   enabled: true
-  application-id: applicationName
-  tx-service-group: fsp_tx_group
   enable-auto-data-source-proxy: true
-  data-source-proxy-mode: AT
-  use-jdk-proxy: false
-#  excludes-for-auto-proxying: firstClassNameForExclude,secondClassNameForExclude
-  config:
-    type: nacos
-    nacos:
-      server-addr: 127.0.0.1:8848
-      group: "SEATA_GROUP"
-      namespace: ""
-      username: "nacos"
-      password: "nacos"
+  tx-service-group: my_test_tx_group # 与nacos注册的分组一致(注意seata配置文件)
