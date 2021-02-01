@@ -21,13 +21,13 @@ public class ObServeTwo implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        if(o instanceof com.luwei.util.schema.observe.TheObServeEd){
+        if(o instanceof TheObServeEd){
             if("TWO".equals(arg)){
-                com.luwei.util.schema.observe.TheObServeEd theObServeEd =(com.luwei.util.schema.observe.TheObServeEd)o;
+                TheObServeEd theObServeEd =(TheObServeEd)o;
                 System.err.println(obServeName.concat("正在指定观察价格变更为：").concat(theObServeEd.getPrice().toPlainString()));
 
             }else{
-                com.luwei.util.schema.observe.TheObServeEd theObServeEd =(com.luwei.util.schema.observe.TheObServeEd)o;
+                TheObServeEd theObServeEd =(TheObServeEd)o;
                 System.out.println(obServeName.concat("正在观察价格变更为：").concat(theObServeEd.getPrice().toPlainString()));
             }
         }

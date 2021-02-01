@@ -1,7 +1,5 @@
 package com.user.util.designmode.createpattern.builder;
 
-import com.luwei.designmode.createpattern.builder.MailSender;
-import com.luwei.designmode.createpattern.builder.SmsSender;
 
 import java.util.ArrayList;
 import java.util.List;

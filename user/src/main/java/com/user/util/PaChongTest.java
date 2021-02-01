@@ -1,7 +1,7 @@
 package com.user.util;
 
 import com.google.common.collect.Lists;
-import com.luwei.encryption.CaesarEncryption;
+import com.user.util.encryption.CaesarEncryption;
 
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;

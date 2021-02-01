@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 public class TestObServe {
     public static void main(String[] args) {
         // 创建一个被观察者，并给予被观察值初始值
-        com.luwei.util.schema.observe.TheObServeEd obServeEd = new com.luwei.util.schema.observe.TheObServeEd(BigDecimal.valueOf(9999L));
+        TheObServeEd obServeEd = new TheObServeEd(BigDecimal.valueOf(9999L));
         System.out.println("初始值:".concat(obServeEd.getPrice().toPlainString()));
 
         // 创建观察者

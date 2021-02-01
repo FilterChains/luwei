@@ -1,8 +1,5 @@
 package com.user.util.designmode.createpattern.factory.staticfactorypattern;
 
-import com.luwei.designmode.createpattern.factory.generalfactorymode.MailSender;
-import com.luwei.designmode.createpattern.factory.generalfactorymode.Sender;
-import com.luwei.designmode.createpattern.factory.generalfactorymode.SmsSender;
 
 public class SendFactory {
 

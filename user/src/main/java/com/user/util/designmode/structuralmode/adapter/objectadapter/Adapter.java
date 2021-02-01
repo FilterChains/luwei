@@ -1,6 +1,5 @@
 package com.user.util.designmode.structuralmode.adapter.objectadapter;
 
-import com.luwei.designmode.structuralmode.adapter.objectadapter.Targetable;
 
 public class Adapter implements Targetable {
 

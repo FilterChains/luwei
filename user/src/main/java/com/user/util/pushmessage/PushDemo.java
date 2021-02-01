@@ -1,8 +1,6 @@
 package com.user.util.pushmessage;
 
 import com.google.common.collect.Maps;
-import com.luwei.pushmessage.PushParams;
-import com.luwei.pushmessage.PushServiceImpl;
 
 import java.util.Map;
 

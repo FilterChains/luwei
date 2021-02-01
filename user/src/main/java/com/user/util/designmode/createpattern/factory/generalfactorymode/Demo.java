@@ -1,7 +1,5 @@
 package com.user.util.designmode.createpattern.factory.generalfactorymode;
 
-import com.luwei.designmode.createpattern.factory.generalfactorymode.SendFactory;
-import com.luwei.designmode.createpattern.factory.generalfactorymode.Sender;
 
 public class Demo {
     public static void main(String[] args) {

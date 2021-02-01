@@ -1,6 +1,5 @@
 package com.user.util.designmode.structuralmode.adapter.interfaceadapter;
 
-import com.luwei.designmode.structuralmode.adapter.interfaceadapter.Target;
 
 public class Work2 implements Target {
 

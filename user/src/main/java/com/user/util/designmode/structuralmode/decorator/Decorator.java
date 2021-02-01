@@ -1,6 +1,5 @@
 package com.user.util.designmode.structuralmode.decorator;
 
-import com.luwei.designmode.structuralmode.decorator.SourceAble;
 
 public class Decorator implements SourceAble {
 

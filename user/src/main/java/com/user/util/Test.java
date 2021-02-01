@@ -1,6 +1,5 @@
 package com.user.util;
 
-import cn.afterturn.easypoi.exception.excel.ExcelExportException;
 import com.aliyuncs.utils.ParameterHelper;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
@@ -62,8 +61,8 @@ public class Test {
         // 允许对象为空
         String str1 = null;
         Optional<String> s1 = Optional.ofNullable(str1);
-        Integer integer = Optional.of(new DemoTest()).map(DemoTest::getIndex).orElseGet(() -> 1);
-        Integer integer1 = Optional.of(new DemoTest()).map(DemoTest::getIndex).orElseThrow(() -> new ExcelExportException("asd"));
+        // Integer integer = Optional.of(new DemoTest()).map(DemoTest::getIndex).orElseGet(() -> 1);
+        // Integer integer1 = Optional.of(new DemoTest()).map(DemoTest::getIndex).orElseThrow(() -> new ExcelExportException("asd"));
 
         String s = "1,2,3,4,5,6,7,8";
         System.out.println(Splitter.on(",").omitEmptyStrings().trimResults().splitToList(s));

@@ -1,7 +1,5 @@
 package com.user.util.designmode.createpattern.builder;
 
-import com.luwei.designmode.createpattern.builder.Builder;
-import com.luwei.designmode.createpattern.builder.Sender;
 
 import java.util.List;
 

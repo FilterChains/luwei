@@ -1,7 +1,5 @@
 package com.user.util.designmode.structuralmode.Proxy;
 
-import com.luwei.designmode.structuralmode.Proxy.Source;
-import com.luwei.designmode.structuralmode.Proxy.SourceTable;
 
 public class Proxy implements SourceTable {
 

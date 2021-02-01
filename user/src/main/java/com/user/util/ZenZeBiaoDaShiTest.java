@@ -127,13 +127,13 @@ public class ZenZeBiaoDaShiTest {
         mp2.put(1,mp1);
         list2.add(mp1);
         list2.add(mp2);
-        DemoTest demoTest = new DemoTest();
-        demoTest.setMp1(list2.get(0));
-        demoTest.setMp2(list2.get(1));
-        System.err.println(demoTest.toString());
-        Map<Integer,String> mp11 = demoTest.getMp1();
-        Map<Integer, Map<Integer,String>> mp21 = demoTest.getMp2();
-        System.err.println(mp21.get(1).get(1));
+        // DemoTest demoTest = new DemoTest();
+        // demoTest.setMp1(list2.get(0));
+        // demoTest.setMp2(list2.get(1));
+        // System.err.println(demoTest.toString());
+        // Map<Integer,String> mp11 = demoTest.getMp1();
+        // Map<Integer, Map<Integer,String>> mp21 = demoTest.getMp2();
+        // System.err.println(mp21.get(1).get(1));
 
     }
 }

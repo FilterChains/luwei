@@ -2,7 +2,6 @@ package com.user.util.pushmessage;
 
 import com.aliyuncs.DefaultAcsClient;
 import com.aliyuncs.profile.DefaultProfile;
-import com.luwei.pushmessage.PushParams;
 
 import java.util.HashMap;
 import java.util.Map;
