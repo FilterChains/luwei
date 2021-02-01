@@ -3,12 +3,17 @@ package com.user.controller;
 import com.user.feign.OrderServiceFeign;
 import com.user.feign.ProductServiceFeign;
 import lombok.extern.slf4j.Slf4j;
+import org.redisson.Redisson;
+import org.redisson.api.RLock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.concurrent.TimeUnit;
+
 @Slf4j
 @RestController
 public class UserController {
@@ -24,6 +29,11 @@ public class UserController {
 
     @Autowired
     private ApplicationContext applicationContext;
+
+    @Autowired
+    private Redisson redisson;
+
+    private static final String KET_REDIS="KET_REDIS";
 
     @GetMapping("user/{string}")
     public String test(@PathVariable String string) {
@@ -52,10 +62,16 @@ public class UserController {
     @GetMapping(value = "po")
     // @GlobalTransactional(name = "用户端调用商品服务和订单服务",rollbackFor = Exception.class)
     public String createMsg(){
-        String port = applicationContext.getEnvironment().getProperty("server.port");
-        log.error("当前USER:"+port);
-        String product = productServiceFeign.createProduct();
-        String order = orderServiceFeign.createOrder();
-        return "Product：".concat(product).concat("--------Order:").concat(order);
+        RLock lock = redisson.getLock(KET_REDIS);
+        try{
+            lock.lock(30L, TimeUnit.SECONDS);
+            String port = applicationContext.getEnvironment().getProperty("server.port");
+            log.error("当前USER:"+port);
+            String product = productServiceFeign.createProduct();
+            String order = orderServiceFeign.createOrder();
+            return "Product：".concat(product).concat("--------Order:").concat(order);
+        }finally {
+            lock.unlock();
+        }
     }
 }
