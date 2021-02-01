@@ -1,0 +1,35 @@
+package com.user.util.schema.observe;
+
+import java.util.Observable;
+import java.util.Observer;
+/**
+ * <p>@description : 观察者贰 </p>
+ * <p>@author : Wei.Lu</p>
+ * <p>@date : 2020/12/24 11:03 </p>
+ *
+ **/
+public class ObServeTwo implements Observer {
+
+    /**
+     * 便于区分：观察者名称
+     */
+    private final String obServeName;
+
+    public ObServeTwo(String obServeName) {
+        this.obServeName = obServeName;
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+        if(o instanceof com.luwei.util.schema.observe.TheObServeEd){
+            if("TWO".equals(arg)){
+                com.luwei.util.schema.observe.TheObServeEd theObServeEd =(com.luwei.util.schema.observe.TheObServeEd)o;
+                System.err.println(obServeName.concat("正在指定观察价格变更为：").concat(theObServeEd.getPrice().toPlainString()));
+
+            }else{
+                com.luwei.util.schema.observe.TheObServeEd theObServeEd =(com.luwei.util.schema.observe.TheObServeEd)o;
+                System.out.println(obServeName.concat("正在观察价格变更为：").concat(theObServeEd.getPrice().toPlainString()));
+            }
+        }
+    }
+}

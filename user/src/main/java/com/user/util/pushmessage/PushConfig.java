@@ -1,0 +1,47 @@
+package com.user.util.pushmessage;
+
+import com.aliyuncs.DefaultAcsClient;
+import com.aliyuncs.profile.DefaultProfile;
+import com.luwei.pushmessage.PushParams;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * <p>@description : 阿里云移动推送配置类 </p>
+ * <p>@author : Wei.Lu</p>
+ * <p>@date : 2020/3/31 15:09 </p>
+ */
+public class PushConfig {
+
+    /**
+     * 区域设置，目前这有这一个值
+     */
+    private static final String REGION = "cn-hangzhou";
+
+    private final DefaultAcsClient client = new DefaultAcsClient(DefaultProfile.getProfile(REGION, "LTAIN5BKeZjMeEYE", "ApICtB7IQi67o2lufC4CaATjEcA1DW"));
+
+    public DefaultAcsClient getClient() {
+        return client;
+    }
+
+    /**
+     * IOS应用集合
+     */
+    private final Map<PushParams.IosAppKey, Long> iosApply = new HashMap<PushParams.IosAppKey, Long>(16);
+
+    public Map<PushParams.IosAppKey, Long> getIosApply() {
+        iosApply.put(PushParams.IosAppKey.CLOUD_MEDICINE_IOS, 29117683L);
+        return iosApply;
+    }
+
+    /**
+     * Android应用集合
+     */
+    private final Map<PushParams.AndroidAppKey, Long> androidApply = new HashMap<PushParams.AndroidAppKey, Long>(16);
+
+    public Map<PushParams.AndroidAppKey, Long> getAndroidApply() {
+        androidApply.put(PushParams.AndroidAppKey.CLOUD_MEDICINE_ANDROID, 29117683L);
+        return androidApply;
+    }
+}
