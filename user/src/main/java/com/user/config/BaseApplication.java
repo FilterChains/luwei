@@ -4,6 +4,7 @@ import org.redisson.Redisson;
 import org.redisson.config.Config;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
@@ -17,10 +18,17 @@ public class BaseApplication {
     }
 
     @Bean
+    @Primary
     public Redisson redisson() throws IOException {
         Config config = new Config();
         config.useSingleServer().setAddress("redis://192.168.3.111:6379")
                 .setPassword("n1yEl39pMQZkH").setDatabase(13);
         return (Redisson) Redisson.create(config);
+    }
+
+    @Bean
+    @Primary // 保证Bean的优先注入和唯一性
+    public PushEvent pushEvent(){
+        return new PushEvent();
     }
 }

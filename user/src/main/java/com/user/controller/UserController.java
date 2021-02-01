@@ -1,5 +1,6 @@
 package com.user.controller;
 
+import com.user.config.PushEvent;
 import com.user.feign.OrderServiceFeign;
 import com.user.feign.ProductServiceFeign;
 import lombok.extern.slf4j.Slf4j;
@@ -7,6 +8,7 @@ import org.redisson.Redisson;
 import org.redisson.api.RLock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationEvent;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -35,6 +37,8 @@ public class UserController {
 
     private static final String KET_REDIS="KET_REDIS";
 
+
+
     @GetMapping("user/{string}")
     public String test(@PathVariable String string) {
 
@@ -62,6 +66,12 @@ public class UserController {
     @GetMapping(value = "po")
     // @GlobalTransactional(name = "用户端调用商品服务和订单服务",rollbackFor = Exception.class)
     public String createMsg(){
+        PushEvent.pushApplicationEvent(new ApplicationEvent(new Object()) {
+            @Override
+            public Object getSource() {
+                return super.getSource();
+            }
+        });
         RLock lock = redisson.getLock(KET_REDIS);
         try{
             lock.lock(30L, TimeUnit.SECONDS);
