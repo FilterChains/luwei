@@ -15,6 +15,7 @@
         <mysql-connector.version>5.1.39</mysql-connector.version>
         <mybatis-plus.version>3.1.0</mybatis-plus.version>
         <mybatis-plus-generator.version>3.1.0</mybatis-plus-generator.version>
+        <spring-cloud-openfeign.version>2.0.0.RELEASE</spring-cloud-openfeign.version>
     </properties>
 
     <dependencies>
@@ -29,7 +30,8 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-openfeign-core</artifactId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>${spring-cloud-openfeign.version}</version>
         </dependency>
         <!--mybatis-plus 相关依赖-->
         <dependency>
