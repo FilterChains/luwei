@@ -13,7 +13,6 @@ public class MemoryTest {
         System.out.println(Runtime.getRuntime().freeMemory() / 1024 / 1024 + "MB");
         System.out.print("已使用内存： ");
         System.out.println(Runtime.getRuntime().totalMemory() / 1024 / 1024 + "MB");
-
         System.out.println("1234".contains("123"));
         System.out.println("1234".contains("123456"));
 

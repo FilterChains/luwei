@@ -5,10 +5,13 @@ import com.google.common.collect.Lists;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.util.CollectionUtils;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+
+import static java.util.regex.Pattern.compile;
 
 /**
  * @projectName： springboot_dubbo
@@ -22,25 +25,25 @@ import java.util.stream.Collectors;
 public class StringOperation {
 
     // 匹配汉字
-    private static final String regex = "([\u4e00-\u9fa5]+)";
+    private static final String REGEX = "([\u4e00-\u9fa5]+)";
+    // 匹配字母
+    private static final String LETTER = "[(A-Za-z)]";
     // 匹配特殊符号
-    private static final String special = "[`~!@#$%^&*()+=|{}':;',\\[\\].<>/?~！@#￥%……&*（）——+|{}【】‘；：”“’。，、？]";
+    private static final String SPECIAL = "[`~!@#$^&*()=|{}':;',\\\\[\\-　\\_±φ△ɸ●▽＊+○－%°〞％·×÷ ]<>/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？]";
     // 指定替换符号
-    private static final String assign = "[>@<]";
+    private static final String ASSIGN = "@";
 
     public static void main(String[] args) {
         String str1 = "10*5克";
-        String str2 = "一克10*5袋";
-        String str3 = "10*5包";
-        String str4 = "10*5";
-        String t = "12克12";
-        String str = "132更新至456你好132胡开心";
-        //String s = charactersTheRestructuring(str2);
-        //System.out.println("组装结果:"+s);
+        String str2 = "(△1☑26*10)1";
+        String str3 = "10g（20％50ml）";
+        String str4 = "10   大秦淮区5";
+        String t = "@美能asdasd/.,><\\\\';l__==--看到了@2克@12@";
+        String str = "456你好132***@";
 
+        System.err.println(charactersTheRestructuring(str2));
 
-        System.out.println(charactersTheRestructuring(str2));
-        System.out.println(getStrNumber(str2));
+        // System.out.println(getStrNumber(str3));
 
     }
 
@@ -66,7 +69,7 @@ public class StringOperation {
     public static List<Integer> getNumbers(String content) {
         List<Integer> digitList = Lists.newArrayList();
         if (StringUtils.isNotBlank(content)) {
-            Pattern p = Pattern.compile("[^0-9]");
+            Pattern p = compile("[^0-9]");
             Matcher m = p.matcher(content);
             String result = m.replaceAll("");
             for (int i = 0; i < result.length(); i++) {
@@ -75,29 +78,42 @@ public class StringOperation {
         }
         return digitList;
     }
-    private static Integer charactersTheRestructuring(String resource) {
-        Integer value = 0;
-        if (StringUtils.isNotEmpty(resource)) {
-            String source = resource.replaceAll("\\s+", "");
-            for (; ; ) {
-                Pattern pattern = Pattern.compile(regex);
-                Matcher matcher = pattern.matcher(source);
-                if (matcher.find()) {
-                    String group = matcher.group(0);
-                    source = source.replace(group, assign);
-                }else{
-                    value = 1;
-                    source = source.replaceAll(special,assign);
-                    List<Integer> stringList = Splitter.on(assign).omitEmptyStrings().trimResults().splitToList(source)
-                            .stream().map(Integer::parseInt).collect(Collectors.toList());
-                    for (Integer rt : stringList) {
-                        value *= rt;
-                    }
-                    break;
-                }
-            }
+
+    /**
+     * <p>@description : 规格匹配规则 </p>
+     * <p>@author : Wei.Lu</p>
+     * <p>@date : 2021/2/5 17:29 </p>
+     *
+     * @param resource ->规格
+     * @return {@link String}
+     **/
+    private static String charactersTheRestructuring(String resource) {
+        if (StringUtils.isEmpty(resource)) {
+            return null;
         }
-        return value;
+        // 匹配汉字
+        resource = resource.replaceAll(REGEX, ASSIGN);
+        // 匹配字母
+        resource = resource.replaceAll(LETTER, ASSIGN);
+        // 匹配特殊字符
+        resource = resource.replaceAll(SPECIAL, ASSIGN);
+        // 按ASSIGN分隔字符
+        List<String> splitToList = Splitter.on(ASSIGN).trimResults().omitEmptyStrings()
+                .splitToList(resource);
+        if (CollectionUtils.isEmpty(splitToList)) {
+            return null;
+        }
+        List<BigDecimal> numberList = splitToList.stream().filter(x -> StringUtils.isNotBlank(x) &&
+                (x.matches("\\d+") || x.matches("\\d+.\\d+")))
+                .map(BigDecimal::new).collect(Collectors.toList());
+        if (CollectionUtils.isEmpty(numberList)) {
+            return null;
+        }
+        BigDecimal bigDecimal = BigDecimal.ONE;
+        for (BigDecimal bd : numberList) {
+            bigDecimal = bigDecimal.multiply(bd);
+        }
+        return bigDecimal.stripTrailingZeros().toPlainString();
     }
 }
 

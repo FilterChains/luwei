@@ -53,8 +53,8 @@
         <!--分布式锁 Redisson-->
         <!-- https://mvnrepository.com/artifact/org.redisson/redisson -->
         <dependency>
-               <groupId>org.redisson</groupId>
-               <artifactId>redisson</artifactId>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
             <version>3.11.1</version>
         </dependency>
 
@@ -143,6 +143,12 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-redis</artifactId>
+        </dependency>
+        <!--即时通讯依赖-->
+        <dependency>
+            <groupId>cn.rongcloud.im</groupId>
+            <artifactId>server-sdk-java</artifactId>
+            <version>3.0.6</version>
         </dependency>
 
     </dependencies>
