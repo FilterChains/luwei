@@ -1,4 +1,4 @@
-package com.user.util.commonexcel;
+package com.user.util.excelimoprtutil;
 
 import org.springframework.util.StringUtils;
 
@@ -17,7 +17,7 @@ import java.util.Map;
  * @alert: This document is private to luwei
  * @version: 1.8.00_66
  */
-class ExcelCode {
+public class ExcelCode {
     /**
      * 总行数
      */

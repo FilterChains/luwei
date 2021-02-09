@@ -1,4 +1,4 @@
-package com.user.util.commonexcel;
+package com.user.util.excelimoprtutil;
 
 import org.apache.commons.collections4.MapUtils;
 import org.apache.poi.ss.usermodel.Cell;

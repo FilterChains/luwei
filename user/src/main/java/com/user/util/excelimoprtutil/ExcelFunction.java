@@ -1,4 +1,4 @@
-package com.user.util.commonexcel;
+package com.user.util.excelimoprtutil;
 
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
