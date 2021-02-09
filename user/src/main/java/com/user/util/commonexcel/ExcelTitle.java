@@ -11,7 +11,7 @@ import java.io.Serializable;
  * @alert: This document is private to luwei
  * @version: 1.8.00_66
  */
-class ExcelTitle implements Serializable {
+public class ExcelTitle implements Serializable {
     /**
      * excel title name
      */

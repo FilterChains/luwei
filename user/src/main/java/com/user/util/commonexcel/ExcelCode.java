@@ -1,5 +1,7 @@
 package com.user.util.commonexcel;
 
+import org.springframework.util.StringUtils;
+
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -74,4 +76,34 @@ class ExcelCode {
      * excel check tableTitle(excel检查表头)
      */
     static Boolean EXCEL_CHECK_TITLE = false;
+
+    /**
+     * @Title: stringReplace
+     * @Description: 字符串替换英文
+     * @Param: [data]   参数
+     * @Return: String ->结果  返回类型
+     * @Date: 2020/2/19 20:57
+     */
+    static String stringReplace(String data) {
+        String result = "";
+        if (!StringUtils.isEmpty(data)) {
+            result = data.replaceAll("\\s+", "")
+                    .replace("（", "(")
+                    .replace("）", ")");
+        }
+        return result;
+    }
+
+    /**
+     * <p>@description : 清空所有对象 </p>
+     * <p>@author : Wei.Lu</p>
+     * <p>@date : 2021/2/9 10:12 </p>
+     **/
+    static void destroyColl() {
+        titleName = null;
+        methodNames = null;
+        fieldTypes = null;
+        validateName = null;
+        excludeTitle = null;
+    }
 }

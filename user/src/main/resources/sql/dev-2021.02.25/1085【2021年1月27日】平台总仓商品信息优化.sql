@@ -17,3 +17,4 @@ ALTER TABLE td_product
 ALTER TABLE td_product
     modify COLUMN p_usage
         text DEFAULT NULL COMMENT '用法用量';
+
