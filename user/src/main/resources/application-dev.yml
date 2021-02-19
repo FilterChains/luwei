@@ -3,11 +3,11 @@ server:
 spring:
   application:
     name: user
-  cloud:
-    # nacos 配置
-    nacos:
-      discovery:
-        server-addr: localhost:8848
+  #  cloud:
+  #    # nacos 配置
+  #    nacos:
+  #      discovery:
+  #        server-addr: localhost:8848
 
   # 配置连接数据库
   datasource:
@@ -39,7 +39,7 @@ spring:
       max-pool-prepared-statement-per-connection-size: 20
 
 # seata 配置分布式事务
-seata:
-  enabled: true
-  enable-auto-data-source-proxy: true
-  tx-service-group: my_test_tx_group # 与nacos注册的分组一致(注意seata配置文件)
+#seata:
+#  enabled: true
+#  enable-auto-data-source-proxy: true
+#  tx-service-group: my_test_tx_group # 与nacos注册的分组一致(注意seata配置文件)

@@ -136,11 +136,12 @@ public class ExcelValidate {
     private static void getExcelFieldAnnotation(Field... fields) throws ExcelException {
 
         // 获得该类的所有属性
+        ExcelTitle excelTitle;
         for (Field field : fields) {
             // 获得字段注解
             ExcelTitleName excelTitleName = field.getAnnotation(ExcelTitleName.class);
             if (!ObjectUtils.isEmpty(excelTitleName)) {
-                ExcelTitle excelTitle = new ExcelTitle();
+                excelTitle = new ExcelTitle();
                 excelTitle.setTitleName(excelTitleName.value());
                 excelTitle.setTitleIndex(excelTitleName.index());
                 ExcelCode.titleName.put(field.getName(), excelTitle);

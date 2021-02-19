@@ -150,6 +150,12 @@
             <artifactId>server-sdk-java</artifactId>
             <version>3.0.6</version>
         </dependency>
+        <!--alibaba canal mysql binlog日志同步 至中间件或noSql数据库-->
+        <dependency>
+            <groupId>com.alibaba.otter</groupId>
+            <artifactId>canal.client</artifactId>
+            <version>1.0.12</version>
+        </dependency>
 
     </dependencies>
 

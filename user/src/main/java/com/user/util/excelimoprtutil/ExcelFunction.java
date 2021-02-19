@@ -16,7 +16,7 @@ import java.util.List;
  * @alert: This document is private to luwei
  * @version: 1.8.00_66
  */
-final class ExcelFunction {
+public class ExcelFunction {
 
     /**
      * @Title: readExcel
@@ -31,7 +31,7 @@ final class ExcelFunction {
      * @Throws: ExcelException
      * @Date: 2020/2/19 20:39
      */
-    static <T> List<T> readExcel(MultipartFile file, Class<T> objectClass, boolean operation, boolean checkTitle) throws ExcelException {
+    public static <T> List<T> readExcel(MultipartFile file, Class<T> objectClass, boolean operation, boolean checkTitle) throws ExcelException {
         List<T> resultDate;
         try {
             //读取数据方式
