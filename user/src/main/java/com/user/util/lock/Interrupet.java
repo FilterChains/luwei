@@ -1,7 +1,6 @@
 package com.user.util.lock;
 
-import javax.swing.tree.TreeNode;
-import java.util.Enumeration;
+import org.springframework.util.StopWatch;
 
 public class Interrupet {
 
@@ -45,49 +44,16 @@ public class Interrupet {
 //        System.out.println("isShutdown:===== >" + executor.isShutdown());
 //        System.out.println("isTerminating:=====> " + executor.isTerminating());
 
-
-        String num1 = "1";
-        String num2 = "1";
-        String integerNum1 = new String(num1);
-        String integerNum2 = new String(num2);
-        System.out.println(num1 == num2);
-        System.out.println(integerNum1 == integerNum2);
-        System.out.println(integerNum1.equals(integerNum2));
-        new TreeNode() {
-            @Override
-            public TreeNode getChildAt(int childIndex) {
-                return null;
-            }
-
-            @Override
-            public int getChildCount() {
-                return 0;
-            }
-
-            @Override
-            public TreeNode getParent() {
-                return null;
-            }
-
-            @Override
-            public int getIndex(TreeNode node) {
-                return 0;
-            }
-
-            @Override
-            public boolean getAllowsChildren() {
-                return false;
-            }
-
-            @Override
-            public boolean isLeaf() {
-                return false;
-            }
-
-            @Override
-            public Enumeration children() {
-                return null;
-            }
-        };
+        StopWatch stopWatch = new StopWatch();
+        System.out.println("开始执行");
+        stopWatch.start("开始任务一");
+        Thread.sleep(3000L);
+        System.out.println("执行结束");
+        stopWatch.stop();
+        stopWatch.start("开始任务二");
+        Thread.sleep(2000L);
+        stopWatch.stop();
+        System.out.println(stopWatch.prettyPrint());
     }
+
 }

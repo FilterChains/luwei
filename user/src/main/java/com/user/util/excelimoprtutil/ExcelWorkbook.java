@@ -26,7 +26,7 @@ public class ExcelWorkbook {
      * @return {@link Workbook}
      **/
     public static Workbook getExcelWorkbook(String fileName, InputStream inputStream) throws ExcelException {
-        Workbook workbook = null;
+        Workbook workbook;
         /*检查文件名是否为空或者是否是Excel格式的文件,并验证相应版本*/
         if (StringUtils.isEmpty(fileName)) {
             throw new ExcelException("文件上传失败,请检查上传文件路径");

@@ -1,7 +1,5 @@
 package com.user.util.excelimoprtutil;
 
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -40,12 +38,9 @@ public class ExcelFunction {
             ExcelCode.EXCEL_CHECK_TITLE = checkTitle;
             //验证实体类字段
             ExcelValidate.validateFields(objectClass.getDeclaredFields());
-            //验证文件是否合法,并判断文件的类型，是2003还是2007
-            Workbook workbook = ExcelWorkbook.getExcelWorkbook(file.getOriginalFilename(), file.getInputStream());
-            // 验证表中数据
-            Sheet sheet = ExcelValidate.validateExcelContent(workbook);
-            //开始读取数据
-            resultDate = ExcelReadFrom.readFromExcel(objectClass, sheet);
+            //验证文件是否合法,并判断文件的类型，是2003还是2007 ->验证表中数据->开始读取数据
+            resultDate = ExcelReadFrom.readFromExcel(objectClass, ExcelValidate.validateExcelContent(
+                    ExcelWorkbook.getExcelWorkbook(file.getOriginalFilename(), file.getInputStream())));
         } catch (ExcelException e) {
             throw e;
         } catch (IOException e) {
