@@ -2,7 +2,7 @@ package com.user.util;
 
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.CollectionUtils;
 
 import java.math.BigDecimal;
@@ -49,7 +49,7 @@ public class StringOperation {
 
     public static String getStrNumber(String content) {
         StringBuilder stringBuilder = listToInteger(getNumbers(content));
-        if (org.springframework.util.StringUtils.isEmpty(stringBuilder)) {
+        if (StringUtils.isEmpty(stringBuilder)) {
             return null;
         }
         return stringBuilder.toString();
@@ -114,6 +114,35 @@ public class StringOperation {
             bigDecimal = bigDecimal.multiply(bd);
         }
         return bigDecimal.stripTrailingZeros().toPlainString();
+    }
+
+
+    /**
+     * <p>@description : 去除规格汉字和字母 </p>
+     * <p>@author : Wei.Lu </p>
+     * <p>@date : 2021/2/23 14:27 </p>
+     *
+     * @param specification ->数据源
+     * @return {@link  String }
+     **/
+    public static String removeCharactersAndLetters(String specification) {
+        // Matcher Chinese and Letter
+        return StringUtils.isEmpty(specification) ? null :
+                specification.replaceAll(REGEX, "").replaceAll(LETTER, "");
+    }
+
+    /**
+     * <p>@description : 对特殊符号统一处理成* </p>
+     * <p>@author : Wei.Lu </p>
+     * <p>@date : 2021/2/23 14:44 </p>
+     *
+     * @param specification -> 数据源
+     * @return {@link  String }
+     **/
+    public static String uniformSpecialSymbol(String specification) {
+        return StringUtils.isEmpty(specification) ? null :
+                String.join("*", Splitter.on(ASSIGN).trimResults().omitEmptyStrings()
+                        .splitToList(specification.replaceAll(SPECIAL, ASSIGN))).toLowerCase();
     }
 }
 

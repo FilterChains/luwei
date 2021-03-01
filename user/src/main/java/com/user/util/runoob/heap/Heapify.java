@@ -1,7 +1,7 @@
-package com.luwei.util.runoob.heap;
+package com.user.util.runoob.heap;
 
 
-import com.luwei.util.runoob.sort.SortTestHelper;
+import com.user.util.runoob.sort.SortTestHelper;
 
 /**
  * 用heapify进行堆排序
@@ -26,8 +26,9 @@ public class Heapify<T extends Comparable> {
             data[i + 1] = arr[i];
         count = n;
         //从第一个不是叶子节点的元素开始
-        for (int i = count / 2; i >= 1; i--)
+        for (int i = count / 2; i >= 1; i--) {
             shiftDown(i);
+        }
     }
 
     // 返回堆中的元素个数

@@ -25,4 +25,6 @@ public class Account implements Serializable {
     private Integer total;
     private Integer used;
     private Integer residue;
+
+    private String msg;
 }

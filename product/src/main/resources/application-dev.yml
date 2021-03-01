@@ -3,10 +3,10 @@ server:
 spring:
   application:
     name: product
-  cloud:
-    nacos:
-      discovery:
-        server-addr: localhost:8848
+  #cloud:
+  #    nacos:
+  #      discovery:
+  #        server-addr: localhost:8848
   # 配置连接数据库
   datasource:
     name: tvpanda
@@ -35,3 +35,12 @@ spring:
       # 是否缓存preparedStatement，也就是PSCache  官方建议MySQL下建议关闭   个人建议如果想用SQL防火墙 建议打开
       pool-prepared-statements: true
       max-pool-prepared-statement-per-connection-size: 20
+
+# RocketMq
+rocketmq:
+  name-server: 192.168.3.111:9876 # 访问地址
+  producer:
+    group: Pro_Group # 必须指定group
+    send-message-timeout: 3000 # 消息发送超时时长，默认3s
+    retry-times-when-send-failed: 3 # 同步发送消息失败重试次数，默认2
+    retry-times-when-send-async-failed: 3 # 异步发送消息失败重试次数，默认2

@@ -16,5 +16,19 @@ ALTER TABLE td_product
         varchar(255) DEFAULT NULL COMMENT '有效期';
 ALTER TABLE td_product
     modify COLUMN p_usage
-        text DEFAULT NULL COMMENT '用法用量';
-
+    text DEFAULT NULL COMMENT '用法用量';
+ALTER TABLE td_product
+    modify COLUMN attention
+    text DEFAULT NULL COMMENT '注意事项';
+ALTER TABLE td_product
+    modify COLUMN reaction
+    text DEFAULT NULL COMMENT '不良反应';
+ALTER TABLE td_product
+    modify COLUMN avoid
+    text DEFAULT NULL COMMENT '禁忌说明';
+ALTER TABLE td_product
+    modify COLUMN indication
+    text DEFAULT NULL COMMENT '功能主治';
+ALTER TABLE td_product
+    modify COLUMN components
+    text DEFAULT NULL COMMENT '主要成分';

@@ -2,6 +2,7 @@ package com.product.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.product.entity.Product;
+import com.product.service.MQConsumerService;
 import com.product.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
@@ -19,6 +20,9 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
+    @Autowired
+    private MQConsumerService mqConsumerService;
+
     @RequestMapping(value = "/product/{string}", method = RequestMethod.GET)
     public String test(@PathVariable String string) throws Exception {
         // throw new Exception("product is Filaed");
@@ -28,7 +32,7 @@ public class ProductController {
     }
 
     @PostMapping(value = "/add")
-    public String addProduct(){
+    public String addProduct() {
         productService.save(Product.builder()
                 .productId(200).residue(200).total(200).used(200)
                 .build());

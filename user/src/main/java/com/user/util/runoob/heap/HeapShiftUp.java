@@ -1,4 +1,4 @@
-package com.luwei.util.runoob.heap;
+package com.user.util.runoob.heap;
 
 /**
  * 往最大堆中添加一元素

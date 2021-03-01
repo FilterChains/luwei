@@ -25,7 +25,7 @@ public class IpService {
     /**
      * 服务器台数
      */
-    private static final int NUM = 80;
+    private static final int NUM = 5;
 
     /**
      * <p>@description : 初始权重（服务器配置） </p>

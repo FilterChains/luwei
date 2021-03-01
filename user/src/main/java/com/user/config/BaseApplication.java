@@ -28,7 +28,7 @@ public class BaseApplication {
 
     @Bean
     @Primary // 保证Bean的优先注入和唯一性
-    public PushEvent pushEvent(){
+    public PushEvent pushEvent() {
         return new PushEvent();
     }
 }

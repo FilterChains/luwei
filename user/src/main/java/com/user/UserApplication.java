@@ -15,5 +15,6 @@ public class UserApplication extends BaseApplication {
         SpringApplication.run(UserApplication.class, args);
     }
 
+
 }
 

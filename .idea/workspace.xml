@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="db00540b-6b0c-4978-8874-951c611e6cce" name="Default Changelist" comment="excel Util v 0.2.0">
+      <change afterPath="$PROJECT_DIR$/.idea/$CACHE_FILE$" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/google-java-format.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/junitgenerator-prj-settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/qaplug_profiles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/saveactions_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/springcloud.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/product/entity/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/product/service/MQConsumerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/service/MQProducerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/collection/Practice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/pollingalgorithm/IpConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/pollingalgorithm/IpData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/pollingalgorithm/SmoothingAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/tree/TreeModelTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/test/java/com/user/controller/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/product/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/product/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/UserApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/config/BaseApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/config/BaseApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/entity/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/entity/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/LingKouStudy.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/LingKouStudy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/StringOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/StringOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/ZenZeBiaoDaShiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/ZenZeBiaoDaShiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/encryption/AssembleAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/encryption/AssembleAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/eventtest/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/eventtest/Operation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelReadFrom.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelReadFrom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelValidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelValidate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelWorkbook.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelWorkbook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/Interrupet.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/Interrupet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/TestDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/TestDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/pollingalgorithm/IpService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/pollingalgorithm/IpService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/pollingalgorithm/Operation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/pushmessage/PushServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/pushmessage/PushServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/heap/HeapShiftDown.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/heap/HeapShiftDown.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/heap/HeapShiftUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/heap/HeapShiftUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/heap/Heapify.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/heap/Heapify.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/heap/MaxHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/heap/MaxHeap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/sort/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/sort/InsertionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/sort/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/sort/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/sort/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/sort/QuickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/sort/QuickSort2Ways.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/sort/QuickSort2Ways.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/sort/QuickSort3Ways.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/sort/QuickSort3Ways.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/sort/SelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/sort/SelectionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/sort/ShellSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/sort/ShellSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/sort/SortTestHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/runoob/sort/SortTestHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/sql/dev-2021.02.25/1085【2021年1月27日】平台总仓商品信息优化.sql" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/sql/dev-2021.02.25/1085【2021年1月27日】平台总仓商品信息优化.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../springcloud\exportToHTML" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="spring-beans.schema" />
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://D:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/HashMap.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\apache-maven-3.5.4\jar" />
+        <option name="mavenHome" value="E:\apache-maven-3.5.4" />
+        <option name="userSettingsFile" value="E:\apache-maven-3.5.4\conf\settings-aliyun.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="#JAVA_HOME" />
+  </component>
+  <component name="ProjectId" id="1nadx743JKr6Cuge6tlvz4XJgFO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../game/mirrors-wildfirechat-server-master" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.20703125" />
+    <property name="project.structure.side.proportion" value="0.12870012" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="typescript.add.unambiguous.imports.on.the.fly" value="true" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="enabled" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\resources\sql.dev-3月" />
+      <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\java\com\user\util" />
+      <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\java\com\user" />
+      <recent name="F:\springcloud\springcloud\product\src\main\resources" />
+      <recent name="F:\springcloud\springcloud\product\src\main\java\com\product" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.user.controller" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.product.entity" />
+      <recent name="com.user.util.cache" />
+      <recent name="com.user.config" />
+      <recent name="com.order.config" />
+      <recent name="com.order" />
+    </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:9909/lottery/10" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:9909/lottery/1" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:9909/id/1" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.UserApplication">
+    <configuration name="LingKouStudy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.user.util.LingKouStudy" />
+      <module name="user" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.user.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SmoothPollingAlgorithm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.user.util.pollingalgorithm.SmoothPollingAlgorithm" />
+      <module name="user" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.user.util.pollingalgorithm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SmoothingAlgorithm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.user.util.pollingalgorithm.SmoothingAlgorithm" />
+      <module name="user" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.user.util.pollingalgorithm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="generated-requests#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="springcolud" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings">
+          <MavenGeneralSettings>
+            <option name="alwaysUpdateSnapshots" value="false" />
+            <option name="checksumPolicy" value="NOT_SET" />
+            <option name="failureBehavior" value="NOT_SET" />
+            <option name="localRepository" value="E:\apache-maven-3.5.4\jar" />
+            <option name="mavenHome" value="Bundled (Maven 3)" />
+            <option name="nonRecursive" value="false" />
+            <option name="outputLevel" value="INFO" />
+            <option name="pluginUpdatePolicy" value="DEFAULT" />
+            <option name="printErrorStackTraces" value="false" />
+            <option name="threads" />
+            <option name="usePluginRegistry" value="false" />
+            <option name="userSettingsFile" value="E:\java\apache-maven-3.5.4\conf\settings-阿里云.xml" />
+            <option name="workOffline" value="false" />
+          </MavenGeneralSettings>
+        </option>
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="OrderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="order" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.order.OrderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="product" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.product.ProductApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <module name="user" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.user.UserApplication" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="D:\Program Files\Java\jdk1.8.0_191\jre" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.LingKouStudy" />
+      <item itemvalue="Application.SmoothingAlgorithm" />
+      <item itemvalue="Application.SmoothPollingAlgorithm" />
+      <item itemvalue="HTTP Request.generated-requests#2" />
+      <item itemvalue="Maven.springcolud" />
+      <item itemvalue="Spring Boot.UserApplication" />
+      <item itemvalue="Spring Boot.OrderApplication" />
+      <item itemvalue="Spring Boot.ProductApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.generated-requests#2" />
+        <item itemvalue="Application.LingKouStudy" />
+        <item itemvalue="Application.SmoothingAlgorithm" />
+        <item itemvalue="Application.SmoothPollingAlgorithm" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="db00540b-6b0c-4978-8874-951c611e6cce" name="Default Changelist" comment="" />
+      <created>1611632378351</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611632378351</updated>
+      <workItem from="1611632384050" duration="13367000" />
+      <workItem from="1611710519923" duration="1721000" />
+      <workItem from="1611712264609" duration="27633000" />
+      <workItem from="1611814531778" duration="10179000" />
+      <workItem from="1611913011796" duration="1668000" />
+      <workItem from="1612142166163" duration="4874000" />
+      <workItem from="1612151461930" duration="8543000" />
+      <workItem from="1612170730850" duration="15627000" />
+      <workItem from="1612194033922" duration="179000" />
+      <workItem from="1612194274200" duration="21000" />
+      <workItem from="1612194337546" duration="3861000" />
+      <workItem from="1612257095988" duration="4091000" />
+      <workItem from="1612322394545" duration="2996000" />
+      <workItem from="1612400462777" duration="17205000" />
+      <workItem from="1612682215421" duration="12317000" />
+      <workItem from="1612769088469" duration="24678000" />
+      <workItem from="1613612088444" duration="18111000" />
+      <workItem from="1613697408463" duration="5335000" />
+      <workItem from="1613720956862" duration="197000" />
+      <workItem from="1613721591085" duration="179000" />
+      <workItem from="1613721811413" duration="8420000" />
+      <workItem from="1613784762525" duration="20278000" />
+      <workItem from="1614135586882" duration="34037000" />
+      <workItem from="1614238938891" duration="762000" />
+      <workItem from="1614239740955" duration="1293000" />
+      <workItem from="1614254412716" duration="590000" />
+      <workItem from="1614255907750" duration="452000" />
+      <workItem from="1614256611804" duration="293000" />
+      <workItem from="1614257798008" duration="15625000" />
+      <workItem from="1614563596423" duration="27000" />
+      <workItem from="1614563670016" duration="27000" />
+      <workItem from="1614563739134" duration="22000" />
+      <workItem from="1614563881380" duration="13268000" />
+    </task>
+    <task id="LOCAL-00001" summary="springcloud">
+      <created>1611712496413</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1611712496413</updated>
+    </task>
+    <task id="LOCAL-00002" summary="springcloud">
+      <created>1611733590551</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1611733590551</updated>
+    </task>
+    <task id="LOCAL-00003" summary="springcloud">
+      <created>1611801550305</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1611801550305</updated>
+    </task>
+    <task id="LOCAL-00004" summary="springcloud">
+      <created>1612182923652</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1612182923652</updated>
+    </task>
+    <task id="LOCAL-00005" summary="springcloud">
+      <created>1612189581510</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1612189581510</updated>
+    </task>
+    <task id="LOCAL-00006" summary="springcloud">
+      <created>1612192012250</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612192012250</updated>
+    </task>
+    <task id="LOCAL-00007" summary="springcloud">
+      <created>1612195567267</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1612195567267</updated>
+    </task>
+    <task id="LOCAL-00008" summary="springcloud">
+      <created>1612769240399</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1612769240399</updated>
+    </task>
+    <task id="LOCAL-00009" summary="excel Util v 0.2.0">
+      <created>1612837265268</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1612837265268</updated>
+    </task>
+    <task id="LOCAL-00010" summary="excel Util v 0.2.0">
+      <created>1612837519542</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1612837519542</updated>
+    </task>
+    <task id="LOCAL-00011" summary="excel Util v 0.2.0">
+      <created>1613725211823</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1613725211823</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="dev" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="springboot" />
+    <MESSAGE value="springcloud" />
+    <MESSAGE value="excel Util v 0.2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="excel Util v 0.2.0" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/springcloud$YcLock.ic" NAME="YcLock Coverage Results" MODIFIED="1613621983976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.user.util.lock.*</FILTER>
+    </SUITE>
+  </component>
+</project>

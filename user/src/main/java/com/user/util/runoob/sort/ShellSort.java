@@ -1,4 +1,4 @@
-package com.luwei.util.runoob.sort;
+package com.user.util.runoob.sort;
 
 /**
  * 希尔排序

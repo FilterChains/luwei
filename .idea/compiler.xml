@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="product" />
+        <module name="server-sdk-java" />
+        <module name="user" />
+        <module name="order" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="account" target="1.8" />
+      <module name="account-service" target="1.8" />
+      <module name="account-xa" target="1.8" />
+      <module name="base-framework-mysql-support" target="1.5" />
+      <module name="business-service" target="1.8" />
+      <module name="business-xa" target="1.8" />
+      <module name="bussiness" target="1.8" />
+      <module name="consumer" target="1.8" />
+      <module name="dubbo-saga-sample" target="1.8" />
+      <module name="dubbo-tcc-sample" target="1.8" />
+      <module name="dubbo_api" target="1.5" />
+      <module name="dubbo_common" target="8" />
+      <module name="dubbo_consumer" target="1.8" />
+      <module name="dubbo_provider" target="1.8" />
+      <module name="dubbo_timer" target="1.8" />
+      <module name="eureka" target="1.8" />
+      <module name="hsf-tcc-sample" target="1.8" />
+      <module name="local-saga-sample" target="1.8" />
+      <module name="local-tcc-sample" target="1.8" />
+      <module name="multiple-datasource" target="1.8" />
+      <module name="multiple-datasource-mybatis-plus" target="1.8" />
+      <module name="nacos-cmdb-plugin-example" target="1.7" />
+      <module name="nacos-examples" target="1.5" />
+      <module name="nacos-health-plugin-example" target="1.8" />
+      <module name="nacos-sentinel-example" target="1.8" />
+      <module name="nacos-spring-boot-config-example" target="1.8" />
+      <module name="nacos-spring-boot-config-mysql-example" target="1.8" />
+      <module name="nacos-spring-boot-discovery-example" target="1.8" />
+      <module name="nacos-spring-boot-example" target="1.8" />
+      <module name="nacos-spring-cloud-config-example" target="1.8" />
+      <module name="nacos-spring-cloud-config-multi-data-ids-example" target="1.8" />
+      <module name="nacos-spring-cloud-consumer-example" target="1.8" />
+      <module name="nacos-spring-cloud-discovery-example" target="1.8" />
+      <module name="nacos-spring-cloud-example" target="1.8" />
+      <module name="nacos-spring-cloud-provider-example" target="1.8" />
+      <module name="nacos-spring-config-datasource-example" target="1.6" />
+      <module name="nacos-spring-config-example" target="1.6" />
+      <module name="nacos-spring-config-listener-example" target="1.6" />
+      <module name="nacos-spring-config-multi-data-ids-example" target="1.6" />
+      <module name="nacos-spring-config-pojo-example" target="1.6" />
+      <module name="nacos-spring-discovery-example" target="1.6" />
+      <module name="nacos-spring-example" target="1.6" />
+      <module name="nutzboot-dubbo-fescar-account" target="1.8" />
+      <module name="nutzboot-dubbo-fescar-common" target="1.8" />
+      <module name="nutzboot-dubbo-fescar-order" target="1.8" />
+      <module name="nutzboot-dubbo-fescar-storage" target="1.8" />
+      <module name="nutzboot-dubbo-fescar-web" target="1.8" />
+      <module name="nutzboot-dubbo-seata" target="1.8" />
+      <module name="order (1) (io.seata)" target="1.8" />
+      <module name="order-service" target="1.8" />
+      <module name="order-xa" target="1.8" />
+      <module name="provider" target="1.8" />
+      <module name="samples-account" target="1.8" />
+      <module name="samples-account-service" target="1.8" />
+      <module name="samples-business" target="1.8" />
+      <module name="samples-business-service" target="1.8" />
+      <module name="samples-common" target="1.8" />
+      <module name="samples-common-service" target="1.8" />
+      <module name="samples-order" target="1.8" />
+      <module name="samples-order-service" target="1.8" />
+      <module name="samples-storage" target="1.8" />
+      <module name="samples-storage-service" target="1.8" />
+      <module name="sbm-account-service" target="1.8" />
+      <module name="sbm-business-service" target="1.8" />
+      <module name="sbm-common-service" target="1.8" />
+      <module name="sbm-order-service" target="1.8" />
+      <module name="sbm-storage-service" target="1.8" />
+      <module name="sca-common" target="1.8" />
+      <module name="sca-customer" target="1.8" />
+      <module name="sca-provider" target="1.8" />
+      <module name="seata-samples" target="1.8" />
+      <module name="seata-samples-api" target="1.8" />
+      <module name="seata-samples-dubbo" target="1.8" />
+      <module name="seata-samples-HA" target="1.8" />
+      <module name="seata-samples-jit" target="1.8" />
+      <module name="seata-samples-nacos" target="1.8" />
+      <module name="seata-samples-saga" target="1.8" />
+      <module name="seata-samples-springboot" target="1.8" />
+      <module name="seata-samples-tcc" target="1.8" />
+      <module name="seata-spring-boot-starter-samples" target="1.8" />
+      <module name="seata-xa" target="1.8" />
+      <module name="shardingsphere-seata-business" target="1.8" />
+      <module name="shardingsphere-seata-order" target="1.8" />
+      <module name="sofarpc-saga-sample" target="1.7" />
+      <module name="sofarpc-tcc-sample" target="1.7" />
+      <module name="spring-cloud-alibaba-samples" target="1.8" />
+      <module name="springboot-dubbo-seata" target="1.8" />
+      <module name="springboot-mybatis" target="1.8" />
+      <module name="springboot-shardingsphere-seata" target="1.8" />
+      <module name="springboot-tcc-sample" target="1.6" />
+      <module name="springboot_dubbo" target="1.8" />
+      <module name="springcloud-eureka-seata" target="1.8" />
+      <module name="springcloud-jpa-seata" target="1.8" />
+      <module name="springcloud-nacos-seata" target="1.5" />
+      <module name="storage" target="1.8" />
+      <module name="storage-service" target="1.8" />
+      <module name="storage-xa" target="1.8" />
+      <module name="transfer-tcc-sample" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="dubbo_consumer" options="-parameters" />
+      <module name="dubbo_provider" options="-parameters" />
+      <module name="dubbo_timer" options="-parameters" />
+      <module name="server-sdk-java" options="-extdirs F:\server-sdk-java-master/lib" />
+    </option>
+  </component>
+</project>

@@ -9,6 +9,12 @@ spring:
   #      discovery:
   #        server-addr: localhost:8848
 
+  redis:
+    host: 192.168.3.111
+    port: 6379
+    password: n1yEl39pMQZkH
+    database: 13
+
   # 配置连接数据库
   datasource:
     name: tvpanda
@@ -38,8 +44,18 @@ spring:
       pool-prepared-statements: true
       max-pool-prepared-statement-per-connection-size: 20
 
-# seata 配置分布式事务
-#seata:
-#  enabled: true
-#  enable-auto-data-source-proxy: true
-#  tx-service-group: my_test_tx_group # 与nacos注册的分组一致(注意seata配置文件)
+  # seata 配置分布式事务
+#  seata:
+#    enabled: true
+#    enable-auto-data-source-proxy: true
+#    tx-service-group: my_test_tx_group # 与nacos注册的分组一致(注意seata配置文件)
+# RocketMq
+rocketmq:
+  name-server: 192.168.3.111:9876 # 访问地址
+  producer:
+    group: Pro_Group # 必须指定group
+    send-message-timeout: 3000 # 消息发送超时时长，默认3s
+    retry-times-when-send-failed: 3 # 同步发送消息失败重试次数，默认2
+    retry-times-when-send-async-failed: 3 # 异步发送消息失败重试次数，默认2
+
+

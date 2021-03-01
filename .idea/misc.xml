@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FindBugsConfigurable">
+    <option name="make" value="true" />
+    <option name="effort" value="default" />
+    <option name="priority" value="Medium" />
+    <option name="excludeFilter" value="" />
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../nacos-examples-master/nacos-spring-example/nacos-spring-discovery-example" />
+    <file type="web" url="file://$PROJECT_DIR$/../seata-samples-master/tcc/hsf-tcc-sample" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../nacos-examples-master/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/pom.xml" />
+        <option value="F:/server-sdk-java-master/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-cmdb-plugin-example/pom.xml" />
+        <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-health-plugin-example/pom.xml" />
+        <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-sentinel-example/pom.xml" />
+        <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-spring-boot-example/nacos-spring-boot-config-example/pom.xml" />
+        <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-spring-boot-example/nacos-spring-boot-config-mysql-example/pom.xml" />
+        <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-spring-boot-example/nacos-spring-boot-discovery-example/pom.xml" />
+        <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-spring-boot-example/pom.xml" />
+        <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-spring-cloud-example/nacos-spring-cloud-config-example/pom.xml" />
+        <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-spring-cloud-example/nacos-spring-cloud-config-multi-data-ids-example/pom.xml" />
+        <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-spring-cloud-example/nacos-spring-cloud-discovery-example/nacos-spring-cloud-consumer-example/pom.xml" />
+        <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-spring-cloud-example/nacos-spring-cloud-discovery-example/nacos-spring-cloud-provider-example/pom.xml" />
+        <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-spring-cloud-example/nacos-spring-cloud-discovery-example/pom.xml" />
+        <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-spring-cloud-example/pom.xml" />
+        <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-spring-example/nacos-spring-config-datasource-example/pom.xml" />
+        <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-spring-example/nacos-spring-config-example/pom.xml" />
+        <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-spring-example/nacos-spring-config-listener-example/pom.xml" />
+        <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-spring-example/nacos-spring-config-multi-data-ids-example/pom.xml" />
+        <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-spring-example/nacos-spring-config-pojo-example/pom.xml" />
+        <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-spring-example/nacos-spring-discovery-example/pom.xml" />
+        <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-spring-example/pom.xml" />
+        <option value="$PROJECT_DIR$/../nacos-examples-master/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/api/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/dubbo/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/ha/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/multiple-datasource-mybatis-plus/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/multiple-datasource/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/nacos/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/nutzboot-dubbo-fescar/nutzboot-dubbo-fescar-account/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/nutzboot-dubbo-fescar/nutzboot-dubbo-fescar-common/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/nutzboot-dubbo-fescar/nutzboot-dubbo-fescar-order/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/nutzboot-dubbo-fescar/nutzboot-dubbo-fescar-storage/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/nutzboot-dubbo-fescar/nutzboot-dubbo-fescar-web/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/nutzboot-dubbo-fescar/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/saga/dubbo-saga-sample/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/saga/local-saga-sample/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/saga/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/saga/sofarpc-saga-sample/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/seata-samples-jit/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/seata-spring-boot-starter-samples/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/seata-spring-boot-starter-samples/samples-account-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/seata-spring-boot-starter-samples/samples-business-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/seata-spring-boot-starter-samples/samples-common-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/seata-spring-boot-starter-samples/samples-order-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/seata-spring-boot-starter-samples/samples-storage-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/seata-xa/account-xa/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/seata-xa/business-xa/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/seata-xa/order-xa/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/seata-xa/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/seata-xa/storage-xa/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/spring-cloud-alibaba-samples/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/spring-cloud-alibaba-samples/sca-common/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/spring-cloud-alibaba-samples/sca-customer/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/spring-cloud-alibaba-samples/sca-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springboot-dubbo-seata/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springboot-dubbo-seata/samples-account/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springboot-dubbo-seata/samples-business/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springboot-dubbo-seata/samples-common/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springboot-dubbo-seata/samples-order/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springboot-dubbo-seata/samples-storage/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springboot-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springboot-mybatis/sbm-account-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springboot-mybatis/sbm-business-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springboot-mybatis/sbm-common-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springboot-mybatis/sbm-order-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springboot-mybatis/sbm-storage-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springboot-shardingsphere-seata/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springboot-shardingsphere-seata/shardingsphere-seata-business/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springboot-shardingsphere-seata/shardingsphere-seata-order/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springboot/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springcloud-eureka-seata/account/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springcloud-eureka-seata/bussiness/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springcloud-eureka-seata/eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springcloud-eureka-seata/order/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springcloud-eureka-seata/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springcloud-eureka-seata/storage/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springcloud-jpa-seata/account-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springcloud-jpa-seata/business-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springcloud-jpa-seata/order-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springcloud-jpa-seata/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springcloud-jpa-seata/storage-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springcloud-nacos-seata/base-framework-mysql-support/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/springcloud-nacos-seata/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/tcc/dubbo-tcc-sample/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/tcc/hsf-tcc-sample/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/tcc/local-tcc-sample/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/tcc/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/tcc/sofarpc-tcc-sample/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/tcc/springboot-tcc-sample/pom.xml" />
+        <option value="$PROJECT_DIR$/../seata-samples-master/tcc/transfer-tcc-sample/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8 (2)" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SuppressionsComponent">
+    <option name="suppComments" value="[]" />
+  </component>
+</project>

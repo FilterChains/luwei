@@ -3,9 +3,7 @@ package com.user.util;
 import com.google.common.collect.Lists;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Collections;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -19,17 +17,6 @@ import java.util.Set;
  * <p>@date : 2020/6/1 11:23 </p>
  **/
 public class LingKouStudy {
-
-    public static void main(String[] args) {
-        int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-        //System.out.println(findLengthOfShortestSubarray());
-        String ad = "领】取快(克）【";
-        String regEx = "[\n`~!@#$%^&*()+=|{}':;',\\[\\].<>/?~！@#￥%……&*（）——+|{}【】‘；：”“’。， 、？]";
-        String regE = "\\p{Punct}";
-        String s = ad.replaceAll(regEx, "");
-        System.out.println("结果:" + s);
-        System.out.println("包含" + s.contains("快克"));
-    }
 
     /**
      * <p>@description : 实现一个算法，确定一个字符串 s 的所有字符是否全都不同。 </p>
@@ -300,11 +287,98 @@ public class LingKouStudy {
         }
     }
 
+    /**
+     * <p>@description : 两个数组的交集 II
+     * 给定两个数组，编写一个函数来计算它们的交集。
+     * 示例 1：
+     * 输入：nums1 = [1,2,2,1], nums2 = [2,2]
+     * 输出：[2,2]
+     * 示例 2:
+     * 输入：nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+     * 输出：[4,9]
+     * 说明：
+     * 输出结果中每个元素出现的次数，应与元素在两个数组中出现次数的最小值一致。
+     * 我们可以不考虑输出结果的顺序。
+     * 进阶：
+     * 如果给定的数组已经排好序呢？你将如何优化你的算法？
+     * 如果 nums1 的大小比 nums2 小很多，哪种方法更优？
+     * 如果 nums2 的元素存储在磁盘上，内存是有限的，并且你不能一次加载所有的元素到内存中，你该怎么办？ </p>
+     * <p>@author : Wei.Lu </p>
+     * <p>@date : 2021/2/24 14:25 </p>
+     *
+     * @param nums1
+     * @param nums2 ->
+     * @return {@link  int[] }
+     **/
+    public static int[] intersect(int[] nums1, int[] nums2) {
+        if (null == nums1 || null == nums2) {
+            return null;
+        }
+        int k = 0;
+        int[] resultIntArr = new int[Math.max(nums1.length, nums2.length)];
+        for (int i : nums1) {
+            boolean temp = true;
+            for (int j : nums2) {
+                if (i == j) {
+                    if (0 != k) {
+                        for (int l = 0; l < k; l++) {
+                            if (resultIntArr[l] == j) {
+                                temp = false;
+                                break;
+                            }
+                        }
+                    }
+                    if (temp) {
+                        resultIntArr[k] = j;
+                        k++;
+                    }
+                    break;
+                }
+            }
+        }
+        int[] resultArr = new int[k];
+        if (k >= 0) {
+            System.arraycopy(resultIntArr, 0, resultArr, 0, k);
+        }
+        return resultArr;
+    }
 
-    private static Date getDateBefore(int day) {
-        Calendar now = Calendar.getInstance();
-        now.setTime(new Date());
-        now.set(Calendar.DATE, now.get(Calendar.DATE) - day);
-        return now.getTime();
+
+    public static int factorial(int num) {
+        if (0 == num || 1 == num) {
+            return num;
+        }
+        int result = 1;
+        for (int i = 1; i <= num; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
+    public static void converSation(int num) {
+        String s = String.valueOf(num);
+        String substring = s.substring(0, 1);
+        String substring1 = s.substring(1, 2);
+        String substring2 = s.substring(2);
+        System.out.println(Integer.valueOf(substring2 + substring1 + substring));
+    }
+
+    public static void printCount(String str) {
+        int length = str.length();
+        Map<Character, Integer> hashMap = new HashMap<>();
+        for (int i = 0; i < length; i++) {
+            Character c = str.charAt(i);
+            if (hashMap.containsKey(c)) {
+                hashMap.put(c, hashMap.get(c) + 1);
+            } else {
+                hashMap.put(c, 1);
+            }
+        }
+        System.out.println(hashMap);
+    }
+
+
+    public static void main(String[] args) {
+        printCount("HelloWorld");
     }
 }
