@@ -21,10 +21,21 @@
         <option value="$PROJECT_DIR$/../nacos-examples-master/pom.xml" />
         <option value="$PROJECT_DIR$/../seata-samples-master/pom.xml" />
         <option value="F:/server-sdk-java-master/pom.xml" />
+        <option value="$PROJECT_DIR$/../mall-master/mall-master/pom.xml" />
+        <option value="F:/springcloud/springBoot 项目/支付案例-spring-boot/52itstyle-spring-boot-pay-master/spring-boot-pay/pom.xml" />
+        <option value="F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/pom.xml" />
+        <option value="F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/../mall-master/mall-master/mall-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/../mall-master/mall-master/mall-common/pom.xml" />
+        <option value="$PROJECT_DIR$/../mall-master/mall-master/mall-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/../mall-master/mall-master/mall-mbg/pom.xml" />
+        <option value="$PROJECT_DIR$/../mall-master/mall-master/mall-portal/pom.xml" />
+        <option value="$PROJECT_DIR$/../mall-master/mall-master/mall-search/pom.xml" />
+        <option value="$PROJECT_DIR$/../mall-master/mall-master/mall-security/pom.xml" />
         <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-cmdb-plugin-example/pom.xml" />
         <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-health-plugin-example/pom.xml" />
         <option value="$PROJECT_DIR$/../nacos-examples-master/nacos-sentinel-example/pom.xml" />

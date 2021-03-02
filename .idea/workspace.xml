@@ -26,6 +26,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db00540b-6b0c-4978-8874-951c611e6cce" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +107,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../import_util-0.0.1-SNAPSHOT.jar" />
+    <property name="last_opened_file_path" value="F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/pom.xml" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -111,9 +116,9 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.20703125" />
-    <property name="project.structure.side.proportion" value="0.12870012" />
+    <property name="project.structure.side.proportion" value="0.21492922" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="typescript.add.unambiguous.imports.on.the.fly" value="true" />
@@ -126,11 +131,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\java\com\user\util\excelimoprtutil" />
       <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\resources\sql.dev-3月" />
       <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\java\com\user\util" />
       <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\java\com\user" />
       <recent name="F:\springcloud\springcloud\product\src\main\resources" />
-      <recent name="F:\springcloud\springcloud\product\src\main\java\com\product" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\resources" />
@@ -176,7 +181,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Interrupet">
+  <component name="RunManager" selected="Application.PhoneUtil">
     <configuration name="Interrupet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.user.util.lock.Interrupet" />
       <module name="user" />
@@ -203,12 +208,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SmoothPollingAlgorithm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.user.util.pollingalgorithm.SmoothPollingAlgorithm" />
-      <module name="user" />
+    <configuration name="PhoneUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mallplus.common.utils.PhoneUtil" />
+      <module name="mall-common-spring-boot-starter" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.user.util.pollingalgorithm.*" />
+          <option name="PATTERN" value="com.mallplus.common.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -284,6 +289,118 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-pay" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.pay.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CmsCenterApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cms-center" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mallplus.CmsCenterApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CodeGeneratorApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="code-generator" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mallplus.generator.CodeGeneratorApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileCenterApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="file-center" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mallplus.FileCenterApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="zuul-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mallplus.GatewayApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoodsCenterApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="goods-center" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mallplus.GoodsCenterApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JobAdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="job-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xxl.job.admin.JobAdminApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JobExecutorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="job-executor-samples" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xxl.job.executor.JobExecutorApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LogApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="log-center" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mallplus.LogApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallAdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mall-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.macro.mall.MallAdminApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mall-demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.macro.mall.demo.MallDemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallPortalApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mall-portal" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.macro.mall.portal.MallPortalApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallSearchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mall-search" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.macro.mall.search.MallSearchApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MarkingCenterApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="marking-center" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mallplus.MarkingCenterApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberCenterApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="member-center" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mallplus.MemberCenterApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MonitorApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="sc-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mallplus.gateway.MonitorApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OrderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="order" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.order.OrderApplication" />
@@ -291,9 +408,58 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OrderCenterApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="order-center" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mallplus.OrderCenterApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="product" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.product.ProductApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceAApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="txlcn-demo-spring-service-a" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.txlcn.demo.ServiceAApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceBApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="txlcn-demo-spring-service-b" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.txlcn.demo.ServiceBApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceCApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="txlcn-demo-spring-service-c" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.txlcn.demo.ServiceCApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShardingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="sharding-jdbc-demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sharding.ShardingApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransactionManagerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="txlcn-tm" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.txlcn.tm.TransactionManagerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UaaServerApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mall-uaa" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mallplus.UaaServerApp" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -309,24 +475,55 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserCenterApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="user-center" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mallplus.UserCenterApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.LingKouStudy" />
       <item itemvalue="Application.SmoothingAlgorithm" />
-      <item itemvalue="Application.SmoothPollingAlgorithm" />
       <item itemvalue="Application.Interrupet" />
       <item itemvalue="HTTP Request.generated-requests#2" />
       <item itemvalue="Maven.springcolud" />
       <item itemvalue="Spring Boot.UserApplication" />
       <item itemvalue="Spring Boot.OrderApplication" />
       <item itemvalue="Spring Boot.ProductApplication" />
+      <item itemvalue="Spring Boot.MallDemoApplication" />
+      <item itemvalue="Spring Boot.MallSearchApplication" />
+      <item itemvalue="Spring Boot.MallPortalApplication" />
+      <item itemvalue="Spring Boot.MallAdminApplication" />
+      <item itemvalue="Spring Boot.Application" />
+      <item itemvalue="Spring Boot.GatewayApp" />
+      <item itemvalue="Spring Boot.MarkingCenterApp" />
+      <item itemvalue="Spring Boot.MonitorApp" />
+      <item itemvalue="Spring Boot.OrderCenterApp" />
+      <item itemvalue="Spring Boot.GoodsCenterApp" />
+      <item itemvalue="Spring Boot.JobAdminApplication" />
+      <item itemvalue="Spring Boot.TransactionManagerApplication" />
+      <item itemvalue="Spring Boot.CodeGeneratorApp" />
+      <item itemvalue="Spring Boot.JobExecutorApplication" />
+      <item itemvalue="Spring Boot.LogApp" />
+      <item itemvalue="Spring Boot.UserCenterApp" />
+      <item itemvalue="Spring Boot.ServiceBApplication" />
+      <item itemvalue="Spring Boot.FileCenterApp" />
+      <item itemvalue="Spring Boot.UaaServerApp" />
+      <item itemvalue="Spring Boot.CmsCenterApp" />
+      <item itemvalue="Spring Boot.ShardingApplication" />
+      <item itemvalue="Spring Boot.MemberCenterApp" />
+      <item itemvalue="Spring Boot.ServiceAApplication" />
+      <item itemvalue="Spring Boot.ServiceCApplication" />
+      <item itemvalue="Application.PhoneUtil" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PhoneUtil" />
         <item itemvalue="Application.Interrupet" />
         <item itemvalue="HTTP Request.generated-requests#2" />
         <item itemvalue="Application.LingKouStudy" />
         <item itemvalue="Application.SmoothingAlgorithm" />
-        <item itemvalue="Application.SmoothPollingAlgorithm" />
       </list>
     </recent_temporary>
   </component>
@@ -374,7 +571,7 @@
       <workItem from="1614563670016" duration="27000" />
       <workItem from="1614563739134" duration="22000" />
       <workItem from="1614563881380" duration="17943000" />
-      <workItem from="1614590293829" duration="4725000" />
+      <workItem from="1614590293829" duration="12296000" />
     </task>
     <task id="LOCAL-00001" summary="springcloud">
       <created>1611712496413</created>
@@ -467,7 +664,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614590608577</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="excel Util v 1.2.1">
+      <created>1614650682696</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1614650682696</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -531,7 +735,8 @@
     <MESSAGE value="springboot" />
     <MESSAGE value="springcloud" />
     <MESSAGE value="excel Util v 0.2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="excel Util v 0.2.0" />
+    <MESSAGE value="excel Util v 1.2.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="excel Util v 1.2.1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/springcloud$YcLock.ic" NAME="YcLock Coverage Results" MODIFIED="1613621983976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

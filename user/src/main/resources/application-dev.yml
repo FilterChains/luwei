@@ -50,6 +50,7 @@ spring:
 #    enable-auto-data-source-proxy: true
 #    tx-service-group: my_test_tx_group # 与nacos注册的分组一致(注意seata配置文件)
 # RocketMq
+
 rocketmq:
   name-server: 192.168.3.111:9876 # 访问地址
   producer:

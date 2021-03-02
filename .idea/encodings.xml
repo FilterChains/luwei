@@ -3,6 +3,188 @@
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://F:/server-sdk-java-master/src/main/java" charset="UTF-8" />
     <file url="file://F:/server-sdk-java-master/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-business/cms-center/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-business/cms-center/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-business/code-generator/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-business/code-generator/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-business/file-center/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-business/file-center/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-business/goods-center/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-business/goods-center/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-business/marking-center/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-business/marking-center/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-business/member-center/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-business/member-center/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-business/order-center/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-business/order-center/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-business/user-center/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-business/user-center/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-commons/mall-auth-client-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-commons/mall-common-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-commons/mall-db-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-commons/mall-log-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-commons/mall-log-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-commons/mall-redis-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-commons/mall-redis-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-commons/mall-ribbon-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-commons/mall-ribbon-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-commons/mall-sentinel-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-commons/mall-sentinel-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-commons/mall-swagger2-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-commons/mall-swagger2-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-config/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-demo/sharding-jdbc-demo/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-demo/sharding-jdbc-demo/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-demo/txlcn-demo/txlcn-demo-common/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-demo/txlcn-demo/txlcn-demo-common/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-demo/txlcn-demo/txlcn-demo-spring-service-a/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-demo/txlcn-demo/txlcn-demo-spring-service-a/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-demo/txlcn-demo/txlcn-demo-spring-service-b/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-demo/txlcn-demo/txlcn-demo-spring-service-b/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-demo/txlcn-demo/txlcn-demo-spring-service-c/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-demo/txlcn-demo/txlcn-demo-spring-service-c/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-gateway/zuul-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-gateway/zuul-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-job/job-admin/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-job/job-admin/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-job/job-core/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-job/job-executor-samples/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-job/job-executor-samples/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-monitor/log-center/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-monitor/log-center/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-monitor/sc-admin/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-monitor/sc-admin/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-transaction/txlcn-tm/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-transaction/txlcn-tm/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-uaa/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/springboot dubbo构建的一个商城项目/catshen-zscat_sw-master/zscat_sw/mall-uaa/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-a-rule/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-auth/auth-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-auth/auth-sdk/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-auth/auth-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-auth/auth-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-cache/cache-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-cache/cache-sdk-memory/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-cache/cache-sdk-redis/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-cache/memory-cache-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-cache/memory-cache-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-cache/redis-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-cache/redis-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-config/config-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-config/config-business/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-config/config-sdk-db/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-config/config-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-config/config-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-db/db-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-db/db-sdk-flyway/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-db/db-sdk-flyway/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-db/db-sdk-init/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-db/db-sdk-mp/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-db/db-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-db/db-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-ds-container/ds-container-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-ds-container/ds-container-business/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-ds-container/ds-container-sdk/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-ds-container/ds-container-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-ds-container/ds-container-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-email/email-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-email/email-sdk-aliyun/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-email/email-sdk-java/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-email/email-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-email/email-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-file/file-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-file/file-business/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-file/file-sdk-aliyun/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-file/file-sdk-local/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-file/file-sdk-minio/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-file/file-sdk-tencent/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-file/file-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-file/file-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-groovy/groovy-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-groovy/groovy-sdk/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-groovy/groovy-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-groovy/groovy-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-i18n/i18n-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-i18n/i18n-business/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-i18n/i18n-sdk/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-i18n/i18n-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-i18n/i18n-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-jwt/jwt-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-jwt/jwt-sdk/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-jwt/jwt-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-jwt/jwt-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-log/log-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-log/log-business-manage/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-log/log-business-requestapi/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-log/log-sdk-db/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-log/log-sdk-file/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-log/log-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-log/log-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-office/office-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-office/office-sdk-excel/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-pinyin/pinyin-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-pinyin/pinyin-sdk-pinyin4j/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-pinyin/pinyin-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-pinyin/pinyin-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-scanner/scanner-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-scanner/scanner-sdk-scanner/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-scanner/scanner-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-scanner/scanner-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-security/security-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-security/security-sdk-xss/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-security/security-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-security/security-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-sms/sms-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-sms/sms-business-validation/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-sms/sms-sdk-aliyun/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-sms/sms-sdk-tencent/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-sms/sms-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-sms/sms-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-timer/timer-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-timer/timer-business/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-timer/timer-sdk-hutool/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-timer/timer-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-timer/timer-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-validator/validator-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-validator/validator-sdk-black-white/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-validator/validator-sdk-captcha/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-validator/validator-sdk-count/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-validator/validator-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-validator/validator-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-wrapper/wrapper-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-wrapper/wrapper-sdk/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-wrapper/wrapper-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-d-wrapper/wrapper-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-o-monitor/monitor-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-o-monitor/monitor-sdk-system-info/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-o-monitor/monitor-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-o-monitor/monitor-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-demo/demo-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-demo/demo-business/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-demo/demo-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-demo/demo-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-dict/dict-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-dict/dict-business/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-dict/dict-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-dict/dict-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-message/message-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-message/message-business-websocket/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-message/message-business/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-message/message-sdk-db/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-message/message-sdk-websocket/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-message/message-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-message/message-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-system/system-api/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-system/system-business-app/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-system/system-business-login-log/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-system/system-business-menu/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-system/system-business-notice/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-system/system-business-organization/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-system/system-business-resource/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-system/system-business-role/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/kernel-s-system/system-business-user/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/支付案例-spring-boot/52itstyle-spring-boot-pay-master/spring-boot-pay/src/main/java" charset="UTF-8" />
+    <file url="file://F:/springcloud/springBoot 项目/支付案例-spring-boot/52itstyle-spring-boot-pay-master/spring-boot-pay/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

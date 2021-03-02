@@ -7,10 +7,144 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="product" />
-        <module name="server-sdk-java" />
-        <module name="user" />
+        <module name="sharding-jdbc-demo" />
+        <module name="wrapper-api" />
+        <module name="file-sdk-local" />
+        <module name="system-spring-boot-starter" />
+        <module name="sc-admin" />
+        <module name="db-sdk-mp" />
+        <module name="job-executor-samples" />
+        <module name="message-sdk-websocket" />
+        <module name="security-api" />
+        <module name="txlcn-demo-common" />
+        <module name="system-business-login-log" />
+        <module name="system-business-user" />
         <module name="order" />
+        <module name="security-spring-boot-starter" />
+        <module name="goods-center" />
+        <module name="email-sdk-java" />
+        <module name="member-center" />
+        <module name="i18n-sdk" />
+        <module name="i18n-spring-boot-starter" />
+        <module name="jwt-spring-boot-starter" />
+        <module name="validator-sdk-captcha" />
+        <module name="timer-spring-boot-starter" />
+        <module name="message-sdk-db" />
+        <module name="log-sdk-db" />
+        <module name="timer-business" />
+        <module name="monitor-api" />
+        <module name="email-api" />
+        <module name="office-spring-boot-starter" />
+        <module name="auth-api" />
+        <module name="system-business-role" />
+        <module name="marking-center" />
+        <module name="sms-sdk-aliyun" />
+        <module name="config-spring-boot-starter" />
+        <module name="memory-cache-spring-boot-starter" />
+        <module name="demo-business" />
+        <module name="demo-spring-boot-starter" />
+        <module name="system-api" />
+        <module name="sms-business-validation" />
+        <module name="sms-spring-boot-starter" />
+        <module name="redis-spring-boot-starter" />
+        <module name="order-center" />
+        <module name="groovy-api" />
+        <module name="dict-api" />
+        <module name="system-business-menu" />
+        <module name="job-admin" />
+        <module name="db-api" />
+        <module name="timer-sdk-hutool" />
+        <module name="txlcn-tm" />
+        <module name="job-core" />
+        <module name="log-api" />
+        <module name="message-spring-boot-starter" />
+        <module name="office-api" />
+        <module name="file-api" />
+        <module name="groovy-spring-boot-starter" />
+        <module name="mall-redis-spring-boot-starter" />
+        <module name="product" />
+        <module name="user-center" />
+        <module name="system-business-notice" />
+        <module name="zuul-gateway" />
+        <module name="wrapper-spring-boot-starter" />
+        <module name="mall-log-spring-boot-starter" />
+        <module name="validator-api" />
+        <module name="mall-common-spring-boot-starter" />
+        <module name="mall-uaa" />
+        <module name="groovy-sdk" />
+        <module name="config-api" />
+        <module name="sms-api" />
+        <module name="ds-container-spring-boot-starter" />
+        <module name="db-spring-boot-starter" />
+        <module name="ds-container-sdk" />
+        <module name="server-sdk-java" />
+        <module name="cms-center" />
+        <module name="log-business-requestapi" />
+        <module name="dict-business" />
+        <module name="timer-api" />
+        <module name="file-sdk-minio" />
+        <module name="office-sdk-excel" />
+        <module name="dict-spring-boot-starter" />
+        <module name="i18n-business" />
+        <module name="config-sdk-db" />
+        <module name="validator-sdk-count" />
+        <module name="monitor-spring-boot-starter" />
+        <module name="log-center" />
+        <module name="kernel-a-rule" />
+        <module name="cache-sdk-redis" />
+        <module name="auth-spring-boot-starter" />
+        <module name="spring-boot-pay" />
+        <module name="mall-sentinel-spring-boot-starter" />
+        <module name="log-sdk-file" />
+        <module name="cache-api" />
+        <module name="ds-container-api" />
+        <module name="validator-sdk-black-white" />
+        <module name="sms-sdk-tencent" />
+        <module name="log-spring-boot-starter" />
+        <module name="file-spring-boot-starter" />
+        <module name="system-business-app" />
+        <module name="file-sdk-aliyun" />
+        <module name="message-api" />
+        <module name="mall-swagger2-spring-boot-starter" />
+        <module name="pinyin-spring-boot-starter" />
+        <module name="mall-ribbon-spring-boot-starter" />
+        <module name="scanner-api" />
+        <module name="mall-db-spring-boot-starter" />
+        <module name="scanner-sdk-scanner" />
+        <module name="ds-container-business" />
+        <module name="file-business" />
+        <module name="code-generator" />
+        <module name="validator-spring-boot-starter" />
+        <module name="system-business-resource" />
+        <module name="jwt-api" />
+        <module name="i18n-api" />
+        <module name="demo-api" />
+        <module name="log-business-manage" />
+        <module name="mall-config" />
+        <module name="scanner-spring-boot-starter" />
+        <module name="mall-auth-client-spring-boot-starter" />
+        <module name="db-sdk-flyway" />
+        <module name="message-business-websocket" />
+        <module name="monitor-sdk-system-info" />
+        <module name="file-center" />
+        <module name="auth-sdk" />
+        <module name="security-sdk-xss" />
+        <module name="db-sdk-init" />
+        <module name="pinyin-api" />
+        <module name="txlcn-demo-spring-service-b" />
+        <module name="txlcn-demo-spring-service-c" />
+        <module name="email-sdk-aliyun" />
+        <module name="wrapper-sdk" />
+        <module name="message-business" />
+        <module name="txlcn-demo-spring-service-a" />
+        <module name="system-business-organization" />
+        <module name="jwt-sdk" />
+        <module name="config-business" />
+        <module name="pinyin-sdk-pinyin4j" />
+        <module name="cache-sdk-memory" />
+        <module name="user" />
+        <module name="email-spring-boot-starter" />
+        <module name="file-sdk-tencent" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -33,6 +167,13 @@
       <module name="hsf-tcc-sample" target="1.8" />
       <module name="local-saga-sample" target="1.8" />
       <module name="local-tcc-sample" target="1.8" />
+      <module name="mall" target="1.8" />
+      <module name="mall-admin" target="1.8" />
+      <module name="mall-common" target="1.8" />
+      <module name="mall-mbg" target="1.8" />
+      <module name="mall-portal" target="1.8" />
+      <module name="mall-search" target="1.8" />
+      <module name="mall-security" target="1.8" />
       <module name="multiple-datasource" target="1.8" />
       <module name="multiple-datasource-mybatis-plus" target="1.8" />
       <module name="nacos-cmdb-plugin-example" target="1.7" />
@@ -116,10 +257,121 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="auth-api" options="-parameters" />
+      <module name="auth-sdk" options="-parameters" />
+      <module name="auth-spring-boot-starter" options="-parameters" />
+      <module name="cache-api" options="-parameters" />
+      <module name="cache-sdk-memory" options="-parameters" />
+      <module name="cache-sdk-redis" options="-parameters" />
+      <module name="config-api" options="-parameters" />
+      <module name="config-business" options="-parameters" />
+      <module name="config-sdk-db" options="-parameters" />
+      <module name="config-spring-boot-starter" options="-parameters" />
+      <module name="db-api" options="-parameters" />
+      <module name="db-sdk-flyway" options="-parameters" />
+      <module name="db-sdk-init" options="-parameters" />
+      <module name="db-sdk-mp" options="-parameters" />
+      <module name="db-spring-boot-starter" options="-parameters" />
+      <module name="demo-api" options="-parameters" />
+      <module name="demo-business" options="-parameters" />
+      <module name="demo-spring-boot-starter" options="-parameters" />
+      <module name="dict-api" options="-parameters" />
+      <module name="dict-business" options="-parameters" />
+      <module name="dict-spring-boot-starter" options="-parameters" />
+      <module name="ds-container-api" options="-parameters" />
+      <module name="ds-container-business" options="-parameters" />
+      <module name="ds-container-sdk" options="-parameters" />
+      <module name="ds-container-spring-boot-starter" options="-parameters" />
       <module name="dubbo_consumer" options="-parameters" />
       <module name="dubbo_provider" options="-parameters" />
       <module name="dubbo_timer" options="-parameters" />
+      <module name="email-api" options="-parameters" />
+      <module name="email-sdk-aliyun" options="-parameters" />
+      <module name="email-sdk-java" options="-parameters" />
+      <module name="email-spring-boot-starter" options="-parameters" />
+      <module name="file-api" options="-parameters" />
+      <module name="file-business" options="-parameters" />
+      <module name="file-sdk-aliyun" options="-parameters" />
+      <module name="file-sdk-local" options="-parameters" />
+      <module name="file-sdk-minio" options="-parameters" />
+      <module name="file-sdk-tencent" options="-parameters" />
+      <module name="file-spring-boot-starter" options="-parameters" />
+      <module name="groovy-api" options="-parameters" />
+      <module name="groovy-sdk" options="-parameters" />
+      <module name="groovy-spring-boot-starter" options="-parameters" />
+      <module name="i18n-api" options="-parameters" />
+      <module name="i18n-business" options="-parameters" />
+      <module name="i18n-sdk" options="-parameters" />
+      <module name="i18n-spring-boot-starter" options="-parameters" />
+      <module name="jwt-api" options="-parameters" />
+      <module name="jwt-sdk" options="-parameters" />
+      <module name="jwt-spring-boot-starter" options="-parameters" />
+      <module name="kernel-a-rule" options="-parameters" />
+      <module name="log-api" options="-parameters" />
+      <module name="log-business-manage" options="-parameters" />
+      <module name="log-business-requestapi" options="-parameters" />
+      <module name="log-sdk-db" options="-parameters" />
+      <module name="log-sdk-file" options="-parameters" />
+      <module name="log-spring-boot-starter" options="-parameters" />
+      <module name="mall-admin" options="-parameters" />
+      <module name="mall-common" options="-parameters" />
+      <module name="mall-demo" options="-parameters" />
+      <module name="mall-mbg" options="-parameters" />
+      <module name="mall-portal" options="-parameters" />
+      <module name="mall-search" options="-parameters" />
+      <module name="mall-security" options="-parameters" />
+      <module name="memory-cache-spring-boot-starter" options="-parameters" />
+      <module name="message-api" options="-parameters" />
+      <module name="message-business" options="-parameters" />
+      <module name="message-business-websocket" options="-parameters" />
+      <module name="message-sdk-db" options="-parameters" />
+      <module name="message-sdk-websocket" options="-parameters" />
+      <module name="message-spring-boot-starter" options="-parameters" />
+      <module name="monitor-api" options="-parameters" />
+      <module name="monitor-sdk-system-info" options="-parameters" />
+      <module name="monitor-spring-boot-starter" options="-parameters" />
+      <module name="office-api" options="-parameters" />
+      <module name="office-sdk-excel" options="-parameters" />
+      <module name="office-spring-boot-starter" options="-parameters" />
+      <module name="pinyin-api" options="-parameters" />
+      <module name="pinyin-sdk-pinyin4j" options="-parameters" />
+      <module name="pinyin-spring-boot-starter" options="-parameters" />
+      <module name="redis-spring-boot-starter" options="-parameters" />
+      <module name="scanner-api" options="-parameters" />
+      <module name="scanner-sdk-scanner" options="-parameters" />
+      <module name="scanner-spring-boot-starter" options="-parameters" />
+      <module name="security-api" options="-parameters" />
+      <module name="security-sdk-xss" options="-parameters" />
+      <module name="security-spring-boot-starter" options="-parameters" />
       <module name="server-sdk-java" options="-extdirs F:\server-sdk-java-master/lib" />
+      <module name="sms-api" options="-parameters" />
+      <module name="sms-business-validation" options="-parameters" />
+      <module name="sms-sdk-aliyun" options="-parameters" />
+      <module name="sms-sdk-tencent" options="-parameters" />
+      <module name="sms-spring-boot-starter" options="-parameters" />
+      <module name="spring-boot-pay" options="-parameters" />
+      <module name="system-api" options="-parameters" />
+      <module name="system-business-app" options="-parameters" />
+      <module name="system-business-login-log" options="-parameters" />
+      <module name="system-business-menu" options="-parameters" />
+      <module name="system-business-notice" options="-parameters" />
+      <module name="system-business-organization" options="-parameters" />
+      <module name="system-business-resource" options="-parameters" />
+      <module name="system-business-role" options="-parameters" />
+      <module name="system-business-user" options="-parameters" />
+      <module name="system-spring-boot-starter" options="-parameters" />
+      <module name="timer-api" options="-parameters" />
+      <module name="timer-business" options="-parameters" />
+      <module name="timer-sdk-hutool" options="-parameters" />
+      <module name="timer-spring-boot-starter" options="-parameters" />
+      <module name="validator-api" options="-parameters" />
+      <module name="validator-sdk-black-white" options="-parameters" />
+      <module name="validator-sdk-captcha" options="-parameters" />
+      <module name="validator-sdk-count" options="-parameters" />
+      <module name="validator-spring-boot-starter" options="-parameters" />
+      <module name="wrapper-api" options="-parameters" />
+      <module name="wrapper-sdk" options="-parameters" />
+      <module name="wrapper-spring-boot-starter" options="-parameters" />
     </option>
   </component>
 </project>
