@@ -1,11 +1,10 @@
 package com.user.util.excelimoprtutil;
 
-import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
+import org.springframework.util.ObjectUtils;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -34,47 +33,51 @@ public class ExcelReadFrom {
      * @return {@link List<T>}
      **/
     public static <T> List<T> readFromExcel(Class<T> objectClass, Sheet... sheets) throws ExcelException {
-        List<T> result;
-        Sheet sheet = sheets[0]; //获取第一个sheet文件
-        Row titleRow = sheet.getRow(0); //获取表头
+        List<T> result = new ArrayList<>();
+        //获取第一个sheet文件
+        Sheet sheet = sheets[0];
+        //获取表头
+        Row titleRow = sheet.getRow(0);
         Map<String, Field> validateExcelTitle = ExcelCode.validateName;
         try {
-            result = new ArrayList<>();
             // 逐行读取数据
             for (int rowIndex = 0; rowIndex < ExcelCode.totalRows; rowIndex++) {
                 // 获得行对象
                 Row row = sheet.getRow(rowIndex);
-                if (Objects.nonNull(row)) {
-                    // 实例化该泛型类的对象
-                    T obj = objectClass.newInstance();
-                    // 获得本行中各单元格中的数据,从第一列开始读取
-                    for (int columnIndex = 0; columnIndex < ExcelCode.totalCells; columnIndex++) {
-                        Cell cl = titleRow.getCell(columnIndex);
-                        String tableName = ExcelCode.stringReplace(ObjectUtils.isEmpty(cl) ? null : cl.toString());
-                        Field field = validateExcelTitle.get(tableName);
-                        //验证保存信息,验证表中的字段是否已在实体类中创建
-                        if (ObjectUtils.isEmpty(field)) {
+                if (Objects.isNull(row)) {
+                    continue;
+                }
+                // 实例化该泛型类的对象
+                T obj = objectClass.newInstance();
+                // 获得本行中各单元格中的数据,从第一列开始读取
+                for (int columnIndex = 0; columnIndex < ExcelCode.totalCells; columnIndex++) {
+                    Cell cl = titleRow.getCell(columnIndex);
+                    final String tableName = ExcelCode.stringReplace(ObjectUtils.isEmpty(cl) ? null : cl.toString());
+                    Field field = validateExcelTitle.get(tableName);
+                    //验证保存信息,验证表中的字段是否已在实体类中创建
+                    if (ObjectUtils.isEmpty(field)) {
+                        continue;
+                    }
+                    //获取本行的所有数据类型
+                    Cell cell = row.getCell(columnIndex);
+                    //获取方法名
+                    final String methodName = ExcelCode.methodNames.get(field.getName());
+                    if (Objects.nonNull(cell) && null != methodName) {
+                        //获取实体类属性的数据类型(根据方法名)
+                        Class<?> fieldClass = ExcelCode.fieldTypes.get(methodName);
+                        if (Objects.isNull(fieldClass)) {
                             continue;
                         }
-                        //获取本行的所有数据类型
-                        Cell cell = row.getCell(columnIndex);
-                        //获取方法名
-                        String methodName = ExcelCode.methodNames.get(field.getName());
-                        if (Objects.nonNull(cell) && !StringUtils.isEmpty(methodName)) {
-                            //获取实体类属性的数据类型(根据方法名)
-                            Class<?> fieldClass = ExcelCode.fieldTypes.get(methodName);
-                            if (Objects.nonNull(fieldClass)) {
-                                //读取信息->返回对应数据类型
-                                Object cellValue = getCellValue(cell, fieldClass);
-                                if (Objects.nonNull(cellValue)) {
-                                    //将读取出来的信息保存至对象中
-                                    objectClass.getMethod(methodName, fieldClass).invoke(obj, cellValue);
-                                }
-                            }
+                        //读取信息->返回对应数据类型
+                        Object cellValue = getCellValue(cell, fieldClass);
+                        if (Objects.isNull(cellValue)) {
+                            continue;
                         }
+                        //将读取出来的信息保存至对象中
+                        objectClass.getMethod(methodName, fieldClass).invoke(obj, cellValue);
                     }
-                    result.add(obj);
                 }
+                result.add(obj);
             }
         } catch (InstantiationException | IllegalAccessException e) {
             throw new ExcelException("实例化对象异常");
@@ -97,7 +100,7 @@ public class ExcelReadFrom {
         Object cellValue = null;
         // 判断数据类型
         switch (cell.getCellType()) {
-            case Cell.CELL_TYPE_NUMERIC: // 数字
+            case Cell.CELL_TYPE_NUMERIC:
                 // 如果数字是日期类型，就转换成日期
                 if (HSSFDateUtil.isCellDateFormatted(cell)) {
                     Date dateCellValue = cell.getDateCellValue();
@@ -109,7 +112,7 @@ public class ExcelReadFrom {
                         cellValue = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(dateCellValue);
                     }
                 } else {
-                    cell.setCellType(Cell.CELL_TYPE_STRING); //转换成字符串
+                    cell.setCellType(Cell.CELL_TYPE_STRING);
                     //所有数字用BigDecimal容器来装;stripTrailingZeros->去除小数点后多余的0,toPlainString->避免科学计数法
                     String number = new BigDecimal(cell.getStringCellValue())
                             .stripTrailingZeros().toPlainString();
@@ -117,14 +120,14 @@ public class ExcelReadFrom {
                     cellValue = conversionNumber(number, fieldClass);
                 }
                 break;
-            case Cell.CELL_TYPE_STRING: // 字符串
+            case Cell.CELL_TYPE_STRING:
                 if (fieldClass.equals(String.class)) {
                     //去除所有空格
                     String trim = cell.getStringCellValue().replaceAll("\\s*", "");
                     cellValue = (0 == trim.length()) ? null : trim;
                 }
                 break;
-            case Cell.CELL_TYPE_BOOLEAN: // Boolean
+            case Cell.CELL_TYPE_BOOLEAN:
                 boolean booleanCellValue = cell.getBooleanCellValue();
                 if (ExcelCode.EXCEL_READ_WAY) {
                     if (fieldClass.equals(Boolean.class) || fieldClass.equals(boolean.class)) {
@@ -134,7 +137,7 @@ public class ExcelReadFrom {
                     cellValue = booleanCellValue ? "是" : "否";
                 }
                 break;
-            case Cell.CELL_TYPE_FORMULA: // 公式
+            case Cell.CELL_TYPE_FORMULA:
                 //获取excel公式计算后的值
                 String result;
                 try {
@@ -145,9 +148,11 @@ public class ExcelReadFrom {
                 //根据字段类型进行相应转换
                 cellValue = conversionNumber(result, fieldClass);
                 break;
-            case Cell.CELL_TYPE_BLANK: // 空值
+            case Cell.CELL_TYPE_BLANK:
+                // 空值
                 break;
-            case Cell.CELL_TYPE_ERROR: // 故障
+            case Cell.CELL_TYPE_ERROR:
+                // 故障
                 cellValue = "非法字符";
                 break;
             default:
@@ -171,7 +176,7 @@ public class ExcelReadFrom {
         if (fieldClass.equals(String.class)) {
             cellValue = number;
         } else if (fieldClass.equals(BigDecimal.class)) {
-            cellValue = new BigDecimal(number).setScale(6, BigDecimal.ROUND_DOWN); //默认保留6位
+            cellValue = new BigDecimal(number).setScale(6, BigDecimal.ROUND_DOWN);
         } else if (fieldClass.equals(Integer.class) || fieldClass.equals(int.class)) {
             cellValue = Integer.valueOf(number);
         } else if (fieldClass.equals(Byte.class) || fieldClass.equals(byte.class)) {

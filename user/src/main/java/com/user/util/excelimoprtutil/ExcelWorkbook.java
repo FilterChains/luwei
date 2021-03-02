@@ -1,6 +1,5 @@
 package com.user.util.excelimoprtutil;
 
-import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -28,7 +27,7 @@ public class ExcelWorkbook {
     public static Workbook getExcelWorkbook(String fileName, InputStream inputStream) throws ExcelException {
         Workbook workbook;
         /*检查文件名是否为空或者是否是Excel格式的文件,并验证相应版本*/
-        if (StringUtils.isEmpty(fileName)) {
+        if (null == fileName || "".equals(fileName)) {
             throw new ExcelException("文件上传失败,请检查上传文件路径");
         }
         try {

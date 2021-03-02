@@ -1,12 +1,11 @@
 package com.user.util.excelimoprtutil;
 
-import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
 import org.apache.commons.collections4.MapUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
+import org.springframework.util.ObjectUtils;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -58,8 +57,8 @@ public class ExcelValidate {
         if (ObjectUtils.isEmpty(row)) {
             throw new ExcelException(ExcelErrorType.TITLE_IS_NULL);
         }
-        // 获取表格的总行数
-        ExcelCode.totalRows = sheet.getLastRowNum() + ExcelCode.titleRows; // 需要算表头
+        // 获取表格的总行数。注：需要算表头
+        ExcelCode.totalRows = sheet.getLastRowNum() + ExcelCode.titleRows;
         if (ExcelCode.totalRows == ExcelCode.titleRows) {
             throw new ExcelException(ExcelErrorType.CONTENT_IS_NULL);
         }
@@ -83,34 +82,34 @@ public class ExcelValidate {
         // 遍历
         for (int columnIndex = 0; columnIndex < ExcelCode.totalCells; columnIndex++) {
             //获取对应列的名称
-            Cell cell = titleRow.getCell(columnIndex);
-            String data = ExcelCode.stringReplace(ObjectUtils.isEmpty(cell) ? null : cell.toString());
+            final Cell cell = titleRow.getCell(columnIndex);
+            final String data = ExcelCode.stringReplace(ObjectUtils.isEmpty(cell) ? null : cell.toString());
             //指定排除列表表头字段
             if (ExcelCode.EXCEL_SERIAL_NUMBER.equals(data)) {
                 ExcelCode.excludeTitle.add(data);
             }
             //排除表名
-            Field field = validateExcelTitle.get(data);
+            final Field field = validateExcelTitle.get(data);
             if (ObjectUtils.isEmpty(field)) {
                 continue;
             }
             //获取对应字段
-            ExcelTitle title = excelTitle.get(field.getName());
+            final ExcelTitle title = excelTitle.get(field.getName());
             if (!ObjectUtils.isEmpty(title)) {
+                final int titleIndex = title.getTitleIndex();
+                String fieldName = field.getName();
+                if ("".equals(fieldName)) {
+                    continue;
+                }
                 //Judge Excel Title Name
                 String capitalizeTheFirstLetter = null;
-                if (title.getTitleIndex() != -1 && title.getTitleIndex() == columnIndex) {
-                    capitalizeTheFirstLetter = field.getName().substring(0, 1).toUpperCase()
-                            + field.getName().substring(1); // 使其首字母大写
-
-                } else if (title.getTitleIndex() == -1) {
-                    capitalizeTheFirstLetter = field.getName().substring(0, 1).toUpperCase()
-                            + field.getName().substring(1); // 使其首字母大写
+                if (-1 == titleIndex || titleIndex == columnIndex) {
+                    capitalizeTheFirstLetter = fieldName.substring(0, 1).toUpperCase().concat(fieldName.substring(1));
                 }
-                if (!StringUtils.isEmpty(capitalizeTheFirstLetter)) {
+                if (null != capitalizeTheFirstLetter) {
                     String methodName = ExcelCode.METHOD_SET + capitalizeTheFirstLetter;
                     //组装方法名
-                    ExcelCode.methodNames.put(field.getName(), methodName);
+                    ExcelCode.methodNames.put(fieldName, methodName);
                     //组装方法类型
                     ExcelCode.fieldTypes.put(methodName, field.getType());
                 }
@@ -118,9 +117,10 @@ public class ExcelValidate {
         }
         //是否检查表头
         if (ExcelCode.EXCEL_CHECK_TITLE) {
-            int size = ExcelCode.totalCells - ExcelCode.excludeTitle.size();
-            int methodSize = ExcelCode.methodNames.size();
-            if (size != excelTitle.size() || excelTitle.size() != methodSize) {
+            final int size = ExcelCode.totalCells - ExcelCode.excludeTitle.size();
+            final int methodSize = ExcelCode.methodNames.size();
+            final int excelSize = excelTitle.size();
+            if (size != excelSize || excelSize != methodSize) {
                 throw new ExcelException(ExcelErrorType.TITLE_THE_MANIPULATION);
             }
         }

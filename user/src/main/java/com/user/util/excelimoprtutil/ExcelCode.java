@@ -1,13 +1,11 @@
 package com.user.util.excelimoprtutil;
 
 
-import org.apache.commons.lang3.StringUtils;
-
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @projectName： GitHub
@@ -52,42 +50,43 @@ public class ExcelCode {
     /**
      * 用于存储方法名 ->表头列数即为需要的set方法个数
      */
-    public static Map<String, String> methodNames = new HashMap<>(16);
+    public static Map<String, String> methodNames = new ConcurrentHashMap<>(16);
     /**
      * 用于存储属性类型 ->字段数据类型;key->字段,value->字段类型
      */
-    public static Map<String, Class<?>> fieldTypes = new HashMap<>(16);
+    public static Map<String, Class<?>> fieldTypes = new ConcurrentHashMap<>(16);
 
     /**
      * 验证实体类
      */
-    public static Map<String, Field> validateName = new HashMap<>(16);
+    public static Map<String, Field> validateName = new ConcurrentHashMap<>(16);
 
     /**
      * 实体类名称
      */
-    public static Map<String, ExcelTitle> titleName = new HashMap<>(16);
+    public static Map<String, ExcelTitle> titleName = new ConcurrentHashMap<>(16);
 
     /**
      * excel read the way(excel读取方式)
      */
-    public static Boolean EXCEL_READ_WAY = false;
+    public static volatile Boolean EXCEL_READ_WAY = false;
 
     /**
      * excel check tableTitle(excel检查表头)
      */
-    public static Boolean EXCEL_CHECK_TITLE = false;
+    public static volatile Boolean EXCEL_CHECK_TITLE = false;
 
     /**
-     * @Title: stringReplace
-     * @Description: 字符串替换英文
-     * @Param: [data]   参数
-     * @Return: String ->结果  返回类型
-     * @Date: 2020/2/19 20:57
-     */
+     * <p>@description : 字符串替换英文 </p>
+     * <p>@author : Wei.Lu </p>
+     * <p>@date : 2021/3/2 9:09 </p>
+     *
+     * @param data ->数据源
+     * @return {@link  String }
+     **/
     public static String stringReplace(String data) {
         String result = "";
-        if (!StringUtils.isEmpty(data)) {
+        if (null != data) {
             result = data.replaceAll("\\s+", "")
                     .replace("（", "(")
                     .replace("）", ")");
