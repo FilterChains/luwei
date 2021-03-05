@@ -9,6 +9,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
+//@EnableSpringUtil
 public class UserApplication extends BaseApplication {
 
     public static void main(String[] args) {

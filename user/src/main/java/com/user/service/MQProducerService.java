@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Component;
 
+import java.util.Map;
+
 @Slf4j
 @Component
 public class MQProducerService {
@@ -19,12 +21,24 @@ public class MQProducerService {
     private Integer messageTimeOut;
 
     // 建议正常规模项目统一用一个TOPIC
-    public static final String topic = "RLT_TEST_TOPIC_TEST_WEI";
+    public static final String topic = "RLT_TEST_TOPIC_TEST_WEI_LU";
     public static final String TAGS = "LU";
 
     // 直接注入使用，用于发送消息到broker服务器
     @Autowired
     private RocketMQTemplate rocketMQTemplate;
+
+    /**
+     * <p>@description : syncRedisCache 异步查询redis缓存信息</p>
+     * <p>@author : Wei.Lu </p>
+     * <p>@date : 2021/3/5 16:49 </p>
+     *
+     * @param hashMap ->访问基本信息
+     **/
+    public void syncRedisCache(Map<String, Object> hashMap) {
+        rocketMQTemplate.convertAndSend(topic.concat(":").concat(TAGS), hashMap);
+    }
+
 
     /**
      * 普通发送（这里的参数对象User可以随意定义，可以发送个对象，也可以是字符串等）

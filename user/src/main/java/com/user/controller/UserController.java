@@ -1,12 +1,15 @@
 package com.user.controller;
 
+import cn.hutool.core.date.DateUtil;
 import com.alibaba.druid.support.json.JSONUtils;
+import com.google.common.collect.Maps;
 import com.user.config.PushEvent;
 import com.user.entity.Account;
 import com.user.feign.OrderServiceFeign;
 import com.user.feign.ProductServiceFeign;
 import com.user.service.MQProducerService;
 import com.user.service.UserService;
+import com.user.util.springutil.SpringUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.Redisson;
 import org.redisson.api.RLock;
@@ -14,14 +17,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -57,10 +63,41 @@ public class UserController {
     private static final String RED_BALL = "RED_BALL";
     private static final String BLUE_BALL = "BLUE_BALL";
 
+    public static void main(String[] args) {
+        String format = DateUtil.format(Calendar.getInstance().getTime(), "YYYY-MM-DD HH:mm:ss");
+        System.out.println("currentTimes:" + format);
+    }
+
+    /**
+     * <p>@description : redisCache模拟处理redis缓存穿透或击穿问题 </p>
+     * <p>@author : Wei.Lu </p>
+     * <p>@date : 2021/3/5 16:43 </p>
+     *
+     * @param id ->请求ID
+     * @return {@link  String }
+     **/
+    @GetMapping("pId/{id}")
+    public String redisCache(@PathVariable long id) {
+        final String redisKey = "REDIS_CACHE_TEST_WEI:".concat(String.valueOf(id));
+        // 从redis cache 拿去信息
+        String redisResult = (String) redisTemplate.opsForValue().get(redisKey);
+        if (!StringUtils.isEmpty(redisResult)) {
+            return redisResult;
+        } else {
+            Map<String, Object> hashMap = Maps.newHashMap();
+            hashMap.put("redisKey", redisKey);
+            hashMap.put("requestId", id);
+            mqProducerService.syncRedisCache(hashMap);
+            return "网络服务繁忙请稍后再试";
+        }
+    }
+
     @GetMapping(value = "mg/{msg}")
     public String sends(@PathVariable String msg) {
         mqProducerService.send(Account.builder().id(1).userId(142857)
                 .used(123456).residue(789654).total(10086).msg(msg).build());
+        String[] activeProfiles = SpringUtil.getActiveProfiles();
+        System.out.println("获取Bean:" + activeProfiles);
         return "发送成功";
     }
 

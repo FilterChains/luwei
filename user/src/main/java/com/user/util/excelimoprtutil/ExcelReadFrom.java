@@ -21,7 +21,7 @@ import java.util.Objects;
  * <p>@author : Wei.Lu</p>
  * <p>@date : 2021/2/9 9:54 </p>
  **/
-public class ExcelReadFrom {
+class ExcelReadFrom {
 
     /**
      * <p>@description : 读取excel信息保存至实体类 </p>
@@ -32,8 +32,8 @@ public class ExcelReadFrom {
      * @param sheets      ->sheet 数组
      * @return {@link List<T>}
      **/
-    public static <T> List<T> readFromExcel(Class<T> objectClass, Sheet... sheets) throws ExcelException {
-        List<T> result = new ArrayList<>();
+    static <T> List<T> readFromExcel(Class<T> objectClass, Sheet... sheets) throws ExcelException {
+        List<T> result = new ArrayList<>(ExcelCode.INITIAL_CAPACITY);
         //获取第一个sheet文件
         Sheet sheet = sheets[0];
         //获取表头
@@ -80,9 +80,9 @@ public class ExcelReadFrom {
                 result.add(obj);
             }
         } catch (InstantiationException | IllegalAccessException e) {
-            throw new ExcelException("实例化对象异常");
+            throw new ExcelException("实例化对象异常".concat(e.getMessage()));
         } catch (InvocationTargetException | NoSuchMethodException e) {
-            throw new ExcelException("保存数据异常,检查字段类型是否正确");
+            throw new ExcelException("保存数据异常,检查字段类型是否正确".concat(e.getMessage()));
         }
         return result;
     }

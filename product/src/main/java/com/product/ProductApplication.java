@@ -13,5 +13,4 @@ public class ProductApplication extends BaseApplication {
     public static void main(String[] args) {
         SpringApplication.run(ProductApplication.class, args);
     }
-
 }

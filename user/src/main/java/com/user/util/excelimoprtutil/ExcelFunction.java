@@ -33,6 +33,7 @@ public class ExcelFunction {
     public static <T> List<T> readExcel(MultipartFile file, Class<T> objectClass, boolean operation, boolean checkTitle) throws ExcelException {
         List<T> resultDate;
         try {
+            ExcelCode.init();
             //读取数据方式
             ExcelCode.EXCEL_READ_WAY = operation;
             //是否检查表头

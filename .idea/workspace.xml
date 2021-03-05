@@ -26,12 +26,1092 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db00540b-6b0c-4978-8874-951c611e6cce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/product/redisconfig/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/product/redisconfig/RedisConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/product/redisconfig/RedisKeyExpiredListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/product/redisconfig/RedisUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/product/redisconfig/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-all/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-all/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-aop/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-aop/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-bloomFilter/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-bloomFilter/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-cache/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-cache/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-captcha/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-captcha/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-core/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-core/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-cron/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-cron/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-crypto/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-crypto/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-db/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-db/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-dfa/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-dfa/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-extra/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-extra/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-http/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-http/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-json/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-json/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-log/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-log/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-poi/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-poi/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-script/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-script/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-setting/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-setting/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-socket/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-socket/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-system/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/maven/cn.hutool/hutool-system/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/services/cn.hutool.aop.proxy.ProxyFactory" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/services/cn.hutool.extra.pinyin.PinyinEngine" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/services/cn.hutool.extra.template.TemplateEngine" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/services/cn.hutool.extra.tokenizer.TokenizerEngine" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/META-INF/services/cn.hutool.log.LogFactory" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/Hutool.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/aop/ProxyUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/aop/aspects/Aspect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/aop/aspects/SimpleAspect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/aop/aspects/TimeIntervalAspect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/aop/interceptor/CglibInterceptor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/aop/interceptor/JdkInterceptor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/aop/interceptor/SpringCglibInterceptor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/aop/proxy/CglibProxyFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/aop/proxy/JdkProxyFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/aop/proxy/ProxyFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/aop/proxy/SpringCglibProxyFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/bloomfilter/BitMapBloomFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/bloomfilter/BitSetBloomFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/bloomfilter/BloomFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/bloomfilter/BloomFilterUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/bloomfilter/bitMap/BitMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/bloomfilter/bitMap/IntMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/bloomfilter/bitMap/LongMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/bloomfilter/filter/AbstractFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/bloomfilter/filter/DefaultFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/bloomfilter/filter/ELFFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/bloomfilter/filter/FNVFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/bloomfilter/filter/HfFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/bloomfilter/filter/HfIpFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/bloomfilter/filter/JSFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/bloomfilter/filter/PJWFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/bloomfilter/filter/RSFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/bloomfilter/filter/SDBMFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/bloomfilter/filter/TianlFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cache/Cache.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cache/CacheUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cache/GlobalPruneTimer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cache/file/AbstractFileCache.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cache/file/LFUFileCache$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cache/file/LFUFileCache.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cache/file/LRUFileCache$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cache/file/LRUFileCache.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cache/impl/AbstractCache.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cache/impl/CacheObj.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cache/impl/CacheObjIterator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cache/impl/CacheValuesIterator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cache/impl/FIFOCache.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cache/impl/LFUCache.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cache/impl/LRUCache.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cache/impl/NoCache$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cache/impl/NoCache.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cache/impl/TimedCache.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cache/impl/WeakCache.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/captcha/AbstractCaptcha.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/captcha/CaptchaUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/captcha/CircleCaptcha.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/captcha/ICaptcha.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/captcha/LineCaptcha.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/captcha/ShearCaptcha.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/captcha/generator/AbstractGenerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/captcha/generator/CodeGenerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/captcha/generator/MathGenerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/captcha/generator/RandomGenerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/annotation/Alias.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/annotation/AnnotationUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/annotation/CombinationAnnotationElement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/annotation/PropIgnore.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/bean/BeanDesc.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/bean/BeanDescCache.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/bean/BeanException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/bean/BeanInfoCache.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/bean/BeanPath.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/bean/BeanUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/bean/DynaBean.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/bean/PropDesc.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/bean/copier/BeanCopier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/bean/copier/CopyOptions.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/bean/copier/ValueProvider.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/bean/copier/provider/BeanValueProvider.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/bean/copier/provider/DynaBeanValueProvider.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/bean/copier/provider/MapValueProvider.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/builder/Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/builder/CompareToBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/builder/EqualsBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/builder/HashCodeBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/builder/IDKey.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/clone/CloneRuntimeException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/clone/CloneSupport.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/clone/Cloneable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/codec/BCD.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/codec/Base32.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/codec/Base62.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/codec/Base62Codec.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/codec/Base64.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/codec/Base64Decoder$IntWrapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/codec/Base64Decoder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/codec/Base64Encoder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/codec/Caesar.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/codec/Morse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/codec/Rot.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/collection/ArrayIter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/collection/BoundedPriorityQueue.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/collection/CollUtil$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/collection/CollUtil$Consumer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/collection/CollUtil$KVConsumer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/collection/CollUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/collection/CollectionUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/collection/ConcurrentHashSet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/collection/CopiedIter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/collection/EnumerationIter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/collection/IterUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/collection/IteratorEnumeration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/collection/LineIter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/collection/ListUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/collection/SpliteratorUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/collection/TransCollection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/collection/TransIter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/collection/TransSpliterator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/comparator/ComparableComparator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/comparator/ComparatorChain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/comparator/ComparatorException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/comparator/CompareUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/comparator/FieldComparator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/comparator/IndexedComparator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/comparator/InstanceComparator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/comparator/PinyinComparator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/comparator/PropertyComparator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/comparator/ReverseComparator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/comparator/VersionComparator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/AbstractConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/BasicType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/Convert.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/ConvertException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/Converter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/ConverterRegistry$SingletonHolder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/ConverterRegistry.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/NumberChineseFormater.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/NumberChineseFormatter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/NumberWordFormater.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/NumberWordFormatter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/ArrayConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/AtomicBooleanConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/AtomicReferenceConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/BeanConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/BooleanConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/CalendarConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/CastConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/CharacterConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/CharsetConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/ClassConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/CollectionConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/CurrencyConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/DateConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/DurationConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/EnumConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/GenericEnumConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/LocaleConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/MapConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/NumberConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/OptionalConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/PathConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/PeriodConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/PrimitiveConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/ReferenceConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/StackTraceElementConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/StringConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/TemporalAccessorConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/TimeZoneConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/URIConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/URLConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/convert/impl/UUIDConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/BetweenFormater$Level.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/BetweenFormater.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/CalendarUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/ChineseDate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/DateBetween.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/DateException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/DateField.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/DateModifier$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/DateModifier$ModifyType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/DateModifier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/DatePattern.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/DateRange.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/DateTime.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/DateUnit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/DateUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/LocalDateTimeUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/Month.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/Quarter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/StopWatch$TaskInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/StopWatch.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/SystemClock$InstanceHolder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/SystemClock.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/TemporalAccessorUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/TimeInterval.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/Week$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/Week.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/Zodiac.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/chinese/ChineseMonth.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/chinese/GanZhi.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/chinese/LunarFestival.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/chinese/LunarInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/chinese/SolarTerms.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/AbstractDateBasic.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/DateBasic.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/DateParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/DatePrinter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDateFormat$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDateFormat.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDateParser$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDateParser$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDateParser$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDateParser$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDateParser$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDateParser$CaseInsensitiveTextStrategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDateParser$CopyQuotedStrategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDateParser$ISO8601TimeZoneStrategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDateParser$NumberStrategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDateParser$PatternStrategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDateParser$Strategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDateParser$StrategyAndWidth.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDateParser$StrategyParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDateParser$TimeZoneStrategy$TzInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDateParser$TimeZoneStrategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDateParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDatePrinter$CharacterLiteral.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDatePrinter$DayInWeekField.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDatePrinter$Iso8601_Rule.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDatePrinter$NumberRule.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDatePrinter$PaddedNumberField.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDatePrinter$Rule.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDatePrinter$StringLiteral.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDatePrinter$TextField.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDatePrinter$TimeZoneDisplayKey.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDatePrinter$TimeZoneNameRule.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDatePrinter$TimeZoneNumberRule.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDatePrinter$TwelveHourField.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDatePrinter$TwentyFourHourField.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDatePrinter$TwoDigitMonthField.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDatePrinter$TwoDigitNumberField.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDatePrinter$TwoDigitYearField.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDatePrinter$UnpaddedMonthField.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDatePrinter$UnpaddedNumberField.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDatePrinter$WeekYear.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FastDatePrinter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/date/format/FormatCache.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/exceptions/DependencyException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/exceptions/ExceptionUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/exceptions/NotInitedException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/exceptions/StatefulException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/exceptions/UtilException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/exceptions/ValidateException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/getter/ArrayTypeGetter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/getter/BasicTypeGetter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/getter/GroupedTypeGetter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/getter/ListTypeGetter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/getter/OptArrayTypeGetter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/getter/OptBasicTypeGetter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/getter/OptNullBasicTypeFromObjectGetter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/getter/OptNullBasicTypeFromStringGetter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/getter/OptNullBasicTypeGetter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/img/BackgroundRemoval.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/img/FontUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/img/GraphicsUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/img/Img.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/img/ImgUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/img/ScaleType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/img/gif/AnimatedGifEncoder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/img/gif/GifDecoder$GifFrame.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/img/gif/GifDecoder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/img/gif/LZWEncoder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/img/gif/NeuQuant.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/BOMInputStream.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/BufferUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/FastByteArrayOutputStream.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/FastByteBuffer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/FastStringWriter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/FileTypeUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/FileUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/IORuntimeException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/IoUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/LineHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/NullOutputStream.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/StreamProgress.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/ValidateObjectInputStream.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/checksum/CRC16.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/checksum/CRC8.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/checksum/crc16/CRC16Ansi.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/checksum/crc16/CRC16CCITT.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/checksum/crc16/CRC16CCITTFalse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/checksum/crc16/CRC16Checksum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/checksum/crc16/CRC16DNP.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/checksum/crc16/CRC16IBM.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/checksum/crc16/CRC16Maxim.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/checksum/crc16/CRC16Modbus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/checksum/crc16/CRC16USB.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/checksum/crc16/CRC16X25.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/checksum/crc16/CRC16XModem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/file/FileAppender.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/file/FileCopier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/file/FileMode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/file/FileNameUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/file/FileReader$ReaderHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/file/FileReader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/file/FileWrapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/file/FileWriter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/file/LineReadWatcher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/file/LineSeparator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/file/PathUtil$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/file/PathUtil$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/file/PathUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/file/Tailer$ConsoleLineHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/file/Tailer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/resource/BytesResource.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/resource/ClassPathResource.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/resource/FileResource.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/resource/InputStreamResource.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/resource/MultiFileResource.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/resource/MultiResource.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/resource/NoResourceException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/resource/Resource.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/resource/ResourceUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/resource/StringResource.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/resource/UrlResource.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/resource/WebAppResource.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/unit/DataSize.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/unit/DataSizeUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/unit/DataUnit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/watch/SimpleWatcher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/watch/WatchAction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/watch/WatchException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/watch/WatchKind.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/watch/WatchMonitor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/watch/WatchServer$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/watch/WatchServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/watch/WatchUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/watch/Watcher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/watch/watchers/DelayWatcher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/watch/watchers/IgnoreWatcher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/io/watch/watchers/WatcherChain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/Assert.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/Chain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/ClassScanner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/ConsistentHash.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/Console.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/ConsoleTable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/Dict.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/Editor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/EnumItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/Filter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/Holder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/JarClassLoader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/Matcher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/ObjectId.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/Pair.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/ParameterizedTypeImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/PatternPool$RegexWithFlag.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/PatternPool.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/Range$Steper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/Range.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/Replacer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/SimpleCache.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/Singleton.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/Snowflake.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/Tuple.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/TypeReference.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/UUID$Holder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/UUID.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/Validator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/WeightRandom$WeightObj.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/WeightRandom.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/caller/Caller.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/caller/CallerUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/caller/SecurityManagerCaller.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/caller/StackTraceCaller.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/copier/Copier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/copier/SrcToDestCopier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/func/Func.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/func/Func0.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/func/Func1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/func/VoidFunc.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/func/VoidFunc0.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/func/VoidFunc1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/generator/Generator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/generator/ObjectGenerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/generator/ObjectIdGenerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/generator/SnowflakeGenerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/generator/UUIDGenerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/hash/CityHash$OrderIter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/hash/CityHash.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/hash/Hash128.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/hash/Hash32.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/hash/Hash64.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/hash/MurmurHash.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/hash/Number128.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/intern/InternUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/intern/Interner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/intern/JdkStringInterner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/intern/WeakInterner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/loader/AtomicLoader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/loader/LazyLoader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/loader/Loader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/mutable/Mutable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/mutable/MutableBool.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/mutable/MutableByte.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/mutable/MutableDouble.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/mutable/MutableFloat.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/mutable/MutableInt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/mutable/MutableLong.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/mutable/MutableObj.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/mutable/MutableShort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/reflect/ActualTypeMapperPool.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/tree/Node.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/tree/Tree.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/tree/TreeNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/tree/TreeNodeConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/tree/TreeUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/tree/parser/DefaultNodeParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/lang/tree/parser/NodeParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/map/BiMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/map/CamelCaseLinkedMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/map/CamelCaseMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/map/CaseInsensitiveLinkedMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/map/CaseInsensitiveMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/map/CustomKeyMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/map/FixedLinkedHashMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/map/MapBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/map/MapProxy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/map/MapUtil$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/map/MapUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/map/MapWrapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/map/TableMap$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/map/TableMap$Entry.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/map/TableMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/map/TolerantMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/map/multi/CollectionValueMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/map/multi/ListValueMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/map/multi/SetValueMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/math/Arrangement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/math/Calculator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/math/Combination.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/math/MathUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/math/Money.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/net/Ipv4Util.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/net/LocalPortGenerater.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/net/MaskBit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/net/NetUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/net/URLDecoder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/net/URLEncoder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/net/multipart/MultipartFormData.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/net/multipart/MultipartRequestInputStream.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/net/multipart/UploadFile.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/net/multipart/UploadFileHeader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/net/multipart/UploadSetting.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/net/url/UrlBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/net/url/UrlPath.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/net/url/UrlQuery.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/swing/DesktopUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/swing/RobotUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/swing/ScreenUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/swing/clipboard/ClipboardListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/swing/clipboard/ClipboardMonitor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/swing/clipboard/ClipboardUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/swing/clipboard/ImageSelection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/swing/clipboard/StrClipboardListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/ASCIIStrCache.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/Simhash.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/StrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/StrFormatter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/StrSpliter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/TextSimilarity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/UnicodeUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/csv/CsvBaseReader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/csv/CsvConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/csv/CsvData.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/csv/CsvParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/csv/CsvReadConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/csv/CsvReader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/csv/CsvRow.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/csv/CsvRowHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/csv/CsvUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/csv/CsvWriteConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/csv/CsvWriter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/escape/Html4Escape.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/escape/Html4Unescape.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/escape/InternalEscapeUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/escape/NumericEntityUnescaper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/replacer/LookupReplacer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/replacer/ReplacerChain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/text/replacer/StrReplacer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/thread/ConcurrencyTester.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/thread/DelegatedExecutorService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/thread/ExecutorBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/thread/FinalizableDelegatedExecutorService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/thread/GlobalThreadPool.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/thread/NamedThreadFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/thread/RejectPolicy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/thread/SemaphoreRunnable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/thread/SyncFinisher$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/thread/SyncFinisher$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/thread/SyncFinisher$Worker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/thread/SyncFinisher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/thread/ThreadFactoryBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/thread/ThreadUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/thread/lock/LockUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/thread/lock/NoLock.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/thread/threadlocal/NamedInheritableThreadLocal.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/thread/threadlocal/NamedThreadLocal.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/ArrayUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/BooleanUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/CharUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/CharsetUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/ClassLoaderUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/ClassUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/CreditCodeUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/EnumUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/EscapeUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/HashUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/HexUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/IdUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/IdcardUtil$Idcard.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/IdcardUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/ModifierUtil$ModifierType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/ModifierUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/NumberUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/ObjectUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/PageUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/PhoneUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/RandomUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/ReUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/ReferenceUtil$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/ReferenceUtil$ReferenceType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/ReferenceUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/ReflectUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/RuntimeUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/ServiceLoaderUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/StrUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/TypeUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/URLUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/XmlUtil$UniversalNamespaceCache.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/XmlUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/core/util/ZipUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/CronException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/CronTimer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/CronUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/Scheduler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/TaskExecutor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/TaskExecutorManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/TaskLauncher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/TaskLauncherManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/TaskTable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/listener/SimpleTaskListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/listener/TaskListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/listener/TaskListenerManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/pattern/CronPattern.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/pattern/CronPatternUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/pattern/matcher/AlwaysTrueValueMatcher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/pattern/matcher/BoolArrayValueMatcher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/pattern/matcher/DayOfMonthValueMatcher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/pattern/matcher/ValueMatcher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/pattern/matcher/ValueMatcherBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/pattern/matcher/YearValueMatcher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/pattern/parser/DayOfMonthValueParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/pattern/parser/DayOfWeekValueParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/pattern/parser/HourValueParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/pattern/parser/MinuteValueParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/pattern/parser/MonthValueParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/pattern/parser/SecondValueParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/pattern/parser/SimpleValueParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/pattern/parser/ValueParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/pattern/parser/YearValueParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/task/InvokeTask.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/task/RunnableTask.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/cron/task/Task.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/BCUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/CipherMode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/CryptoException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/ECKeyUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/GlobalBouncyCastleProvider.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/KeyUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/Mode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/Padding.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/PemUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/ProviderFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/SecureUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/SmUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/asymmetric/AbstractAsymmetricCrypto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/asymmetric/AsymmetricAlgorithm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/asymmetric/AsymmetricCrypto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/asymmetric/BaseAsymmetric$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/asymmetric/BaseAsymmetric.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/asymmetric/ECIES.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/asymmetric/KeyType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/asymmetric/RSA.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/asymmetric/SM2$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/asymmetric/SM2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/asymmetric/Sign.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/asymmetric/SignAlgorithm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/digest/BCrypt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/digest/DigestAlgorithm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/digest/DigestUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/digest/Digester.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/digest/HMac.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/digest/HmacAlgorithm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/digest/MD5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/digest/SM3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/digest/mac/BCHMacEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/digest/mac/DefaultHMacEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/digest/mac/MacEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/digest/mac/MacEngineFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/digest/opt/HOTP.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/digest/opt/TOPT.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/symmetric/AES.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/symmetric/DES.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/symmetric/DESede.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/symmetric/RC4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/symmetric/SM4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/symmetric/SymmetricAlgorithm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/symmetric/SymmetricCrypto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/crypto/symmetric/Vigenere.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/AbstractDb.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ActiveEntity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/DaoTemplate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/Db.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/DbRuntimeException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/DbUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/Entity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/GlobalDbConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/Page.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/PageResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/Session.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/SqlConnRunner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/SqlRunner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/StatementUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ThreadLocalConnection$GroupedConnection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ThreadLocalConnection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/dialect/Dialect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/dialect/DialectFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/dialect/DialectName.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/dialect/DriverUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/dialect/impl/AnsiSqlDialect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/dialect/impl/H2Dialect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/dialect/impl/MysqlDialect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/dialect/impl/OracleDialect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/dialect/impl/PostgresqlDialect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/dialect/impl/SqlServer2012Dialect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/dialect/impl/Sqlite3Dialect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ds/AbstractDSFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ds/DSFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ds/DataSourceWrapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ds/GlobalDSFactory$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ds/GlobalDSFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ds/bee/BeeDSFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ds/c3p0/C3p0DSFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ds/dbcp/DbcpDSFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ds/druid/DruidDSFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ds/hikari/HikariDSFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ds/jndi/JndiDSFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ds/pooled/ConnectionWraper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ds/pooled/DbConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ds/pooled/DbSetting.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ds/pooled/PooledConnection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ds/pooled/PooledDSFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ds/pooled/PooledDataSource.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ds/simple/AbstractDataSource.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ds/simple/SimpleDSFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ds/simple/SimpleDataSource.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/ds/tomcat/TomcatDSFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/handler/BeanHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/handler/BeanListHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/handler/EntityHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/handler/EntityListHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/handler/EntitySetHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/handler/HandleHelper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/handler/NumberHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/handler/PageResultHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/handler/RsHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/handler/StringHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/handler/ValueListHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/meta/Column.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/meta/JdbcType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/meta/MetaUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/meta/Table.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/meta/TableType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/nosql/mongo/MongoDS.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/nosql/mongo/MongoFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/nosql/redis/RedisDS.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/sql/Condition$LikeType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/sql/Condition.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/sql/ConditionBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/sql/Direction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/sql/LogicalOperator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/sql/NamedSql.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/sql/Order.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/sql/Query.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/sql/SqlBuilder$Join.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/sql/SqlBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/sql/SqlExecutor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/sql/SqlFormatter$FormatProcess.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/sql/SqlFormatter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/sql/SqlLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/sql/SqlUtil$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/sql/SqlUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/sql/StatementWrapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/sql/Wrapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/db/transaction/TransactionLevel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/dfa/SensitiveUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/dfa/StopChar.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/dfa/WordTree.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/cglib/BeanCopierCache.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/cglib/CglibUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/emoji/EmojiUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/ftp/AbstractFtp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/ftp/Ftp$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/ftp/Ftp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/ftp/FtpConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/ftp/FtpException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/ftp/FtpMode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/mail/GlobalMailAccount.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/mail/InternalMailUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/mail/Mail.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/mail/MailAccount.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/mail/MailException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/mail/MailUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/mail/UserPassAuthenticator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/pinyin/PinyinEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/pinyin/PinyinException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/pinyin/PinyinUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/pinyin/engine/PinyinFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/pinyin/engine/jpinyin/JPinyinEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/pinyin/engine/pinyin4j/Pinyin4jEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/pinyin/engine/tinypinyin/TinyPinyinEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/qrcode/BufferedImageLuminanceSource.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/qrcode/QrCodeException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/qrcode/QrCodeUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/qrcode/QrConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/servlet/ServletUtil$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/servlet/ServletUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/spring/EnableSpringUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/spring/SpringUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/ssh/ChannelType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/ssh/Connector.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/ssh/JschRuntimeException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/ssh/JschSessionPool.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/ssh/JschUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/ssh/Sftp$Mode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/ssh/Sftp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/AbstractTemplate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/Template.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/TemplateConfig$ResourceMode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/TemplateConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/TemplateEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/TemplateException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/TemplateUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/TemplateFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/beetl/BeetlEngine$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/beetl/BeetlEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/beetl/BeetlTemplate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/beetl/BeetlUtil$ResourceLoaderBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/beetl/BeetlUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/enjoy/EnjoyEngine$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/enjoy/EnjoyEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/enjoy/EnjoyTemplate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/freemarker/FreemarkerEngine$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/freemarker/FreemarkerEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/freemarker/FreemarkerTemplate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/freemarker/SimpleStringTemplateLoader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/rythm/RythmEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/rythm/RythmTemplate$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/rythm/RythmTemplate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/thymeleaf/ThymeleafEngine$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/thymeleaf/ThymeleafEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/thymeleaf/ThymeleafTemplate$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/thymeleaf/ThymeleafTemplate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/velocity/SimpleStringResourceLoader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/velocity/VelocityEngine$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/velocity/VelocityEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/velocity/VelocityTemplate$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/velocity/VelocityTemplate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/template/engine/velocity/VelocityUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/AbstractResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/Result.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/TokenizerEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/TokenizerException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/TokenizerUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/Word.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/TokenizerFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/analysis/AnalysisEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/analysis/AnalysisResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/analysis/AnalysisWord.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/analysis/SmartcnEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/ansj/AnsjEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/ansj/AnsjResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/ansj/AnsjWord.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/hanlp/HanLPEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/hanlp/HanLPResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/hanlp/HanLPWord.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/ikanalyzer/IKAnalyzerEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/ikanalyzer/IKAnalyzerResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/ikanalyzer/IKAnalyzerWord.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/jcseg/JcsegEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/jcseg/JcsegResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/jcseg/JcsegWord.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/jieba/JiebaEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/jieba/JiebaResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/jieba/JiebaWord.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/mmseg/MmsegEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/mmseg/MmsegResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/mmseg/MmsegWord.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/mynlp/MynlpEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/mynlp/MynlpResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/mynlp/MynlpWord.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/word/WordEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/word/WordResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/extra/tokenizer/engine/word/WordWord.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/ContentType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/GlobalHeaders.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/HTMLFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/Header.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/HtmlUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/HttpBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/HttpConnection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/HttpException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/HttpGlobalConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/HttpInputStream.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/HttpRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/HttpResponse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/HttpStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/HttpUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/Method.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/Status.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/body/MultipartBody.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/body/RequestBody.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/cookie/GlobalCookieManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/cookie/ThreadLocalCookieStore$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/cookie/ThreadLocalCookieStore.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/server/HttpServerBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/server/HttpServerRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/server/HttpServerResponse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/server/SimpleServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/server/action/Action.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/server/action/RootAction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/server/handler/ActionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/ssl/AndroidSupportSSLFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/ssl/CustomProtocolsSSLFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/ssl/DefaultSSLFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/ssl/DefaultSSLInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/ssl/DefaultTrustManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/ssl/SSLSocketFactoryBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/ssl/TrustAnyHostnameVerifier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/useragent/Browser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/useragent/Engine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/useragent/OS.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/useragent/Platform.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/useragent/UserAgent.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/useragent/UserAgentInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/useragent/UserAgentParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/useragent/UserAgentUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/webservice/SoapClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/webservice/SoapProtocol.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/webservice/SoapRuntimeException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/http/webservice/SoapUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/InternalJSONUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/JSON.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/JSONArray.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/JSONConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/JSONConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/JSONException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/JSONGetter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/JSONNull.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/JSONObject.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/JSONObjectIter$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/JSONObjectIter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/JSONStrFormater.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/JSONString.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/JSONSupport.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/JSONTokener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/JSONUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/XML.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/XMLTokener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/serialize/GlobalSerializeMapping.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/serialize/JSONArraySerializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/serialize/JSONDeserializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/serialize/JSONObjectSerializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/json/serialize/JSONSerializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/AbstractLog$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/AbstractLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/GlobalLogFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/Log.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/LogFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/StaticLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/commons/ApacheCommonsLog$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/commons/ApacheCommonsLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/commons/ApacheCommonsLog4JLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/commons/ApacheCommonsLogFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/console/ConsoleLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/console/ConsoleLogFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/jboss/JbossLog$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/jboss/JbossLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/jboss/JbossLogFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/jdk/JdkLog$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/jdk/JdkLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/jdk/JdkLogFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/log4j/Log4jLog$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/log4j/Log4jLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/log4j/Log4jLogFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/log4j2/Log4j2Log$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/log4j2/Log4j2Log.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/log4j2/Log4j2LogFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/slf4j/Slf4jLog$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/slf4j/Slf4jLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/slf4j/Slf4jLogFactory$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/slf4j/Slf4jLogFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/tinylog/TinyLog$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/tinylog/TinyLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/tinylog/TinyLog2$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/tinylog/TinyLog2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/tinylog/TinyLog2Factory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/dialect/tinylog/TinyLogFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/level/DebugLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/level/ErrorLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/level/InfoLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/level/Level.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/level/TraceLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/log/level/WarnLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/PoiChecker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/BigExcelWriter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/ExcelBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/ExcelExtractorUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/ExcelFileUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/ExcelPicUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/ExcelReader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/ExcelUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/ExcelWriter$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/ExcelWriter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/RowUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/StyleSet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/WorkbookUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/cell/CellEditor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/cell/CellHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/cell/CellLocation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/cell/CellUtil$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/cell/CellUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/cell/CellValue.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/cell/FormulaCellValue.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/editors/NumericToIntEditor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/editors/TrimEditor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/reader/AbstractSheetReader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/reader/BeanSheetReader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/reader/ListSheetReader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/reader/MapSheetReader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/reader/SheetReader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/sax/AttributeName.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/sax/CellDataType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/sax/ElementName.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/sax/Excel03SaxReader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/sax/Excel07SaxReader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/sax/ExcelSaxReader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/sax/ExcelSaxUtil$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/sax/ExcelSaxUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/sax/SheetRidReader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/sax/handler/AbstractRowHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/sax/handler/BeanRowHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/sax/handler/MapRowHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/sax/handler/RowHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/style/Align.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/excel/style/StyleUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/exceptions/POIException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/word/DocUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/word/PicType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/word/TableUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/word/Word07Writer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/poi/word/WordUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/script/FullSupportScriptEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/script/JavaScriptEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/script/ScriptRuntimeException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/script/ScriptUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/setting/AbsSetting$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/setting/AbsSetting.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/setting/GroupedMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/setting/GroupedSet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/setting/Setting$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/setting/Setting.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/setting/SettingLoader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/setting/SettingRuntimeException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/setting/SettingUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/setting/dialect/Props$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/setting/dialect/Props.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/setting/dialect/PropsUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/setting/profile/GlobalProfile.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/setting/profile/Profile.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/socket/SocketConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/socket/SocketRuntimeException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/socket/SocketUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/socket/aio/AcceptHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/socket/aio/AioClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/socket/aio/AioServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/socket/aio/AioSession.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/socket/aio/IoAction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/socket/aio/ReadHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/socket/aio/SimpleIoAction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/socket/nio/AcceptHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/socket/nio/ChannelHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/socket/nio/NioClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/socket/nio/NioServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/socket/nio/NioUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/socket/nio/Operation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/socket/protocol/MsgDecoder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/socket/protocol/MsgEncoder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/socket/protocol/Protocol.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/system/HostInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/system/JavaInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/system/JavaRuntimeInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/system/JavaSpecInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/system/JvmInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/system/JvmSpecInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/system/OsInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/system/RuntimeInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/system/SystemPropsKeys.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/system/SystemUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/system/UserInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/system/oshi/CpuInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/hutool-all-5.4.4/cn/hutool/system/oshi/OshiUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/springutil/EnableSpringUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/springutil/SpringUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/resources/sql.dev-3月/1113 专题页优化 2021-.3-30.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/product/ProductApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/product/ProductApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/product/service/MQConsumerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/product/service/MQConsumerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/UserApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/service/MQProducerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/service/MQProducerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelErrorType.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelErrorType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelReadFrom.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelReadFrom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelValidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelValidate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelWorkbook.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelWorkbook.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +1187,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="F:/springcloud/springBoot 项目/企业级的分布式和服务化解决方案/stylefeng-roses-master/roses/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/product/src/main/java/com/product" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -116,7 +1196,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.20703125" />
     <property name="project.structure.side.proportion" value="0.21492922" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -131,13 +1211,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\springcloud\product\src\main\java\com\product" />
       <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\java\com\user\util\excelimoprtutil" />
       <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\resources\sql.dev-3月" />
       <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\java\com\user\util" />
       <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\java\com\user" />
-      <recent name="F:\springcloud\springcloud\product\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\java\com\user\util" />
       <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -181,26 +1262,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.PhoneUtil">
+  <component name="RunManager" selected="Spring Boot.ProductApplication">
     <configuration name="Interrupet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.user.util.lock.Interrupet" />
       <module name="user" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.user.util.lock.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LingKouStudy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.user.util.LingKouStudy" />
-      <module name="user" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.user.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -221,12 +1289,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SmoothingAlgorithm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.user.util.pollingalgorithm.SmoothingAlgorithm" />
+    <configuration name="ProductApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.product.ProductApplication" />
+      <module name="product" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.product.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.user.UserApplication" />
       <module name="user" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.user.util.pollingalgorithm.*" />
+          <option name="PATTERN" value="com.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.user.controller.UserController" />
+      <module name="user" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.user.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -246,9 +1340,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="generated-requests#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" runType="Run single request">
-      <method v="2" />
     </configuration>
     <configuration name="springcolud" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
@@ -483,10 +1574,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.LingKouStudy" />
-      <item itemvalue="Application.SmoothingAlgorithm" />
       <item itemvalue="Application.Interrupet" />
-      <item itemvalue="HTTP Request.generated-requests#2" />
       <item itemvalue="Maven.springcolud" />
       <item itemvalue="Spring Boot.UserApplication" />
       <item itemvalue="Spring Boot.OrderApplication" />
@@ -516,14 +1604,17 @@
       <item itemvalue="Spring Boot.ServiceAApplication" />
       <item itemvalue="Spring Boot.ServiceCApplication" />
       <item itemvalue="Application.PhoneUtil" />
+      <item itemvalue="Application.UserController" />
+      <item itemvalue="Application.ProductApplication" />
+      <item itemvalue="Application.UserApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UserApplication" />
+        <item itemvalue="Application.ProductApplication" />
+        <item itemvalue="Application.UserController" />
         <item itemvalue="Application.PhoneUtil" />
         <item itemvalue="Application.Interrupet" />
-        <item itemvalue="HTTP Request.generated-requests#2" />
-        <item itemvalue="Application.LingKouStudy" />
-        <item itemvalue="Application.SmoothingAlgorithm" />
       </list>
     </recent_temporary>
   </component>
@@ -571,7 +1662,7 @@
       <workItem from="1614563670016" duration="27000" />
       <workItem from="1614563739134" duration="22000" />
       <workItem from="1614563881380" duration="17943000" />
-      <workItem from="1614590293829" duration="12296000" />
+      <workItem from="1614590293829" duration="35194000" />
     </task>
     <task id="LOCAL-00001" summary="springcloud">
       <created>1611712496413</created>
@@ -671,7 +1762,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614650682696</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="excel Util v 1.2.1">
+      <created>1614692850302</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1614692850302</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -737,6 +1835,17 @@
     <MESSAGE value="excel Util v 0.2.0" />
     <MESSAGE value="excel Util v 1.2.1" />
     <option name="LAST_COMMIT_MESSAGE" value="excel Util v 1.2.1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/user/src/main/java/com/user/controller/UserController.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/springcloud$YcLock.ic" NAME="YcLock Coverage Results" MODIFIED="1613621983976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

@@ -9,7 +9,7 @@ package com.user.util.excelimoprtutil;
  * @alert: This document is private to luwei
  * @version: 1.8.00_66
  */
-public enum ExcelErrorType {
+enum ExcelErrorType {
     /**
      * 上传文件格式与模板不匹配
      */

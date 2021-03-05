@@ -7,6 +7,13 @@ spring:
   #    nacos:
   #      discovery:
   #        server-addr: localhost:8848
+
+  redis:
+    host: 192.168.3.111
+    port: 6379
+    password: n1yEl39pMQZkH
+    database: 13
+
   # 配置连接数据库
   datasource:
     name: tvpanda

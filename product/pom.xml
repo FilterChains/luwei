@@ -83,6 +83,14 @@
             <artifactId>rocketmq-spring-boot-starter</artifactId>
             <version>2.2.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
         <!-- 还有其它需要的jar包自由引入（注：fastjson不要使用低于1.2.60版本，会有安全漏洞）
         在mq数据传输是的字节就是用的fastjson转化的byte[] 解析消息body的时候需要用到-->
         <!--<dependency>

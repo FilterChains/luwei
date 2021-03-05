@@ -17,7 +17,7 @@ import java.util.Map;
  * <p>@author : Wei.Lu</p>
  * <p>@date : 2021/2/9 9:26 </p>
  **/
-public class ExcelValidate {
+class ExcelValidate {
 
 
     /**
@@ -27,7 +27,7 @@ public class ExcelValidate {
      *
      * @param fields fields ->字段数组
      **/
-    public static void validateFields(Field... fields) throws ExcelException {
+    static void validateFields(Field... fields) throws ExcelException {
         if (null == fields || 0 == fields.length) {
             throw new ExcelException("请为实体类创建字段");
         }
@@ -43,7 +43,7 @@ public class ExcelValidate {
      * @param workbook ->excel WorkBook
      * @return {@link Sheet}
      **/
-    public static Sheet validateExcelContent(Workbook workbook) throws ExcelException {
+    static Sheet validateExcelContent(Workbook workbook) throws ExcelException {
         //获取excel中sheet的总数
         int sheets = workbook.getNumberOfSheets();
         List<Sheet> she = new ArrayList<>();
