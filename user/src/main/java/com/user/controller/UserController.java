@@ -7,6 +7,7 @@ import com.user.config.PushEvent;
 import com.user.entity.Account;
 import com.user.feign.OrderServiceFeign;
 import com.user.feign.ProductServiceFeign;
+import com.user.service.EsSearchService;
 import com.user.service.MQProducerService;
 import com.user.service.UserService;
 import com.user.util.springutil.SpringUtil;
@@ -59,6 +60,9 @@ public class UserController {
     @Autowired
     private MQProducerService mqProducerService;
 
+    @Autowired
+    private EsSearchService esSearchService;
+
     private static final String KET_REDIS = "KET_REDIS";
     private static final String RED_BALL = "RED_BALL";
     private static final String BLUE_BALL = "BLUE_BALL";
@@ -95,7 +99,7 @@ public class UserController {
     @GetMapping(value = "mg/{msg}")
     public String sends(@PathVariable String msg) {
         mqProducerService.send(Account.builder().id(1).userId(142857)
-                .used(123456).residue(789654).total(10086).msg(msg).build());
+                .used(123456).residue(789654).total(10086).build());
         String[] activeProfiles = SpringUtil.getActiveProfiles();
         System.out.println("获取Bean:" + activeProfiles);
         return "发送成功";
@@ -133,7 +137,7 @@ public class UserController {
 
     @GetMapping(value = "id/{id}")
     public String findUser(@PathVariable long id) {
-        return JSONUtils.toJSONString(userService.getById(id));
+        return JSONUtils.toJSONString(userService.selectOne(id));
     }
 
     @GetMapping("user/{string}")

@@ -7,22 +7,29 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ace-api" />
         <module name="sharding-jdbc-demo" />
         <module name="wrapper-api" />
+        <module name="mall-search" />
         <module name="file-sdk-local" />
         <module name="system-spring-boot-starter" />
+        <module name="mall-common" />
         <module name="sc-admin" />
         <module name="db-sdk-mp" />
         <module name="job-executor-samples" />
         <module name="message-sdk-websocket" />
+        <module name="mybatis-plus-sample-resultmap" />
         <module name="security-api" />
+        <module name="mybatis-plus-sample-no-spring" />
         <module name="txlcn-demo-common" />
         <module name="system-business-login-log" />
         <module name="system-business-user" />
         <module name="order" />
         <module name="security-spring-boot-starter" />
+        <module name="mybatis-plus-sample-sequence" />
         <module name="goods-center" />
         <module name="email-sdk-java" />
+        <module name="mybatis-plus-sample-performance-analysis" />
         <module name="member-center" />
         <module name="i18n-sdk" />
         <module name="i18n-spring-boot-starter" />
@@ -36,7 +43,10 @@
         <module name="email-api" />
         <module name="office-spring-boot-starter" />
         <module name="auth-api" />
+        <module name="mybatis-plus-sample-optimistic-locker" />
         <module name="system-business-role" />
+        <module name="mybatis-plus-sample-reduce-springmvc" />
+        <module name="mybatis-plus-sample-sql-injector" />
         <module name="marking-center" />
         <module name="sms-sdk-aliyun" />
         <module name="config-spring-boot-starter" />
@@ -44,9 +54,14 @@
         <module name="demo-business" />
         <module name="demo-spring-boot-starter" />
         <module name="system-api" />
+        <module name="ace-monitor" />
+        <module name="mybatis-plus-sample-enum" />
         <module name="sms-business-validation" />
+        <module name="mybatis-plus-sample-assembly" />
         <module name="sms-spring-boot-starter" />
+        <module name="mybatis-plus-sample-wrapper" />
         <module name="redis-spring-boot-starter" />
+        <module name="mybatis-plus-sample-quickstart-springmvc" />
         <module name="order-center" />
         <module name="groovy-api" />
         <module name="dict-api" />
@@ -54,8 +69,11 @@
         <module name="job-admin" />
         <module name="db-api" />
         <module name="timer-sdk-hutool" />
+        <module name="ace-sample" />
         <module name="txlcn-tm" />
+        <module name="mall-mbg" />
         <module name="job-core" />
+        <module name="mybatis-plus-sample-generator" />
         <module name="log-api" />
         <module name="message-spring-boot-starter" />
         <module name="office-api" />
@@ -74,14 +92,19 @@
         <module name="groovy-sdk" />
         <module name="config-api" />
         <module name="sms-api" />
+        <module name="spring-boot-seckill" />
+        <module name="mybatis-plus-sample-tenant" />
+        <module name="mybatis-plus-sample-execution-analysis" />
         <module name="ds-container-spring-boot-starter" />
         <module name="db-spring-boot-starter" />
         <module name="ds-container-sdk" />
         <module name="server-sdk-java" />
+        <module name="mybatis-plus-sample-crud" />
         <module name="cms-center" />
         <module name="log-business-requestapi" />
         <module name="dict-business" />
         <module name="timer-api" />
+        <module name="ace-gate" />
         <module name="file-sdk-minio" />
         <module name="office-sdk-excel" />
         <module name="dict-spring-boot-starter" />
@@ -89,6 +112,7 @@
         <module name="config-sdk-db" />
         <module name="validator-sdk-count" />
         <module name="monitor-spring-boot-starter" />
+        <module name="ace-auth-sdk" />
         <module name="log-center" />
         <module name="kernel-a-rule" />
         <module name="cache-sdk-redis" />
@@ -96,24 +120,35 @@
         <module name="spring-boot-pay" />
         <module name="mall-sentinel-spring-boot-starter" />
         <module name="log-sdk-file" />
+        <module name="ace-generator" />
         <module name="cache-api" />
         <module name="ds-container-api" />
         <module name="validator-sdk-black-white" />
+        <module name="ace-admin" />
         <module name="sms-sdk-tencent" />
         <module name="log-spring-boot-starter" />
+        <module name="mybatis-plus-sample-typehandler" />
+        <module name="ace-common" />
         <module name="file-spring-boot-starter" />
         <module name="system-business-app" />
+        <module name="mybatis-plus-sample-deluxe" />
         <module name="file-sdk-aliyun" />
         <module name="message-api" />
         <module name="mall-swagger2-spring-boot-starter" />
+        <module name="mybatis-plus-sample-auto-fill-metainfo" />
         <module name="pinyin-spring-boot-starter" />
+        <module name="mybatis-plus-sample-pagination" />
         <module name="mall-ribbon-spring-boot-starter" />
         <module name="scanner-api" />
         <module name="mall-db-spring-boot-starter" />
+        <module name="mall-portal" />
         <module name="scanner-sdk-scanner" />
         <module name="ds-container-business" />
+        <module name="mybatis-plus-sample-active-record" />
         <module name="file-business" />
         <module name="code-generator" />
+        <module name="ace-tool" />
+        <module name="mybatis-plus-sample-id-generator" />
         <module name="validator-spring-boot-starter" />
         <module name="system-business-resource" />
         <module name="jwt-api" />
@@ -138,19 +173,41 @@
         <module name="message-business" />
         <module name="txlcn-demo-spring-service-a" />
         <module name="system-business-organization" />
+        <module name="mybatis-plus-sample-logic-delete" />
+        <module name="mybatis-plus-sample-quickstart" />
         <module name="jwt-sdk" />
+        <module name="mall-demo (1) (com.macro.mall)" />
+        <module name="mall-security" />
         <module name="config-business" />
+        <module name="mall-admin" />
         <module name="pinyin-sdk-pinyin4j" />
         <module name="cache-sdk-memory" />
+        <module name="ace-nlp" />
         <module name="user" />
         <module name="email-spring-boot-starter" />
+        <module name="mybatis-plus-sample-dynamic-tablename" />
         <module name="file-sdk-tencent" />
+        <module name="mybatis-plus-sample-pagehelper" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="account" target="1.8" />
       <module name="account-service" target="1.8" />
       <module name="account-xa" target="1.8" />
+      <module name="ace-admin" target="1.8" />
+      <module name="ace-api" target="1.8" />
+      <module name="ace-auth-sdk" target="1.8" />
+      <module name="ace-common" target="1.8" />
+      <module name="ace-dev-base" target="1.8" />
+      <module name="ace-gate" target="1.8" />
+      <module name="ace-generator" target="1.8" />
+      <module name="ace-infrastructure" target="1.8" />
+      <module name="ace-modules" target="1.8" />
+      <module name="ace-monitor" target="1.8" />
+      <module name="ace-nlp" target="1.8" />
+      <module name="ace-sample" target="1.8" />
+      <module name="ace-security" target="1.8" />
+      <module name="ace-tool" target="1.8" />
       <module name="base-framework-mysql-support" target="1.5" />
       <module name="business-service" target="1.8" />
       <module name="business-xa" target="1.8" />
@@ -167,13 +224,6 @@
       <module name="hsf-tcc-sample" target="1.8" />
       <module name="local-saga-sample" target="1.8" />
       <module name="local-tcc-sample" target="1.8" />
-      <module name="mall" target="1.8" />
-      <module name="mall-admin" target="1.8" />
-      <module name="mall-common" target="1.8" />
-      <module name="mall-mbg" target="1.8" />
-      <module name="mall-portal" target="1.8" />
-      <module name="mall-search" target="1.8" />
-      <module name="mall-security" target="1.8" />
       <module name="multiple-datasource" target="1.8" />
       <module name="multiple-datasource-mybatis-plus" target="1.8" />
       <module name="nacos-cmdb-plugin-example" target="1.7" />
@@ -316,6 +366,7 @@
       <module name="mall-admin" options="-parameters" />
       <module name="mall-common" options="-parameters" />
       <module name="mall-demo" options="-parameters" />
+      <module name="mall-demo (1) (com.macro.mall)" options="-parameters" />
       <module name="mall-mbg" options="-parameters" />
       <module name="mall-portal" options="-parameters" />
       <module name="mall-search" options="-parameters" />
@@ -330,6 +381,31 @@
       <module name="monitor-api" options="-parameters" />
       <module name="monitor-sdk-system-info" options="-parameters" />
       <module name="monitor-spring-boot-starter" options="-parameters" />
+      <module name="mybatis-plus-sample-active-record" options="-parameters" />
+      <module name="mybatis-plus-sample-assembly" options="-parameters" />
+      <module name="mybatis-plus-sample-auto-fill-metainfo" options="-parameters" />
+      <module name="mybatis-plus-sample-crud" options="-parameters" />
+      <module name="mybatis-plus-sample-deluxe" options="-parameters" />
+      <module name="mybatis-plus-sample-dynamic-tablename" options="-parameters" />
+      <module name="mybatis-plus-sample-enum" options="-parameters" />
+      <module name="mybatis-plus-sample-execution-analysis" options="-parameters" />
+      <module name="mybatis-plus-sample-generator" options="-parameters" />
+      <module name="mybatis-plus-sample-id-generator" options="-parameters" />
+      <module name="mybatis-plus-sample-logic-delete" options="-parameters" />
+      <module name="mybatis-plus-sample-no-spring" options="-parameters" />
+      <module name="mybatis-plus-sample-optimistic-locker" options="-parameters" />
+      <module name="mybatis-plus-sample-pagehelper" options="-parameters" />
+      <module name="mybatis-plus-sample-pagination" options="-parameters" />
+      <module name="mybatis-plus-sample-performance-analysis" options="-parameters" />
+      <module name="mybatis-plus-sample-quickstart" options="-parameters" />
+      <module name="mybatis-plus-sample-quickstart-springmvc" options="-parameters" />
+      <module name="mybatis-plus-sample-reduce-springmvc" options="-parameters" />
+      <module name="mybatis-plus-sample-resultmap" options="-parameters" />
+      <module name="mybatis-plus-sample-sequence" options="-parameters" />
+      <module name="mybatis-plus-sample-sql-injector" options="-parameters" />
+      <module name="mybatis-plus-sample-tenant" options="-parameters" />
+      <module name="mybatis-plus-sample-typehandler" options="-parameters" />
+      <module name="mybatis-plus-sample-wrapper" options="-parameters" />
       <module name="office-api" options="-parameters" />
       <module name="office-sdk-excel" options="-parameters" />
       <module name="office-spring-boot-starter" options="-parameters" />

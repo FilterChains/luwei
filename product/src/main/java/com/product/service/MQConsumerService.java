@@ -43,7 +43,7 @@ public class MQConsumerService {
             final String redisKey = (String) message.get("redisKey");
             final String requestId = String.valueOf(message.get("requestId"));
 
-            // 记录日志判断是否重复消费
+            // 记录是否重复消费(这一步也需要用到redis)
             if (list.contains(requestId)) {
                 redisTemplate.opsForValue().set(redisKey,
                         "网络服务繁忙请稍后再试",
@@ -54,7 +54,7 @@ public class MQConsumerService {
                 // 查询数据库 存在->true,数据库不存在->false;
                 System.out.println("使用请求ID:" + requestId + "查询数据库");
                 Thread.sleep(3000L); // 模拟数据库查询
-                if (false) { // 假设数据中有此数据
+                if (true) { // 假设数据中有此数据
                     // 同步数据库查询的消息
                     redisTemplate.opsForValue().set(redisKey,
                             "Hello Redis Cache Temporarily Expired",

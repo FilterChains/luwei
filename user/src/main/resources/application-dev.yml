@@ -8,17 +8,24 @@ spring:
   #    nacos:
   #      discovery:
   #        server-addr: localhost:8848
-
+  # redis整合
   redis:
     host: 192.168.3.111
     port: 6379
     password: n1yEl39pMQZkH
     database: 13
+  # ES整合
+  data:
+    elasticsearch:
+      # 消费节点名称与es 服务上一致
+      cluster-name: yuncai-cluster
+      #配置es节点信息，逗号分隔
+      cluster-nodes: 192.168.3.111:9300
 
   # 配置连接数据库
   datasource:
     name: tvpanda
-    url: jdbc:mysql://192.168.3.111:3306/seat-account?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://192.168.3.111:3306/yuncai?useUnicode=true&characterEncoding=utf8
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
@@ -59,4 +66,8 @@ rocketmq:
     retry-times-when-send-failed: 3 # 同步发送消息失败重试次数，默认2
     retry-times-when-send-async-failed: 3 # 异步发送消息失败重试次数，默认2
 
+# 开启console-sql
+logging:
+  level:
+    com.user.mapper: debug
 
