@@ -5,12 +5,12 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.springframework.util.ObjectUtils;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * <p>@description : excel validate </p>
@@ -54,7 +54,7 @@ class ExcelValidate {
         //读取excel数据 ->获得指定的excel表 ,目前只开发读取第一个sheet表格
         Sheet sheet = she.get(0);
         Row row = sheet.getRow(0);
-        if (ObjectUtils.isEmpty(row)) {
+        if (Objects.isNull(row)) {
             throw new ExcelException(ExcelErrorType.TITLE_IS_NULL);
         }
         // 获取表格的总行数。注：需要算表头
@@ -83,19 +83,19 @@ class ExcelValidate {
         for (int columnIndex = 0; columnIndex < ExcelCode.totalCells; columnIndex++) {
             //获取对应列的名称
             final Cell cell = titleRow.getCell(columnIndex);
-            final String data = ExcelCode.stringReplace(ObjectUtils.isEmpty(cell) ? null : cell.toString());
+            final String data = ExcelCode.stringReplace(Objects.isNull(cell) ? null : cell.toString());
             //指定排除列表表头字段
             if (ExcelCode.EXCEL_SERIAL_NUMBER.equals(data)) {
                 ExcelCode.excludeTitle.add(data);
             }
             //排除表名
             final Field field = validateExcelTitle.get(data);
-            if (ObjectUtils.isEmpty(field)) {
+            if (Objects.isNull(field)) {
                 continue;
             }
             //获取对应字段
             final ExcelTitle title = excelTitle.get(field.getName());
-            if (!ObjectUtils.isEmpty(title)) {
+            if (!Objects.isNull(title)) {
                 final int titleIndex = title.getTitleIndex();
                 String fieldName = field.getName();
                 if ("".equals(fieldName)) {
@@ -140,7 +140,7 @@ class ExcelValidate {
         for (Field field : fields) {
             // 获得字段注解
             ExcelTitleName excelTitleName = field.getAnnotation(ExcelTitleName.class);
-            if (!ObjectUtils.isEmpty(excelTitleName)) {
+            if (!Objects.isNull(excelTitleName)) {
                 excelTitle = new ExcelTitle();
                 excelTitle.setTitleName(excelTitleName.value());
                 excelTitle.setTitleIndex(excelTitleName.index());

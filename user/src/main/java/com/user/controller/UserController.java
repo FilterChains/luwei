@@ -1,31 +1,29 @@
 package com.user.controller;
 
-import cn.hutool.core.date.DateUtil;
 import com.alibaba.druid.support.json.JSONUtils;
 import com.google.common.collect.Maps;
-import com.user.config.PushEvent;
+import com.user.config.SpringUtil;
 import com.user.entity.Account;
 import com.user.feign.OrderServiceFeign;
 import com.user.feign.ProductServiceFeign;
 import com.user.service.EsSearchService;
 import com.user.service.MQProducerService;
 import com.user.service.UserService;
-import com.user.util.springutil.SpringUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.redisson.Redisson;
 import org.redisson.api.RLock;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.util.StringUtils;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
-import java.util.Calendar;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -33,6 +31,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
+@Validated
 @RestController
 public class UserController {
 
@@ -44,9 +43,6 @@ public class UserController {
 
     @Autowired
     private OrderServiceFeign orderServiceFeign;
-
-    @Autowired
-    private ApplicationContext applicationContext;
 
     @Autowired
     private UserService userService;
@@ -66,11 +62,6 @@ public class UserController {
     private static final String KET_REDIS = "KET_REDIS";
     private static final String RED_BALL = "RED_BALL";
     private static final String BLUE_BALL = "BLUE_BALL";
-
-    public static void main(String[] args) {
-        String format = DateUtil.format(Calendar.getInstance().getTime(), "YYYY-MM-DD HH:mm:ss");
-        System.out.println("currentTimes:" + format);
-    }
 
     /**
      * <p>@description : redisCache模拟处理redis缓存穿透或击穿问题 </p>
@@ -167,7 +158,7 @@ public class UserController {
     @GetMapping(value = "po")
     // @GlobalTransactional(name = "用户端调用商品服务和订单服务",rollbackFor = Exception.class)
     public String createMsg() {
-        PushEvent.pushApplicationEvent(new ApplicationEvent(new Object()) {
+        SpringUtil.pushApplicationEvent(new ApplicationEvent(new Object()) {
             @Override
             public Object getSource() {
                 return super.getSource();
@@ -176,8 +167,12 @@ public class UserController {
         RLock lock = redisson.getLock(KET_REDIS);
         try {
             lock.lock(30L, TimeUnit.SECONDS);
-            String port = applicationContext.getEnvironment().getProperty("server.port");
+            String port = SpringUtil.getApplicationContext().getEnvironment().getProperty("server.port");
             log.error("当前USER:" + port);
+            String[] activeProfiles = SpringUtil.getActiveProfiles();
+            System.out.println("当前环境变量:" + Arrays.asList(activeProfiles));
+
+            System.out.println("当前环境变量:" + SpringUtil.getProperty("spring.profiles.active"));
             String product = productServiceFeign.createProduct();
             String order = orderServiceFeign.createOrder();
             return "Product：".concat(product).concat("--------Order:").concat(order);

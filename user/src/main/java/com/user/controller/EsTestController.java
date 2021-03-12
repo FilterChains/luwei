@@ -1,17 +1,17 @@
 package com.user.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.user.entity.Product;
-import com.user.entity.TdProduct;
+import com.user.request.UserRequest;
 import com.user.service.EsSearchService;
 import com.user.service.ProductService;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
 public class EsTestController {
@@ -22,19 +22,20 @@ public class EsTestController {
     @Autowired
     private ProductService productService;
 
-    @GetMapping(value = "saveProduct/{id}")
-    public String saveProduct(@PathVariable String id) {
-        List<TdProduct> limitProduct = productService.findLimitProduct();
-        List<Product> products = new ArrayList<>();
-        Product product;
-        for (TdProduct tdProduct : limitProduct) {
-            product = new Product();
-            BeanUtils.copyProperties(tdProduct, product);
-            product.setId(String.valueOf(tdProduct.getId()));
-            products.add(product);
-        }
-        esSearchService.saveAll(products);
-        return "成功";
+    @PostMapping(value = "saveProduct")
+    public String saveProduct(@Validated @RequestBody UserRequest userRequest) throws Exception {
+        throw new Exception("请求出错".concat(JSON.toJSONString(userRequest)));
+//        List<TdProduct> limitProduct = productService.findLimitProduct();
+//        List<Product> products = new ArrayList<>();
+//        Product product;
+//        for (TdProduct tdProduct : limitProduct) {
+//            product = new Product();
+//            BeanUtils.copyProperties(tdProduct, product);
+//            product.setId(String.valueOf(tdProduct.getId()));
+//            products.add(product);
+//        }
+//        esSearchService.saveAll(products);
+//        return "成功";
     }
 
     @GetMapping(value = "deleteProduct/{id}")

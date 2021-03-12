@@ -26,32 +26,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db00540b-6b0c-4978-8874-951c611e6cce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/config/EnableAutoBaseConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/controller/EsTestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/entity/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/entity/TdProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/mapper/ProductMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/service/BaseElasticsearchRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/service/EsSearchService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/service/ProductServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/ProductMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/common/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/config/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/config/SpringUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/config/ValidateCreate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/config/ValidateUpdate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/controller/LockController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/request/UserRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/CompletableFutureTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/distributedlock/AbstractDistributedLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/distributedlock/DistributedLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/distributedlock/RedisDistributedLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/redislock/AbstractDistributedLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/redislock/DistributedLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/redislock/ISuperService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/redislock/IdempotencyException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/redislock/LockException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/redislock/RedisDistributedLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/redislock/RedisRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/redislock/SuperServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/resources/elasticsearch.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/product/service/MQConsumerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/product/service/MQConsumerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/UserApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/config/BaseApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/config/BaseApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/config/EnableAutoBaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/config/EnableAutoBaseConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/config/PushEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/controller/EsTestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/controller/EsTestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/entity/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/entity/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelReadFrom.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelReadFrom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelValidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelValidate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/listener/KeyExpiredListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/listener/KeyExpiredListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/listener/Subscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/listener/Subscriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/listener/TestJedis.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/listener/TestJedis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/redisconfig/RedisConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/redisconfig/RedisConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/redisconfig/RedisKeyExpiredListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/redisconfig/RedisKeyExpiredListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/springutil/EnableSpringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/springutil/EnableSpringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/springutil/SpringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/springutil/SpringUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +132,7 @@
   <component name="PropertiesComponent">
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="MyBatisLogPluginindexNum" value="9" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelOrder2" value="2" />
@@ -129,7 +146,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/user/src/main/java/com/user" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/redislock" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -153,11 +170,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\java\com\user\util\lock\redislock" />
+      <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\java\com\user\util\lock" />
+      <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\java\com\user\config" />
       <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\java\com\user" />
       <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\java\com\user\mybaitesexpand" />
-      <recent name="C:\Users\Administrator\Desktop\springcloud\product\src\main\java\com\product" />
-      <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\java\com\user\util\excelimoprtutil" />
-      <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\resources\sql.dev-3月" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\springcloud\user\src\main\java\com\user\util" />
@@ -170,11 +187,11 @@
       <recent name="com.user.controller" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.user.util.lock.distributedlock" />
+      <recent name="com.user.util.lock.redislock" />
+      <recent name="com.user.config" />
       <recent name="com.product.entity" />
       <recent name="com.user.util.cache" />
-      <recent name="com.user.config" />
-      <recent name="com.order.config" />
-      <recent name="com.order" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -205,12 +222,12 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.UserApplication">
-    <configuration name="DateUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mallplus.util.DateUtils" />
-      <module name="mall-common-spring-boot-starter" />
+    <configuration name="CompletableFutureTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.user.util.CompletableFutureTest" />
+      <module name="user" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mallplus.util.*" />
+          <option name="PATTERN" value="com.user.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -218,12 +235,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.product.ProductApplication" />
-      <module name="product" />
+    <configuration name="DateUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mallplus.util.DateUtils" />
+      <module name="mall-common-spring-boot-starter" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.product.*" />
+          <option name="PATTERN" value="com.mallplus.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -257,26 +274,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.user.UserApplication" />
+    <configuration name="UserController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.user.controller.UserController" />
       <module name="user" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.user.*" />
+          <option name="PATTERN" value="com.user.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -323,6 +329,13 @@
     <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="spring-boot-seckill" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.itstyle.seckill.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-mail" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itstyle.mail.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -633,11 +646,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ProductApplication" />
-      <item itemvalue="Application.UserApplication" />
       <item itemvalue="Application.DateUtils" />
       <item itemvalue="Application.ShellSort" />
       <item itemvalue="Application.SecurityRSA" />
+      <item itemvalue="Application.UserController" />
+      <item itemvalue="Application.CompletableFutureTest" />
       <item itemvalue="Maven.springcolud" />
       <item itemvalue="Spring Boot.UserApplication" />
       <item itemvalue="Spring Boot.OrderApplication" />
@@ -683,14 +696,15 @@
       <item itemvalue="Spring Boot.ResultmapApplication" />
       <item itemvalue="Spring Boot.TypehandlerApplication" />
       <item itemvalue="Spring Boot.ArApplication" />
+      <item itemvalue="Spring Boot.Application (2)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CompletableFutureTest" />
+        <item itemvalue="Application.UserController" />
         <item itemvalue="Application.SecurityRSA" />
         <item itemvalue="Application.ShellSort" />
         <item itemvalue="Application.DateUtils" />
-        <item itemvalue="Application.UserApplication" />
-        <item itemvalue="Application.ProductApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -739,7 +753,10 @@
       <workItem from="1614563739134" duration="22000" />
       <workItem from="1614563881380" duration="17943000" />
       <workItem from="1614590293829" duration="58953000" />
-      <workItem from="1615173182220" duration="9434000" />
+      <workItem from="1615173182220" duration="47675000" />
+      <workItem from="1615424092631" duration="6528000" />
+      <workItem from="1615431862040" duration="22303000" />
+      <workItem from="1615510155616" duration="1949000" />
     </task>
     <task id="LOCAL-00001" summary="springcloud">
       <created>1611712496413</created>
@@ -853,7 +870,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614936923578</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Elasticsearch整合">
+      <created>1615191493045</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1615191493045</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -919,7 +943,8 @@
     <MESSAGE value="excel Util v 0.2.0" />
     <MESSAGE value="excel Util v 1.2.1" />
     <MESSAGE value="redis 缓存 击穿、穿透 demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="redis 缓存 击穿、穿透 demo" />
+    <MESSAGE value="Elasticsearch整合" />
+    <option name="LAST_COMMIT_MESSAGE" value="Elasticsearch整合" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

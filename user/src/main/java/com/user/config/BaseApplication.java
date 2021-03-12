@@ -27,10 +27,4 @@ public class BaseApplication {
                 .setPassword("n1yEl39pMQZkH").setDatabase(13);
         return (Redisson) Redisson.create(config);
     }
-
-    @Bean
-    @Primary // 保证Bean的优先注入和唯一性
-    public PushEvent pushEvent() {
-        return new PushEvent();
-    }
 }

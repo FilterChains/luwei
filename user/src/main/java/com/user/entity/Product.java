@@ -34,6 +34,7 @@ public class Product implements Serializable {
     /**
      * 商品名称
      */
+//    @Field(analyzer = "ik_smart", type = FieldType.Text)
     private String name;
     /**
      * 药品品类id
@@ -58,10 +59,12 @@ public class Product implements Serializable {
     /**
      * 批准文号
      */
+//    @Field(analyzer = "ik_smart", type = FieldType.Text)
     private String licenseNumber;
     /**
      * 规格
      */
+//    @Field(analyzer = "ik_smart", type = FieldType.Text)
     private String specifications;
     /**
      * 件装量
@@ -70,6 +73,7 @@ public class Product implements Serializable {
     /**
      * 生产企业生产厂家
      */
+//    @Field(analyzer = "ik_smart", type = FieldType.Text)
     private String manufactur;
     /**
      * 生产厂家id

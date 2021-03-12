@@ -4,7 +4,6 @@ import org.apache.poi.hssf.usermodel.HSSFDateUtil;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
-import org.springframework.util.ObjectUtils;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -52,10 +51,10 @@ class ExcelReadFrom {
                 // 获得本行中各单元格中的数据,从第一列开始读取
                 for (int columnIndex = 0; columnIndex < ExcelCode.totalCells; columnIndex++) {
                     Cell cl = titleRow.getCell(columnIndex);
-                    final String tableName = ExcelCode.stringReplace(ObjectUtils.isEmpty(cl) ? null : cl.toString());
+                    final String tableName = ExcelCode.stringReplace(Objects.isNull(cl) ? null : cl.toString());
                     Field field = validateExcelTitle.get(tableName);
                     //验证保存信息,验证表中的字段是否已在实体类中创建
-                    if (ObjectUtils.isEmpty(field)) {
+                    if (Objects.isNull(field)) {
                         continue;
                     }
                     //获取本行的所有数据类型

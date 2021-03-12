@@ -7,187 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ace-api" />
-        <module name="sharding-jdbc-demo" />
-        <module name="wrapper-api" />
-        <module name="mall-search" />
-        <module name="file-sdk-local" />
-        <module name="system-spring-boot-starter" />
-        <module name="mall-common" />
-        <module name="sc-admin" />
-        <module name="db-sdk-mp" />
-        <module name="job-executor-samples" />
-        <module name="message-sdk-websocket" />
-        <module name="mybatis-plus-sample-resultmap" />
-        <module name="security-api" />
-        <module name="mybatis-plus-sample-no-spring" />
-        <module name="txlcn-demo-common" />
-        <module name="system-business-login-log" />
-        <module name="system-business-user" />
-        <module name="order" />
-        <module name="security-spring-boot-starter" />
-        <module name="mybatis-plus-sample-sequence" />
-        <module name="goods-center" />
-        <module name="email-sdk-java" />
-        <module name="mybatis-plus-sample-performance-analysis" />
-        <module name="member-center" />
-        <module name="i18n-sdk" />
-        <module name="i18n-spring-boot-starter" />
-        <module name="jwt-spring-boot-starter" />
-        <module name="validator-sdk-captcha" />
-        <module name="timer-spring-boot-starter" />
-        <module name="message-sdk-db" />
-        <module name="log-sdk-db" />
-        <module name="timer-business" />
-        <module name="monitor-api" />
-        <module name="email-api" />
-        <module name="office-spring-boot-starter" />
-        <module name="auth-api" />
-        <module name="mybatis-plus-sample-optimistic-locker" />
-        <module name="system-business-role" />
-        <module name="mybatis-plus-sample-reduce-springmvc" />
-        <module name="mybatis-plus-sample-sql-injector" />
-        <module name="marking-center" />
-        <module name="sms-sdk-aliyun" />
-        <module name="config-spring-boot-starter" />
-        <module name="memory-cache-spring-boot-starter" />
-        <module name="demo-business" />
-        <module name="demo-spring-boot-starter" />
-        <module name="system-api" />
-        <module name="ace-monitor" />
-        <module name="mybatis-plus-sample-enum" />
-        <module name="sms-business-validation" />
-        <module name="mybatis-plus-sample-assembly" />
-        <module name="sms-spring-boot-starter" />
-        <module name="mybatis-plus-sample-wrapper" />
-        <module name="redis-spring-boot-starter" />
-        <module name="mybatis-plus-sample-quickstart-springmvc" />
-        <module name="order-center" />
-        <module name="groovy-api" />
-        <module name="dict-api" />
-        <module name="system-business-menu" />
-        <module name="job-admin" />
-        <module name="db-api" />
-        <module name="timer-sdk-hutool" />
-        <module name="ace-sample" />
-        <module name="txlcn-tm" />
-        <module name="mall-mbg" />
-        <module name="job-core" />
-        <module name="mybatis-plus-sample-generator" />
-        <module name="log-api" />
-        <module name="message-spring-boot-starter" />
-        <module name="office-api" />
-        <module name="file-api" />
-        <module name="groovy-spring-boot-starter" />
-        <module name="mall-redis-spring-boot-starter" />
-        <module name="product" />
-        <module name="user-center" />
-        <module name="system-business-notice" />
-        <module name="zuul-gateway" />
-        <module name="wrapper-spring-boot-starter" />
-        <module name="mall-log-spring-boot-starter" />
-        <module name="validator-api" />
-        <module name="mall-common-spring-boot-starter" />
-        <module name="mall-uaa" />
-        <module name="groovy-sdk" />
-        <module name="config-api" />
-        <module name="sms-api" />
-        <module name="spring-boot-seckill" />
-        <module name="mybatis-plus-sample-tenant" />
-        <module name="mybatis-plus-sample-execution-analysis" />
-        <module name="ds-container-spring-boot-starter" />
-        <module name="db-spring-boot-starter" />
-        <module name="ds-container-sdk" />
-        <module name="server-sdk-java" />
-        <module name="mybatis-plus-sample-crud" />
-        <module name="cms-center" />
-        <module name="log-business-requestapi" />
-        <module name="dict-business" />
-        <module name="timer-api" />
-        <module name="ace-gate" />
-        <module name="file-sdk-minio" />
-        <module name="office-sdk-excel" />
-        <module name="dict-spring-boot-starter" />
-        <module name="i18n-business" />
-        <module name="config-sdk-db" />
-        <module name="validator-sdk-count" />
-        <module name="monitor-spring-boot-starter" />
-        <module name="ace-auth-sdk" />
-        <module name="log-center" />
-        <module name="kernel-a-rule" />
-        <module name="cache-sdk-redis" />
-        <module name="auth-spring-boot-starter" />
-        <module name="spring-boot-pay" />
-        <module name="mall-sentinel-spring-boot-starter" />
-        <module name="log-sdk-file" />
-        <module name="ace-generator" />
-        <module name="cache-api" />
-        <module name="ds-container-api" />
-        <module name="validator-sdk-black-white" />
-        <module name="ace-admin" />
-        <module name="sms-sdk-tencent" />
-        <module name="log-spring-boot-starter" />
-        <module name="mybatis-plus-sample-typehandler" />
-        <module name="ace-common" />
-        <module name="file-spring-boot-starter" />
-        <module name="system-business-app" />
-        <module name="mybatis-plus-sample-deluxe" />
-        <module name="file-sdk-aliyun" />
-        <module name="message-api" />
-        <module name="mall-swagger2-spring-boot-starter" />
-        <module name="mybatis-plus-sample-auto-fill-metainfo" />
-        <module name="pinyin-spring-boot-starter" />
-        <module name="mybatis-plus-sample-pagination" />
-        <module name="mall-ribbon-spring-boot-starter" />
-        <module name="scanner-api" />
-        <module name="mall-db-spring-boot-starter" />
-        <module name="mall-portal" />
-        <module name="scanner-sdk-scanner" />
-        <module name="ds-container-business" />
-        <module name="mybatis-plus-sample-active-record" />
-        <module name="file-business" />
-        <module name="code-generator" />
-        <module name="ace-tool" />
-        <module name="mybatis-plus-sample-id-generator" />
-        <module name="validator-spring-boot-starter" />
-        <module name="system-business-resource" />
-        <module name="jwt-api" />
-        <module name="i18n-api" />
-        <module name="demo-api" />
-        <module name="log-business-manage" />
-        <module name="mall-config" />
-        <module name="scanner-spring-boot-starter" />
-        <module name="mall-auth-client-spring-boot-starter" />
-        <module name="db-sdk-flyway" />
-        <module name="message-business-websocket" />
-        <module name="monitor-sdk-system-info" />
-        <module name="file-center" />
-        <module name="auth-sdk" />
-        <module name="security-sdk-xss" />
-        <module name="db-sdk-init" />
-        <module name="pinyin-api" />
-        <module name="txlcn-demo-spring-service-b" />
-        <module name="txlcn-demo-spring-service-c" />
-        <module name="email-sdk-aliyun" />
-        <module name="wrapper-sdk" />
-        <module name="message-business" />
-        <module name="txlcn-demo-spring-service-a" />
-        <module name="system-business-organization" />
-        <module name="mybatis-plus-sample-logic-delete" />
-        <module name="mybatis-plus-sample-quickstart" />
-        <module name="jwt-sdk" />
-        <module name="mall-demo (1) (com.macro.mall)" />
-        <module name="mall-security" />
-        <module name="config-business" />
-        <module name="mall-admin" />
-        <module name="pinyin-sdk-pinyin4j" />
-        <module name="cache-sdk-memory" />
-        <module name="ace-nlp" />
         <module name="user" />
-        <module name="email-spring-boot-starter" />
-        <module name="mybatis-plus-sample-dynamic-tablename" />
-        <module name="file-sdk-tencent" />
-        <module name="mybatis-plus-sample-pagehelper" />
+        <module name="product" />
+        <module name="order" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -208,11 +30,38 @@
       <module name="ace-sample" target="1.8" />
       <module name="ace-security" target="1.8" />
       <module name="ace-tool" target="1.8" />
+      <module name="auth-api" target="1.8" />
+      <module name="auth-sdk" target="1.8" />
+      <module name="auth-spring-boot-starter" target="1.8" />
       <module name="base-framework-mysql-support" target="1.5" />
       <module name="business-service" target="1.8" />
       <module name="business-xa" target="1.8" />
       <module name="bussiness" target="1.8" />
+      <module name="cache-api" target="1.8" />
+      <module name="cache-sdk-memory" target="1.8" />
+      <module name="cache-sdk-redis" target="1.8" />
+      <module name="cms-center" target="1.8" />
+      <module name="code-generator" target="1.8" />
+      <module name="config-api" target="1.8" />
+      <module name="config-business" target="1.8" />
+      <module name="config-sdk-db" target="1.8" />
+      <module name="config-spring-boot-starter" target="1.8" />
       <module name="consumer" target="1.8" />
+      <module name="db-api" target="1.8" />
+      <module name="db-sdk-flyway" target="1.8" />
+      <module name="db-sdk-init" target="1.8" />
+      <module name="db-sdk-mp" target="1.8" />
+      <module name="db-spring-boot-starter" target="1.8" />
+      <module name="demo-api" target="1.8" />
+      <module name="demo-business" target="1.8" />
+      <module name="demo-spring-boot-starter" target="1.8" />
+      <module name="dict-api" target="1.8" />
+      <module name="dict-business" target="1.8" />
+      <module name="dict-spring-boot-starter" target="1.8" />
+      <module name="ds-container-api" target="1.8" />
+      <module name="ds-container-business" target="1.8" />
+      <module name="ds-container-sdk" target="1.8" />
+      <module name="ds-container-spring-boot-starter" target="1.8" />
       <module name="dubbo-saga-sample" target="1.8" />
       <module name="dubbo-tcc-sample" target="1.8" />
       <module name="dubbo_api" target="1.5" />
@@ -220,12 +69,135 @@
       <module name="dubbo_consumer" target="1.8" />
       <module name="dubbo_provider" target="1.8" />
       <module name="dubbo_timer" target="1.8" />
+      <module name="email-api" target="1.8" />
+      <module name="email-sdk-aliyun" target="1.8" />
+      <module name="email-sdk-java" target="1.8" />
+      <module name="email-spring-boot-starter" target="1.8" />
       <module name="eureka" target="1.8" />
+      <module name="file-api" target="1.8" />
+      <module name="file-business" target="1.8" />
+      <module name="file-center" target="1.8" />
+      <module name="file-sdk-aliyun" target="1.8" />
+      <module name="file-sdk-local" target="1.8" />
+      <module name="file-sdk-minio" target="1.8" />
+      <module name="file-sdk-tencent" target="1.8" />
+      <module name="file-spring-boot-starter" target="1.8" />
+      <module name="goods-center" target="1.8" />
+      <module name="groovy-api" target="1.8" />
+      <module name="groovy-sdk" target="1.8" />
+      <module name="groovy-spring-boot-starter" target="1.8" />
       <module name="hsf-tcc-sample" target="1.8" />
+      <module name="i18n-api" target="1.8" />
+      <module name="i18n-business" target="1.8" />
+      <module name="i18n-sdk" target="1.8" />
+      <module name="i18n-spring-boot-starter" target="1.8" />
+      <module name="job-admin" target="1.8" />
+      <module name="job-core" target="1.8" />
+      <module name="job-executor-samples" target="1.8" />
+      <module name="jwt-api" target="1.8" />
+      <module name="jwt-sdk" target="1.8" />
+      <module name="jwt-spring-boot-starter" target="1.8" />
+      <module name="kernel-a-rule" target="1.8" />
+      <module name="kernel-d-auth" target="1.8" />
+      <module name="kernel-d-cache" target="1.8" />
+      <module name="kernel-d-config" target="1.8" />
+      <module name="kernel-d-db" target="1.8" />
+      <module name="kernel-d-ds-container" target="1.8" />
+      <module name="kernel-d-email" target="1.8" />
+      <module name="kernel-d-file" target="1.8" />
+      <module name="kernel-d-groovy" target="1.8" />
+      <module name="kernel-d-i18n" target="1.8" />
+      <module name="kernel-d-jwt" target="1.8" />
+      <module name="kernel-d-log" target="1.8" />
+      <module name="kernel-d-office" target="1.8" />
+      <module name="kernel-d-pinyin" target="1.8" />
+      <module name="kernel-d-scanner" target="1.8" />
+      <module name="kernel-d-security" target="1.8" />
+      <module name="kernel-d-sms" target="1.8" />
+      <module name="kernel-d-timer" target="1.8" />
+      <module name="kernel-d-validator" target="1.8" />
+      <module name="kernel-d-wrapper" target="1.8" />
+      <module name="kernel-o-monitor" target="1.8" />
+      <module name="kernel-s-demo" target="1.8" />
+      <module name="kernel-s-dict" target="1.8" />
+      <module name="kernel-s-message" target="1.8" />
+      <module name="kernel-s-system" target="1.8" />
       <module name="local-saga-sample" target="1.8" />
       <module name="local-tcc-sample" target="1.8" />
+      <module name="log-api" target="1.8" />
+      <module name="log-business-manage" target="1.8" />
+      <module name="log-business-requestapi" target="1.8" />
+      <module name="log-center" target="1.8" />
+      <module name="log-sdk-db" target="1.8" />
+      <module name="log-sdk-file" target="1.8" />
+      <module name="log-spring-boot-starter" target="1.8" />
+      <module name="mall" target="1.8" />
+      <module name="mall-admin" target="1.8" />
+      <module name="mall-auth-client-spring-boot-starter" target="1.8" />
+      <module name="mall-business" target="1.8" />
+      <module name="mall-common" target="1.8" />
+      <module name="mall-common-spring-boot-starter" target="1.8" />
+      <module name="mall-commons" target="1.8" />
+      <module name="mall-config" target="1.8" />
+      <module name="mall-db-spring-boot-starter" target="1.8" />
+      <module name="mall-demo" target="1.8" />
+      <module name="mall-demo (1) (com.macro.mall)" target="1.8" />
+      <module name="mall-demo (1) (com.mall)" target="1.8" />
+      <module name="mall-gateway" target="1.8" />
+      <module name="mall-job" target="1.8" />
+      <module name="mall-log-spring-boot-starter" target="1.8" />
+      <module name="mall-mbg" target="1.8" />
+      <module name="mall-monitor" target="1.8" />
+      <module name="mall-portal" target="1.8" />
+      <module name="mall-redis-spring-boot-starter" target="1.8" />
+      <module name="mall-ribbon-spring-boot-starter" target="1.8" />
+      <module name="mall-search" target="1.8" />
+      <module name="mall-security" target="1.8" />
+      <module name="mall-sentinel-spring-boot-starter" target="1.8" />
+      <module name="mall-swagger2-spring-boot-starter" target="1.8" />
+      <module name="mall-transaction" target="1.8" />
+      <module name="mall-uaa" target="1.8" />
+      <module name="mallcloud" target="1.8" />
+      <module name="marking-center" target="1.8" />
+      <module name="member-center" target="1.8" />
+      <module name="memory-cache-spring-boot-starter" target="1.8" />
+      <module name="message-api" target="1.8" />
+      <module name="message-business" target="1.8" />
+      <module name="message-business-websocket" target="1.8" />
+      <module name="message-sdk-db" target="1.8" />
+      <module name="message-sdk-websocket" target="1.8" />
+      <module name="message-spring-boot-starter" target="1.8" />
+      <module name="monitor-api" target="1.8" />
+      <module name="monitor-sdk-system-info" target="1.8" />
+      <module name="monitor-spring-boot-starter" target="1.8" />
       <module name="multiple-datasource" target="1.8" />
       <module name="multiple-datasource-mybatis-plus" target="1.8" />
+      <module name="mybatis-plus-sample-active-record" target="1.8" />
+      <module name="mybatis-plus-sample-assembly" target="1.8" />
+      <module name="mybatis-plus-sample-auto-fill-metainfo" target="1.8" />
+      <module name="mybatis-plus-sample-crud" target="1.8" />
+      <module name="mybatis-plus-sample-deluxe" target="1.8" />
+      <module name="mybatis-plus-sample-dynamic-tablename" target="1.8" />
+      <module name="mybatis-plus-sample-enum" target="1.8" />
+      <module name="mybatis-plus-sample-execution-analysis" target="1.8" />
+      <module name="mybatis-plus-sample-generator" target="1.8" />
+      <module name="mybatis-plus-sample-id-generator" target="1.8" />
+      <module name="mybatis-plus-sample-logic-delete" target="1.8" />
+      <module name="mybatis-plus-sample-no-spring" target="1.8" />
+      <module name="mybatis-plus-sample-optimistic-locker" target="1.8" />
+      <module name="mybatis-plus-sample-pagehelper" target="1.8" />
+      <module name="mybatis-plus-sample-pagination" target="1.8" />
+      <module name="mybatis-plus-sample-performance-analysis" target="1.8" />
+      <module name="mybatis-plus-sample-quickstart" target="1.8" />
+      <module name="mybatis-plus-sample-quickstart-springmvc" target="1.8" />
+      <module name="mybatis-plus-sample-reduce-springmvc" target="1.8" />
+      <module name="mybatis-plus-sample-resultmap" target="1.8" />
+      <module name="mybatis-plus-sample-sequence" target="1.8" />
+      <module name="mybatis-plus-sample-sql-injector" target="1.8" />
+      <module name="mybatis-plus-sample-tenant" target="1.8" />
+      <module name="mybatis-plus-sample-typehandler" target="1.8" />
+      <module name="mybatis-plus-sample-wrapper" target="1.8" />
+      <module name="mybatis-plus-samples" target="1.8" />
       <module name="nacos-cmdb-plugin-example" target="1.7" />
       <module name="nacos-examples" target="1.5" />
       <module name="nacos-health-plugin-example" target="1.8" />
@@ -253,10 +225,19 @@
       <module name="nutzboot-dubbo-fescar-storage" target="1.8" />
       <module name="nutzboot-dubbo-fescar-web" target="1.8" />
       <module name="nutzboot-dubbo-seata" target="1.8" />
+      <module name="office-api" target="1.8" />
+      <module name="office-sdk-excel" target="1.8" />
+      <module name="office-spring-boot-starter" target="1.8" />
       <module name="order (1) (io.seata)" target="1.8" />
+      <module name="order-center" target="1.8" />
       <module name="order-service" target="1.8" />
       <module name="order-xa" target="1.8" />
+      <module name="pinyin-api" target="1.8" />
+      <module name="pinyin-sdk-pinyin4j" target="1.8" />
+      <module name="pinyin-spring-boot-starter" target="1.8" />
       <module name="provider" target="1.8" />
+      <module name="redis-spring-boot-starter" target="1.8" />
+      <module name="roses-kernel" target="1.8" />
       <module name="samples-account" target="1.8" />
       <module name="samples-account-service" target="1.8" />
       <module name="samples-business" target="1.8" />
@@ -272,9 +253,13 @@
       <module name="sbm-common-service" target="1.8" />
       <module name="sbm-order-service" target="1.8" />
       <module name="sbm-storage-service" target="1.8" />
+      <module name="sc-admin" target="1.8" />
       <module name="sca-common" target="1.8" />
       <module name="sca-customer" target="1.8" />
       <module name="sca-provider" target="1.8" />
+      <module name="scanner-api" target="1.8" />
+      <module name="scanner-sdk-scanner" target="1.8" />
+      <module name="scanner-spring-boot-starter" target="1.8" />
       <module name="seata-samples" target="1.8" />
       <module name="seata-samples-api" target="1.8" />
       <module name="seata-samples-dubbo" target="1.8" />
@@ -286,10 +271,23 @@
       <module name="seata-samples-tcc" target="1.8" />
       <module name="seata-spring-boot-starter-samples" target="1.8" />
       <module name="seata-xa" target="1.8" />
+      <module name="security-api" target="1.8" />
+      <module name="security-sdk-xss" target="1.8" />
+      <module name="security-spring-boot-starter" target="1.8" />
+      <module name="server-sdk-java" target="1.7" />
+      <module name="sharding-jdbc-demo" target="1.8" />
       <module name="shardingsphere-seata-business" target="1.8" />
       <module name="shardingsphere-seata-order" target="1.8" />
+      <module name="sms-api" target="1.8" />
+      <module name="sms-business-validation" target="1.8" />
+      <module name="sms-sdk-aliyun" target="1.8" />
+      <module name="sms-sdk-tencent" target="1.8" />
+      <module name="sms-spring-boot-starter" target="1.8" />
       <module name="sofarpc-saga-sample" target="1.7" />
       <module name="sofarpc-tcc-sample" target="1.7" />
+      <module name="spring-boot-mail" target="1.8" />
+      <module name="spring-boot-pay" target="1.8" />
+      <module name="spring-boot-seckill" target="1.8" />
       <module name="spring-cloud-alibaba-samples" target="1.8" />
       <module name="springboot-dubbo-seata" target="1.8" />
       <module name="springboot-mybatis" target="1.8" />
@@ -302,7 +300,37 @@
       <module name="storage" target="1.8" />
       <module name="storage-service" target="1.8" />
       <module name="storage-xa" target="1.8" />
+      <module name="system-api" target="1.8" />
+      <module name="system-business-app" target="1.8" />
+      <module name="system-business-login-log" target="1.8" />
+      <module name="system-business-menu" target="1.8" />
+      <module name="system-business-notice" target="1.8" />
+      <module name="system-business-organization" target="1.8" />
+      <module name="system-business-resource" target="1.8" />
+      <module name="system-business-role" target="1.8" />
+      <module name="system-business-user" target="1.8" />
+      <module name="system-spring-boot-starter" target="1.8" />
+      <module name="timer-api" target="1.8" />
+      <module name="timer-business" target="1.8" />
+      <module name="timer-sdk-hutool" target="1.8" />
+      <module name="timer-spring-boot-starter" target="1.8" />
       <module name="transfer-tcc-sample" target="1.8" />
+      <module name="txlcn-demo" target="1.8" />
+      <module name="txlcn-demo-common" target="1.8" />
+      <module name="txlcn-demo-spring-service-a" target="1.8" />
+      <module name="txlcn-demo-spring-service-b" target="1.8" />
+      <module name="txlcn-demo-spring-service-c" target="1.8" />
+      <module name="txlcn-tm" target="1.8" />
+      <module name="user-center" target="1.8" />
+      <module name="validator-api" target="1.8" />
+      <module name="validator-sdk-black-white" target="1.8" />
+      <module name="validator-sdk-captcha" target="1.8" />
+      <module name="validator-sdk-count" target="1.8" />
+      <module name="validator-spring-boot-starter" target="1.8" />
+      <module name="wrapper-api" target="1.8" />
+      <module name="wrapper-sdk" target="1.8" />
+      <module name="wrapper-spring-boot-starter" target="1.8" />
+      <module name="zuul-gateway" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -425,6 +453,7 @@
       <module name="sms-sdk-aliyun" options="-parameters" />
       <module name="sms-sdk-tencent" options="-parameters" />
       <module name="sms-spring-boot-starter" options="-parameters" />
+      <module name="spring-boot-mail" options="-parameters" />
       <module name="spring-boot-pay" options="-parameters" />
       <module name="system-api" options="-parameters" />
       <module name="system-business-app" options="-parameters" />

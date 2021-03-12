@@ -227,10 +227,15 @@
             <artifactId>hutool-all</artifactId>
             <version>5.4.4</version>
         </dependency>
-        <!--elasticsearch 整合-->
+        <!--elasticsearch.md 整合-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+        </dependency>
+        <!--spring Validate-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
         <!-- 还有其它需要的jar包自由引入（注：fastjson不要使用低于1.2.60版本，会有安全漏洞）
         在mq数据传输是的字节就是用的fastjson转化的byte[] 解析消息body的时候需要用到-->
