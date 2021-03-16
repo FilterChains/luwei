@@ -28,7 +28,7 @@ public class LockController {
         boolean acquired = lock.lock(lockKey, 6000, 2, 1000L);
         if (!acquired) {
             System.err.println("网络繁忙请稍后再试");
-            return "acquired lock: " + lockKey + " timeout";
+            return "网络繁忙请稍后再试";
         }
         try {
             System.out.println("开始执行任务");
@@ -44,9 +44,8 @@ public class LockController {
                 return "FAILED";
             }
             redisTemplate.opsForValue().set(REDIS_KEY, String.valueOf(stroe));
-
             System.out.println("任务执行完毕");
-            return "SUCCESS";
+            return "剩余库存:" + stroe;
         } finally {
             boolean b = lock.releaseLock(lockKey);
             System.out.println("是否释放锁" + b);

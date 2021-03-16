@@ -26,48 +26,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db00540b-6b0c-4978-8874-951c611e6cce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/common/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/config/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/config/SpringUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/config/ValidateCreate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/config/ValidateUpdate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/controller/LockController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/request/UserRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/CompletableFutureTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/distributedlock/AbstractDistributedLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/distributedlock/DistributedLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/distributedlock/RedisDistributedLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/redislock/AbstractDistributedLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/redislock/DistributedLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/redislock/ISuperService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/redislock/IdempotencyException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/redislock/LockException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/redislock/RedisDistributedLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/redislock/RedisRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/redislock/SuperServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/resources/elasticsearch.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/product/redisconfig/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/product/redisconfig/RedisConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/UserApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/config/BaseApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/config/BaseApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/config/EnableAutoBaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/config/EnableAutoBaseConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/config/PushEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/controller/EsTestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/controller/EsTestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/controller/LockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/controller/LockController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelReadFrom.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelReadFrom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelValidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/excelimoprtutil/ExcelValidate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/listener/KeyExpiredListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/listener/KeyExpiredListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/listener/Subscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/listener/Subscriber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/listener/TestJedis.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/listener/TestJedis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/redisconfig/RedisConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/redisconfig/RedisConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/redisconfig/RedisKeyExpiredListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/redisconfig/RedisKeyExpiredListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/springutil/EnableSpringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/springutil/EnableSpringUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/springutil/SpringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/springutil/SpringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/CompletableFutureTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/CompletableFutureTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/distributedlock/DistributedLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/lock/distributedlock/DistributedLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/redisconfig/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/redisconfig/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/util/schema/event/EventMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/util/schema/event/EventMonitor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,6 +251,19 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -757,6 +738,8 @@
       <workItem from="1615424092631" duration="6528000" />
       <workItem from="1615431862040" duration="22303000" />
       <workItem from="1615510155616" duration="1949000" />
+      <workItem from="1615516229356" duration="4562000" />
+      <workItem from="1615856116605" duration="8681000" />
     </task>
     <task id="LOCAL-00001" summary="springcloud">
       <created>1611712496413</created>
@@ -877,7 +860,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615191493045</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Distributed-lock redis分布式锁">
+      <created>1615516497063</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1615516497063</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -944,7 +934,8 @@
     <MESSAGE value="excel Util v 1.2.1" />
     <MESSAGE value="redis 缓存 击穿、穿透 demo" />
     <MESSAGE value="Elasticsearch整合" />
-    <option name="LAST_COMMIT_MESSAGE" value="Elasticsearch整合" />
+    <MESSAGE value="Distributed-lock redis分布式锁" />
+    <option name="LAST_COMMIT_MESSAGE" value="Distributed-lock redis分布式锁" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -958,6 +949,11 @@
           <url>jar://E:/apache-maven-3.5.4/jar/com/baomidou/mybatis-plus-extension/3.1.0/mybatis-plus-extension-3.1.0.jar!/com/baomidou/mybatisplus/extension/service/impl/ServiceImpl.class</url>
           <line>247</line>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/user/src/main/java/com/user/controller/UserController.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

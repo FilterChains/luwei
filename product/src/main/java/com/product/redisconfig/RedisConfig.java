@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.cache.annotation.CachingConfigurerSupport;
-import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -28,7 +27,6 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
  * @alert: This document is private to luwei
  * @version: 1.8.00_66
  */
-@EnableCaching //开启注解
 @Configuration //spring配置注解
 public class RedisConfig extends CachingConfigurerSupport {
 

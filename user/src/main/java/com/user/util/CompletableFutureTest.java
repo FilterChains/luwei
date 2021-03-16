@@ -5,6 +5,7 @@ import org.apache.commons.lang.math.RandomUtils;
 import org.springframework.util.StopWatch;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -14,20 +15,22 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Slf4j
 public class CompletableFutureTest {
-    
+
     public static void main(String[] args) throws ExecutionException, InterruptedException, TimeoutException {
         ThreadPoolExecutor executor = new ThreadPoolExecutor(4, 4, 0, TimeUnit.SECONDS,
                 new LinkedBlockingQueue<>(1), Executors.defaultThreadFactory(), new ThreadPoolExecutor.CallerRunsPolicy());
         try {
-            allOfAnfAnyOf(executor);
+//            allOfAnfAnyOf(executor);
 //            exceptionThread(executor);
 //            compareThread(executor);
 //            operationThread(executor);
 //            connectThread(executor);
+            exceptionFunction(executor);
         } catch (Exception e) {
             log.error(e.getMessage());
             executor.shutdownNow();
@@ -36,6 +39,67 @@ public class CompletableFutureTest {
         }
 
     }
+
+    public static void exceptionFunction(ThreadPoolExecutor executor) {
+        CompletableFuture<List<String>> asyncA = CompletableFuture.supplyAsync(() -> {
+            List<String> list = new ArrayList<>();
+            list.add("asyncA-123");
+            list.add("asyncA-456");
+            list.add("asyncA-789");
+            System.out.println("程序开始运行");
+            try {
+                Thread.sleep(300L);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return list;
+        }, executor).exceptionally(new Function<Throwable, List<String>>() {
+            @Override
+            public List<String> apply(Throwable throwable) {
+                List<String> list = new ArrayList<>();
+                list.add("asyncA-AAA");
+                list.add("asyncA-BBB");
+                list.add("asyncA-CCC");
+                return list;
+            }
+        });
+        CompletableFuture<List<String>> asyncB = CompletableFuture.supplyAsync(() -> {
+            List<String> list = new ArrayList<>();
+            list.add("asyncB-123");
+            list.add("asyncB-456");
+            list.add("asyncB-789");
+            int i = 1 / 0;
+            System.out.println("程序开始运行");
+            try {
+                Thread.sleep(200L);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return list;
+        }, executor).exceptionally(new Function<Throwable, List<String>>() {
+            @Override
+            public List<String> apply(Throwable throwable) {
+                List<String> list = new ArrayList<>();
+                list.add("asyncB-AAA");
+                list.add("asyncB-BBB");
+                list.add("asyncB-CCC");
+                return list;
+            }
+        });
+
+        // 有结果就返回
+        CompletableFuture<Object> future = CompletableFuture.anyOf(asyncA, asyncB);
+        future.join();
+        System.out.println("线程优先返回结果：" + future.join());
+        System.out.println("线程运行结果-asyncA:" + asyncA.join());
+        System.out.println("线程运行结果-asyncB:" + asyncB.join());
+        // 方法无返回结果
+        CompletableFuture<Void> allOf = CompletableFuture.allOf(asyncA, asyncB);
+        allOf.join();
+        System.out.println("线程运行结果-asyncA:" + asyncA.join());
+        System.out.println("线程运行结果-asyncB:" + asyncB.join());
+    }
+
 
     /**
      * <p>@description : 用于连接两个线程 </p>
