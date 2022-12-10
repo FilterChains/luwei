@@ -57,7 +57,7 @@
         <!--<dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>5.2.0.RELEASE</version>
+            <version>6.0.0</version>
             <scope>compile</scope>
         </dependency>-->
         <dependency>
@@ -165,7 +165,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>5.2.0.RELEASE</version>
+            <version>6.0.0</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -203,7 +203,7 @@
         <!--<dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>5.2.0.RELEASE</version>
+            <version>6.0.0</version>
             <scope>compile</scope>
         </dependency>-->
         <!--阿里云推送-->
